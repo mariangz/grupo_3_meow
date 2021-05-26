@@ -1,6 +1,10 @@
 # Meow
 
-descripcion del grupo
+## Descripción del proyecto
+
+Nuestro sitio web ofrece una variedad de alimentos orgánicos y saludables para gatos.
+Nuestra audiencia objetivo serán las personas que estén preocupadas por la alimentación de sus amigos felinos y que tengan ingresos discrecionales para adquirir productos de mayor calidad.
+La idea es, además de la venta, ofrecer una suscripción para que nuestros clientes puedan conocer en detalle nuestros productos y también ajustar sus necesidades y presupuestos a nuestros paquetes.
 
 
 ## Referentes del mercado
