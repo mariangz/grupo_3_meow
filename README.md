@@ -9,7 +9,7 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 
 ## Referentes del mercado
 
-+ Natalia
++ Natalia Krivanek
 	+ [Bor](https://www.bor.com.ar/): se puede observar la simplicidad de la estructura del sitio.  Me agradan la paleta de colores que utiliza, siempre acompañando a los colores de la marca. Es fácil de recorrer, pero con pocos productos.
 
 + Sabrina
@@ -23,3 +23,18 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 + Mariano
 	+ [Smalls](https://www.smalls.com/): el diseño que me resulta agradable, tanto su layout, paleta de colores y tipografía. Es amigable para la navegación y tiene pequeños detalles que me gustan (sus ilustraciones y efectos al desplazarse).
 	+ [Soapplybox](https://soapplybox.com/): sitio simple, con un diseño limpio y moderno. Ofrece una experiencia sin distracciones.
+
+## Referentes del mercado
+
++ Natalia Krivanek
+	+ Administrativa de un Tiempo Compartido en Bariloche. 
+	+ Me encuentro en la busqueda de nuevos desafíos.
+
++ Sabrina
+	+ 
+	
++ Analía
+	+ 
+
++ Mariano
+	+ 
