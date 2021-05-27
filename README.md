@@ -37,4 +37,4 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 	+ Especialista en comercio internacional.
 
 + Mariano
-	+ 
+	+ Desarrollador Full-Stack en progreso.
