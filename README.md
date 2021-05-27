@@ -24,7 +24,7 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 	+ [Smalls](https://www.smalls.com/): el diseño que me resulta agradable, tanto su layout, paleta de colores y tipografía. Es amigable para la navegación y tiene pequeños detalles que me gustan (sus ilustraciones y efectos al desplazarse).
 	+ [Soapplybox](https://soapplybox.com/): sitio simple, con un diseño limpio y moderno. Ofrece una experiencia sin distracciones.
 
-## Referentes del mercado
+## Sobre los colaboradores
 
 + Natalia Krivanek
 	+ Administrativa de un Tiempo Compartido en Bariloche. 
