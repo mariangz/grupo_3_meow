@@ -34,7 +34,7 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 	+ 
 	
 + Analía
-	+ 
+	+ Especialista en comercio internacional.
 
 + Mariano
 	+ 
