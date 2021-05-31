@@ -30,9 +30,6 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 	+ Administrativa de un Tiempo Compartido en Bariloche. 
 	+ Me encuentro en la busqueda de nuevos desafíos.
 
-+ Sabrina
-	+ 
-	
 + Analía
 	+ Especialista en comercio internacional.
 
