@@ -3,10 +3,58 @@
     --color-primary: #8FD9C1; 
     --color-accent: #FFE95A;
 
+    --color-font: #000;
     --ff-primary: 'Montserrat', sans-serif;
     --ff-accent: 'Work Sans', sans-serif;
 }
 
+body {
+    font-family: var(--ff-primary);
+}
+
+
 header {
     background-color: var(--background-color);
+    text-align: center;
+    position: fixed;
+    width: 100%;
 }
+
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: var(--background-color);
+    width: 100%;
+    display: none;
+    /* border: 1px solid red; */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+nav a {
+    color: var(--color-font);
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #FFE95A;
+}
+
+.nav-toggle:checked + nav {
+    display: block;
+}
+
+
