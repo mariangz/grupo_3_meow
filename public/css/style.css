@@ -1,0 +1,12 @@
+:root {
+    --background-color: #F0ECE5;
+    --color-primary: #8FD9C1; 
+    --color-accent: #FFE95A;
+
+    --ff-primary: 'Montserrat', sans-serif;
+    --ff-accent: 'Work Sans', sans-serif;
+}
+
+header {
+    background-color: var(--background-color);
+}
