@@ -14,3 +14,8 @@ app.get('/', (req, res) => {
     const publicHtml = path.resolve(__dirname, './views/home.html');
     res.sendFile(publicHtml); 
 });
+
+app.get('/productDetail', (req, res) => {
+    const publicProductHtml = path.resolve(__dirname, './views/productDetail.html');
+    res.sendFile(publicProductHtml); 
+});
