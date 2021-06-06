@@ -17,7 +17,7 @@ app.listen(3000, (req, res) => {
 
 // renderizar templates
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('home', {pageTitle: "Meow"});
 });
 
 app.get('/login', (req, res) => {
