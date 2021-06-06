@@ -11,18 +11,19 @@ section{
 
 .detail-container{
   font-family: sans-serif;
-  width: 80vw;
+  max-width: 90%;
 }
 .detail-container .img-container{
   overflow: hidden;
-  height: 250px;
+  height: 50%;
   position: relative;
   border-radius: 5px;
 }
 .detail-container .img-container img{
-  width: 100%;
-  position: absolute;
-  height: 100%;
+    max-width: 100%;
+    position: absolute;
+    width:auto;
+    height:auto;
 }
 
 .detail-container .info-container{
@@ -31,12 +32,12 @@ section{
   text-align: justify;
   justify-content: center;
 }
-.detail-container .info-container h2,
-.detail-container .info-container h3{
+.detail-container .info-container h3,
+.detail-container .info-container h4{
 margin: 0;
 }
-.detail-container .info-container h2,
 .detail-container .info-container h3,
+.detail-container .info-container h4,
 .detail-container .info-container span{
   padding: 10px 0px;
   width: 100%;
@@ -50,7 +51,7 @@ margin: 0;
   padding: 10px;
   border: 1px solid black;
   border-radius: 5px;
-  width:100vw;
+  width:100%;
   text-align: center;
 }
 .detail-container .add-cart:hover{
