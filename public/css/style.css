@@ -20,7 +20,6 @@ body {
   flex-direction: column;
 }
 
-
 header {
   background-color: var(--background-color);
   text-align: center;
@@ -146,19 +145,6 @@ footer {
   padding: 1em;
   margin-bottom: 2em;
 }
-
-footer .container {
-  /* max-width: 1200px; */
-  /* margin-right: auto;
-  margin-left: auto; */
-}
-/* 
-footer .row {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #8FD9C1;
-} */
-
 
 footer h4 {
   font-weight: 400;
