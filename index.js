@@ -1,8 +1,9 @@
 // express
 const express = require('express');
-const path = require('path');
 const app = express();
+const path = require('path');
 
+// static files
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
@@ -17,7 +18,7 @@ app.listen(3000, (req, res) => {
 
 // renderizar templates
 app.get('/', (req, res) => {
-  res.render('home', {pageTitle: "Meow"});
+  res.render('home');
 });
 
 app.get('/login', (req, res) => {

@@ -1,8 +1,57 @@
-<%- include('template/head'), {pageTitle: 'Detalle del Producto'} %>
+<%- include('partials/head', {pageTitle: 'Detalle del Producto'}) %>
 <body>
-  <%- include('template/header') %>
+  <%- include('partials/header') %>
   <!-- FALTA EL MAIN -->
-   
-  <%- include('template/footer') %>
+  <main>
+    <section class="productos">
+
+      <div class="card">
+        <div class="card__body">
+          <img src="/images/food/fish.jpeg" class="card__image">
+        </div>
+        <h2 class="card__title">Pescado</h2>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="card__btn">Agregar</button>
+      </div>
+
+      <div class="card">
+        <div class="card__body">
+          <img src="/images/food/vegetarian.jpeg" class="card__image">
+        </div>
+        <h2 class="card__title">Vegetales</h2>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="card__btn">Agregar</button>
+      </div>
+
+      <div class="card">
+        <div class="card__body">
+          <img src="/images/food/meat.jpeg" class="card__image">
+        </div>
+        <h2 class="card__title">Carne</h2>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="card__btn">Agregar</button>
+      </div>
+
+      <div class="card">
+        <div class="card__body">
+          <img src="/images/food/salmon.jpeg" class="card__image">
+        </div>
+        <h2 class="card__title">Salmón</h2>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="card__btn">Agregar</button>
+      </div>
+
+      <div class="card">
+        <div class="card__body">
+          <img src="/images/food/curry.jpeg" class="card__image">
+        </div>
+        <h2 class="card__title">Curry</h2>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <button class="card__btn">Agregar</button>
+      </div>
+    </section>
+
+  </main>
+  <%- include('partials/footer') %>
 </body>
 
