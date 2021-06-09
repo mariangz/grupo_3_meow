@@ -4,29 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,500" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Registro | Meow</title>
 </head>
 <body>
-    <div class="register-box">
+    <form action="/registro" method="POST"></form>
+    <div class="contenedor">
     <h1>Registrate</h1>
     <h3>Crea tu cuenta para disfrutar de nuestros productos</h3>
-    <form>
-        <!--nombre-->
-        <label for="nombre">Nombre</label>
-        <input type="text" placeholder="Ingresa tu nombre">
-        <!--email-->
-        <label for="email">E-mail</label>
-        <input type="email" placeholder="Ingresa tu e-mail">
-        <!--contraseña-->
-        <label for="contraseña">Contraseña</label>
-        <input type="password" placeholder="Ingresa tu contraseña">
-        <!--confirmar contraseña-->
-        <label for="confirmar-contraseña">Confirma tu contraseña</label>
-        <input type="password" placeholder="Confirma tu contraseña">
-        <!--falta poner el tilde con boton aca abajo-->
-        <p>Quiero suscribirme a las novedades</p>
-        <input type="submit" value="Ingresar">
-        <p><a ref="#">¿Ya estás registrado?</a></p>
+    <div class="input-contenedor">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
     </div>
+    <div class="input-contenedor">
+        <label for="email">E-mail:</label>
+        <input type="email" name="e-mail" id="email"placeholder="Ingresa tu e-mail" required>
+    </div>
+    <div class="input-contenedor">    
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña"required>
+    </div>
+    <div class="input-contenedor">
+        <label for="confirmar-contraseña">Confirma tu contraseña</label>
+        <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" placeholder="Confirma tu contraseña" required>
+    </div>
+    <div class="input-contenedor">
+        <label for="mailing">Quiero suscribirme a las novedades</label>
+        <input type="checkbox" name="mailing">
+    </div>
+    <div class="input-contenedor">
+        <button type="submit" value="Ingresar">Ingresar</button>
+        <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+    </div>
+    <div class="input-contenedor">
+        <h4 id="registrado">¿Ya tienes una cuenta?<a class="link" href="login.html"></a></h4>
+    </div>
+    </form>
 </body>
 </html>
