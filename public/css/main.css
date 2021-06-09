@@ -38,6 +38,7 @@ body {
   max-width: 450px;
   top: -65%;
   left: 5%;
+  font-weight: 300;
 }
 
 .hero-description p {
@@ -52,6 +53,10 @@ body {
   border: 0;
   color: whitesmoke;
   background-color: #000;
+}
+
+.nobreak {
+  white-space: nowrap;
 }
 
 @media screen and (min-width: 768px) {

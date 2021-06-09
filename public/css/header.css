@@ -24,14 +24,15 @@ header {
 
 .container-nav {
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 100%;
   height: 4rem;
+  
 }
 
 /* ********** checkout icon ********** */
 .carrito {
-  visibility: hidden;
+  display: none;
 }
 
 a {
@@ -48,6 +49,8 @@ li {
   display: block;
   max-width: 5rem;
   transition: all 0.1s ease-in;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo img {
@@ -135,7 +138,7 @@ head nav {
 /* ********** media queries ********** */
 @media screen and (min-width: 768px) {
   .carrito {
-    visibility: visible;
+    display: block;
     margin-right: 1rem;
   }
   .carrito-icon {
