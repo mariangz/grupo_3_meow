@@ -1,0 +1,11 @@
+main {
+    display: block;
+    max-width: 90%;
+    padding: 10px 10px 0;
+    margin: auto;
+}
+
+body {
+    margin: 0;
+    line-height: 1.4em
+}

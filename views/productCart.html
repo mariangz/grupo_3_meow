@@ -6,16 +6,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/cd66ba717f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Carrito de Compras</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
     <header>
     </header>
-
-
     <main>
+        <div class="shopify-section">
+            <h3 class="page-title">Carrito de Compras</h3>
+            <form action="/cart" method="post">
+                <table class="cart-items clean">
+                    <thead>
+                        <tr>
+                            <th class="first" colspan="2">Precio</th>
+                            <th>Cantidad</th>
+                            <th class="fast">Total</th>
+                        </tr>
 
+                        <tbody>
+                            <tr class="cart-item">
+                                <td class="cart-item-product first">
+                                    <a class="cart-image" href="url del producto">
+                                        <img src="url de la imagen" alt="producto"></a>
+                            </tr>
+                            </td>
+                            <div class="cart-item-product-wrap">
+                                <span class="cart-title">
+                                        <a href="url del producto">Nombre producto</a>
+                                    </span>
+                                <a class="cart-item-remove" href="" line=1 & quantity=0>Eliminar</a>
+                            </div>
+                            <td class="cart-item-price">
+                                <span class="money">$3.000</span>
+                            </td>
+                            <td class="cart-item-quantity">
+                                <input type="text" name="updates[]" class="input-fieldset-item-quantity-display" value="1" size="1">
+                                <span class="cart-item-decrease icon"></span>
+                                <span class="cart-item-increase icon"></span>
+                            </td>
+                            <td class="cart-item-total last">
+                                <span class="money">$3.000</span>
+                            </td>
+                        </tbody>
+                    </thead>
+
+                </table>
+
+                <div class="cart-tools">
+                    <div class="cart-totals">
+                        <p class="cart-price">
+                            <span class="money">$3.000</span>
+                        </p>
+                        <input class="cart-button-update button secondary" type="submit" name="update" value="update">
+                        <input class="cart-button-checkout button" type="submit" name="checkout" value="checkout">
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
     </main>
 
     <footer>
