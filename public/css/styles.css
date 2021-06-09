@@ -1,11 +1,91 @@
-main {
-    display: block;
-    max-width: 90%;
-    padding: 10px 10px 0;
-    margin: auto;
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    margin: 0;
-    line-height: 1.4em
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.page-title {
+    margin: 0 0 15px;
+}
+
+.cart-page {
+    margin: 80px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+p {
+    display: none;
+}
+
+th {
+    text-align: center;
+    padding: 5px;
+    color: black;
+    background: #66d7d1;
+    font-weight: normal;
+    font-size: small;
+}
+
+td {
+    padding: 5px 5px;
+}
+
+td input {
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+
+td a {
+    color: #66d7d1;
+    font-size: 12px;
+}
+
+td img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.product-item {
+    border-bottom: 2px solid #66d7d1;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table {
+    width: 100%;
+    max-width: 350px;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+@media (min-width: 768px) {
+    p {
+        display: block;
+    }
 }
