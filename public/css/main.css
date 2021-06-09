@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .hero {
   font-size: 1rem;
 }
@@ -28,17 +29,19 @@ body {
   width: 100vw;
   object-fit: cover;
   z-index: -1;
+  position: relative;
 }
 
 .hero-description {
-  position: relative;
+  position: absolute;
   color: #000;
   padding: 1rem;
   width: 75%;
   max-width: 450px;
-  top: -65%;
+  top: 20%;
   left: 5%;
-  font-weight: 300;
+  /* font-family: var(--ff-accent); */
+  font-family: var(--ff-primary);
 }
 
 .hero-description p {
@@ -53,15 +56,30 @@ body {
   border: 0;
   color: whitesmoke;
   background-color: #000;
+  transition: all 200ms;
+  display: block;
+  cursor: pointer;
+}
+
+.hero-description button:hover {
+  color: #000;
+  background-color: whitesmoke;
 }
 
 .nobreak {
   white-space: nowrap;
 }
 
+/* ********** media queries ********** */
 @media screen and (min-width: 768px) {
   .hero {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .hero {
+    font-size: 1.6rem;
   }
 }
 
