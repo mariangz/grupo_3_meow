@@ -1,0 +1,139 @@
+/* ********** header ********** */
+:root {
+  --background-color: #F0ECE5;
+  --color-primary: #8FD9C1;
+  --color-accent: #FFE95A;
+
+  --color-font: #000;
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-accent: 'Work Sans', sans-serif;
+}
+
+header {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  background-color: var(--background-color);
+  padding: 1rem 0;
+}
+
+.container {
+  display: flex;
+}
+
+.container-nav {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ********** checkout icon ********** */
+.carrito {
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* ********** logo ********** */
+.logo {
+  display: block;
+  max-width: 5rem;
+  transition: all 0.1s ease-in;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.logo:hover {
+  transform: scale(1.2);
+}
+
+.logo:focus {
+  transform: scale(1.2);
+}
+
+/* ********** navbar menu ********** */
+.nav-button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+.nav-button {
+  width: 2rem;
+  height: 2rem;
+}
+
+head nav {
+  margin: .5rem 0;
+}
+
+.nav-menu {
+  position: fixed;
+  /* display: none; */
+  left: -100%;
+  top: 2rem;
+  flex-direction: column;
+  background-color: var(--background-color);
+  width: 35%;
+  text-align: left;
+  padding-left: .9rem;
+  transition: all 0.3s ease-out; 
+}
+.nav-menu.active {
+  left: 0%;
+  z-index: 10;
+}
+
+/* ********** hamburger ********** */
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-item {
+  margin: 2.5rem 0;
+}
+
+.nav-button  {
+  display: block;
+  cursor: pointer;
+}
+
+.nav-button.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-button.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-button.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ********** media queries ********** */
+@media screen and (min-width: 768px) {
+  .carrito {
+    visibility: visible;
+    margin-right: 1rem;
+  }
+}
