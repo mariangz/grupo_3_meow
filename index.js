@@ -14,7 +14,3 @@ app.get('/', (req, res) => {
     const publicHtml = path.resolve(__dirname, './views/register.html');
     res.sendFile(publicHtml); 
 });
-app.post('/', (req, res) => {
-    const publicHtml = path.resolve(__dirname, './views/register.html');
-    res.sendFile(publicHtml); 
-});
