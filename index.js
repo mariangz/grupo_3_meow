@@ -6,11 +6,11 @@ const app = express();
 const publicPath = path.resolve(__dirname, './public');
 app.use( express.static(publicPath));
 
-app.listen(3000, (req, res) => {
-    console.log('servidor corriendo en el puerto 3000');
+app.listen(3001, (req, res) => {
+    console.log('servidor corriendo en el puerto 3001');
 });
 
 app.get('/', (req, res) => {
-    const publicHtml = path.resolve(__dirname, './views/login.html');
+    const publicHtml = path.resolve(__dirname, './views/register.html');
     res.sendFile(publicHtml); 
 });
