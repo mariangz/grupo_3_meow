@@ -11,6 +11,6 @@ app.listen(3001, (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    const publicHtml = path.resolve(__dirname, './views/register.html');
+    const publicHtml = path.resolve(__dirname, './views/login.html');
     res.sendFile(publicHtml); 
 });
