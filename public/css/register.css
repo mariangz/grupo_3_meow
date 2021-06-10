@@ -60,4 +60,7 @@ button{
   padding: 1rem;
   height: 15%;
   font-family: 'Quicksand', sans-serif;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
 }
