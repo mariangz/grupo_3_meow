@@ -1,94 +1,177 @@
-*{
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
-section{
-  width: 100%;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* DETAILS PRODUCT*/
+
+.row {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 30px 0;
 }
 
-.detail-container{
-  font-family: sans-serif;
-  max-width: 90%;
-}
-.detail-container .img-container{
-  overflow: hidden;
-  height: 50%;
-  position: relative;
-  border-radius: 5px;
-}
-.detail-container .img-container img{
-    max-width: 100%;
-    position: absolute;
-    width:auto;
-    height:auto;
+.col-2 {
+  min-width: 300px;
+  flex-basis: 100%;
 }
 
-.detail-container .info-container{
-  display: flex;
-  flex-wrap: wrap;
-  text-align: justify;
-  justify-content: center;
-}
-.detail-container .info-container h3,
-.detail-container .info-container h4{
-margin: 0;
-}
-.detail-container .info-container h3,
-.detail-container .info-container h4,
-.detail-container .info-container span{
-  padding: 10px 0px;
-  width: 100%;
+.col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+  border-radius: 15px;
 }
 
-.detail-container .add-cart{
-  margin-top: 10px;
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-  width:100%;
+.btn {
+  display: inline-block;
+  background: #66d7d1;
+  color: #fff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 15px;
+  width: 230px;
   text-align: center;
+  transition: background 0.5s;
 }
-.detail-container .add-cart:hover{
+
+.btn:hover {
+  background: #ffe95a;
   color: black;
-  background-color: transparent;
-  border: 1px solid black;
 }
 
-/* prueba */
-
-.detail-container .product-quantity {
-    display: inline-block;
-    font-size: 14px;
+.small-container {
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
 }
-.detail-container .product-quantity label{
+
+a {
+  text-decoration: none;
+  color: #555;
+}
+
+p {
+  color: #555;
+}
+
+.single-product {
+  margin-top: 80px;
+}
+
+.single-product .col-2 img{
+  padding: 0;
+}
+
+.single-product .col-2{
+  padding: 10px 0;
+}
+
+.single-product h1{
+  font-size: 26px;
+  line-height: 32px;
+  margin: 15px 0;
+}
+
+.single-product h4{
+  margin: 20px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #555;
+  font-weight: normal;
+}
+
+.single-product select{
   display: block;
-  padding: 10px 20px;
-}
-.product-quantity-left {
-    margin-left: 10px;
-    padding-right: 5px;
-    font-size: 20px;
-}
-.product-quantity-right {
-    padding-left: 5px;
-    font-size: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid #66d7d1;
 }
 
-.product-quantity-input {
-    display: inline-block;
-    width: 50px;
-    text-align: center;
+select:focus{
+  outline: none;
 }
-.input-field {
-    height: 30px;
-    padding: 12px;
-    padding-top: 12px;
-    background-color: lightgrey;
-    border: none;
+
+.single-product input{
+  width: 50px;
+  height: 40px;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  border: 1px solid #66d7d1;
+}
+
+input:focus{
+  outline: none;
+}
+
+.small-img-row{
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-img-col1, .small-img-col2, 
+.small-img-col3, .small-img-col4{
+  flex-basis: 6%;
+}
+
+.small-img-col1 {
+  transition: all 30s;
+  animation: transparencia 15s infinite;
+}
+
+.small-img-col2 {
+  transition: all 15s;
+  animation: transparencia 15s infinite;
+}
+
+.small-img-col3 {
+  transition: all 15s;
+  animation: transparencia 15s infinite;
+}
+
+.small-img-col4 {
+  transition: all 15s;
+  animation: transparencia 15s infinite;
+}
+@keyframes transparencia {
+  0% {
+     opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@media (min-width: 768px){
+  .col-2{
+      flex-basis: 50%;
+  }
+
+  .col-2 h1{
+      font-size: 50px;
+      line-height: 60px;
+  }
+  .single-product .col-2{
+      padding: 20px;
+  }
+}
+
+@media (min-width: 1024px){
+  .col-2 h1{
+      font-size: 50px;
+      line-height: 60px;
+  }
+  .btn {
+      width: 350px;
+  }
 }

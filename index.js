@@ -4,7 +4,7 @@ const path = require('path');
 const app = express();
 
 const publicPath = path.resolve(__dirname, './public');
-app.use( express.static(publicPath));
+app.use(express.static(publicPath));
 
 app.listen(3000, (req, res) => {
     console.log('servidor corriendo en el puerto 3000');
@@ -12,10 +12,10 @@ app.listen(3000, (req, res) => {
 
 app.get('/', (req, res) => {
     const publicHtml = path.resolve(__dirname, './views/home.html');
-    res.sendFile(publicHtml); 
+    res.sendFile(publicHtml);
 });
 
 app.get('/productDetail', (req, res) => {
     const publicProductHtml = path.resolve(__dirname, './views/productDetail.html');
-    res.sendFile(publicProductHtml); 
+    res.sendFile(publicProductHtml);
 });

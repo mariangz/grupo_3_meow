@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/product.css">
     <script src="https://kit.fontawesome.com/cd66ba717f.js" crossorigin="anonymous"></script>
-    <title>Detalle de Producto</title>
+    <title>Detalle del Producto - MEOW</title>
 </head>
+
 <body>
     <header>
     </header>
-    
-    <main>
-        <section>
-            <div class="detail-container">
-                <div class="img-container">
-                  <img src="/images/productoCarne.jpg" alt="producto 1">
-                </div>
-              <div class="info-container">
-                <h3>NOMBRE DEL PRODUCTO</h3>
-                <h4>$$$$$$</h4>
-              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.</p>
-                
-                
-          <div class="detail-container product-quantity">
-            <label>Cantidad</label>
-            <span class="product-quantity-left">-</span>
-            <input class="input-field product-quantity-input" type="text" name="quantity" value="1">
-            <span>+</span>
-                </div>
-               
-                <a href="#" class="add-cart">Añadir al carrito</a>
-              </div>
-        </section>
-    </main>
 
-    <footer>
-    </footer>
+    <main>
+
+<!----- DETAILS PRODUCT ----->
+
+        <div class="small-container single-product">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/product-01.jpg" width="100%">
+                    <div class="small-img-row">
+                        <div class="small-img-col1">
+                            <img src="images/patita1.png" width="100%" id="small-img">
+                        </div>
+                        <div class="small-img-col2">
+                            <img src="images/patita2.png" width="100%" id="small-img">
+                        </div>
+                        <div class="small-img-col3">
+                            <img src="images/patita3.png" width="100%" id="small-img">
+                        </div>
+                        <div class="small-img-col4">
+                            <img src="images/patita4.png" width="100%" id="small-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h1>Regular FIT</h1>
+                    <p>Meow - El mejor alimento</p>
+                    <h4>$500.00</h4>
+                    <select>
+				<option>Edad de tu mascota</option>
+				<option>Cachorro</option>
+				<option>Adulto</option>
+				<option>Senior</option>
+			</select>
+                    <input type="number" name="quantity" value="1">
+                    <a href="" class="btn">Añadir al carrito</a>
+                    <h3>Info Nutricional</h3>
+                    <br>
+                    <p>Regular Fit es un alimento completo y equilibrado que ayuda a mantener un buen estado de salud. Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada.</p>
+                </div>
+            </div>
+        </div>
+
+ 
+
+    </main>
 </body>
 </html>
