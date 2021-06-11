@@ -73,13 +73,14 @@ body {
 /* ********** FOOTER ********** */
 footer {
   /* padding-t: 1rem; */
-  margin-top: 3rem;
+  margin-top: auto;
   padding-bottom: 1rem;
   font-family: var(--ff-accent);
 }
 
 footer h4 {
   font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 footer ul {
@@ -100,18 +101,40 @@ footer ul {
 
 }
 
-.col-two{
+.col-two {
   /* border: 2px solid blue; */
   margin-bottom: 1rem;
   padding-left: .5rem;
 }
 
+.col-three {
+  margin-top: 3rem;
+}
+
+.col-three ul {
+  display: flex;
+  justify-content: space-around;
+}
 
 /* ********** media queries ********** */
 @media screen and (min-width: 768px) {
   .hero {
     font-size: 1.3rem;
   }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .col-three ul {
+    justify-content: space-around;
+  }
+
+  .col-three ul li{
+    margin-right: 2rem;
+  }
+
 }
 
 @media screen and (min-width: 968px) {
