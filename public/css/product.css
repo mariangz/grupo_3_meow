@@ -80,7 +80,7 @@ p {
 }
 
 .single-product h4{
-  margin: 20px 0;
+  margin: 15px 0;
   font-size: 22px;
   font-weight: bold;
   color: #555;
@@ -111,50 +111,12 @@ input:focus{
   outline: none;
 }
 
-.small-img-row{
-  display: flex;
-  justify-content: space-between;
-}
-
-.small-img-col1, .small-img-col2, 
-.small-img-col3, .small-img-col4{
-  flex-basis: 6%;
-}
-
-.small-img-col1 {
-  transition: all 30s;
-  animation: transparencia 15s infinite;
-}
-
-.small-img-col2 {
-  transition: all 15s;
-  animation: transparencia 15s infinite;
-}
-
-.small-img-col3 {
-  transition: all 15s;
-  animation: transparencia 15s infinite;
-}
-
-.small-img-col4 {
-  transition: all 15s;
-  animation: transparencia 15s infinite;
-}
-@keyframes transparencia {
-  0% {
-     opacity: 1;
-  }
-  50% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
+/* MEDIA QUERIES */
 
 @media (min-width: 768px){
   .col-2{
       flex-basis: 50%;
+      align-self: normal;
   }
 
   .col-2 h1{
@@ -173,5 +135,11 @@ input:focus{
   }
   .btn {
       width: 350px;
+  }
+  .single-product h4{
+    font-size: 26px;
+  }
+  p{
+    font-size: 18px;
   }
 }
