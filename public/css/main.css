@@ -20,6 +20,7 @@ body {
   flex-direction: column;
 }
 
+/* ********** PORTADA ********** */
 .hero {
   font-size: 1rem;
 }
@@ -40,7 +41,6 @@ body {
   max-width: 450px;
   top: 20%;
   left: 5%;
-  /* font-family: var(--ff-accent); */
   font-family: var(--ff-primary);
 }
 
@@ -69,6 +69,43 @@ body {
 .nobreak {
   white-space: nowrap;
 }
+
+/* ********** FOOTER ********** */
+footer {
+  /* padding-t: 1rem; */
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+  font-family: var(--ff-accent);
+}
+
+footer h4 {
+  font-size: 1.3rem;
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  line-height: 3;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.col-one{
+  /* border: 2px solid red; */
+  margin-bottom: 2rem;
+  padding-left: .5rem;
+
+}
+
+.col-two{
+  /* border: 2px solid blue; */
+  margin-bottom: 1rem;
+  padding-left: .5rem;
+}
+
 
 /* ********** media queries ********** */
 @media screen and (min-width: 768px) {
