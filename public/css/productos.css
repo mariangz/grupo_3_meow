@@ -1,3 +1,13 @@
+:root {
+  --background-color: #F0ECE5;
+  --color-primary: #8FD9C1;
+  --color-accent: #FFE95A;
+
+  --color-font: #000;
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-accent: 'Work Sans', sans-serif;
+}
+
 main {
   margin-top: 8rem;
 }
