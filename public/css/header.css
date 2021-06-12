@@ -100,8 +100,7 @@ head nav {
   background-color: var(--background-color);
   width: 100%;
   text-align: center;
-  padding-left: .9rem;
-  transition: all 0.3s ease-out; 
+  transition: all 200ms ease-in-out; 
 }
 .nav-menu.active {
   left: 0%;
