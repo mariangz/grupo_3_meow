@@ -13,28 +13,27 @@
     <h1>Registrate</h1>
     <h3>Crea tu cuenta para disfrutar de nuestros productos</h3>
     <div class="input-contenedor">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre" required>
+        <span class="titulo"><label for="nombre">Nombre:</label></span>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
     </div>
     <div class="input-contenedor">
-        <label for="email">E-mail:</label>
-        <input type="email" name="e-mail" id="email"placeholder="Ingresa tu e-mail" required>
+        <span class="titulo"><label for="email">E-mail:</label></span>
+        <input type="email" name="e-mail" id="email"placeholder="E-mail" required>
     </div>
     <div class="input-contenedor">    
-        <label for="contraseña">Contraseña:</label>
-        <input type="password" name="contraseña" id="contraseña" placeholder="Ingresa tu contraseña"required>
+        <span class="titulo"><label for="contraseña">Contraseña:</label></span>
+        <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña"required>
     </div>
     <div class="input-contenedor">
-        <label for="confirmar-contraseña">Confirma tu contraseña</label>
+        <span class="titulo"><label for="confirmar-contraseña">Confirma tu contraseña</label></span>
         <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" placeholder="Confirma tu contraseña" required>
     </div>
     <div class="input-contenedor">
-        <label for="mailing">Quiero suscribirme a las novedades</label>
-        <input type="checkbox" name="mailing">
+        <input type="checkbox" name="mailing" class="checkbox">
+        <label for="mailing" class="news">Quiero suscribirme a las novedades</label>
     </div>
     <div class="input-contenedor">
         <button type="submit" value="Ingresar">Ingresar</button>
-        <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
     </div>
     <div class="input-contenedor">
         <h4 id="registrado">¿Ya tienes una cuenta?<a class="link" href="login.html"></a></h4>

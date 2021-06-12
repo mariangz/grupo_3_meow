@@ -19,11 +19,13 @@ h1, h2, h3, h4, h5, h6 {
 h1{
   text-align: center;
   text-transform: uppercase;
-  margin-top: 15%;
+  margin-top: 5%;
+  font-size: 30px;
 }
 h3{
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  font-size: 15px;
 }
 h4{
   font-size: 12px;
@@ -49,9 +51,20 @@ form{
   margin-bottom: 15px;
 }
 input{
-  background-color: gray;
-  border-radius: 3px;
-  border-color: gray;
+  width: 80%;
+  border: 2px solid #cac2bc;
+  border-radius: 4px;
+  background: #fff;
+  color: lightgray;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+  margin-left: auto;
+}
+.checkbox{
+  width: 10%;
+  align-items: center;
 }
 button{
   border-radius: 12px;
@@ -60,7 +73,31 @@ button{
   padding: 1rem;
   height: 15%;
   font-family: 'Quicksand', sans-serif;
-  background-color: black;
-  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background: #ffda51;
+  color:black;
   text-transform: uppercase;
+}
+.titulo{
+  display: block;
+  font-size: 15px;
+  padding-right: 2.5rem;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+.news{
+  font-size: 15px;
+}
+.input-contenedor #registrado{
+  margin-bottom: 1rem;
+  color: #121212;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Quicksand', sans-serif;
+  font-style: normal;
+  line-height: 104%;
+  letter-spacing: .01em;
+  text-align: center;
 }
