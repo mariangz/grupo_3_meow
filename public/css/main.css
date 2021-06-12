@@ -22,21 +22,16 @@ body {
 
 /* ********** PORTADA ********** */
 .portada {
-  /* border: 2px solid red; */
   position: relative;
-  /* top: -8rem; */
   font-size: 1rem;
   
 }
 
 
 .hero-image {
-  height: 100vh;
+  height: calc(100vh - 5rem);
   width: 100vw;
   object-fit: cover;
-  /* z-index: -1; */
-  /* position: relative; */
-  
 }
 
 .hero-description {

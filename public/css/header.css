@@ -14,7 +14,6 @@ header {
   position: fixed;
   width: 100%;
   background-color: var(--background-color);
-  /* padding: 1rem 0; */
   z-index: 100;
   position: relative;
   height: 5rem;
@@ -95,13 +94,12 @@ head nav {
 
 .nav-menu {
   position: fixed;
-  /* display: none; */
   left: -100%;
   top: 3rem;
   flex-direction: column;
   background-color: var(--background-color);
-  width: 35%;
-  text-align: left;
+  width: 100%;
+  text-align: center;
   padding-left: .9rem;
   transition: all 0.3s ease-out; 
 }
