@@ -1,15 +1,4 @@
-:root {
-  --background-color: #F0ECE5;
-  --color-primary: #8FD9C1;
-  --color-accent: #FFE95A;
-
-  --color-font: #000;
-  --ff-primary: 'Montserrat', sans-serif;
-  --ff-accent: 'Work Sans', sans-serif;
-}
-
 main {
-  /* margin-top: 8rem; */
   margin-bottom: 3rem;
 }
 
@@ -31,7 +20,6 @@ main {
   cursor: pointer;
   transition: transform 200ms ease-in;
 }
-
 
 .card__image {
   height: 15rem;

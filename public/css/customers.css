@@ -1,14 +1,3 @@
-:root {
-  --background-color: #F0ECE5;
-  --color-primary: #8FD9C1;
-  --color-secondary: #c5d4e9;
-  --color-accent: #FFE95A;
-
-  --color-font: #000;
-  --ff-primary: 'Montserrat', sans-serif;
-  --ff-accent: 'Work Sans', sans-serif;
-}
-
 .customers {
   margin-top: 2rem;
   width: 100%;
