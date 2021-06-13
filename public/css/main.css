@@ -20,13 +20,16 @@ body {
   flex-direction: column;
 }
 
+#productos, 
+#customers {
+  scroll-margin-top: 2rem;
+}
+
 /* ********** PORTADA ********** */
 .portada {
   position: relative;
   font-size: 1rem;
-  
 }
-
 
 .hero-image {
   height: calc(100vh - 5rem);
@@ -51,19 +54,25 @@ body {
 }
 
 .hero-description button {
+  background-color: transparent;
+  padding: 0;
   margin-top: .5rem;
-  display: inline-block;
-  padding: .6em 1.5em;
-  min-width: 5rem;
+  outline: 0;
   border: 0;
-  color: whitesmoke;
-  background-color: #000;
-  transition: all 200ms;
-  display: block;
-  cursor: pointer;
 }
 
-.hero-description button:hover {
+
+.hero-description .button {
+  display: inline-block;
+  padding: 1em 2em;
+  color: whitesmoke;
+  background-color: #000;
+  display: block;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.hero-description .button:hover {
   color: #000;
   background-color: whitesmoke;
 }
