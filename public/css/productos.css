@@ -1,0 +1,74 @@
+:root {
+  --background-color: #F0ECE5;
+  --color-primary: #8FD9C1;
+  --color-accent: #FFE95A;
+
+  --color-font: #000;
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-accent: 'Work Sans', sans-serif;
+}
+
+main {
+  /* margin-top: 8rem; */
+  margin-bottom: 3rem;
+}
+
+.productos {
+  box-sizing: border-box;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  grid-gap: 2rem;
+  justify-content: center;
+
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  overflow: hidden;
+  box-shadow: 0px 2px 10px gray;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+}
+
+
+.card__image {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__title {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__description {
+  padding: 0 1rem;
+}
+
+.card__btn {
+  padding: 1rem;
+  /* font-weight: bold; */
+  font-size: 1rem;
+  margin: 1rem;
+  border: 2px solid var(--color-primary);
+  outline: 2px solid transparent;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  transition: all 200 ease-in;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card__btn:hover {
+  background-color: white;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}

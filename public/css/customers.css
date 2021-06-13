@@ -1,0 +1,79 @@
+:root {
+  --background-color: #F0ECE5;
+  --color-primary: #8FD9C1;
+  --color-secondary: #c5d4e9;
+  --color-accent: #FFE95A;
+
+  --color-font: #000;
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-accent: 'Work Sans', sans-serif;
+}
+
+.line {
+  height: 120px;
+  background-color: #FFE95A;
+  width: 100%;
+}
+
+.customers {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.customers-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 1rem;
+}
+
+.customers-card {
+  width: 80%;
+  max-width: 250px;
+  margin-bottom: 2rem;
+  font-size: .9rem;
+  padding: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #c5d4e9;
+  border-radius: 1rem;
+}
+
+.customers-card img {
+  max-width: 3rem;
+  display: block;
+  border-radius: 50%;
+}
+
+.fa-quote-left {
+  color: #000;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.card-customer {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.customer-text {
+  margin-left: 1rem;
+}
+
+.customers-city {
+  font-size: .8em;
+}
+
+@media screen and (min-width: 768px) {
+  .customers-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 968px) {
+  .portada {
+    font-size: 1.6rem;
+  }
+}
