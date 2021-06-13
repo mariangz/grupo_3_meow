@@ -1,6 +1,7 @@
 :root {
   --color-primary: #8FD9C1;
   --color-accent: #FFE95A;
+  --color-accentTwo: #FED8D2;
 
   --color-font: #000;
   --ff-primary: 'Montserrat', sans-serif;
@@ -19,6 +20,10 @@ body {
   flex-direction: column;
 }
 
+main {
+  margin-bottom: 3rem;
+}
+
 .horizontalBlock {
   height: 120px;
   width: 100%;
@@ -30,6 +35,10 @@ body {
 
 .horizontalBlock--yellow {
   background-color: var(--color-accent);
+}
+
+.horizontalBlock--pink {
+  background-color: var(--color-accentTwo);
 }
 
 #productos, 
@@ -72,7 +81,6 @@ body {
   outline: 0;
   border: 0;
 }
-
 
 .hero-description .button {
   display: inline-block;
