@@ -25,11 +25,15 @@ app.get('/login', (req, res) => {
   res.render('login');
 });
 
-app.get('/registro', (req, res) => {
+app.get('/register', (req, res) => {
   res.render('register');
 });
 
-app.get('/producto', (req, res) => {
-  res.render('product');
+app.get('/productCart', (req, res) => {
+  res.render('productCart');
+});
+
+app.get('/productDetail', (req, res) => {
+  res.render('productDetail');
 });
 
