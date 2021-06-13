@@ -24,6 +24,20 @@ main {
   margin-bottom: 3rem;
 }
 
+section {
+  margin: 2rem 0;
+}
+
+section:first-child {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .horizontalBlock {
   height: 120px;
   width: 100%;
