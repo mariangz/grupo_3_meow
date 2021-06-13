@@ -20,6 +20,19 @@ body {
   flex-direction: column;
 }
 
+.horizontalBlock {
+  height: 120px;
+  width: 100%;
+}
+
+.horizontalBlock--turquesa {
+  background-color: var(--color-primary);
+}
+
+.horizontalBlock--yellow {
+  background-color: var(--color-accent);
+}
+
 #productos, 
 #customers {
   scroll-margin-top: 2rem;
@@ -64,7 +77,7 @@ body {
 
 .hero-description .button {
   display: inline-block;
-  padding: 1em 2em;
+  padding: .6em 2em;
   color: whitesmoke;
   background-color: #000;
   display: block;
