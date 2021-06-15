@@ -1,6 +1,6 @@
 *, *:before, *:after {
     box-sizing: border-box;
-  }
+}
 @media(max-width:768px){      
     body {
     background-color: white;
@@ -23,77 +23,94 @@ h3 {
 h4{
     font-size: 12px;
 }
+form{
+    padding: 3px;
+}
 .contenedor{
     width: 100vw;
     height: 100vh;
     text-align: center;
     padding: 15px;
 }
-form{
-    padding: 3px;
-}
-.input [type="password"],
-.input [type="email"]{
-    font-size: 20px;
-    width: 82px;
-    margin: 10px 0;
-    padding: 10px;
-    border: 0;
-    border-bottom: 1px solid #eee;
-}
 .input-contenedor{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
     margin-bottom: 15px;
     text-align: center;
     line-height: 2rem;
 }
-input{
-    border:2px solid #cac2bc;
-    border-radius: 4px;
-    background: #fff;
-    transition: border-color 120ms;
-    padding: 8px 16px;
-}
-button{
-    font-family: 'Quicksand', sans-serif;
-    border-color: black;
-    background-color: black;
-    color: white;
-    text-transform: none;
-    width: 70%;
-    margin-top: 24px;
-    border-width: 0;
-    border-radius: 40px;
-    font-weight: 400;
-    font-size: 16px;
-    font-style:normal;
-    line-height: 16px;
-    letter-spacing: .04rem;
-    text-align: center;
-    transition: background-color 240ms;
-    margin: 1rem auto;
-    padding: 10px;
-}
 .titulo{
-    display: block;
     color: #78706b;
     font-weight: 400;
+    font-family: 'Quicksand', sans-serif;
     font-size: 12px;
     font-style: normal;
     line-height: 12px;
     letter-spacing: .04rem;
     padding-right: 2.5rem;
     margin: 10px;
-    text-align: center;
+    text-align: left;
+    width: 70%;
 }
-.olvido, .noRegistrado{
+.input [type="password"],
+.input [type="email"]{
+    font-size: 20px;
+    width: 70%;
+    font-family: 'Quicksand', sans-serif;
+    margin: 10px 0;
+    padding: 10px;
+    border: 0;
+    border-bottom: 1px solid #eee;
+}
+input{
+    border:2px solid #cac2bc;
+    border-radius: 5px;
+    background: #fff;
+    font-family: 'Quicksand', sans-serif;
+    padding: 8px 16px;
+}
+.input-ingreso{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.boton button{
+    font-family: 'Quicksand', sans-serif;
+    border-color: #ffda51;
+    background-color: #ffda51;
+    color: black;
+    text-transform: none;
+    border-width: 0;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 16px;
+    font-style:normal;
+    line-height: 16px;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 10px;
+    width: 100%;
+}
+.input-olvido-registrado{
+    display: flex;
+    justify-content: center;
+}
+.olvido-registrado{
     margin-bottom: 1rem;
     color: #121212;
     font-weight: 400;
     font-size: 14px;
     font-family: 'Quicksand', sans-serif;
     font-style: normal;
-    line-height: 104%;
+    line-height: 2rem;
     letter-spacing: .01em;
     text-align: center;
+}
+.olvido, .registrado{
+    color: #121212;
     text-decoration: none;
+    text-align: center;
+
 }

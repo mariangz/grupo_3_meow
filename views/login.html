@@ -15,20 +15,22 @@
         <h1>Bienvenid@</h1>
         <h3>Ingrese a su cuenta</h3>
     <div class="input-contenedor">
-        <span class="titulo"><label for="email">E-mail</label></span>
+        <div class="titulo"><label for="email">E-mail</label></div>
         <input type="email" name="email" placeholder="Email" required>
     </div>
     <div class="input-contenedor">
-        <span class="titulo"><label for="contraseña">Contraseña</label></span>
+        <div class="titulo"><label for="contraseña">Contraseña</label></div>
         <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
     </div>
-    <div class="input-contenedor">
-        <button type="submit" value="Ingresar">Ingresar</button>
+    <div class="input-ingreso">
+        <div class="boton"><button type="submit" value="Ingresar">Ingresar</button></div>
     </div>
-    <div class="input-contenedor">
+    <div class="input-olvido-registrado">
+        <div class="olvido-registrado">
         <a class="olvido" href="#">¿Olvidaste tu contraseña?</a>
         <br>
-        <a class="noRegistrado" href="#">¿No estás registrado?</a>
+        <a class="registrado" href="/views/register.html">¿No estás registrado?</a>
+        </div>
     </div>
     </div>
     </form>
