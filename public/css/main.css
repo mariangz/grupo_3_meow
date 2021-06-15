@@ -1,7 +1,7 @@
 :root {
-  --background-color: #F0ECE5;
   --color-primary: #8FD9C1;
   --color-accent: #FFE95A;
+  --color-accentTwo: #FED8D2;
 
   --color-font: #000;
   --ff-primary: 'Montserrat', sans-serif;
@@ -20,13 +20,51 @@ body {
   flex-direction: column;
 }
 
+main {
+  margin-bottom: 3rem;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+section:first-child {
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.horizontalBlock {
+  height: 120px;
+  width: 100%;
+}
+
+.horizontalBlock--turquesa {
+  background-color: var(--color-primary);
+}
+
+.horizontalBlock--yellow {
+  background-color: var(--color-accent);
+}
+
+.horizontalBlock--pink {
+  background-color: var(--color-accentTwo);
+}
+
+#productos, 
+#customers {
+  scroll-margin-top: 2rem;
+}
+
 /* ********** PORTADA ********** */
 .portada {
   position: relative;
   font-size: 1rem;
-  
 }
-
 
 .hero-image {
   height: calc(100vh - 5rem);
@@ -51,19 +89,24 @@ body {
 }
 
 .hero-description button {
+  background-color: transparent;
+  padding: 0;
   margin-top: .5rem;
-  display: inline-block;
-  padding: .6em 1.5em;
-  min-width: 5rem;
+  outline: 0;
   border: 0;
-  color: whitesmoke;
-  background-color: #000;
-  transition: all 200ms;
-  display: block;
-  cursor: pointer;
 }
 
-.hero-description button:hover {
+.hero-description .button {
+  display: inline-block;
+  padding: .6em 2em;
+  color: whitesmoke;
+  background-color: #000;
+  display: block;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.hero-description .button:hover {
   color: #000;
   background-color: whitesmoke;
 }
