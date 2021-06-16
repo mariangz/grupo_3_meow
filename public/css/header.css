@@ -92,6 +92,7 @@ head nav {
   flex-direction: column;
   background-color: var(--backgroundHeader-color);
   width: 40%;
+  max-width: 20rem;
   text-align: left;
   transition: all 200ms ease-in-out; 
 }
