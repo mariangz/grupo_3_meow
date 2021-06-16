@@ -2,16 +2,17 @@ const navButton = document.querySelector(".nav-button");
 const navMenu = document.querySelector(".nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
 
-navButton.addEventListener("click", mobileMenu);
-
-navLink.forEach(link => link.addEventListener("click", closeMenu));
-
-function mobileMenu() {
+const openMenu = () => {
   navButton.classList.toggle("active");
-    navMenu.classList.toggle("active");
+  navMenu.classList.toggle("active");
 }
 
-function closeMenu() {
+const closeMenu = () => {
   navButton.classList.remove("active");
-    navMenu.classList.remove("active");
+  navMenu.classList.remove("active");
 }
+
+navButton.addEventListener("click", openMenu);
+navLink.forEach(link => link.addEventListener("click", closeMenu));
+// navLink.addEventListener("click", closeMenu);
+
