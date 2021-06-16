@@ -9,7 +9,7 @@ header {
   width: 100%;
   background-color: var(--backgroundHeader-color);
   z-index: 100;
-  position: relative;
+  /* position: relative; */
   height: 5rem;
   margin: 0%;
 }
