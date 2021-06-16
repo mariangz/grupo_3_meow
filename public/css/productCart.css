@@ -1,16 +1,5 @@
 /*CSS cart items details*/
 
-
-/*La tipografia del Body es para prueba*/
-
-body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-main {
-  margin-bottom: 4rem;
-}
-
 .small-container {
     max-width: 1080px;
     margin: auto;
