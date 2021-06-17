@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <link rel="stylesheet" href="/css/productDetail.css">
+</head>
+
+<body>
+  <%- include('partials/header') %>
+  <main>
+    <div class="small-container single-product">
+      <div class="row">
+        <div class="col-2">
+          <img src="images/product-01.jpg" width="100%">
+        </div>
+        <div class="col-2">
+          <h1>Regular FIT</h1>
+          <p>Meow - El mejor alimento</p>
+          <h4>$500.00</h4>
+          <select>
+            <option>Edad de tu mascota</option>
+            <option>Cachorro</option>
+            <option>Adulto</option>
+            <option>Senior</option>
+          </select>
+          <input type="number" name="quantity" value="1">
+          <a href="" class="btn">Añadir al carrito</a>
+          <h3>Info Nutricional</h3>
+          <br>
+          <p>Regular Fit es un alimento completo y equilibrado que ayuda a mantener un buen estado de salud. Proporciona
+            un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <%- include('partials/footer'); %>
+  </footer>
+</body>

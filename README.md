@@ -37,4 +37,4 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 	+ Desarrollador Full-Stack en progreso.
 
 ## Tablero de trabajo
-Este es el link de [nuestro tablero en Trello](https://github.com/mariangz/grupo_3_meow.git)
+Utilizamos Projects de GITHub.
