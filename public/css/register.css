@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+*{
+  box-sizing: border-box;
+}
+>>>>>>> ff8b163302b370b06f9973d29cbbafd73800e946
 @media(max-width:768px){
   body {
     background-color: white;
@@ -110,4 +116,8 @@ button{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ff8b163302b370b06f9973d29cbbafd73800e946
