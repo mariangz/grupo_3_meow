@@ -1,0 +1,55 @@
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 16rem));
+  grid-gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0px 2px 10px gray;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 200ms ease-in;
+}
+
+.card__image {
+  height: 15rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__title {
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__description {
+  padding: 0 1rem;
+}
+
+.card__btn {
+  padding: 1rem;
+  font-size: 1rem;
+  margin: 1rem;
+  border: 2px solid #fff;
+  outline: 2px solid transparent;
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  transition: all 200 ease-in;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card__btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 2px solid #000;
+}

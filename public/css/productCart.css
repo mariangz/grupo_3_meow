@@ -1,0 +1,142 @@
+/*CSS cart items details*/
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.page-title,
+.page-subtitle {
+    margin: 0 0 15px;
+}
+
+.cart-page {
+    margin: 60px auto;
+}
+
+.cart-paid {
+    margin: 30px auto;
+    padding: 0%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+.cart-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0.5em;
+}
+
+small {
+    display: none;
+}
+
+th {
+    text-align: center;
+    padding: 5px;
+    color: black;
+    background: #66d7d1;
+    font-weight: normal;
+    font-size: 10px;
+}
+
+td {
+    padding: 5px 5px;
+}
+
+td input {
+    width: 20px;
+    padding: 3px;
+    text-align: center;
+    border: none;
+    margin: auto;
+}
+
+td a img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+td img {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+.product-item {
+    border-bottom: 2px solid #66d7d1;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table {
+    width: 100%;
+    max-width: 200px;
+    font-weight: bold;
+}
+
+.product-n {
+    border-bottom: 1px solid #66d7d1;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+.button-checkout {
+    display: block;
+    padding: 5px 20px;
+    font-weight: 500;
+    line-height: 2;
+    cursor: pointer;
+    border: 0;
+    margin-top: 9px;
+    font-size: 1em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    float: right;
+    background: #66d7d1;
+    border-radius: 3px;
+    transition: background 0.5s;
+}
+
+.button-checkout:hover {
+    background: #ffe95a;
+    color: black;
+  }
+
+label img {
+    width: 40%;
+    margin: auto;
+    vertical-align: middle;
+    padding-left: 5px;
+}
+
+@media (min-width: 768px) {
+    small {
+        display: block;
+    }
+    label img {
+        width: 20%;
+    }
+}
