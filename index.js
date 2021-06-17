@@ -36,4 +36,3 @@ app.get('/productCart', (req, res) => {
 app.get('/productDetail', (req, res) => {
   res.render('productDetail');
 });
-
