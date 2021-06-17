@@ -1,6 +1,40 @@
-<%- include('partials/head', {pageTitle: 'Iniciar Sesión'}) %>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+
 <body>
   <%- include('partials/header') %>
-
-
+  <main>
+    <form action="/login" method="POST">
+      <div class="contenedor">
+          <h1>Bienvenid@</h1>
+          <h3>Ingrese a su cuenta</h3>
+      <div class="input-contenedor">
+          <div class="titulo"><label for="email">E-mail</label></div>
+          <input type="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="input-contenedor">
+          <div class="titulo"><label for="contraseña">Contraseña</label></div>
+          <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+      </div>
+      <div class="input-ingreso">
+          <div class="boton"><button type="submit" value="Ingresar">Ingresar</button></div>
+      </div>
+      <div class="input-olvido-registrado">
+          <div class="olvido-registrado">
+          <a class="olvido" href="#">¿Olvidaste tu contraseña?</a>
+          <br>
+          <a class="registrado" href="/views/register.html">¿No estás registrado?</a>
+          </div>
+      </div>
+      </div>
+      </form>
+  </main>
+    <footer>
+      <%- include('partials/footer'); %>
+    </footer>
 </body>
