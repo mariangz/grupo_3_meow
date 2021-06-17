@@ -7,6 +7,7 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath));
 
+
 // servidor
 app.listen(3000, (req, res) => {
   console.log('servidor corriendo en el puerto 3000');
