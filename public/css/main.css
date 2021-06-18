@@ -138,10 +138,6 @@ footer a {
   padding: .3rem;
 }
 
-footer .link:hover {
-  background-color: var(--color-accent);
-  color: #000;
-}
 
 .footer-container {
   display: flex;
@@ -194,6 +190,11 @@ footer .link:hover {
 @media screen and (min-width: 968px) {
   .portada {
     font-size: 1.6rem;
+  }
+
+  footer .link:hover {
+    background-color: var(--color-accent);
+    color: #000;
   }
 }
 
