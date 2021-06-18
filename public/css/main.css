@@ -134,10 +134,10 @@ footer ul {
   line-height: 3;
 }
 
-footer a {
+footer .link {
+  transition: all 200ms;
   padding: .3rem;
 }
-
 
 .footer-container {
   display: flex;
