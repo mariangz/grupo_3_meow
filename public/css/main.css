@@ -134,6 +134,15 @@ footer ul {
   line-height: 3;
 }
 
+footer a {
+  padding: .3rem;
+}
+
+footer .link:hover {
+  background-color: var(--color-accent);
+  color: #000;
+}
+
 .footer-container {
   display: flex;
   flex-direction: column;
