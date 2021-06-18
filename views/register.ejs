@@ -8,7 +8,8 @@
 <body>
   <%- include('partials/header'); %>
   <main>
-    <form action="/registro" method="POST"></form>
+    <div class="formulario">
+    <form action="/registro" method="POST">
     <div class="contenedor">
     <h1>Registrate</h1>
     <h3>Crea tu cuenta para disfrutar de nuestros productos</h3>
@@ -34,12 +35,13 @@
         </div>
     </div>
     <div class="input-contenedor-button">
-        <div class="button"><button type="submit" value="Ingresar">Ingresar</button></div>
+        <div class="button"><button type="submit" value="Ingresar"><a href="/views/home.ejs"></a>Ingresar</button></div>
     </div>
     <div class="input-contenedor-registrado">
-        <h4 id="registrado">¿Ya tienes una cuenta?<a class="link" href="login.html"></a></h4>
+        <h4 id="registrado">¿Ya tienes una cuenta?<a class="link" href="/views/login.ejs"></a></h4>
     </div>
     </form>
+    </div>
   </main>
   <footer>
     <%- include('partials/footer'); %>
