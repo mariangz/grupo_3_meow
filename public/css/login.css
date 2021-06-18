@@ -1,120 +1,4 @@
-<<<<<<< HEAD
-
-@media(max-width:768px){      
-  body {
-  background-color: white;
-  }
-}
-body{
-  font-family: 'Quicksand', sans-serif;
-}
-h1 {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 1rem;
-  padding: 1rem;
-}
-h3 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 18px;
-}
-h4{
-  font-size: 12px;
-}
-form{
-  padding: 3px;
-}
-.contenedor{
-  width: 100vw;
-  height: 100vh;
-  text-align: center;
-  padding: 15px;
-}
-.input-contenedor{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  justify-items: center;
-  margin-bottom: 15px;
-  text-align: center;
-  line-height: 2rem;
-}
-.titulo{
-  color: #78706b;
-  font-weight: 400;
-  font-family: 'Quicksand', sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  line-height: 12px;
-  letter-spacing: .04rem;
-  padding-right: 2.5rem;
-  margin: 10px;
-  text-align: left;
-  width: 70%;
-}
-.input [type="password"],
-.input [type="email"]{
-  font-size: 20px;
-  width: 70%;
-  font-family: 'Quicksand', sans-serif;
-  margin: 10px 0;
-  padding: 10px;
-  border: 0;
-  border-bottom: 1px solid #eee;
-}
-input{
-  border:2px solid #cac2bc;
-  border-radius: 5px;
-  background: #fff;
-  font-family: 'Quicksand', sans-serif;
-  padding: 8px 16px;
-}
-.input-ingreso{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-}
-.boton button{
-  font-family: 'Quicksand', sans-serif;
-  border-color: #ffda51;
-  background-color: #ffda51;
-  color: black;
-  text-transform: none;
-  border-width: 0;
-  border-radius: 40px;
-  font-weight: bold;
-  font-size: 16px;
-  font-style:normal;
-  line-height: 16px;
-  text-align: center;
-  margin: 1rem auto;
-  padding: 10px;
-  width: 100%;
-}
-.input-olvido-registrado{
-  display: flex;
-  justify-content: center;
-}
-.olvido-registrado{
-  margin-bottom: 1rem;
-  color: #121212;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: 'Quicksand', sans-serif;
-  font-style: normal;
-  line-height: 2rem;
-  letter-spacing: .01em;
-  text-align: center;
-}
-.olvido, .registrado{
-  color: #121212;
-  text-decoration: none;
-  text-align: center;
-
-}
-=======
-*, *:before, *:after {
+* {
     box-sizing: border-box;
 }
 @media(max-width:768px){      
@@ -156,6 +40,7 @@ form{
     margin-bottom: 15px;
     text-align: center;
     line-height: 2rem;
+    margin-left: 25%;
 }
 .titulo{
     color: #78706b;
@@ -186,6 +71,7 @@ input{
     background: #fff;
     font-family: 'Quicksand', sans-serif;
     padding: 8px 16px;
+    width: 70%;
 }
 .input-ingreso{
     display: flex;
@@ -230,4 +116,3 @@ input{
     text-align: center;
 
 }
->>>>>>> ff8b163302b370b06f9973d29cbbafd73800e946
