@@ -15,3 +15,21 @@
 ### Dejar de hacer
 + No perder más miembros del equipo :)
 + Utilizar Trello como herramienta de organización de tareas del equipo
+
+## Retrospectiva Nro 2 del Proyecto Meow
+### Start doing
++ Agregar reuniones especiales de zoom para tocar temás específicos que requieran atención
++ Detallar al comienzo de cada semana qué tareas va a encarar cada uno
+
+### More of
++ Compartir info útil para reforzar conceptos de las clases
+
+### Keep doing
++ Continuar utilizando Whatsapp como herramienta de comunicación grupal
++ Colaborar en la resolución de problemas respecto de aplicación de herramientas
+
+### Less of
++ Evitar procastinar tareas 
+
+### Dejar de hacer
++ ...

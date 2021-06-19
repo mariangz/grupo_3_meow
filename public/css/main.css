@@ -134,6 +134,11 @@ footer ul {
   line-height: 3;
 }
 
+footer .link {
+  transition: all 200ms;
+  padding: .3rem;
+}
+
 .footer-container {
   display: flex;
   flex-direction: column;
@@ -185,6 +190,11 @@ footer ul {
 @media screen and (min-width: 968px) {
   .portada {
     font-size: 1.6rem;
+  }
+
+  footer .link:hover {
+    background-color: var(--color-accent);
+    color: #000;
   }
 }
 

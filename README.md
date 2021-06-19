@@ -27,11 +27,10 @@ La idea es, además de la venta, ofrecer una suscripción para que nuestros clie
 ## Sobre los colaboradores
 
 + Natalia Krivanek
-	+ Administrativa de un Tiempo Compartido en Bariloche. 
-	+ Me encuentro en la busqueda de nuevos desafíos.
+	+ Desarrollador Full-Stack en progreso.
 
 + Analía
-	+ Especialista en comercio internacional.
+	+ Desarrollador Full-Stack en progreso.
 
 + Mariano
 	+ Desarrollador Full-Stack en progreso.
