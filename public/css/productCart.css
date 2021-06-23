@@ -24,7 +24,7 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .cart-info {
@@ -48,7 +48,7 @@ th {
     color: black;
     background: #FED8D2;
     font-weight: normal;
-    font-size: 10px;
+    font-size: 11px;
 }
 
 td {
@@ -56,7 +56,7 @@ td {
 }
 
 td input {
-    width: 20px;
+    width: 40px;
     padding: 3px;
     text-align: center;
     border: none;
@@ -102,10 +102,12 @@ td:last-child {
 th:last-child {
     text-align: right;
 }
-.button-cart{
+
+.button-cart {
     display: flex;
     justify-content: flex-end;
 }
+
 .button-checkout {
     color: #fff;
     background-color: #000;
@@ -122,10 +124,10 @@ th:last-child {
 }
 
 .button-checkout:hover {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
-  }
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
 
 label img {
     width: 40%;
