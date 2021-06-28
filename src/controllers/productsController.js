@@ -1,15 +1,15 @@
 const productsController = {
   atun: (req, res) => res.render('products/atun'),
 
-  carne: (req, res) => res.render('carne'),
+  carne: (req, res) => res.render('products/carne'),
 
-  pollo: (req, res) => res.render('pollo'),
+  pollo: (req, res) => res.render('products/pollo'),
 
-  pescado: (req, res) => res.render('pescado'),
+  pescado: (req, res) => res.render('products/pescado'),
 
-  salmon: (req, res) => res.render('salmon'),
+  salmon: (req, res) => res.render('products/salmon'),
 
-  vegetariano: (req, res) => res.render('vegetariano'),
+  vegetariano: (req, res) => res.render('products/vegetariano'),
 };
 
 module.exports = productsController;

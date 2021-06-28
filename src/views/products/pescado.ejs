@@ -2,17 +2,17 @@
 <html lang="es">
 
 <head>
-  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
   <link rel="stylesheet" href="/css/productDetail.css">
 </head>
 
 <body>
-  <%- include('partials/header') %>
+  <%- include('../partials/header') %>
   <main>
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
-          <img src="images/food/fish.jpeg" width="100%">
+          <img src="/images/food/fish.jpeg" width="100%">
         </div>
         <div class="col-2">
           <h1>Pescado</h1>
@@ -37,6 +37,6 @@
     <div class="horizontalBlock horizontalBlock--yellow"></div>
   </main>
   <footer>
-    <%- include('partials/footer'); %>
+    <%- include('../partials/footer'); %>
   </footer>
 </body>
