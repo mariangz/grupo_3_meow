@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <link rel="stylesheet" href="/css/register.css">
+</head>
+<body>
+  <%- include('partials/header'); %>
+  <main>
+    <div class="formulario">
+    <form action="/registro" method="POST">
+    <div class="contenedor">
+    <h1>Registrate</h1>
+    <h3>Crea tu cuenta para disfrutar de nuestros productos</h3>
+    <div class="input-contenedor">
+        <div class="titulo"><label for="nombre">Nombre:</label></div>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+    </div>
+    <div class="input-contenedor">
+        <div class="titulo"><label for="email">E-mail:</label></div>
+        <input type="email" name="e-mail" id="email"placeholder="E-mail" required>
+    </div>
+    <div class="input-contenedor">    
+        <div class="titulo"><label for="contraseña">Contraseña:</label></div>
+        <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña"required>
+    </div>
+    <div class="input-contenedor">
+        <div class="titulo"><label for="confirmar-contraseña">Confirma tu contraseña</label></div>
+        <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" placeholder="Confirma tu contraseña" required>
+    </div>
+    <div class="input-contenedor-checkbox">
+        <div><input type="checkbox" name="mailing" class="checkbox">
+        <label for="mailing" class="news">Quiero suscribirme a las novedades</label>
+        </div>
+    </div>
+    <div class="input-contenedor-button">
+        <div class="button"><button type="submit" value="Ingresar"><a href="/views/home.ejs"></a>Ingresar</button></div>
+    </div>
+    <div class="input-contenedor-registrado">
+        <h4 id="registrado">¿Ya tienes una cuenta?<a class="link" href="/views/login.ejs"></a></h4>
+    </div>
+    </form>
+    </div>
+  </main>
+  <footer>
+    <%- include('partials/footer'); %>
+  </footer>
+
+</body>

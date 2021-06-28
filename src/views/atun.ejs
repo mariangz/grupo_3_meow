@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <link rel="stylesheet" href="/css/productDetail.css">
+</head>
+
+<body>
+  <%- include('partials/header') %>
+  <main>
+    <div class="small-container single-product">
+      <div class="row">
+        <div class="col-2">
+          <img src="images/food/tuna.jpeg" width="100%">
+        </div>
+        <div class="col-2">
+          <h1>Atún</h1>
+          <p>Meow - El mejor alimento</p>
+          <h4>$620.00</h4>
+          <select>
+            <option>Edad de tu mascota</option>
+            <option>Cachorro</option>
+            <option>Adulto</option>
+            <option>Senior</option>
+          </select>
+          <input type="number" name="quantity" value="1">
+          <a href="" class="btn-detail">Añadir al carrito</a>
+          <h3>Info Nutricional</h3>
+          <br>
+          <p>Es un alimento húmedo 100% super sabroso, completo y balanceado.</p>
+          <p>Hecho de delicados trozos de atún, sumergidos en una abundante salsa ligera y deliciosa. Es ideal para los gatos fanáticos de las salsas y para aquellos que tienen el paladar exigente.</p>
+          <p>Aporta a tu gato los nutrientes que necesita para mantenerse sano y fuerte!</p>
+        </div>
+      </div>
+    </div>
+    <div class="horizontalBlock horizontalBlock--yellow"></div>
+  </main>
+  <footer>
+    <%- include('partials/footer'); %>
+  </footer>
+</body>
