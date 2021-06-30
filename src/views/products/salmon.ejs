@@ -2,22 +2,22 @@
 <html lang="es">
 
 <head>
-  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
   <link rel="stylesheet" href="/css/productDetail.css">
 </head>
 
 <body>
-  <%- include('partials/header') %>
+  <%- include('../partials/header') %>
   <main>
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
-          <img src="images/food/meat.jpeg" width="100%">
+          <img src="/images/food/salmon2.jpeg" width="100%">
         </div>
         <div class="col-2">
-          <h1>Carne</h1>
+          <h1>Salmón</h1>
           <p>Meow - El mejor alimento</p>
-          <h4>$500.00</h4>
+          <h4>$650.00</h4>
           <select>
             <option>Edad de tu mascota</option>
             <option>Cachorro</option>
@@ -28,15 +28,15 @@
           <a href="" class="btn-detail">Añadir al carrito</a>
           <h3>Info Nutricional</h3>
           <br>
-          <p>Es un alimento completo y equilibrado, 100% húmedo que contiene suaves trocitos de carne de vaca cocidos al vapor con salsa.</p>
-          <p>Formulado con proteínas de origen animal que ayudan a proporcionar los nutrientes que tu gato necesita todos los días para estar saludable.</p>
-          <p>Cada porción contribuye con la vitalidad y energía necesarias para explorar el mundo! </p>
+          <p>Es un alimento completo y balanceado, 100% húmedo super sabroso. Super nutritivo e ideal para paladares exigentes!</p>
+          <p>Está hecho de pequeños trozos de salmón horneado a fuego lento, con una textura y sabor únicas de las que tu gato no podrá resistirse.</p>
+          <p>Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.</p>
         </div>
       </div>
     </div>
     <div class="horizontalBlock horizontalBlock--yellow"></div>
   </main>
   <footer>
-    <%- include('partials/footer'); %>
+    <%- include('../partials/footer'); %>
   </footer>
 </body>

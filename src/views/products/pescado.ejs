@@ -2,22 +2,22 @@
 <html lang="es">
 
 <head>
-  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
   <link rel="stylesheet" href="/css/productDetail.css">
 </head>
 
 <body>
-  <%- include('partials/header') %>
+  <%- include('../partials/header') %>
   <main>
     <div class="small-container single-product">
       <div class="row">
         <div class="col-2">
-          <img src="images/food/salmon2.jpeg" width="100%">
+          <img src="/images/food/fish.jpeg" width="100%">
         </div>
         <div class="col-2">
-          <h1>Salmón</h1>
+          <h1>Pescado</h1>
           <p>Meow - El mejor alimento</p>
-          <h4>$650.00</h4>
+          <h4>$590.00</h4>
           <select>
             <option>Edad de tu mascota</option>
             <option>Cachorro</option>
@@ -28,15 +28,15 @@
           <a href="" class="btn-detail">Añadir al carrito</a>
           <h3>Info Nutricional</h3>
           <br>
-          <p>Es un alimento completo y balanceado, 100% húmedo super sabroso. Super nutritivo e ideal para paladares exigentes!</p>
-          <p>Está hecho de pequeños trozos de salmón horneado a fuego lento, con una textura y sabor únicas de las que tu gato no podrá resistirse.</p>
-          <p>Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.</p>
+          <p>Es un alimento completo y balanceado, 100% húmedo y sabroso!</p>
+          <p>Está hecho con trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, que aportan a tu gato los nutrientes que necesita para mantenerse sano y fuerte.</p>
+          <p>Además, su textura y sabor son ideales para aquellos que tienen el paladar exigente.</p>
         </div>
       </div>
     </div>
     <div class="horizontalBlock horizontalBlock--yellow"></div>
   </main>
   <footer>
-    <%- include('partials/footer'); %>
+    <%- include('../partials/footer'); %>
   </footer>
 </body>
