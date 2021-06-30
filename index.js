@@ -11,8 +11,8 @@ app.use(express.static(publicPath));
 // servidor
 // eslint-disable-next-line no-unused-vars
 app.listen(3000, (req, res) => {
-  // eslint-disable-next-line no-console
-  console.log('servidor corriendo en el puerto 3000');
+    // eslint-disable-next-line no-console
+    console.log('servidor corriendo en el puerto 3000');
 });
 
 // template engine
@@ -21,20 +21,24 @@ app.set('views', `${__dirname}/views`);
 
 // renderizar templates
 app.get('/', (req, res) => {
-  res.render('home');
+    res.render('home');
 });
 app.get('/login', (req, res) => {
-  res.render('login');
+    res.render('login');
 });
 
 app.get('/register', (req, res) => {
-  res.render('register');
+    res.render('register');
 });
 
 app.get('/productCart', (req, res) => {
-  res.render('productCart');
+    res.render('productCart');
 });
 
-app.get('/productDetail', (req, res) => {
-  res.render('productDetail');
+app.get('/productChicken', (req, res) => {
+    res.render('productChicken');
+});
+
+app.get('/createProduct', (req, res) => {
+    res.render('createProduct');
 });
