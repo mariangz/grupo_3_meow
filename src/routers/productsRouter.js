@@ -10,5 +10,6 @@ router.get('/pescado', productsController.pescado);
 router.get('/salmon', productsController.salmon);
 router.get('/vegetariano', productsController.vegetariano);
 router.get('/pollo', productsController.pollo);
+router.get('/createProduct', productsController.crear);
 
 module.exports = router;
