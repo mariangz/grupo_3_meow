@@ -33,7 +33,7 @@
     outline: 2px solid transparent;
     cursor: pointer;
     text-transform: uppercase;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     transition: all 200 ease-in;
 }
 
@@ -89,7 +89,8 @@ p {
     display: block;
     padding: 10px;
     margin-top: 20px;
-    border: 1px solid #8FD9C1;
+    border: 2px solid #F0ECE5;
+    border-radius: 0.5rem;
 }
 
 select:focus {
@@ -102,7 +103,8 @@ select:focus {
     padding-left: 10px;
     font-size: 20px;
     margin-right: 10px;
-    border: 1px solid #8FD9C1;
+    border-radius: 0.5rem;
+    border: 2px solid #F0ECE5;
 }
 
 input:focus {
