@@ -9,43 +9,42 @@
 <body>
     <%- include('../partials/header') %>
         <main>
-            <div class="main-create-product">
-                <div class="form-container">
-                    <div class="form-content">
-                        <h2>CREAR PRODUCTO</h2>
-                        <form id="product" action="" method="POST">
-                            <label for="name">Nombre del producto: </label>
-                            <input type="text" name="name" id="name" autofocus><br>
+            <div class="crear-producto">
+                <h2>Crear Producto</h2>
+                <div class="form-content">
+                    <form id="product" action="" method="POST">
+                        <label for="name">Nombre del producto: </label>
+                        <input type="text" name="name" id="name" autofocus>
 
-                            <label for="price">Precio</label>
-                            <input type="number" min="0.00" max="1000000.00" step="0.01" name="price" id="price" placeholder="Ej. 4200.99"><br>
+                        <label for="price">Precio:</label>
+                        <input type="number" min="0.00" max="1000000.00" step="0.01" name="price" id="price" placeholder="Ej. 4200.99">
 
-                            <label for="description">Descripción</label>
-                            <textarea maxlength="500" name="description" id="description" cols="60" rows="5" placeholder="Descripción del producto (Hasta 500 caracteres)"></textarea><br>
+                        <label for="description">Descripción:</label>
+                        <textarea maxlength="500" name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto (Hasta 500 caracteres)"></textarea>
 
-                            <span>Edad de tu mascota</span>
-                            <div class="contenedor-categorias contenedor-generos">
+                        <span>Edad de tu mascota:</span>
+                        <div class="contenedor">
 
-                                <input type="radio" name="edad" id="product-cachorro" value="1">
-                                <label for="product-cachorro">Cachorro</label>
+                            <input type="radio" name="edad" id="product-cachorro" value="1">
+                            <label for="product-cachorro">Cachorro</label>
 
-                                <input type="radio" name="edad" id="product-adulto" value="2">
-                                <label for="product-adulto">Adulto</label>
+                            <input type="radio" name="edad" id="product-adulto" value="2">
+                            <label for="product-adulto">Adulto</label>
 
-                                <input type="radio" name="edad" id="product-senior" value="3">
-                                <label for="product-senior">Senior</label>
-                            </div>
+                            <input type="radio" name="edad" id="product-senior" value="3">
+                            <label for="product-senior">Senior</label>
+                        </div>
 
-                            <span>Agregar una imagen</span>
+                        <span>Agregar una imagen:</span>
+                        <div class="contenedor">
                             <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
-
-                            <button type="submit">Agregar producto</button>
-                            <button type="reset">Borrar Campos</button>
-                        </form>
-                    </div>
+                        </div>
+                        <button type="submit">Agregar producto</button>
+                        <button type="reset">Borrar Campos</button>
+                    </form>
                 </div>
-            </div>
 
+                <div class="horizontalBlock horizontalBlock--yellow"></div>
         </main>
         <footer>
             <%- include('../partials/footer'); %>
