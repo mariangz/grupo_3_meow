@@ -9,6 +9,7 @@
     + Desarrollar los 6 productos que tenemos en el home con sus respectivos textos e imagenes en paginas separadas. Mejorar su estilo en CSS.
     + Mejorar la vista de la pagina productCart para que su estilo sea acorde al resto de la web.
     + Armar el texto que irá en el Home para cada uno de los productos.
+    + Creación de las pagina crear y editar productos.
 
 + Analía
     + Descripción del "About us" tanto para GitHub como para la página web.
