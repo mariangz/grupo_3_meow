@@ -9,13 +9,13 @@
   background-color: #fcfbf9;
 }
 
-.customers-container {
+.customers-card {
   display: flex;
   flex-direction: column;
   margin: 0 1rem;
 }
 
-.customers-card {
+.customers-card__text {
   width: 80%;
   max-width: 250px;
   margin-bottom: 2rem;
