@@ -32,7 +32,8 @@
 .customers-card__text {
   margin-bottom: 1rem;
   display: flex;
-  font-weight: 800;
+  font-weight: 400;
+  font-style: italic;
   max-width: 70%;
 }
 

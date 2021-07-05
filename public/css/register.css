@@ -1,11 +1,8 @@
 *{
   box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
-@media(max-width:768px){
-  body {
-    background-color: white;
-  }
-}
+
 body {
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
@@ -88,14 +85,6 @@ button{
   justify-content: center;
   margin-left: 28%;
 }
-.titulo{
-  text-align: left;
-  font-size: 15px;
-  padding-right: 2.5rem;
-  text-decoration: none;
-  margin: 5px;
-  padding: 0;
-}
 .input [type="text"],
 .input [type="password"],
 .input [type="email"]{
@@ -125,4 +114,12 @@ button{
 }
 .formulario{
   margin-top: 5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width:768px){
+  body {
+    background-color: white;
+  }
 }
