@@ -10,7 +10,7 @@ router.get('/pescado', productsController.pescado);
 router.get('/salmon', productsController.salmon);
 router.get('/vegetariano', productsController.vegetariano);
 router.get('/pollo', productsController.pollo);
-router.get('/crear-producto', productsController.crear);
-router.get('/editar-producto', productsController.editar);
+router.get('/crear-productos', productsController.crear);
+router.get('/editar-productos', productsController.editar);
 
 module.exports = router;
