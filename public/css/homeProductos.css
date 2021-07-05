@@ -54,7 +54,6 @@
   transition: all 200 ease-in;
 }
 
-
 .card:hover {
   transform: scale(1.02);
 }

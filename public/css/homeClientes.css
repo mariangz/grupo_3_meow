@@ -51,7 +51,7 @@
   position: absolute;
   left: 9rem;
   bottom: 1rem;
-  width: 10rem;
+  width: 8rem;
   height: auto;
   display: block;
 }
@@ -92,8 +92,8 @@
 
   .grid { 
     display: grid;
-    grid-template-columns: repeat(12, 3.125rem);
-    grid-template-rows: repeat(12, 1.875rem);
+    grid-template-columns: repeat(12, 3.250rem);
+    grid-template-rows: repeat(12, 2rem);
     gap: 1rem;
     width: 800px;
     margin-left: auto;
@@ -103,7 +103,7 @@
   }
 
   .item-1 {
-    grid-column: 1/7;
+    grid-column: 2/8;
     grid-row: 1/5;
   }
   .item-2 {
@@ -111,7 +111,7 @@
     grid-row: 4/8;
   }
   .item-3 {
-    grid-column: 2/8;
+    grid-column: 3/9;
     grid-row: 8/12;
   }
 
@@ -131,6 +131,7 @@
   }
 
   .quote-icon {
+    width: 9rem;
     left: 10rem;
     bottom: 5rem;
   }
@@ -147,12 +148,20 @@
 } 
 
 @media screen and (min-width: 968px) {
-  .grid {
-    font-size: 19px;
-  }
-
   .portada {
     font-size: 1.6rem;
+  }
+
+  .customers-card__text {
+    font-size: .760rem;
+  }
+
+  .quote-icon {
+    width: 10rem;
+  }
+
+  .customers-photo {
+    padding-bottom: .5rem;
   }
 
 }
