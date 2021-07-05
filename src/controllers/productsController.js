@@ -12,6 +12,8 @@ const productsController = {
   vegetariano: (req, res) => res.render('products/vegetariano'),
 
   crear: (req, res) => res.render('products/createProduct'),
+
+  editar: (req, res) => res.render('products/editProduct'),
 };
 
 module.exports = productsController;

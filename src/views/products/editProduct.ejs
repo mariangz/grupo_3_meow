@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <%- include('../partials/head', {pageTitle: 'Crear producto!'}); %>
+    <%- include('../partials/head', {pageTitle: 'Editar producto!'}); %>
         <link rel="stylesheet" href="/css/adminProduct.css">
 </head>
 
@@ -10,7 +10,7 @@
     <%- include('../partials/header') %>
         <main>
             <div class="crear-producto">
-                <h2>Crear Producto</h2>
+                <h2>Editando Producto</h2>
                 <div class="form-content">
                     <form id="product" action="" method="POST">
                         <label for="name">Nombre del producto: </label>
@@ -39,8 +39,7 @@
                         <div class="contenedor">
                             <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
                         </div>
-                        <button type="submit">Agregar producto</button>
-                        <button type="reset">Borrar Campos</button>
+                        <button type="submit">Guardar cambios</button>
                     </form>
                 </div>
 
