@@ -9,33 +9,32 @@
 <body>
   <%- include('partials/header') %>
   <main>
-    <form action="/login" method="POST">
-      <h1>Bienvenid@</h1>
-      <div class="field">
-        <label for="email">
-          <span>Email:</span>
-          <strong><abbr title="required">*</abbr></strong>
-        </label>
-        <input type="email" id="email" name="usermail" required>
-      </div>
-      <div class="field">
-        <label for="contraseña">
-          <span>Contraseña:</span>
-          <strong><abbr title="required">*</abbr></strong>
-        </label>
-        <input type="password" name="contraseña" id="contraseña" required>
-      </div>
-      <div class=""><
-            button type="submit" value="Ingresar"><a href="/views/home.ejs"></a>Ingresar</></div>
-      </div>
-      <div class="input-olvido-registrado">
-          <div class="olvido-registrado">
-          <a class="olvido" href="#">¿Olvidaste tu contraseña?</a>
-          <br>
-          <a class="registrado" href="/views/register.html">¿No estás registrado?</a>
+      <div class="form-container">
+        <form class="login-form" action="/login" method="POST">
+          <h1>Bienvenid@</h1>
+          <div class="field">
+            <label for="email">
+              <span>Email:</span>
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="email" id="email" name="usermail" required>
           </div>
+          <div class="field">
+            <label for="contraseña">
+              <span>Contraseña:</span>
+              <strong><abbr title="required">*</abbr></strong>
+            </label>
+            <input type="password" name="contraseña" id="contraseña" required>
+            <p><a class="olvido" href="#">¿Olvidaste tu contraseña?</a></p>
+          </div>
+          <div class="form-btn">
+            <button type="submit" value="Ingresar">Ingresar</button>
+          </div>
+          <p><a class="registrado" href="/views/register.html">¿No estás registrado?</a></p>
+          </form>
       </div>
-      </form>
+    <div class="horizontalBlock horizontalBlock--yellow"></div>
   </main>
+  
   <%- include('partials/footer'); %>
 </body>
