@@ -25,7 +25,7 @@ main {
 }
 
 section {
-  margin: 2rem 0;
+  margin-top: 2rem 0;
 }
 
 section:first-child {
@@ -53,6 +53,7 @@ h2 {
 
 .horizontalBlock--pink {
   background-color: var(--color-accentTwo);
+  margin-top: 2rem;
 }
 
 #productos, 
