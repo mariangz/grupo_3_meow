@@ -10,19 +10,23 @@
   <%- include('partials/header') %>
   <main>
     <form action="/login" method="POST">
-      <div class="contenedor">
-          <h1>Bienvenid@</h1>
-          <h3>Ingrese a su cuenta</h3>
-      <div class="input-contenedor">
-          <div class="titulo"><label for="email">E-mail</label></div>
-          <input class="email" type="email" name="email" placeholder="Email" required>
+      <h1>Bienvenid@</h1>
+      <div class="field">
+        <label for="email">
+          <span>Email:</span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="email" id="email" name="usermail" required>
       </div>
-      <div class="input-contenedor">
-          <div class="titulo"><label for="contraseña">Contraseña</label></div>
-          <input class= "contraseña" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
+      <div class="field">
+        <label for="contraseña">
+          <span>Contraseña:</span>
+          <strong><abbr title="required">*</abbr></strong>
+        </label>
+        <input type="password" name="contraseña" id="contraseña" required>
       </div>
-      <div class="input-ingreso">
-          <div class="boton"><button type="submit" value="Ingresar"><a href="/views/home.ejs"></a>Ingresar</button></div>
+      <div class=""><
+            button type="submit" value="Ingresar"><a href="/views/home.ejs"></a>Ingresar</></div>
       </div>
       <div class="input-olvido-registrado">
           <div class="olvido-registrado">
@@ -31,10 +35,7 @@
           <a class="registrado" href="/views/register.html">¿No estás registrado?</a>
           </div>
       </div>
-      </div>
       </form>
   </main>
-    <footer>
-      <%- include('partials/footer'); %>
-    </footer>
+  <%- include('partials/footer'); %>
 </body>
