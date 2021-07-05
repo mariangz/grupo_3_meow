@@ -1,117 +1,69 @@
-* {
-    box-sizing: border-box;
-}
-@media(max-width:768px){      
-    body {
-    background-color: white;
-    }
-}
-body{
-    font-family: 'Quicksand', sans-serif;
-}
-h1 {
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 1rem;
-    padding: 1rem;
-}
-h3 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 18px;
-}
-h4{
-    font-size: 12px;
-}
-form{
-    padding: 3px;
-}
-.contenedor{
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    padding: 15px;
-}
-.input-contenedor{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-items: center;
-    margin-bottom: 15px;
-    text-align: center;
-    line-height: 2rem;
-    margin-left: 25%;
-}
-.titulo{
-    color: #78706b;
-    font-weight: 400;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    line-height: 12px;
-    letter-spacing: .04rem;
-    padding-right: 2.5rem;
-    margin: 10px;
-    text-align: left;
-    width: 70%;
-}
-.email, .contraseña{
-    font-size: 15px;
-    width: 70%;
-    font-family: 'Quicksand', sans-serif;
-    margin: 5px 0;
-    padding: 5px;
-    border-bottom: 1px solid #eee;
-    outline: 0;
-}
-input{
-    border:2px solid #cac2bc;
-    border-radius: 5px;
-    background: #fff;
-    font-family: 'Quicksand', sans-serif;
-    padding: 6px 12px;
-    width: 70%;
-}
-.input-ingreso{
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-}
-.boton button{
-    font-family: 'Quicksand', sans-serif;
-    border-color: #ffda51;
-    background-color: #ffda51;
-    color: black;
-    text-transform: none;
-    border-width: 0;
-    border-radius: 40px;
-    font-weight: bold;
-    font-size: 16px;
-    font-style:normal;
-    line-height: 16px;
-    text-align: center;
-    margin: 1rem auto;
-    padding: 10px;
-    width: 100%;
-}
-.input-olvido-registrado{
-    display: flex;
-    justify-content: center;
-}
-.olvido-registrado{
-    margin-bottom: 1rem;
-    color: #121212;
-    font-weight: 400;
-    font-size: 14px;
-    font-family: 'Quicksand', sans-serif;
-    font-style: normal;
-    line-height: 2rem;
-    letter-spacing: .01em;
-    text-align: center;
-}
-.olvido, .registrado{
-    color: #121212;
-    text-decoration: none;
-    text-align: center;
+.form-container {
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  /* border: 1px solid red; */
 
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+.login-form {
+  max-width: 300px;
+  padding: 2rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  --color-primary: #61b69b;
+  --color-accent: #FED8D2;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.login-form a {
+  display: block;
+  font-size: .7rem;
+  margin-top: .3rem;
+  color: grey;
+  transition: all 200ms;
+}
+
+.login-form a:hover {
+  color: var(--color-primary)
+}
+
+label, 
+button, 
+input {
+  display: block;
+  outline: 1px solid transparent;
+  border: 1px solid transparent;
+  width: 100%;
+} 
+
+label, 
+button {
+  margin-top: 1rem;
+}
+
+input {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.644);
+  margin-top: .3rem;
+  font-size: .9rem;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--color-primary);
+  border-radius: .4rem;
+  padding-top: .4rem;
+  padding-bottom: .5rem;
+  color: #fff;
+  transition: all 200ms;
+}
+
+button:hover {
+  color: var(--color-primary);
+  background-color: #fff;
+  border: 1px solid var(--color-primary);;
 }
