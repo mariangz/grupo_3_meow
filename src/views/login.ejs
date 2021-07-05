@@ -11,24 +11,24 @@
   <main>
     <form action="/login" method="POST">
       <div class="contenedor">
-          <h1>Bienvenid@</h1>
+          <h2>Bienvenid@</h2>
           <h3>Ingrese a su cuenta</h3>
+          <br>
       <div class="input-contenedor">
-          <div class="titulo"><label for="email">E-mail</label></div>
           <input class="email" type="email" name="email" placeholder="Email" required>
       </div>
+      <br>
       <div class="input-contenedor">
-          <div class="titulo"><label for="contraseña">Contraseña</label></div>
           <input class= "contraseña" type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
       </div>
       <div class="input-ingreso">
-          <div class="boton"><button type="submit" value="Ingresar"><a href="/views/home.ejs"></a>Ingresar</button></div>
+          <div class="boton"><button type="submit" value="Ingresar"><a href="/home"></a>Ingresar</button></div>
       </div>
       <div class="input-olvido-registrado">
           <div class="olvido-registrado">
           <a class="olvido" href="#">¿Olvidaste tu contraseña?</a>
           <br>
-          <a class="registrado" href="/views/register.html">¿No estás registrado?</a>
+          <a class="registrado" href="/register">¿No estás registrado?</a>
           </div>
       </div>
       </div>
