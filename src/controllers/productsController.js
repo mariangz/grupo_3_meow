@@ -1,19 +1,19 @@
 const productsController = {
-    atun: (req, res) => res.render('products/atun'),
+  atun: (req, res) => res.render('products/atun'),
 
-    carne: (req, res) => res.render('products/carne'),
+  carne: (req, res) => res.render('products/carne'),
 
-    pollo: (req, res) => res.render('products/pollo'),
+  pollo: (req, res) => res.render('products/pollo'),
 
-    pescado: (req, res) => res.render('products/pescado'),
+  pescado: (req, res) => res.render('products/pescado'),
 
-    salmon: (req, res) => res.render('products/salmon'),
+  salmon: (req, res) => res.render('products/salmon'),
 
-    vegetariano: (req, res) => res.render('products/vegetariano'),
+  vegetariano: (req, res) => res.render('products/vegetariano'),
 
-    crear: (req, res) => res.render('products/createProduct'),
+  crear: (req, res) => res.render('products/createProduct'),
 
-    editar: (req, res) => res.render('products/editProduct'),
+  editar: (req, res) => res.render('products/editProduct'),
 };
 
 module.exports = productsController;
