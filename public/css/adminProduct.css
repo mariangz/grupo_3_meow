@@ -94,10 +94,3 @@ h3 {
 .contenedor {
     margin-top: 1rem;
 }
-
-
-/* MEDIA QUERIES */
-
-@media (min-width: 768px) {}
-
-@media (min-width: 1024px) {}
