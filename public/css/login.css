@@ -51,7 +51,7 @@ input {
 }
 
 button {
-  cursor: pointer;
+  cursor: url(https://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e3f527ee73853fed80720/1611546450815/paw.pnghttps://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e201ac6ff83514535e1ce/1611538458484/SMALLS_SMALLSWEAR_STICKERS-12.png),auto;
   background-color: var(--color-primary);
   border-radius: .4rem;
   padding-top: .4rem;
