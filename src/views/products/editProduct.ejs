@@ -10,40 +10,57 @@
     <%- include('../partials/header') %>
         <main>
             <div class="crear-producto">
-                <h2>Editando Producto</h2>
                 <div class="form-content">
+                    <h3>Editar Producto</h3>
                     <form id="product" action="" method="POST">
-                        <label for="name">Nombre del producto: </label>
-                        <input type="text" name="name" id="name" autofocus>
-
-                        <label for="price">Precio:</label>
-                        <input type="number" min="0.00" max="1000000.00" step="0.01" name="price" id="price" placeholder="Ej. 4200.99">
-
-                        <label for="description">Descripción:</label>
-                        <textarea maxlength="500" name="description" id="description" cols="30" rows="5" placeholder="Descripción del producto (Hasta 500 caracteres)"></textarea>
-
-                        <span>Edad de tu mascota:</span>
                         <div class="contenedor">
-
-                            <input type="checkbox" name="edad" id="product-cachorro" value="1">
-                            <label for="product-cachorro">Cachorro</label>
-
-                            <input type="checkbox" name="edad" id="product-adulto" value="2">
-                            <label for="product-adulto">Adulto</label>
-
-                            <input type="checkbox" name="edad" id="product-senior" value="3">
-                            <label for="product-senior">Senior</label>
+                            <label for="name">
+                            <span>Nombre del producto: </span>
+                        <input type="text" name="name" id="name" autofocus></label>
+                        </div>
+                        <div class="contenedor">
+                            <label for="price">
+                            <span>Precio:</span>
+                        <input type="number" name="price" id="price" placeholder="Ej. 4200.99"></label>
                         </div>
 
-                        <span>Agregar una imagen:</span>
                         <div class="contenedor">
-                            <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
+                            <label for="description">
+                            <span>Descripción:</span>
+                        <textarea name="description" id="description" placeholder="Descripción del producto"></textarea></label>
                         </div>
-                        <button type="submit">Guardar cambios</button>
+                        <div class="contenedor">
+                            <span>Edad de tu mascota:</span><br>
+
+                            <label for="product-cachorro">
+                                <input type="checkbox" name="edad" id="product-cachorro" value="1">
+                                <span>Cachorro</span></label>
+
+                            <label for="product-adulto">
+                                <input type="checkbox" name="edad" id="product-adulto" value="2">
+                                <span>Adulto</span>
+                            </label>
+
+                            <label for="product-senior">
+                                <input type="checkbox" name="edad" id="product-senior" value="3">
+                                <span>Senior</span>
+                            </label>
+                        </div>
+                        <div class="contenedor">
+                            <span>Agregar una imagen:</span>
+                            <div class="file-select">
+                                <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
+                            </div>
+                        </div>
+                        <div class="button-product">
+                            <button type="submit">Agregar</button>
+                            <button type="reset">Borrar</button>
+                        </div>
                     </form>
                 </div>
+            </div>
 
-                <div class="horizontalBlock horizontalBlock--yellow"></div>
+            <div class="horizontalBlock horizontalBlock--yellow"></div>
         </main>
         <%- include('../partials/footer'); %>
 </body>
