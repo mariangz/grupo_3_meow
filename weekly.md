@@ -15,3 +15,21 @@
     + Descripción del "About us" tanto para GitHub como para la página web.
     + Redactar reseñas de los productos para dicha sección de la web.
     + Mejorar el estilo en css de la página Login y Registro.
+
+## Weekly - 4to Sprint
+
++ Mariano
+    + Mejorar 
+    + Ordenar 
+    + Revisar 
+
++ Natalia
+    + Desarrollar 
+    + Mejorar 
+    + Armar 
+    + Creación 
+
++ Analía
+    + Actualizar weekly del proyecto.
+    + Detallar la retrospectiva de esta entrega.
+    + Desarrollar la parte de USUARIOS en JSON.
