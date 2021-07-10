@@ -1,125 +1,79 @@
-*{
-  box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+.form-container {
+  margin-top: 7rem;
+  margin-bottom: 5rem;
 }
 
-body {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
-  margin: 0;
-}
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
-}
-h1{
-  font-family: 'Quicksand', sans-serif;
-  text-align: center;
-  text-transform: none;
-  margin-top: 5%;
-  margin-bottom: 5px;
-  font-size: 30px;
-}
-h3{
-  text-align: center;
-  margin-bottom: 1rem;
-  font-size: 15px;
+h1 {
+  font-size: 1.3rem;
 }
 h4{
-  font-size: 12px;
+  font-weight: lighter;
 }
-.contenedor{
-  text-align: center;
-  padding: 15px;
+
+.register-form {
+  max-width: 300px;
+  padding: 2rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  --color-primary: #61b69b;
+  --color-accent: #FED8D2;
+  font-family: 'Montserrat', sans-serif;
 }
-form{
-  padding: 3px;
+
+.register-form a {
+  display: block;
+  font-size: .7rem;
+  margin-top: .3rem;
+  color: grey;
+  transition: all 200ms;
 }
-input{
-  width: 70%;
-  border: 2px solid #cac2bc;
-  border-radius: 4px;
-  background: #fff;
-  color: lightgray;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-family: 'Quicksand', sans-serif;
+
+.register-form a:hover {
+  color: var(--color-primary)
 }
-.checkbox{
-  width: 10%;
-  align-items: center;
-}
-button{
-  border-radius: 12px;
-  border: none;
-  padding: 1rem;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: bold;
-  font-size: 15px;
-  background: #ffda51;
-  color:black;
-  text-transform: uppercase;
-  text-align: center;
-  margin: auto;
-}
-.news{
-  font-size: 15px;
-  height: 2rem;
-  margin-bottom: 0%;
-}
-.input-contenedor #registrado{
-  margin-bottom: 1rem;
-  color: #121212;
-  font-weight: 400;
-  font-size: 14px;
-  font-family: 'Quicksand', sans-serif;
-  font-style: normal;
-  line-height: 100%;
-  letter-spacing: .01em;
-  text-align: center;
-}
-.input-contenedor{
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-left: 28%;
-}
-.input [type="text"],
-.input [type="password"],
-.input [type="email"]{
-  font-size: 20px;
+
+label, 
+button, 
+input {
+  display: block;
+  outline: 1px solid transparent;
+  border: 1px solid transparent;
   width: 100%;
-  padding: 10px;
-  border: none;
-}
-.input-contenedor-checkbox{
-  margin-bottom: 5px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.input-contenedor-button{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-.input-contenedor-registrado{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+} 
+
+label, 
+button {
   margin-top: 1rem;
-  font-family: 'Quicksand', sans-serif;
-}
-.formulario{
-  margin-top: 5rem;
 }
 
-/* MEDIA QUERIES */
+input {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.644);
+  margin-top: .3rem;
+  font-size: .9rem;
+}
 
-@media(max-width:768px){
-  body {
-    background-color: white;
-  }
+button {
+  cursor: url(https://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e3f527ee73853fed80720/1611546450815/paw.pnghttps://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e201ac6ff83514535e1ce/1611538458484/SMALLS_SMALLSWEAR_STICKERS-12.png),auto;
+  background-color: var(--color-primary);
+  border-radius: .4rem;
+  padding-top: .4rem;
+  padding-bottom: .5rem;
+  color: #fff;
+  transition: all 200ms;
+}
+
+button:hover {
+  color: var(--color-primary);
+  background-color: #fff;
+  border: 1px solid var(--color-primary);;
+}
+.field-checkbox{
+  display: flex;
+}
+.field-checkbox-hija{
+flex-direction: row;
+align-items: flex-start;
+flex-wrap: wrap;
+flex-grow: 0.5;
 }

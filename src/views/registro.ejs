@@ -5,39 +5,52 @@
   <%- include('partials/head', {pageTitle: 'Meow!'}); %>
   <link rel="stylesheet" href="/css/register.css">
 </head>
+
 <body>
   <%- include('partials/header'); %>
   <main>
-    <div class="formulario">
-    <form action="/registro" method="POST">
-    <div class="contenedor">
-    <h1>Registrate</h1>
-    <h3>Crea tu cuenta para disfrutar de nuestros productos</h3>
-    <div class="input-contenedor">
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre completo" required>
+    <div class="form-container">
+        <form class= "register-form" action="/registro" method="POST">
+            <h1>Registrate</h1>
+            <div class="field">
+                <label for="name">
+                    <span>Nombre y Apellido:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            <div class="field">
+                <label for="email">
+                    <span>E-mail:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label> 
+                <input type="email" name="email" id="email" required>
+            </div>
+            <div class="field">
+                <label for="password">
+                    <span>Contraseña:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>     
+                <input type="password" name="password" id="password" required>
+            </div>
+            <div class="field">
+                <label for="confirmar-contraseña">
+                    <span>Confirmar contraseña:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" required>
+            </div>
+            <div class="field-checkbox">
+                <div class="field-checkbox-hija"><input type="checkbox" name="mailing" id="mailing" class="checkbox"></div>
+                <div class="field-checkbox-hija"><p><a class="registrado">Quiero suscribirme a las novedades</a></p></div>
+            </div>
+            <div class="form-btn">
+                <button type="submit" value="Ingresar">Ingresar<a href="/home"></a></button>
+            </div>
+            <p><a class="registrado" href="/login">¿Ya tienes una cuenta?</a></p>
+        </form>
     </div>
-    <div class="input-contenedor">
-        <input type="email" name="e-mail" id="email"placeholder="E-mail" required>
-    </div>
-    <div class="input-contenedor">    
-        <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña"required>
-    </div>
-    <div class="input-contenedor">
-        <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" placeholder="Confirma tu contraseña" required>
-    </div>
-    <div class="input-contenedor-checkbox">
-        <div><input type="checkbox" name="mailing" class="checkbox">
-        <label for="mailing" class="news">Quiero suscribirme a las novedades</label>
-        </div>
-    </div>
-    <div class="input-contenedor-button">
-        <div class="button"><button type="submit" value="Ingresar"><a href="/home"></a>Ingresar</button></div>
-    </div>
-    <div class="input-contenedor-registrado">
-        <h4 id="registrado">¿Ya tienes una cuenta?<a href="/login" class="link" ></a></h4>
-    </div>
-    </form>
-    </div>
+    <div class="horizontalBlock horizontalBlock--yellow"></div>
   </main>
   <%- include('partials/footer'); %>
 </body>
