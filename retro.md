@@ -33,10 +33,10 @@
 
 ## Retrospectiva Nro 3 del Proyecto Meow (Julio 2021)
 ### Start doing
-+ Buscar ideas interesantes para darle más dinamismo y atractivo a nuestra aplicación
++ Continuar mejorando continúamente nuestro sitio y desarrollando nuevas ideas para potenciar su atractivo
 
 ### More of
-+ Seguir compartiendo info útil para reforzar conceptos de las clases
++ Seguir compartiendo info útil para reforzar conceptos de las clases y su implementación en el proyecto
 
 ### Keep doing
 + Continuar utilizando Whatsapp como herramienta de comunicación grupal
