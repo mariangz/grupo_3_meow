@@ -1,0 +1,14 @@
+[{
+    "id": 1,
+    "name": "Pescado",
+    "description": "Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!",
+    "nutritional": "Es un alimento completo y balanceado, 100% húmedo y sabroso! Está hecho con trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, que aportan a tu gato los nutrientes que necesita para mantenerse sano y fuerte.Además, su textura y sabor son ideales para aquellos que tienen el paladar exigente.",
+    "category": [
+        "Cachorro",
+        "Adulto",
+        "Senior"
+    ],
+
+    "price": 590,
+    "image": "/images/food/pescado.jpeg"
+}]
