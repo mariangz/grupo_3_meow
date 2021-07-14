@@ -1,5 +1,5 @@
 [{
-        "id": 1,
+        "id": "pescado",
         "name": "Pescado",
         "description": "Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!",
         "nutritional1": "Es un alimento completo y balanceado, 100% húmedo y sabroso!",
@@ -14,7 +14,7 @@
         "image": "pescado.jpeg"
     },
     {
-        "id": 2,
+        "id": "vegetariano",
         "name": "Vegetales",
         "description": "La mejor selección de vegetales para lograr un balance perfecto en la alimentación de tu gato.",
         "nutritional1": "Es un alimento completo y equilibrado que ayuda a mantener un buen estado de salud.",
@@ -29,7 +29,7 @@
         "image": "vegetariano.jpeg"
     },
     {
-        "id": 3,
+        "id": "carne",
         "name": "Carne",
         "description": "Suaves trocitos de la mejor carne de vaca cocidos al vapor con salsa, 100% húmedo y sabroso!",
         "nutritional1": "Es un alimento completo y equilibrado, 100% húmedo que contiene suaves trocitos de carne de vaca cocidos al vapor con salsa.",
@@ -44,7 +44,7 @@
         "image": "carne.jpeg"
     },
     {
-        "id": 4,
+        "id": "salmon",
         "name": "Salmón",
         "description": "Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!",
         "nutritional1": "Es un alimento completo y balanceado, 100% húmedo super sabroso. Super nutritivo e ideal para paladares exigentes!",
@@ -59,7 +59,7 @@
         "image": "salmon2.jpeg"
     },
     {
-        "id": 5,
+        "id": "pollo",
         "name": "Pollo",
         "description": "Deliciosos trocitos de pollo con abundante salsa, para que tu gato disfrute en cualquier momento.",
         "nutritional1": "Es un alimento completo y equilibrado, 100% húmedo super sabroso. Cada porción combina un sabor delicado, que lo hace delicioso y nutritivo!",
@@ -74,7 +74,7 @@
         "image": "pollo.jpeg"
     },
     {
-        "id": 6,
+        "id": "atun",
         "name": "Atún",
         "description": "Delicados trozos de atún con una deliciosa salsa, ideal para aquellos que tienen el paladar exigente.",
         "nutritional1": "Es un alimento húmedo 100% super sabroso, completo y balanceado.",
