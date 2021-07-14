@@ -26,79 +26,25 @@
             <section id="productos">
                 <h2>Nuestra Selección</h2>
                 <div class="productos">
-
-                    <div class="card">
-                        <a href="/productos/pescado" class="link-product"><img src="/images/food/pescado.jpeg" class="card__image"></a>
-                        <div class="card__text-container">
-                            <h3 class="card__text title">Pescado</h3>
-                            <p class="card__text description">Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!</p>
-                            <div class="card__text-btn-container">
-                                <p class="card__text price">$11.00</p>
-                                <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
+                    <% producto.forEach(element => { %>
+                        <div class="card">
+                            <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
+                            <div class="card__text-container">
+                                <h3 class="card__text title">
+                                    <%= element.name %>
+                                </h3>
+                                <p class="card__text description">
+                                    <%= element.description %>
+                                </p>
+                                <div class="card__text-btn-container">
+                                    <p class="card__text price">$
+                                        <%= element.price %>
+                                    </p>
+                                    <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="card">
-                        <a class="link-product" href="/productos/vegetariano"><img src="/images/food/vegetariano.jpeg" class="card__image"></a>
-                        <div class="card__text-container">
-                            <h3 class="card__text title">Vegetales</h3>
-                            <p class="card__text description">La mejor selección de vegetales para lograr un balance perfecto en la alimentación de tu gato.</p>
-                            <div class="card__text-btn-container">
-                                <p class="card__text price">$12.00</p>
-                                <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <a class="link-product" href="/productos/carne"><img src="/images/food/carne.jpeg" class="card__image"></a>
-                        <div class="card__text-container">
-                            <h3 class="card__text title">Carne</h3>
-                            <p class="card__text description">Suaves trocitos de la mejor carne de vaca cocidos al vapor con salsa, 100% húmedo y sabroso!</p>
-                            <div class="card__text-btn-container">
-                                <p class="card__text price">$19.00</p>
-                                <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <a class="link-product" href="/productos/salmon"><img src="/images/food/salmon.jpeg" class="card__image"></a>
-                        <div class="card__text-container">
-                            <h3 class="card__text title">Salmón</h3>
-                            <p class="card__text description">Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!</p>
-                            <div class="card__text-btn-container">
-                                <p class="card__text price">$15.00</p>
-                                <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <a class="link-product" href="/productos/pollo"><img src="/images/food/pollo.jpeg" class="card__image"></a>
-                        <div class="card__text-container">
-                            <h3 class="card__text title">Pollo</h3>
-                            <p class="card__text description">Deliciosos trocitos de pollo con abundante salsa, para que tu gato disfrute en cualquier momento.</p>
-                            <div class="card__text-btn-container">
-                                <p class="card__text price">$18.00</p>
-                                <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <a class="link-product" href="/productos/atun"><img src="/images/food/atun.jpeg" class="card__image"></a>
-                        <div class="card__text-container">
-                            <h3 class="card__text title">Atún</h3>
-                            <p class="card__text description">Delicados trozos de atún con una deliciosa salsa, ideal para aquellos que tienen el paladar exigente.</p>
-                            <div class="card__text-btn-container">
-                                <p class="card__text price">$19.00</p>
-                                <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <% }) %>
             </section>
 
             <div class="horizontalBlock horizontalBlock--pink"></div>
