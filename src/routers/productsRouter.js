@@ -12,5 +12,6 @@ router.get('/vegetariano', productsController.vegetariano);
 router.get('/pollo', productsController.pollo);
 router.get('/crear-productos', productsController.crear);
 router.get('/editar-productos', productsController.editar);
+router.get('/:id/', productsController.detalle);
 
 module.exports = router;

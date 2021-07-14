@@ -1,19 +1,35 @@
+const fs = require('fs');
+const path = require('path');
+const productosFilePath = path.join(__dirname, '../data/productos.json');
+const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+
 const productsController = {
-  atun: (req, res) => res.render('products/atun'),
+    detalle: (req, res) => {
+        const id = req.params.id
+        const detalle = productos.find((e) => e.id == id)
+        const viewData = {
+            producto: detalle
+        }
 
-  carne: (req, res) => res.render('products/carne'),
+        res.render('products/productDetail', viewData);
+    },
 
-  pollo: (req, res) => res.render('products/pollo'),
+    atun: (req, res) => res.render('products/atun'),
 
-  pescado: (req, res) => res.render('products/pescado'),
+    carne: (req, res) => res.render('products/carne'),
 
-  salmon: (req, res) => res.render('products/salmon'),
+    pollo: (req, res) => res.render('products/pollo'),
 
-  vegetariano: (req, res) => res.render('products/vegetariano'),
+    pescado: (req, res) => res.render('products/pescado'),
 
-  crear: (req, res) => res.render('products/createProduct'),
+    salmon: (req, res) => res.render('products/salmon'),
 
-  editar: (req, res) => res.render('products/editProduct'),
+    vegetariano: (req, res) => res.render('products/vegetariano'),
+
+    crear: (req, res) => res.render('products/createProduct'),
+
+    editar: (req, res) => res.render('products/editProduct'),
+
 };
 
 module.exports = productsController;
