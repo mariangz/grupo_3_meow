@@ -12,28 +12,31 @@
             <div class="crear-producto">
                 <div class="form-content">
                     <h3>Editar Producto</h3>
-                    <form id="product" action="" method="POST">
+                    <form id="product" method="POST" action="/productos/<%=producto.id %>/editar?_method=PUT">
                         <div class="contenedor">
                             <label for="name">
                             <span>Nombre del producto: </span>
-                        <input type="text" name="name" id="name" autofocus></label>
+                        <input type="text" name="name" id="name" autofocus value=<%= producto.name %>></label>
                         </div>
                         <div class="contenedor">
                             <label for="price">
                             <span>Precio:</span>
-                        <input type="number" name="price" id="price" placeholder="Ej. 4200.99"></label>
+                        <input type="number" name="price" id="price" placeholder="Ej. 4200.99" value=<%= producto.price %>></label>
                         </div>
 
                         <div class="contenedor">
                             <label for="description">
-                            <span>Descripción:</span>
-                        <textarea name="description" id="description" placeholder="Descripción del producto"></textarea></label>
+                            <span>Descripción resumida:</span>
+                        <textarea name="description" id="description"><%= producto.description %></textarea></label>
+                            <label for="nutritional">
+                            <span>Información nutricional:</span>
+                        <textarea name="nutritional" id="nutritional"><%= producto.nutritional %></textarea></label>
                         </div>
                         <div class="contenedor">
                             <span>Edad de tu mascota:</span><br>
 
                             <label for="product-cachorro">
-                                <input type="checkbox" name="edad" id="product-cachorro" value="1">
+                                <input type="checkbox" name="edad" id="product-cachorro" value=<%= producto.category %>>
                                 <span>Cachorro</span></label>
 
                             <label for="product-adulto">
@@ -47,13 +50,15 @@
                             </label>
                         </div>
                         <div class="contenedor">
-                            <span>Agregar una imagen:</span>
+                            <label>Imagen Actual:
+                            <input type="text" name="actualImage" value=<%=producto.image %>></label>
+                            <span>Agregar una nueva imagen:</span>
                             <div class="file-select">
                                 <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
                             </div>
                         </div>
                         <div class="button-product">
-                            <button type="submit">Agregar</button>
+                            <button type="submit">Guardar</button>
                             <button type="reset">Borrar</button>
                         </div>
                     </form>

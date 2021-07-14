@@ -10,6 +10,7 @@ const mainController = {
         }
         res.render('home', viewData);
     },
+
     login: (req, res) => res.render('login'),
 
     registro: (req, res) => res.render('registro'),
