@@ -10,27 +10,35 @@
   <%- include('partials/header') %>
   <main>
       <div class="form-container">
-        <form class="login-form" action="/login" method="POST">
+        <form class="login-form" action="/users/login" method="POST">
           <h1>Bienvenid@</h1>
           <div class="field">
             <label for="email">
               <span>Email:</span>
               <strong><abbr title="required">*</abbr></strong>
             </label>
-            <input type="email" id="email" name="usermail" required>
+            <input type="email" id="email" name="email" required>
           </div>
           <div class="field">
             <label for="contraseña">
               <span>Contraseña:</span>
               <strong><abbr title="required">*</abbr></strong>
             </label>
-            <input type="password" name="contraseña" id="contraseña" required>
-            <p><a class="olvido" href="#">¿Olvidaste tu contraseña?</a></p>
+            <input type="password" name="password" id="password" required>
+            <% if (locals.errors && errors.email){%>
+              <div class="text-danger"><%=errors.email.msg%></div>
+            <%}%>
+            <p><a class="olvido" href="/src/views/users/password.ejs">¿Olvidaste tu contraseña?</a></p>
           </div>
+          <div class="field-checkbox">
+            <div class="field-checkbox-hija"><input type="checkbox" name="conectado" id="conectado" class="checkbox"></div>
+            <div class="field-checkbox-hija"><p><a class="conectado">Quiero permanecer conectado</a></p></div>
+          </div>
+
           <div class="form-btn">
             <button type="submit" value="Ingresar">Ingresar</button>
           </div>
-          <p><a class="registrado" href="/registro">¿No estás registrado?</a></p>
+          <p><a class="registrado" href="/src/views/users/registerUser.ejs">¿No estás registrado?</a></p>
           </form>
       </div>
     <div class="horizontalBlock horizontalBlock--yellow"></div>

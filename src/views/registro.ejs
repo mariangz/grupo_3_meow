@@ -18,6 +18,10 @@
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
                 <input type="text" name="name" id="name" required>
+                <div class="text-danger" id="errorName">
+                    <% if (locals.errors && errors.name) { %> 
+                        <%= errors.name.msg %> <% } %>
+                  </div>
             </div>
             <div class="field">
                 <label for="email">
@@ -25,6 +29,10 @@
                     <strong><abbr title="required">*</abbr></strong>
                 </label> 
                 <input type="email" name="email" id="email" required>
+                <div class="text-danger" id="errorEmail">
+                    <% if (locals.errors && errors.email) { %> <%= errors.email.msg %>
+                    <% } %>
+                </div>
             </div>
             <div class="field">
                 <label for="password">
@@ -32,6 +40,10 @@
                     <strong><abbr title="required">*</abbr></strong>
                 </label>     
                 <input type="password" name="password" id="password" required>
+                <div class="text-danger" id="errorPassword">
+                    <% if (locals.errors && errors.password) { %> <%=
+                    errors.password.msg %> <% } %>
+                </div>
             </div>
             <div class="field">
                 <label for="confirmar-contraseña">
@@ -45,7 +57,7 @@
                 <div class="field-checkbox-hija"><p><a class="registrado">Quiero suscribirme a las novedades</a></p></div>
             </div>
             <div class="form-btn">
-                <button type="submit" value="Ingresar">Ingresar<a href="/home"></a></button>
+                <button type="submit" value="Ingresar">Ingresar<a href="/src/views/home.ejs"></a></button>
             </div>
             <p><a href="/login" class="registrado">¿Ya tienes una cuenta?</a></p>
         </form>
