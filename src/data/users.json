@@ -1,26 +1,30 @@
 [
     {
-      "Name": "Admin",
+      "id": 1,
+      "name": "Admin",
       "email": "admin@admin.com",
       "password": "$2b$10$S4Z01P8.V/7kZk6dPz/gS",
       "active": "true",
       "admin": "true",
-      "id": 1
+      "image":""    
     },
     {
-      "Name": "Lisa Simpson",
-      "email": "lisa@simpson.com",
-      "password": "AvenidaSiempreViva1234",
+      "id": 7,
+      "name": "Luciana García",
+      "email": "lucia@garcia.com",
+      "password": "Avenida1234",
       "admin": "false",
       "active": "true",
-      "id": 7
+      "image": "uno.png"
+    
     },
     {
-      "Name": "Meryl Streep",
-      "email": "meryl@streep.com",
+      "id": 5,
+      "name": "Alicia Mondino",
+      "email": "alicia@mondino.com",
       "password": "PuentesdeMadison1998",
       "admin": "false",
       "active": "true",
-      "id": 5
+      "image": "dos.png"
     }
   ]

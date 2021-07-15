@@ -18,10 +18,6 @@
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
                 <input type="text" name="name" id="name" required>
-                <div class="text-danger" id="errorName">
-                    <% if (locals.errors && errors.name) { %> 
-                        <%= errors.name.msg %> <% } %>
-                  </div>
             </div>
             <div class="field">
                 <label for="email">
@@ -29,10 +25,6 @@
                     <strong><abbr title="required">*</abbr></strong>
                 </label> 
                 <input type="email" name="email" id="email" required>
-                <div class="text-danger" id="errorEmail">
-                    <% if (locals.errors && errors.email) { %> <%= errors.email.msg %>
-                    <% } %>
-                </div>
             </div>
             <div class="field">
                 <label for="password">
@@ -40,10 +32,6 @@
                     <strong><abbr title="required">*</abbr></strong>
                 </label>     
                 <input type="password" name="password" id="password" required>
-                <div class="text-danger" id="errorPassword">
-                    <% if (locals.errors && errors.password) { %> <%=
-                    errors.password.msg %> <% } %>
-                </div>
             </div>
             <div class="field">
                 <label for="confirmar-contraseña">
@@ -51,6 +39,11 @@
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
                 <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" required>
+            </div>
+            <div class="field">
+                <label>Imagen de Perfil:
+                <div class="file-select">
+                    <input type="file" name="image" id="userAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
             </div>
             <div class="field-checkbox">
                 <div class="field-checkbox-hija"><input type="checkbox" name="mailing" id="mailing" class="checkbox"></div>
