@@ -7,7 +7,7 @@ const productsController = {
     /* GET - dellate de un producto en particular */
     detalle: (req, res) => {
         const id = req.params.id
-        const detalle = productos.find((e) => e.id == id)
+        const detalle = productos.find((prod) => prod.id == id)
         const viewData = {
             producto: detalle
         }
@@ -25,7 +25,7 @@ const productsController = {
 
     editar: (req, res) => {
         const id = req.params.id;
-        const detalle = productos.find((e) => e.id == id)
+        const detalle = productos.find((prod) => prod.id == id)
         const productoEditar = {
             producto: detalle
         }
@@ -42,10 +42,18 @@ const productsController = {
         })
         const productoActualizar = JSON.stringify(productosActualizar, null, 2);
         fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), productoActualizar)
-        res.redirect("/");
+        res.redirect('products/adminProduct');
     },
+
+    eliminar: (req, res) => {
+        const productoEliminarId = req.params.id;
+        const productosFinal = productos.filter(prod => prod.id != productoEliminarId);
+        fs.writeFileSync(productosFilePath, JSON.stringify(productosFinal, null, 2))
+        const productosActualizados = {
+            producto: productosFinal
+        }
+        res.redirect('products/adminProduct', productosActualizados);
+    }
 };
-
-
 
 module.exports = productsController;

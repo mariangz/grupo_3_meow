@@ -21,6 +21,7 @@ router.get('/administrar', productsController.listar); /* GET - listado de produ
 router.get('/crear-productos', productsController.crear);
 router.get('/editar-productos/:id', productsController.editar); /* GET - formulario de edición de productos */
 router.put('/editar-productos/:id', uploadFile.single('image'), productsController.actualizar); /* PUT - Acción de edición a donde se envia el formulario */
+router.delete('/editar-productos/:id', productsController.eliminar);
 router.get('/:id/', productsController.detalle); /* GET - dellate de un producto en particular */
 
 module.exports = router;
