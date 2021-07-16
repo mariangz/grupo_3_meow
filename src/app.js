@@ -10,6 +10,8 @@ app.use(express.static('../public'));
 
 app.set('view engine', 'ejs');
 app.use(methodOverride('_method'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
 app.use('/usuarios', usersRouter);

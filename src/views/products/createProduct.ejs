@@ -12,7 +12,12 @@
             <div class="crear-producto">
                 <div class="form-content">
                     <h3>Crear Producto</h3>
-                    <form id="product" action="/productos" enctype="multipart/form-data" method="POST">
+                    <form id="product" action="/productos/administrar" enctype="multipart/form-data" method="POST">
+                        <div class="contenedor">
+                            <label for="id">
+                            <span>ID del producto: </span>
+                        <input type="text" name="id" id="id" autofocus></label>
+                        </div>
                         <div class="contenedor">
                             <label for="name">
                             <span>Nombre del producto: </span>
@@ -26,8 +31,11 @@
 
                         <div class="contenedor">
                             <label for="description">
-                            <span>Descripción:</span>
-                        <textarea name="description" id="description" placeholder="Descripción del producto"></textarea></label>
+                                <span>Descripción resumida:</span>
+                            <textarea name="description" id="description"></textarea></label>
+                            <label for="nutritional">
+                                <span>Información nutricional:</span>
+                            <textarea name="nutritional" id="nutritional"></textarea></label>
                         </div>
                         <div class="contenedor">
                             <span>Edad de tu mascota:</span><br>
@@ -54,7 +62,7 @@
                         </div>
                         <div class="button-product">
                             <button type="submit">Agregar</button>
-                            <button type="reset">Borrar</button>
+                            <button type="reset">Limpiar</button>
                         </div>
                     </form>
                 </div>
