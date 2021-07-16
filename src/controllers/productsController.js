@@ -17,13 +17,28 @@ const productsController = {
     crear: (req, res) => res.render('products/createProduct'),
 
     editar: (req, res) => {
-        const id = req.params.id
+        const id = req.params.id;
         const detalle = productos.find((e) => e.id == id)
-        const viewData = {
+        const productoEditar = {
             producto: detalle
         }
-        res.render('products/editProduct', viewData);
+        res.render('products/editProduct', productoEditar);
+    },
+
+    actualizar: (req, res) => {
+        req.body.id = req.params.id;
+        const productosActualizar = productos.map(prod => {
+            if (prod.id == req.body.id) {
+                return prod = req.body;
+            }
+            return prod;
+        })
+        const productoActualizar = JSON.stringify(productosActualizar, null, 2);
+        fs.writeFileSync(path.resolve(__dirname, '../data/productos.json'), productoActualizar)
+        res.redirect("/");
     },
 };
+
+
 
 module.exports = productsController;

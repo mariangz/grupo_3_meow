@@ -4,9 +4,10 @@ const path = require('path');
 const multer = require('multer');
 const productsController = require('../controllers/productsController');
 
+/* Indicamos para subir el archivo nombre y donde guardarlo */
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, '/public/images/food');
+        cb(null, '/public/images/food/');
     },
     filename: function(req, file, cb) {
         const imageProduct = file.originalname
@@ -14,8 +15,11 @@ const storage = multer.diskStorage({
     }
 });
 
+const uploadFile = multer({ storage });
+
 router.get('/crear-productos', productsController.crear);
-router.get('/:id/editar-productos', productsController.editar); /* GET - formulario de edición de productos */
+router.get('/editar-productos/:id', productsController.editar); /* GET - formulario de edición de productos */
+router.put('/editar-productos/:id', uploadFile.single('image'), productsController.actualizar); /* PUT - Acción de edición a donde se envia el formulario */
 router.get('/:id/', productsController.detalle); /* GET - dellate de un producto en particular */
 
 module.exports = router;
