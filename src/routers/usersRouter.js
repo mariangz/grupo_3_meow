@@ -3,7 +3,7 @@ const router = express.Router();
 const usersController = require("../controllers/usersController");
 const { body } = require('express-validator');
 
-// localhost:3000/users/register
+// localhost:3000/users/registro
 router.get('/registro', usersController.registrar);
 router.post('/registro',
 
