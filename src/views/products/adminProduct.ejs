@@ -2,44 +2,46 @@
 <html lang="es">
 
 <head>
-    <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+    <%- include('../partials/head', {pageTitle: 'Administrar'}); %>
+        <link rel="stylesheet" href="/css/adminProduct.css">
         <link rel="stylesheet" href="/css/homeProductos.css">
-        <link rel="stylesheet" href="/css/homeClientes.css">
 </head>
 
 <body>
-    <%- include('partials/header'); %>
+    <%- include('../partials/header') %>
         <main>
-            <section id="productos">
-                <h2>Administrador de productos</h2>
-                <div class="productos">
-                    <div class="card">
-                        <a href="/productos/editar-productos" class="link-product"><img src="/images/food/carne.jpeg" class="card__image"></a>
-                        <div class="card__text-container">
-                            <h3 class="card__text title">Nuevo</h3>
-                            <div class="card__text-btn-container">
-                                <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
-                            </div>
-                        </div>
-                    </div>
-                    <% producto.forEach(element => { %>
+            <div class="crear-producto">
+                <section id="productos">
+                    <h2>Administrador de productos</h2>
+                    <div class="productos">
                         <div class="card">
-                            <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
+                            <img src="/images/food/carne.jpeg" class="card__image">
                             <div class="card__text-container">
-                                <h3 class="card__text title">
-                                    <%= element.name %>
-                                </h3>
-                                <div class="card__text-btn-container">
-                                    <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
+                                <h3 class="card__text title">Nuevo</h3>
+                                <div class="button-admin">
+                                    <a href="crear-productos"><button type="submit">Crear</button></a>
                                 </div>
                             </div>
                         </div>
-                        <% }) %>
-                </div>
-            </section>
+                        <% producto.forEach(element => { %>
+                            <div class="card">
+                                <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
+                                <div class="card__text-container">
+                                    <h3 class="card__text title">
+                                        <%= element.name %>
+                                    </h3>
+                                    <div class="button-admin">
+                                        <a href="editar-productos/<%= element.id %>"><button type="submit">Editar</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                </section>
+            </div>
 
             <div class="horizontalBlock horizontalBlock--pink"></div>
 
         </main>
-        <%- include('partials/footer'); %>
+        <%- include('../partials/footer'); %>
 </body>
