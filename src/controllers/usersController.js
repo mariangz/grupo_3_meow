@@ -15,7 +15,7 @@ const usersController = {
            // return res.status(400).json({ errors: errors.array() });
         }
         const userToCreate = req.body;
-        userToCreate.id = 2;
+        userToCreate.id = 5;
         userToCreate.password = bcrypt.hashSync(req.body.password, saltRounds);
         users.push(userToCreate);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
