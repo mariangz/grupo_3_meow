@@ -71,7 +71,12 @@ h3 {
     justify-content: space-between;
 }
 
-.form-content form button {
+.button-admin {
+    text-align: end;
+}
+
+.form-content form button,
+.button-admin button {
     background-color: var(--color-primary);
     border-radius: .4rem;
     padding-top: .4rem;
@@ -84,7 +89,8 @@ h3 {
     width: 45%;
 }
 
-.form-content form button:hover {
+.form-content form button:hover,
+.button-admin button:hover {
     color: var(--color-primary);
     background-color: #fff;
     border: 1px solid var(--color-primary);
