@@ -17,6 +17,7 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage });
 
+router.get('/administrar', productsController.listar);
 router.get('/crear-productos', productsController.crear);
 router.get('/editar-productos/:id', productsController.editar); /* GET - formulario de edición de productos */
 router.put('/editar-productos/:id', uploadFile.single('image'), productsController.actualizar); /* PUT - Acción de edición a donde se envia el formulario */

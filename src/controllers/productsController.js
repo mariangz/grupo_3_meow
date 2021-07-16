@@ -14,6 +14,13 @@ const productsController = {
         res.render('products/productDetail', viewData);
     },
 
+    listar: (req, res) => {
+        const viewData = {
+            producto: productos
+        }
+        res.render('products/adminProduct', viewData);
+    },
+
     crear: (req, res) => res.render('products/createProduct'),
 
     editar: (req, res) => {
