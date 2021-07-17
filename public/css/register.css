@@ -68,12 +68,40 @@ form button:hover {
   background-color: #fff;
   border: 1px solid var(--color-primary);;
 }
-.field-checkbox{
+.field-checkbox {
   display: flex;
+  align-items: center
+  /* border: 1px solid green; */
 }
-.field-checkbox-hija{
-flex-direction: row;
-align-items: flex-start;
-flex-wrap: wrap;
-flex-grow: 0.5;
+
+.field-checkbox-hija {
+display: flex;
+align-items: center;
+border-bottom: 1px solid transparent;
+/* margin-top: .5rem; */
+/* border: 1px solid red; */
 }
+
+.field-checkbox-hija .checkbox {
+  display: block;
+  width: .6rem;
+  margin-left: .5rem;
+}
+
+
+.file-select {
+  margin-top: .5rem;
+}
+/* 
+.file-select input {
+  padding: .3rem;K
+} */
+
+.file-select input{
+  border-bottom: 1px solid transparent;
+}
+/* 
+.registrado {
+  margin-top: .5rem;
+  border: 1px solid red;
+} */
