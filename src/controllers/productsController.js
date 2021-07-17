@@ -30,25 +30,19 @@ const productsController = {
     /* GET - formulario de edición de productos */
     editar: (req, res) => {
         const id = req.params.id;
-        const detalle = productos.find((prod) => prod.id === id);
-        const productoEditar = {
-            producto: detalle,
-        };
-        res.render('products/editProduct', productoEditar);
+        const product = productos.find((prod) => prod.id === id);
+        const viewData = {
+            producto: product
+        }
+        return res.render('products/editProduct', viewData)
     },
 
     /* PUT - Acción de edición a donde se envia el formulario */
     actualizar: (req, res) => {
-        req.body.id = req.params.id;
-        const productosActualizar = productos.map((prod) => {
-            if (prod.id === req.body.id) {
-                return (prod = req.body);
-            }
-            return prod;
-        });
-        const productoActualizar = JSON.stringify(productosActualizar, null, 2);
-        fs.writeFileSync(productosFilePath, productoActualizar);
-        res.redirect('products/adminProduct');
+        const idProduct = productos.findIndex(producto => producto.id == req.params.id)
+        productos[idProduct] = {...productos[idProduct], ...req.body };
+        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
+        res.redirect(303, '/');
     },
 
     /* DELETE - Acción de borrado - EN PROCESO - */
