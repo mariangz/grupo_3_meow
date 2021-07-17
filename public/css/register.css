@@ -101,12 +101,11 @@ input[type="file"] {
 
 .subirImagen {
   display: block;
-  background-color: var(--color-accent);
+  background-color: rgba(254, 216, 210, 0.8);
   font-family: 'Work Sans', sans-serif;
   font-size: .9rem;
   padding: .5rem 0;
   text-align: center;
-  color: #fff;
   width: 60%;
   border-radius: .3rem;
   cursor: pointer;
