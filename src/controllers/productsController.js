@@ -27,6 +27,14 @@ const productsController = {
     /* GET - formulario de creación de productos */
     crear: (req, res) => res.render('products/createProduct'),
 
+    /* POST - Acción de creación a donde se envia el formulario */
+    guardar: (req, res) => {
+        const productoACrear = req.body;
+        productos.push(productoACrear);
+        fs.writeFileSync(productosFilePath, JSON.Stringity(productos, null, 2))
+        res.render('/');
+    },
+
     /* GET - formulario de edición de productos */
     editar: (req, res) => {
         const id = req.params.id;
