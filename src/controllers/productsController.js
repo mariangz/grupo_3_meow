@@ -47,10 +47,8 @@ const productsController = {
 
     /* DELETE - Acción de borrado - EN PROCESO - */
     eliminar: (req, res) => {
-        const productoEliminarId = req.params.id;
         const productosFinal = productos.filter(
-            (prod) => prod.id !== productoEliminarId
-        );
+            (prod) => prod.id != req.params.id);
         fs.writeFileSync(
             productosFilePath,
             JSON.stringify(productosFinal, null, 2)

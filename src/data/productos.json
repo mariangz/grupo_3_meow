@@ -8,7 +8,7 @@
       "Adulto",
       "Senior"
     ],
-    "price": 590,
+    "price": "590",
     "image": "pescado.jpeg",
     "id": "pescado"
   },
@@ -17,11 +17,11 @@
     "description": "La mejor selección de vegetales para lograr un balance perfecto en la alimentación de tu gato.",
     "nutritional": "Es un alimento completo y equilibrado que ayuda a mantener un buen estado de salud. Los mejores vegetales seleccionados cuidadosamente para lograr un balance perfecto en la alimentación de tu gato. Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.",
     "category": [
-      "on",
-      "on",
-      "on"
+      "Cachorro",
+      "Adulto",
+      "Senior"
     ],
-    "price": "490",
+    "price": 490,
     "image": "vegetariano.jpeg",
     "id": "vegetariano"
   },
