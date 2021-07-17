@@ -61,7 +61,7 @@ const productsController = {
     /* PUT - Acción de edición a donde se envia el formulario */
     actualizar: (req, res) => {
         const idProduct = productos.findIndex(producto => producto.id == req.params.id)
-        productos[idProduct] = {...productos[idProduct], ...req.body };
+        productos[idProduct] = {...productos[idProduct], ...req.body, ...req.file };
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
         res.redirect('/');
     },

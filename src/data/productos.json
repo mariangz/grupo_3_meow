@@ -9,7 +9,7 @@
       "Adulto",
       "Senior"
     ],
-    "price": "590",
+    "price": 590,
     "image": "pescado.jpeg"
   },
   {
@@ -76,13 +76,5 @@
     ],
     "price": 390,
     "image": "atun.jpeg"
-  },
-  {
-    "id": "asdas",
-    "name": "asdads",
-    "description": "dqdewd",
-    "nutritional": "asdasdsad",
-    "price": "313212",
-    "image": "img-cafetera-moulinex.jpg"
   }
 ]
