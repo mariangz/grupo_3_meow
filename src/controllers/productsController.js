@@ -27,6 +27,14 @@ const productsController = {
     /* GET - formulario de creación de productos */
     crear: (req, res) => res.render('products/createProduct'),
 
+    /* POST - Acción de creación a donde se envia el formulario */
+    guardar: (req, res) => {
+        const productoACrear = req.body;
+        productos.push(productoACrear);
+        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
+        res.redirect('administrar');
+    },
+
     /* GET - formulario de edición de productos */
     editar: (req, res) => {
         const id = req.params.id;
@@ -42,7 +50,7 @@ const productsController = {
         const idProduct = productos.findIndex(producto => producto.id == req.params.id)
         productos[idProduct] = {...productos[idProduct], ...req.body };
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
-        res.redirect(303, '/');
+        res.redirect('/administrar');
     },
 
     /* DELETE - Acción de borrado - EN PROCESO - */
@@ -53,10 +61,7 @@ const productsController = {
             productosFilePath,
             JSON.stringify(productosFinal, null, 2)
         );
-        const productosActualizados = {
-            producto: productosFinal,
-        };
-        res.redirect('products/adminProduct', productosActualizados);
+        res.redirect('administrar');
     },
 };
 

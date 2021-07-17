@@ -65,9 +65,11 @@
                         </div>
                         <div class="button-product">
                             <button type="submit">Guardar</button>
-                            <form action="/editar-productos/<%= producto.id %>?_method=DELETE" method="POST">
-                                <button type="submit" class="action-button delete">ELIMINAR</button>
-                            </form>
+                        </div>
+                    </form>
+                    <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST">
+                        <div class="button-product">
+                            <button type="submit" class="action-button delete">ELIMINAR</button>
                         </div>
                     </form>
                 </div>
