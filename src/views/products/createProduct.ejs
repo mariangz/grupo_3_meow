@@ -12,7 +12,7 @@
             <div class="crear-producto">
                 <div class="form-content">
                     <h3>Crear Producto</h3>
-                    <form id="product" action="/productos" enctype="multipart/form-data" method="POST">
+                    <form action="crear-productos" method="POST">
                         <div class="contenedor">
                             <label for="id">
                             <span>ID del producto: </span>
@@ -41,16 +41,16 @@
                             <span>Edad de tu mascota:</span><br>
 
                             <label for="product-cachorro">
-                                <input type="checkbox" name="edad" id="product-cachorro" value="1">
+                                <input type="checkbox" name="category" id="product-cachorro" value="Cachorro">
                                 <span>Cachorro</span></label>
 
                             <label for="product-adulto">
-                                <input type="checkbox" name="edad" id="product-adulto" value="2">
+                                <input type="checkbox" name="category" id="product-adulto" value="Adulto">
                                 <span>Adulto</span>
                             </label>
 
                             <label for="product-senior">
-                                <input type="checkbox" name="edad" id="product-senior" value="3">
+                                <input type="checkbox" name="category" id="product-senior" value="Senior">
                                 <span>Senior</span>
                             </label>
                         </div>
@@ -61,7 +61,9 @@
                             </div>
                         </div>
                         <div class="button-product">
-                            <button type="submit">Agregar</button>
+                            <button type="submit">GUARDAR</button>
+                        </div>
+                        <div class="button-product">
                             <button type="reset">Limpiar</button>
                         </div>
                     </form>

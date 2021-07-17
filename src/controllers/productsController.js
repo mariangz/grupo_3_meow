@@ -31,8 +31,8 @@ const productsController = {
     guardar: (req, res) => {
         const productoACrear = req.body;
         productos.push(productoACrear);
-        fs.writeFileSync(productosFilePath, JSON.Stringity(productos, null, 2))
-        res.render('/');
+        fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
+        res.redirect('administrar');
     },
 
     /* GET - formulario de edición de productos */
@@ -50,7 +50,7 @@ const productsController = {
         const idProduct = productos.findIndex(producto => producto.id == req.params.id)
         productos[idProduct] = {...productos[idProduct], ...req.body };
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
-        res.redirect(303, '/');
+        res.redirect('/administrar');
     },
 
     /* DELETE - Acción de borrado - EN PROCESO - */
@@ -61,7 +61,7 @@ const productsController = {
             productosFilePath,
             JSON.stringify(productosFinal, null, 2)
         );
-        res.redirect(303, '/');
+        res.redirect('administrar');
     },
 };
 
