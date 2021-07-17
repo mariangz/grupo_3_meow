@@ -90,5 +90,29 @@ border-bottom: 1px solid transparent;
 }
 
 input[type="file"]{
-  border-bottom: 1px solid transparent;
+  display: none;
+}
+
+.upload-image {
+  display: flex;
+  justify-content: space-around;
+}
+
+.subirImagen {
+  display: block;
+  background-color: var(--color-accent);
+  font-family: 'Work Sans', sans-serif;
+  font-size: .9rem;
+  padding: .5rem 0;
+  text-align: center;
+  color: #fff;
+  width: 60%;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+.fa-upload {
+  display: inline-block;
+  margin-right: 2rem;
+  color: #000;
 }
