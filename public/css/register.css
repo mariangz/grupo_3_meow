@@ -70,15 +70,22 @@ form button:hover {
 }
 .field-checkbox{
   display: flex;
+  justify-content:left
+  border: 1px solid red;
 }
-.field-checkbox-hija{
-flex-direction: row;
-align-items: flex-start;
-flex-wrap: wrap;
-flex-grow: 0.5;
+.field-checkbox-hija {
+display: flex;
+align-items: center;
 border-bottom: 1px solid transparent;
 margin-top: .5rem;
 }
+
+.field-checkbox-hija .checkbox {
+  display: block;
+  width: .6rem;
+  margin-left: .5rem;
+}
+
 
 .file-select {
   margin-top: .5rem;
