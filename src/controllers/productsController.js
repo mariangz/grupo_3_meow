@@ -31,6 +31,7 @@ const productsController = {
     guardar: (req, res) => {
         //Obtengo los datos ingresados en el formulario del producto a crear
         const productoACrear = req.body;
+        const imagenASubir = req.file;
         //Organizo objeto con la misma estrucuta que el JSON de productos
         const productoNuevo = {
                 id: productoACrear.id,
@@ -39,7 +40,7 @@ const productsController = {
                 nutritional: productoACrear.nutritional,
                 category: productoACrear.category,
                 price: productoACrear.price,
-                image: productoACrear.image
+                image: imagenASubir.filename
             }
             //Guardo el nuevo producto en la base de datos
         productos.push(productoNuevo);

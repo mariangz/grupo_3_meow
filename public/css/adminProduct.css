@@ -66,9 +66,7 @@ h3 {
 }
 
 .button-product {
-    display: flex;
     margin-top: 1rem;
-    justify-content: space-between;
 }
 
 .button-admin {
@@ -86,7 +84,7 @@ h3 {
     outline: 1px solid transparent;
     border: 1px solid transparent;
     font-size: 1rem;
-    width: 45%;
+    width: 100%;
 }
 
 .form-content form button:hover,
