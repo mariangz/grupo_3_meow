@@ -60,8 +60,13 @@ form button {
   transition: all 200ms;
 }
 
-form button:hover {
-  color: var(--color-primary);
-  background-color: #fff;
-  border: 1px solid var(--color-primary);;
+.field-checkbox {
+  display: flex;
+  align-items: flex-start;
+  /* border: 1px solid red; */
+}
+
+.field-checkbox input {
+  width: .5rem;
+  margin-left: .7rem;
 }
