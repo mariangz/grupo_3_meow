@@ -29,8 +29,20 @@ const productsController = {
 
     /* POST - Acción de creación a donde se envia el formulario */
     guardar: (req, res) => {
+        //Obtengo los datos ingresados en el formulario del producto a crear
         const productoACrear = req.body;
-        productos.push(productoACrear);
+        //Organizo objeto con la misma estrucuta que el JSON de productos
+        const productoNuevo = {
+                id: productoACrear.id,
+                name: productoACrear.name,
+                description: productoACrear.description,
+                nutritional: productoACrear.nutritional,
+                category: productoACrear.category,
+                price: productoACrear.price,
+                image: productoACrear.image
+            }
+            //Guardo el nuevo producto en la base de datos
+        productos.push(productoNuevo);
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
         res.redirect('administrar');
     },
@@ -50,7 +62,7 @@ const productsController = {
         const idProduct = productos.findIndex(producto => producto.id == req.params.id)
         productos[idProduct] = {...productos[idProduct], ...req.body };
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
-        res.redirect('/administrar');
+        res.redirect('/');
     },
 
     /* DELETE - Acción de borrado - EN PROCESO - */
