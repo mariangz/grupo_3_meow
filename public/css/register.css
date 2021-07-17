@@ -76,4 +76,19 @@ flex-direction: row;
 align-items: flex-start;
 flex-wrap: wrap;
 flex-grow: 0.5;
+border-bottom: 1px solid transparent;
+margin-top: .5rem;
 }
+
+.file-select {
+  margin-top: .5rem;
+}
+
+.file-select input{
+  border-bottom: 1px solid transparent;
+}
+/* 
+.registrado {
+  margin-top: .5rem;
+  border: 1px solid red;
+} */
