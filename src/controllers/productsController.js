@@ -53,10 +53,7 @@ const productsController = {
             productosFilePath,
             JSON.stringify(productosFinal, null, 2)
         );
-        const productosActualizados = {
-            producto: productosFinal,
-        };
-        res.redirect('products/adminProduct', productosActualizados);
+        res.redirect(303, '/');
     },
 };
 
