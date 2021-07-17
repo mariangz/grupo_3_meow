@@ -41,7 +41,8 @@
                             <span>Edad de tu mascota:</span><br>
 
                             <label for="product-cachorro">
-                                <input type="checkbox" name="category" id="product-cachorro">
+                                
+                                <input type="checkbox" name="category" id="product-cachorro"> 
                                 <span>Cachorro</span></label>
 
                             <label for="product-adulto">
@@ -64,7 +65,9 @@
                         </div>
                         <div class="button-product">
                             <button type="submit">Guardar</button>
-                            <button type="submit"><a href="/editar-productos/<%= producto.id%>">Eliminar</a></button>
+                            <form action="/editar-productos/<%= producto.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="action-button delete">ELIMINAR</button>
+                            </form>
                         </div>
                     </form>
                 </div>
