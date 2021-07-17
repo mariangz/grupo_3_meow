@@ -71,15 +71,12 @@ form button:hover {
 .field-checkbox {
   display: flex;
   align-items: center
-  /* border: 1px solid green; */
 }
 
 .field-checkbox-hija {
 display: flex;
 align-items: center;
 border-bottom: 1px solid transparent;
-/* margin-top: .5rem; */
-/* border: 1px solid red; */
 }
 
 .field-checkbox-hija .checkbox {
@@ -88,20 +85,10 @@ border-bottom: 1px solid transparent;
   margin-left: .5rem;
 }
 
-
 .file-select {
   margin-top: .5rem;
 }
-/* 
-.file-select input {
-  padding: .3rem;K
-} */
 
-.file-select input{
+input[type="file"]{
   border-bottom: 1px solid transparent;
 }
-/* 
-.registrado {
-  margin-top: .5rem;
-  border: 1px solid red;
-} */
