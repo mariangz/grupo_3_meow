@@ -28,7 +28,6 @@
                             <span>Precio:</span>
                         <input type="number" name="price" id="price" value=<%= producto.price %>></label>
                         </div>
-
                         <div class="contenedor">
                             <label for="description">
                             <span>Descripción resumida:</span>
@@ -37,27 +36,19 @@
                             <span>Información nutricional:</span>
                         <textarea name="nutritional" id="nutritional"><%= producto.nutritional %></textarea></label>
                         </div>
-                        <div class="contenedor">
-                            <span>Edad de tu mascota:</span><br>
-
-                            <label for="product-cachorro">
-                                
-                                <input type="checkbox" name="category" id="product-cachorro">
+                        <% producto.category.forEach(edad => { %>
+                            <div class="contenedor">
+                                <span>Edad de tu mascota:</span><br>
+                                <label>
+                                <input type="checkbox" name="category" value="Cachorro" <%= edad == "Cachorro" ? 'checked' : null %>>
                                 <span>Cachorro</span></label>
+                                <label>
 
-                            <label for="product-adulto">
-                                <input type="checkbox" name="category" id="product-adulto">
-                                <span>Adulto</span>
-                            </label>
-
-                            <label for="product-senior">
-                                <input type="checkbox" name="category" id="product-senior">
-                                <span>Senior</span>
-                            </label>
-                        </div>
-                        <div class="button-product">
-                            <button type="submit">Guardar</button>
-                        </div>
+                            </div>
+                            <% }) %>
+                                <div class="button-product">
+                                    <button type="submit">Guardar</button>
+                                </div>
                     </form>
                     <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST">
                         <div class="button-product">
