@@ -60,14 +60,15 @@ const productsController = {
 
     /* PUT - Acción de edición a donde se envia el formulario */
     actualizar: (req, res) => {
-        const idProduct = productos.findIndex(producto => producto.id == req.params.id)
-        productos[idProduct] = {...productos[idProduct], ...req.body, ...req.file };
+        const indiceProduct = productos.findIndex(producto => producto.id == req.params.id)
+        productos[indiceProduct] = {...productos[indiceProduct], ...req.body, ...req.file };
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2))
         res.redirect('/');
     },
 
     /* DELETE - Acción de borrado - EN PROCESO - */
     eliminar: (req, res) => {
+        //Buscar el producto con el id recibido por parametro en el array
         const productosFinal = productos.filter(
             (prod) => prod.id != req.params.id);
         fs.writeFileSync(
