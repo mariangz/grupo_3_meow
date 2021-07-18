@@ -19,12 +19,14 @@
 ## Weekly - 4to Sprint
 
 + Mariano
-    + Mejorar 
-    + Ordenar 
-    + Revisar 
+    + Mejorar la consistencia en todo el sitio.
+    + Mejorar el footer, header y reviews. 
+    + Revisar el funcionamiento de links y botones.
+    + Limpiar el código, arreglar identaciones.
+    + Detalles de accesibilidad.
 
 + Natalia
-    + Armar el tablero para el Srpint4.
+    + Armar el tablero para el Sprint4.
     + Mejorar vista de crear y editar productos en base al max-width 300 o 350.
     + Desarrollar la parte de Productos en JSON.
     + Creación el CRUD para productos.
