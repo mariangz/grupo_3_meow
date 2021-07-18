@@ -1,24 +1,37 @@
 [
-    {
-      "id": 1,
-      "name": "Admin",
-      "email": "admin@admin.com",
-      "password": "$2b$10$S4Z01P8.V/7kZk6dPz/gS",
-      "image":""    
-    },
-    {
-      "id": 2,
-      "name": "Luciana García",
-      "email": "lucia@garcia.com",
-      "password": "Avenida1234",
-      "image": "uno.png"
-    
-    },
-    {
-      "id": 3,
-      "name": "Alicia Mondino",
-      "email": "alicia@mondino.com",
-      "password": "PuentesdeMadison1998",
-      "image": "dos.png"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@admin.com",
+    "password": "$2b$10$S4Z01P8.V/7kZk6dPz/gS",
+    "image": ""
+  },
+  {
+    "id": 2,
+    "name": "Luciana García",
+    "email": "lucia@garcia.com",
+    "password": "Avenida1234",
+    "image": "uno.png"
+  },
+  {
+    "id": 3,
+    "name": "Alicia Mondino",
+    "email": "alicia@mondino.com",
+    "password": "PuentesdeMadison1998",
+    "image": "dos.png"
+  },
+  {
+    "name": "Analia Maidana",
+    "email": "analiamaidana@gmail.com",
+    "password": "$2b$10$4S2EBQr1kXkoJ5oclj9.GuJDxKbIhd7AljI/YttOv7qwaE4PUW8u.",
+    "confirmar-contraseña": "123456",
+    "image": "ana.jpg"
+  },
+  {
+    "name": "Luis Viale",
+    "email": "luisviale@gmail.com",
+    "password": "$2b$10$wTF7qhckhwa.eMwUYm.s1O21ilBJhlkrslbrLuVPrKphFYE/.clvS",
+    "confirmar-contraseña": "654321",
+    "image": "baran-lotfollahi-uJ9qe65pN_k-unsplash.jpg"
+  }
+]

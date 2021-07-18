@@ -5,7 +5,7 @@ const productosFilePath = path.join(__dirname, '../data/productos.json');
 const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
 
 const productsController = {
-    /* GET - dellate de un producto en particular */
+    /* GET - detalle de un producto en particular */
     detalle: (req, res) => {
         const { id } = req.params;
         const detalle = productos.find((prod) => prod.id === id);
