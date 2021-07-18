@@ -24,10 +24,10 @@
     + Revisar 
 
 + Natalia
-    + Desarrollar 
-    + Mejorar 
-    + Armar 
-    + Creación 
+    + Armar el tablero para el Srpint4.
+    + Mejorar vista de crear y editar productos en base al max-width 300 o 350.
+    + Desarrollar la parte de Productos en JSON.
+    + Creación el CRUD para productos.
 
 + Analía
     + Actualizar weekly del proyecto.

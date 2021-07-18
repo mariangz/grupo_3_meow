@@ -76,5 +76,18 @@
     ],
     "price": 390,
     "image": "atun.jpeg"
+  },
+  {
+    "id": "sad",
+    "name": "asdas",
+    "description": "asdas",
+    "nutritional": "asdas",
+    "category": [
+      "Cachorro",
+      "Adulto",
+      "Senior"
+    ],
+    "price": "",
+    "image": "img-cafetera-moulinex.jpg"
   }
 ]
