@@ -2,105 +2,104 @@
 <html lang="es">
 
 <head>
-    <%- include('partials/head', {pageTitle: 'Meow!'}); %>
-        <link rel="stylesheet" href="/css/homeProductos.css">
-        <link rel="stylesheet" href="/css/homeClientes.css">
+  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <link rel="stylesheet" href="/css/homeProductos.css">
+  <link rel="stylesheet" href="/css/homeClientes.css">
 </head>
 
 <body>
-    <%- include('partials/header'); %>
-        <main>
-            <section id="portada" class="portada">
-                <div class="hero">
-                    <img src="/images/background.jpeg" alt="gato" class="hero-image">
-                    <div class="hero-description">
-                        <h1 class="title">Alimento real,<br>
-                            <span class="nobreak">para gatos reales 🐱</span></h1>
-                        <button><a class="button" href="/#productos">Quiero!</a></button>
-                    </div>
-                </div>
-            </section>
-            <div class="horizontalBlock horizontalBlock--turquesa"></div>
+  <%- include('partials/header'); %>
+  <main>
+    <section id="portada" class="portada">
+      <div class="hero">
+        <div class="hero-description">
+          <h1 class="title">Alimento real,<br>
+            <span class="nobreak">para gatos reales 🐱</span></h1>
+          <a class="button" href="/#productos">Quiero!</a>
+        </div>
+      </div>
+    </section>
+    <div class="horizontalBlock horizontalBlock--turquesa"></div>
 
-            <!-- PRODUCTS -->
-            <section id="productos">
-                <h2>Nuestra Selección</h2>
-                <div class="productos">
-                    <% producto.forEach(element => { %>
-                        <div class="card">
-                            <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
-                            <div class="card__text-container">
-                                <h3 class="card__text title">
-                                    <%= element.name %>
-                                </h3>
-                                <p class="card__text description">
-                                    <%= element.description %>
-                                </p>
-                                <div class="card__text-btn-container">
-                                    <p class="card__text price">$
-                                        <%= element.price %>
-                                    </p>
-                                    <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
-                                </div>
-                            </div>
-                        </div>
-                        <% }) %>
-            </section>
+    <!-- PRODUCTS -->
+    <section id="productos">
+      <h2>Nuestra Selección</h2>
+      <div class="productos">
+        <% producto.forEach(element => { %>
+        <div class="card">
+          <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
+          <div class="card__text-container">
+            <h3 class="card__text title">
+              <%= element.name %>
+            </h3>
+            <p class="card__text description">
+              <%= element.description %>
+            </p>
+            <div class="card__text-btn-container">
+              <p class="card__text price">$
+                <%= element.price %>
+              </p>
+              <button class="card__text btn"><img src="/images/plus.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+    </section>
 
-            <div class="horizontalBlock horizontalBlock--pink"></div>
-            <!-- CUSTOMERS -->
-            <section id="customers" class="customers">
-                <h2 class="title-clientes">Clientes felices</h2>
+    <div class="horizontalBlock horizontalBlock--pink"></div>
+    <!-- CUSTOMERS -->
+    <section id="customers" class="customers">
+      <h2 class="title-clientes">Clientes felices</h2>
 
-                <div class="grid">
-                    <div class="customers-card item-1">
-                        <div class="customers-card__text">
-                            <img class="quote-icon yellow" src="/images/customers/quote-yellow.png" alt="">
-                            <p>Es el mejor alimento que puedo darle a mi gato. Coco está muy saludable y su pelaje se increíble.</p>
-                        </div>
-                        <div class="customers-card__description">
-                            <img src="/images/customers/uno.png" alt="" class="customers-photo">
-                            <div class="customers-card__description-person">
-                                <p class="customers-name">Luciana & Coco</p>
-                                <p class="customers-city">Viedma</p>
-                            </div>
-                        </div>
-                    </div>
+      <div class="grid">
+        <div class="customers-card item-1">
+          <div class="customers-card__text">
+            <img class="quote-icon yellow" src="/images/customers/quote-yellow.png" alt="">
+            <p>Es el mejor alimento que puedo darle a mi gato. Coco está muy saludable y su pelaje se
+              increíble.</p>
+          </div>
+          <div class="customers-card__description">
+            <img src="/images/customers/uno.png" alt="" class="customers-photo">
+            <div class="customers-card__description-person">
+              <p class="customers-name">Luciana & Coco</p>
+              <p class="customers-city">Viedma</p>
+            </div>
+          </div>
+        </div>
 
-                    <div class="customers-card item-2">
-                        <div class="customers-card__text">
-                            <img class="quote-icon yellow" src="/images/customers/quote-pink.png" alt="">
-                            <p>Los problemas de salud de Greta han desaparecido, ha recuperado el peso que perdió.
-                            </p>
-                        </div>
-                        <div class="customers-card__description">
-                            <img src="/images/customers/tres.png" alt="" class="customers-photo">
-                            <div class="customers-card__description-person">
-                                <p class="customers-name">Martín & Greta</p>
-                                <p class="customers-city">Rosario</p>
-                            </div>
-                        </div>
-                    </div>
+        <div class="customers-card item-2">
+          <div class="customers-card__text">
+            <img class="quote-icon yellow" src="/images/customers/quote-pink.png" alt="">
+            <p>Los problemas de salud de Greta han desaparecido, ha recuperado el peso que perdió.
+            </p>
+          </div>
+          <div class="customers-card__description">
+            <img src="/images/customers/tres.png" alt="" class="customers-photo">
+            <div class="customers-card__description-person">
+              <p class="customers-name">Martín & Greta</p>
+              <p class="customers-city">Rosario</p>
+            </div>
+          </div>
+        </div>
 
-                    <div class="customers-card item-3">
-                        <div class="customers-card__text">
-                            <img class="quote-icon yellow" src="/images/customers/quote-green.png" alt="">
-                            <p>No hay forma de que podamos volver a la pasta enlatada o a las croquetas de supermercado.
-                            </p>
-                        </div>
-                        <div class="customers-card__description">
-                            <img src="/images/customers/dos.png" alt="" class="customers-photo">
-                            <div class="customers-card__description-person">
-                                <p class="customers-name">Alicia & Kati</p>
-                                <p class="customers-city">San Juan</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="horizontalBlock horizontalBlock--yellow">
+        <div class="customers-card item-3">
+          <div class="customers-card__text">
+            <img class="quote-icon yellow" src="/images/customers/quote-green.png" alt="">
+            <p>No hay forma de que podamos volver a la pasta enlatada o a las croquetas de supermercado.
+            </p>
+          </div>
+          <div class="customers-card__description">
+            <img src="/images/customers/dos.png" alt="" class="customers-photo">
+            <div class="customers-card__description-person">
+              <p class="customers-name">Alicia & Kati</p>
+              <p class="customers-city">San Juan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        </main>
+  </main>
 
-        <%- include('partials/footer'); %>
+  <%- include('partials/footer'); %>
 </body>

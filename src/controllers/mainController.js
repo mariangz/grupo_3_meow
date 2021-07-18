@@ -17,6 +17,8 @@ const mainController = {
   registro: (req, res) => res.render('registro'),
 
   carrito: (req, res) => res.render('carrito'),
+
+  error: (req, res) => res.render('404'),
 };
 
 module.exports = mainController;
