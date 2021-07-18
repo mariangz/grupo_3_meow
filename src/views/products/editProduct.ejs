@@ -36,18 +36,16 @@
                             <span>Información nutricional:</span>
                         <textarea name="nutritional" id="nutritional"><%= producto.nutritional %></textarea></label>
                         </div>
-                        <div class=“contenedor”>
+                        <div class="contenedor">
                             <span>Edad de tu mascota:</span><br>
                             <% edades.forEach(function(edad){%>
-                                <div>
-                                    <input type=“checkbox” name=“edad” value="<%=edad %>">
-                                    <% producto.category.forEach(function(p_edad) { %>
-                                        <%= (p_edad == edad) ? 'checked' : '' %>
+                                <input type="checkbox" name="<%= edad %>" value=<%=edad %>
+                                <% producto.category.forEach(function(p_edad) { %>
+                                    <%= (p_edad == edad) ? 'checked' : '' %>
+                                        <% }) %>
+                                            >
+                                            <label for="<%=edad%>"><%=edad%></label>
                                             <% }) %>
-
-                                                <label for=<%=edad%>><%=edad%></label>
-                                </div>
-                                <% }) %>
                         </div>
 
                         <div class="button-product">

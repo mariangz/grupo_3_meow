@@ -49,7 +49,7 @@ const productsController = {
 
     /* GET - formulario de edición de productos */
     editar: (req, res) => {
-        const edades = ['cachorro', 'adulto', 'senior'];
+        const edades = ['Cachorro', 'Adulto', 'Senior'];
         const id = req.params.id;
         const product = productos.find((prod) => prod.id === id);
         const viewData = {
