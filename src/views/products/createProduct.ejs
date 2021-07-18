@@ -16,26 +16,26 @@
                         <div class="contenedor">
                             <label for="id">
                             <span>ID del producto: </span>
-                        <input type="text" name="id" id="id" autofocus></label>
+                        <input type="text" name="id" id="id" autofocus required></label>
                         </div>
                         <div class="contenedor">
                             <label for="name">
                             <span>Nombre del producto: </span>
-                        <input type="text" name="name" id="name" autofocus></label>
+                        <input type="text" name="name" id="name" autofocus required></label>
                         </div>
                         <div class="contenedor">
                             <label for="price">
                             <span>Precio:</span>
-                        <input type="number" name="price" id="price" placeholder="Ej. 4200.99"></label>
+                        <input type="number" name="price" id="price" placeholder="Ej. 4200.99" required></label>
                         </div>
 
                         <div class="contenedor">
                             <label for="description">
                                 <span>Descripción resumida:</span>
-                            <textarea name="description" id="description"></textarea></label>
+                            <textarea name="description" id="description" placeholder="Es la descripción del producto en el home" required></textarea></label>
                             <label for="nutritional">
                                 <span>Información nutricional:</span>
-                            <textarea name="nutritional" id="nutritional"></textarea></label>
+                            <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto" required></textarea></label>
                         </div>
                         <div class="contenedor">
                             <span>Edad de tu mascota:</span><br>
@@ -57,19 +57,19 @@
                         <div class="contenedor">
                             <span>Agregar una imagen:</span>
                             <div class="file-select">
-                                <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg"></input>
+                                <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg" required></input>
                             </div>
-                        </div>
-                        <div class="button-product">
-                            <button type="submit">GUARDAR</button>
                         </div>
                         <div class="button-product">
                             <button type="reset">Limpiar</button>
                         </div>
+                        <div class="button-product">
+                            <button type="submit">GUARDAR</button>
+                        </div>
                     </form>
                 </div>
             </div>
-            <div class="horizontalBlock horizontalBlock--yellow"></div>
+
         </main>
         <%- include('../partials/footer'); %>
 </body>

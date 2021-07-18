@@ -2,45 +2,45 @@
 <html lang="es">
 
 <head>
-  <%- include('../partials/head', {pageTitle: 'Administrar'}); %>
-  <link rel="stylesheet" href="/css/adminProduct.css">
-  <link rel="stylesheet" href="/css/homeProductos.css">
+    <%- include('../partials/head', {pageTitle: 'Administrar'}); %>
+        <link rel="stylesheet" href="/css/adminProduct.css">
+        <link rel="stylesheet" href="/css/homeProductos.css">
 </head>
 
 <body>
-  <%- include('../partials/header') %>
-  <main>
-    <div class="crear-producto">
-      <section id="productos">
-        <h2>Administrador de productos</h2>
-        <div class="productos">
-          <div class="card">
-            <img src="/images/food/carne.jpeg" class="card__image">
-            <div class="card__text-container">
-              <h3 class="card__text title">Nuevo</h3>
-              <div class="button-admin">
-                <a href="crear-productos"><button type="submit">Crear</button></a>
-              </div>
-            </div>
-          </div>
-          <% producto.forEach(element => { %>
-          <div class="card">
-            <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
-            <div class="card__text-container">
-              <h3 class="card__text title">
-                <%= element.name %>
-              </h3>
-              <div class="button-admin">
-                <a href="editar-productos/<%= element.id %>"><button type="submit">Editar</button></a>
-              </div>
+    <%- include('../partials/header') %>
+        <main>
+            <div class="crear-producto">
+                <section id="productos">
+                    <h2>Administrador de productos</h2>
+                    <div class="productos">
+                        <div class="card">
+                            <img src="/images/food/nuevo.jpeg" class="card__image">
+                            <div class="card__text-container">
+                                <h3 class="card__text title">Nuevo Producto</h3>
+                                <div class="button-admin">
+                                    <a href="crear-productos"><button type="submit">CREAR</button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <% producto.forEach(element => { %>
+                            <div class="card">
+                                <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
+                                <div class="card__text-container">
+                                    <h3 class="card__text title">
+                                        <%= element.name %>
+                                    </h3>
+                                    <div class="button-admin">
+                                        <a href="editar-productos/<%= element.id %>"><button type="submit">EDITAR</button></a>
+                                    </div>
 
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                </section>
             </div>
-          </div>
-          <% }) %>
-        </div>
-      </section>
-    </div>
 
-  </main>
-  <%- include('../partials/footer'); %>
+        </main>
+        <%- include('../partials/footer'); %>
 </body>
