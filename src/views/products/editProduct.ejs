@@ -36,19 +36,23 @@
                             <span>Información nutricional:</span>
                         <textarea name="nutritional" id="nutritional"><%= producto.nutritional %></textarea></label>
                         </div>
-                        <% producto.category.forEach(edad => { %>
-                            <div class="contenedor">
-                                <span>Edad de tu mascota:</span><br>
-                                <label>
-                                <input type="checkbox" name="category" value="Cachorro" <%= edad == "Cachorro" ? 'checked' : null %>>
-                                <span>Cachorro</span></label>
-                                <label>
+                        <div class=“contenedor”>
+                            <span>Edad de tu mascota:</span><br>
+                            <% edades.forEach(function(edad){%>
+                                <div>
+                                    <input type=“checkbox” name=“edad” value="<%=edad %>">
+                                    <% producto.category.forEach(function(p_edad) { %>
+                                        <%= (p_edad == edad) ? 'checked' : '' %>
+                                            <% }) %>
 
-                            </div>
-                            <% }) %>
-                                <div class="button-product">
-                                    <button type="submit">Guardar</button>
+                                                <label for=<%=edad%>><%=edad%></label>
                                 </div>
+                                <% }) %>
+                        </div>
+
+                        <div class="button-product">
+                            <button type="submit">Guardar</button>
+                        </div>
                     </form>
                     <form action="/productos/<%= producto.id %>?_method=DELETE" method="POST">
                         <div class="button-product">
