@@ -1,13 +1,14 @@
 :root {
-  --color-primary: #8FD9C1;
-  --color-accent: #FFE95A;
-  --color-accentTwo: #FED8D2;
+  --color-primary: #8fd9c1;
+  --color-accent: #ffe95a;
+  --color-accentTwo: #fed8d2;
 
   --color-font: #000;
   --color-fontLight: #999;
-  --ff-primary: 'Montserrat', sans-serif;
-  --ff-accent: 'Work Sans', sans-serif;
+  --ff-primary: "Montserrat", sans-serif;
+  --ff-accent: "Work Sans", sans-serif;
 
+  --backgroundHeader-color: #f0ece5;
   --headerHeight: 4rem;
 }
 
@@ -27,6 +28,13 @@ main {
   margin-top: var(--headerHeight);
   min-height: 100%;
   flex-grow: 1;
+}
+
+.container {
+  width: calc(100vw - 3rem);
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 section:first-child {
@@ -58,13 +66,13 @@ h2 {
   margin-top: 2rem;
 }
 
-#productos, 
+#productos,
 #customers {
   scroll-margin-top: 2rem;
 }
 
 /* ********** PORTADA ********** */
-section .portada {
+.portada {
   position: relative;
   font-size: 1rem;
 }
@@ -99,25 +107,76 @@ section .portada {
 }
 
 .hero-description p {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
+/* adds transitions to all buttons, links and form elements */
+a, button, input, textarea, select,
+a img, button img,
+a::before, a::after, button::before, button::after {
+  transition: all 0.15s ease-in;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* ********** Buttons and links ********** */
 .button {
   display: inline-block;
-  padding: .6em 2em;
-  color: whitesmoke;
+  padding: 0.6em 2em;
+  color: #FFF;
   background-color: var(--color-font);
   cursor: pointer;
-  transition: all 200ms;
-  margin-top: .5rem;
   outline: 0;
   border: 0;
+  border-radius: 3rem;
 }
 
 .button:hover,
 .button:focus {
   color: var(--color-font);
-  background-color: whitesmoke;
+  background-color: var(--color-accent);
+}
+
+.button--accent {
+  background-color: var(--color-accent);
+  color: var(--color-font);
+}
+
+.button--accent:hover,
+.button--accent:focus {
+  background-color: var(--color-accentTwo);
+  color: var(--color-font);
+}
+
+.button__icon {
+  display: inline-block;
+  height: 1em;
+  font-size: inherit;
+  margin-right: 1em;
+  vertical-align: -0.125em;
+}
+
+.icon-link {
+  display: block;
+}
+
+.icon-link img {
+  display: inline-block;
+  opacity: .5;
+  height: 1em;
+  vertical-align: middle;
+}
+
+.icon-link:hover img,
+.icon-link:focus img {
+  opacity: 1;
 }
 
 .nobreak {
@@ -125,103 +184,76 @@ section .portada {
 }
 
 /* ********** FOOTER ********** */
-footer {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+.footer {
   font-family: var(--ff-accent);
 }
 
-footer h4 {
-  font-size: 1.3rem;
+.footer h4 {
+  font-size: 1rem;
+  color: var(--color-fontLight);
   margin-bottom: 1rem;
 }
 
-footer ul {
+.footer-list {
   margin: 0;
   padding: 0;
 }
 
+.footer-list--social-media {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
 .footer-link {
   display: block;
-  padding: .25rem .25rem .25rem 2.5rem;
+  padding: 0.25rem 0.75rem 0.25rem 2.5rem;
   position: relative;
   color: var(--color-fontLight);
-  transition: all 200ms;
 }
 
 .footer-link::before {
-  content: ''; 
+  content: "";
   display: block;
   position: absolute;
   width: 1rem;
-  height: .25rem;
+  height: 0.25rem;
   left: 0;
-  top: calc(50% - .25rem);
+  top: calc(50% - 0.25rem);
   background-color: var(--color-accentTwo);
-  transition: all 200ms;
 }
 
 .footer-link:hover,
 .footer-link:focus {
   padding-left: 3rem;
+  padding-right: .25rem;
   color: var(--color-font);
 }
 
-
-.footer-container {
+.footer-nav {
   display: flex;
+  gap: 1.5rem;
   flex-direction: column;
-  margin-left: 1rem;
-}
-.col-one {
-  margin-bottom: 2rem;
-  padding-left: .5rem;
-
-}
-
-.col-two {
-  margin-bottom: 1rem;
-  padding-left: .5rem;
-}
-
-.col-three {
-  margin-top: 3rem;
-}
-
-.col-three ul {
-  display: flex;
-  justify-content: space-around;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 /* ********** media queries ********** */
+@media screen and (min-width: 400px) {
+  .footer-nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .portada {
     font-size: 1.5rem;
   }
-
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .col-three ul {
-    justify-content: space-around;
-  }
-
-  .col-three ul li{
-    margin-right: 2rem;
-  }
-
 }
 
 @media screen and (min-width: 968px) {
   .portada {
     font-size: 1.6rem;
   }
-
-  footer .link:hover {
-    background-color: var(--color-accent);
-    color: var(--color-font);
-  }
 }
-

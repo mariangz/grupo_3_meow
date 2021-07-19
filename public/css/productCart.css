@@ -1,127 +1,126 @@
 /*CSS cart items details*/
 
 .small-container {
-    max-width: 1000px;
-    margin: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  max-width: 1000px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .page-title,
 .page-subtitle {
-    margin: 0 0 15px;
+  margin: 0 0 15px;
 }
 
 .cart-page {
-    margin: 7rem auto;
+  margin: 7rem auto;
 }
 
 .cart-paid {
-    margin: 30px auto;
-    padding: 0;
+  margin: 30px auto;
+  padding: 0;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 13px;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
 }
 
 .cart-info {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 p {
-    margin-block-start: 0em;
-    margin-block-end: 0.5em;
+  margin-block-start: 0;
+  margin-block-end: 0.5em;
 }
 
 small {
-    display: none;
+  display: none;
 }
 
 th {
-    text-align: center;
-    padding: 5px;
-    color: var(--color-font);
-    background-color: var(--color-accentTwo);
-    font-weight: normal;
-    font-size: 11px;
+  text-align: center;
+  padding: 5px;
+  color: var(--color-font);
+  background-color: var(--color-accentTwo);
+  font-weight: normal;
+  font-size: 11px;
 }
 
 td {
-    padding: 5px 5px;
+  padding: 5px 5px;
 }
 
 td input {
-    width: 40px;
-    padding: 3px;
-    text-align: center;
-    border: none;
-    margin: auto;
+  width: 40px;
+  padding: 3px;
+  text-align: center;
+  border: none;
+  margin: auto;
 }
 
 td a img {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
 }
 
 td img {
-    width: 60px;
-    height: 60px;
-    margin-right: 10px;
-    border-radius: 3px;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 3px;
 }
 
 .product-item {
-    border-bottom: 2px solid var(--color-accentTwo);
+  border-bottom: 2px solid var(--color-accentTwo);
 }
 
 .total-price {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .total-price table {
-    width: 100%;
-    max-width: 200px;
-    font-weight: bold;
+  width: 100%;
+  max-width: 200px;
+  font-weight: bold;
 }
 
 .product-n {
-    border-bottom: 1px solid var(--color-accentTwo);
+  border-bottom: 1px solid var(--color-accentTwo);
 }
 
 td:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 th:last-child {
-    text-align: right;
+  text-align: right;
 }
-
 
 .button-checkout {
-    color: #fff;
-    background-color: var(--color-font);
-    padding: .5rem 1.3rem;
-    cursor: pointer;
-    border: 2px solid #fff;
-    outline: 2px solid transparent;
-    font-size: 1rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    border-radius: .8rem;
-    transition: all 200 ease-in;
+  color: #fff;
+  background-color: var(--color-font);
+  padding: 0.5rem 1.3rem;
+  cursor: pointer;
+  border: 2px solid #fff;
+  outline: 2px solid transparent;
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0.8rem;
 }
 
-.button-checkout:hover {
-    background-color: #fff;
-    color: var(--color-font);
-    border: 2px solid var(--color-font);
+.button-checkout:hover,
+.button-checkout:focus {
+  background-color: #fff;
+  color: var(--color-font);
+  border: 2px solid var(--color-font);
 }
 
 .checkout-container {
@@ -131,18 +130,18 @@ th:last-child {
 }
 
 label img {
-    width: 40%;
-    margin: auto;
-    vertical-align: middle;
-    padding-left: 5px;
-    display: inline;
+  width: 40%;
+  margin: auto;
+  vertical-align: middle;
+  padding-left: 5px;
+  display: inline;
 }
 
 @media (min-width: 768px) {
-    small {
-        display: block;
-    }
-    label img {
-        width: 20%;
-    }
+  small {
+    display: block;
+  }
+  label img {
+    width: 20%;
+  }
 }
