@@ -1,25 +1,43 @@
-<header>
-    <div class="container container-nav">
-        <nav>
-            <button class="nav-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/#productos" class="nav-link">Productos</a></li>
-                <li class="nav-item"><a href="/carrito" class="nav-link">Carrito</a></li>
-                <li class="nav-item"><a href="/users/login" class="nav-link">Login</a></li>
-                <li class="nav-item"><a href="/users/registro" class="nav-link">Registro</a></li>
-                <li class="nav-item"><a href="/productos/administrar" class="nav-link">Admin Productos</a></li>
-            </ul>
-        </nav>
+<header class="header">
+  <div class="container">
+    <div class="header-wrapper">
+      <nav>
+        <button class="nav-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+          <li class="nav-item">
+            <a href="/#productos" class="nav-link">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a href="/carrito" class="nav-link">Carrito</a>
+          </li>
+          <li class="nav-item">
+            <a href="/users/login" class="nav-link">Login</a>
+          </li>
+          <li class="nav-item">
+            <a href="/users/registro" class="nav-link">Registro</a>
+          </li>
+          <li class="nav-item">
+            <a href="/productos/administrar" class="nav-link">Admin Productos</a>
+          </li>
+        </ul>
+      </nav>
 
-        <a href="/" class="logo" title="meow home">
-            <img src="/images/logo.svg" alt="logo de meow" width="80" height="28">
-        </a>
+      <a href="/" class="logo" title="meow home">
+        <img src="/images/logo.svg" alt="logo de meow" width="80" height="28" />
+      </a>
 
-        <div class="carrito"><a href="/carrito"><img src="/images/carrito.png" alt="carrito compras" class="carrito-icon"></a></div>
+      <a class="button-carrito" href="/carrito">
+        <img
+          src="/images/shopping-basket-solid.svg"
+          alt="carrito compras"
+          class="button-carrito__icon"
+        />
+      </a>
     </div>
+  </div>
 </header>
