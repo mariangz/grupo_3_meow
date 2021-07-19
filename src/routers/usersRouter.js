@@ -5,7 +5,7 @@ const { body } = require('express-validator');
 const multer = require('multer');
 
 // localhost:3000/users/registro
-router.get('/registro', usersController.registrar);
+router.get('/users/registro', usersController.registrar);
 
 /* Indicamos para subir el archivo nombre y donde guardarlo */
 const storage = multer.diskStorage({
@@ -19,7 +19,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.post('/registro',
+router.post('/users/registro',
 
     body('email').isEmail().withMessage('Debe ser un email válido'),
     body('password').isLength({ min: 6 }).withMessage('Debe tener al menos 6 caracteres'),
@@ -27,8 +27,8 @@ router.post('/registro',
 
     usersController.guardarRegistro);
 
-router.get('/login', usersController.ingresar);
-router.post('/login', usersController.guardarLogin);
-router.post('/registro', upload.single('image'), usersController.guardarRegistro);
+router.get('/users/login', usersController.ingresar);
+router.post('/users/login', usersController.guardarLogin);
+router.post('/users/registro', upload.single('image'), usersController.guardarRegistro);
 
 module.exports = router;

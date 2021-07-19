@@ -2,15 +2,15 @@
 <html lang="es">
 
 <head>
-  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
   <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
-  <%- include('partials/header') %>
+  <%- include('../partials/header') %>
   <main>
       <div class="form-container">
-        <form class="login-form" action="/usuarios/login" method="POST">
+        <form class="login-form" action="/src/views/users/login.ejs" method="POST">
           <h1>Bienvenid@</h1>
           <div class="field">
             <label for="email">
@@ -41,5 +41,5 @@
     <!-- <div class="horizontalBlock horizontalBlock--yellow"></div> -->
   </main>
   
-  <%- include('partials/footer'); %>
+  <%- include('../partials/footer'); %>
 </body>

@@ -2,15 +2,15 @@
 <html lang="es">
 
 <head>
-  <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+  <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
   <link rel="stylesheet" href="/css/register.css">
 </head>
 
 <body>
-  <%- include('partials/header'); %>
+  <%- include('../partials/header'); %>
   <main>
     <div class="form-container">
-        <form class= "register-form" action="/usuarios/registro" method="POST">
+        <form class= "register-form" action="/src/views/users/registro.ejs" method="POST">
             <h1>Registrate</h1>
             <div class="field">
                 <label for="name">
@@ -60,5 +60,5 @@
     </div>
     <!-- <div class="horizontalBlock horizontalBlock--yellow"></div> -->
   </main>
-  <%- include('partials/footer'); %>
+  <%- include('../partials/footer'); %>
 </body>

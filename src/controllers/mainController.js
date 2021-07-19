@@ -15,9 +15,9 @@ const mainController = {
     res.render('home', viewData);
   },
 
-  login: (req, res) => res.render('login'),
+  login: (req, res) => res.render('users/login'),
 
-  registro: (req, res) => res.render('registro'),
+  registro: (req, res) => res.render('users/registro'),
 
   carrito: (req, res) => res.render('carrito'),
 

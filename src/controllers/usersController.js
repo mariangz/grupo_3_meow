@@ -8,12 +8,12 @@ const { validationResult } = require('express-validator');
 
 const usersController = {
     /* GET - formulario de creación de usuarios */
-    registrar: (req, res) => res.render('registro'),
+    registrar: (req, res) => res.render('../users/registro'),
     /* POST - petición de guardar registro de usuario */
     guardarRegistro: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.render('registro', { errors: errors.array() });
+            return res.render('../users/registro', { errors: errors.array() });
            // return res.status(400).json({ errors: errors.array() });
         }
         //Obtengo los datos ingresados en el formulario del usuario a crear//
@@ -34,7 +34,7 @@ const usersController = {
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2))
         return res.send(userToCreate);
     },
-    ingresar: (req, res) => res.render('login'),
+    ingresar: (req, res) => res.render('../users/login'),
     guardarLogin: (req, res) => {
         // Buscar en users.json
         // Un usuario cuyo mail sea igual al req.body.email
