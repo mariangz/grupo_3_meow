@@ -76,5 +76,18 @@
     ],
     "price": 390,
     "image": "atun.jpeg"
+  },
+  {
+    "id": "prueba2",
+    "name": "Prueba2",
+    "description": "sdfafasdsds",
+    "nutritional": "asdadasdd",
+    "category": [
+      "Cachorro",
+      "Adulto",
+      "Senior"
+    ],
+    "price": "1234",
+    "image": "img-cafetera-moulinex.jpg"
   }
 ]
