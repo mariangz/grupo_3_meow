@@ -78,18 +78,15 @@
     "image": "atun.jpeg"
   },
   {
-    "id": "prueba",
-    "name": "Prueba20",
-    "description": "Probamos editar un nuevo producto",
-    "nutritional": "Probamos editar un nuevo producto",
+    "id": "pruebax",
+    "name": "Prueba22",
+    "description": "Probando editar cada campo del producto, inclusive quitando uno de los checkbox para ver si los guarda como array.\r\n",
+    "nutritional": "Probamos editar un nuevo producto, esperando que funcione.",
     "category": [
       "Cachorro",
-      "Adulto"
+      "Senior"
     ],
-    "price": "120",
-    "image": "img-cafetera-moulinex.jpg",
-    "Cachorro": "Cachorro",
-    "Adulto": "Adulto",
-    "Senior": "Senior"
+    "price": "1200",
+    "image": "img-cafetera-moulinex.jpg"
   }
 ]

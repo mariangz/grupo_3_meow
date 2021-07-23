@@ -44,7 +44,7 @@ const productsController = {
         //Guardo el nuevo producto en la base de datos
         productos.push(productoNuevo);
         fs.writeFileSync(productosFilePath, JSON.stringify(productos, null, 2));
-        res.redirect('administrar');
+        res.redirect('/');
     },
 
     /* GET - formulario de edición de productos */
@@ -83,7 +83,7 @@ const productsController = {
             productosFilePath,
             JSON.stringify(productosFinal, null, 2)
         );
-        res.redirect('administrar');
+        res.redirect('/');
     },
 };
 
