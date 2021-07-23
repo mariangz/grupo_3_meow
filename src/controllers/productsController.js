@@ -37,7 +37,7 @@ const productsController = {
             name: productoACrear.name,
             description: productoACrear.description,
             nutritional: productoACrear.nutritional,
-            category: [productoACrear.category],
+            category: productoACrear.category,
             price: productoACrear.price,
             image: imagenASubir.filename,
         };
