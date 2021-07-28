@@ -39,19 +39,6 @@
     "image": "carne.jpeg"
   },
   {
-    "id": "salmon",
-    "name": "Salmón",
-    "description": "Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!",
-    "nutritional": "Es un alimento completo y balanceado, 100% húmedo super sabroso. Super nutritivo e ideal para paladares exigentes! Está hecho de pequeños trozos de salmón horneado a fuego lento, con una textura y sabor únicas de las que tu gato no podrá resistirse. Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.",
-    "category": [
-      "Cachorro",
-      "Adulto",
-      "Senior"
-    ],
-    "price": 550,
-    "image": "salmon.jpeg"
-  },
-  {
     "id": "pollo",
     "name": "Pollo",
     "description": "Deliciosos trocitos de pollo con abundante salsa, para que tu gato disfrute en cualquier momento.",
