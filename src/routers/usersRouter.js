@@ -1,31 +1,32 @@
-const express = require("express");
+const express = require('express');
+
 const router = express.Router();
-const usersController = require("../controllers/usersController");
 const { body } = require('express-validator');
 const multer = require('multer');
+const usersController = require('../controllers/usersController');
 
 // localhost:3000/users/registro
 router.get('/users/registro', usersController.registrar);
 
 /* Indicamos para subir el archivo nombre y donde guardarlo */
 const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, '../public/images/users');
-    },
-    filename: function(req, file, cb) {
-        cb(null, file.originalname);
-    }
+  destination(req, file, cb) {
+    cb(null, '../public/images/users');
+  },
+  filename(req, file, cb) {
+    cb(null, file.originalname);
+  },
 });
 
 const upload = multer({ storage });
 
 router.post('/users/registro',
 
-    body('email').isEmail().withMessage('Debe ser un email válido'),
-    body('password').isLength({ min: 6 }).withMessage('Debe tener al menos 6 caracteres'),
-    body('name').isString().isLength({ min: 2 }).withMessage('Debe tener al menos 2 caracteres'),
+  body('email').isEmail().withMessage('Debe ser un email válido'),
+  body('password').isLength({ min: 6 }).withMessage('Debe tener al menos 6 caracteres'),
+  body('name').isString().isLength({ min: 2 }).withMessage('Debe tener al menos 2 caracteres'),
 
-    usersController.guardarRegistro);
+  usersController.guardarRegistro);
 
 router.get('/users/login', usersController.ingresar);
 router.post('/users/login', usersController.guardarLogin);
