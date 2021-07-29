@@ -82,7 +82,7 @@ const productsController = {
       JSON.stringify(productosFinal, null, 2),
     );
     res.redirect('/');
-  },
+   },
 };
 
 module.exports = productsController;
