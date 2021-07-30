@@ -20,8 +20,12 @@ router.post('/users/registro',
 
     usersController.guardarRegistro);
 
-router.get('/users/login', usersController.ingresar);
-router.post('/users/login', usersController.guardarLogin);
+// Formulario de LOGIN
+router.get('/login', usersController.login);
+
+// Proceso de LOGIN
+router.post('/login', usersController.loginProcess);
+
 router.post('/users/registro', upload.single('image'), usersController.guardarRegistro);
 
 module.exports = router;

@@ -2,44 +2,46 @@
 <html lang="es">
 
 <head>
-  <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
-  <link rel="stylesheet" href="/css/login.css">
+    <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
+        <link rel="stylesheet" href="/css/login.css">
 </head>
 
 <body>
-  <%- include('../partials/header') %>
-  <main>
-      <div class="form-container">
-        <form class="login-form" action="/src/views/users/login.ejs" method="POST">
-          <h1>Bienvenid@</h1>
-          <div class="field">
-            <label for="email">
+    <%- include('../partials/header') %>
+        <main>
+            <div class="form-container">
+                <form class="login-form" action="/users/login" method="POST">
+                    <h1>Bienvenid@</h1>
+                    <div class="field">
+                        <label for="email">
               <span>Email:</span>
               <strong><abbr title="required">*</abbr></strong>
             </label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="field">
-            <label for="contraseña">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="contraseña">
               <span>Contraseña:</span>
               <strong><abbr title="required">*</abbr></strong>
             </label>
-            <input type="password" name="password" id="password" required>
-            <p><a class="olvido" href="/src/views/users/password.ejs">¿Olvidaste tu contraseña?</a></p>
-          </div>
-          <div class="field-checkbox">
-            <div class="field-checkbox-hija"><p><a class="conectado">Quiero permanecer conectado</a></p></div>
-            <div class="field-checkbox-hija"><input type="checkbox" name="conectado" id="conectado" class="checkbox"></div>
-          </div>
+                        <input type="password" name="password" id="password" required>
+                        <p><a class="olvido" href="/src/views/users/password.ejs">¿Olvidaste tu contraseña?</a></p>
+                    </div>
+                    <div class="field-checkbox">
+                        <div class="field-checkbox-hija">
+                            <p><a class="conectado">Quiero permanecer conectado</a></p>
+                        </div>
+                        <div class="field-checkbox-hija"><input type="checkbox" name="conectado" id="conectado" class="checkbox"></div>
+                    </div>
 
-          <div class="form-btn">
-            <button type="submit" value="Ingresar">Ingresar</button>
-          </div>
-          <p><a class="registrado" href="/src/views/users/registerUser.ejs">¿No estás registrado?</a></p>
-          </form>
-      </div>
-    <!-- <div class="horizontalBlock horizontalBlock--yellow"></div> -->
-  </main>
-  
-  <%- include('../partials/footer'); %>
+                    <div class="form-btn">
+                        <button type="submit" value="Ingresar">Ingresar</button>
+                    </div>
+                    <p><a class="registrado" href="/src/views/users/registerUser.ejs">¿No estás registrado?</a></p>
+                </form>
+            </div>
+            <!-- <div class="horizontalBlock horizontalBlock--yellow"></div> -->
+        </main>
+
+        <%- include('../partials/footer'); %>
 </body>
