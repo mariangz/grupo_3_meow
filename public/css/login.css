@@ -1,74 +1,79 @@
 .form-container {
-  margin-top: 7rem;
-  margin-bottom: 5rem;
+    margin-top: 7rem;
+    margin-bottom: 5rem;
 }
 
 h1 {
-  font-size: 1.3rem;
+    font-size: 1.3rem;
 }
 
 .login-form {
-  max-width: 360px;
-  padding: 2rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  margin-left: auto;
-  margin-right: auto;
-  --color-accent: #fed8d2;
-  font-family: var(--ff-primary);
+    max-width: 360px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-left: auto;
+    margin-right: auto;
+    --color-accent: #fed8d2;
+    font-family: var(--ff-primary);
 }
 
 .login-form a {
-  display: block;
-  font-size: 0.7rem;
-  margin-top: 0.3rem;
-  color: var(--color-fontLight);
+    display: block;
+    font-size: 0.7rem;
+    margin-top: 0.3rem;
+    color: var(--color-fontLight);
 }
 
 .login-form a:hover,
 .login-form a:focus {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 label,
 button,
 input {
-  display: block;
-  outline: 1px solid transparent;
-  border: 1px solid transparent;
-  width: 100%;
+    display: block;
+    outline: 1px solid transparent;
+    border: 1px solid transparent;
+    width: 100%;
 }
 
 label,
 button {
-  margin-top: 1rem;
+    margin-top: 1rem;
 }
 
 input {
-  border-bottom: 1px solid rgba(128, 128, 128, 0.644);
-  margin-top: 0.3rem;
-  font-size: 0.9rem;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.644);
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
 }
 
 form button {
-  background-color: var(--color-primary);
-  border-radius: 0.4rem;
-  padding-top: 0.4rem;
-  padding-bottom: 0.5rem;
-  color: #fff;
-  cursor: pointer;
+    background-color: var(--color-primary);
+    border-radius: 0.4rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.5rem;
+    color: #fff;
+    cursor: pointer;
 }
 
 .field-checkbox {
-  display: flex;
-  align-items: flex-start;
+    display: flex;
+    align-items: flex-start;
 }
 
 .field-checkbox input {
-  width: 0.5rem;
-  margin-left: 0.7rem;
+    width: 0.5rem;
+    margin-left: 0.7rem;
 }
+
 button:hover,
 button:focus {
-  cursor: pointer;
-  /* cursor: url(https://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e3f527ee73853fed80720/1611546450815/paw.pnghttps://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e201ac6ff83514535e1ce/1611538458484/SMALLS_SMALLSWEAR_STICKERS-12.png),auto; */
+    cursor: pointer;
+    /* cursor: url(https://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e3f527ee73853fed80720/1611546450815/paw.pnghttps://static1.squarespace.com/static/5ff8e4d66bbc7c345298e9e3/t/600e201ac6ff83514535e1ce/1611538458484/SMALLS_SMALLSWEAR_STICKERS-12.png),auto; */
+}
+
+.text-danger {
+    color: #dc3545!important
 }
