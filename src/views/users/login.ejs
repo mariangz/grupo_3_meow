@@ -18,6 +18,11 @@
               <strong><abbr title="required">*</abbr></strong>
             </label>
                         <input type="email" id="email" name="email" required>
+                        <% if (locals.errors && errors.email) { %>
+                            <div class="text-danger">
+                                <%= errors.email.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="field">
                         <label for="contraseña">
