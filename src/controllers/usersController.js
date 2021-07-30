@@ -46,12 +46,15 @@ const usersController = {
         // Buscar en users.json, un usuario cuyo mail sea igual al req.body.email
         const userToLogin = User.findByField('email', req.body.email);
         if (userToLogin) {
-
+            let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            if (isOkPassword) {
+                return res.send('OK, puedes ingresar')
+            }
         }
         return res.render('users/login', {
             errors: {
                 email: {
-                    msg: 'Las credenciales son inválidas'
+                    msg: 'El mail no se encuentra registrado'
                 }
             }
         });
