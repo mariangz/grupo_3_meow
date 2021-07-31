@@ -66,15 +66,14 @@
   },
   {
     "id": "prueba",
-    "name": "Prueba1",
+    "name": "Prueba",
     "description": "Probando editar cada campo del producto, inclusive quitando uno de los checkbox para ver si los guarda como array.\r\n",
     "nutritional": "Probamos editar un nuevo producto, esperando que funcione.",
     "category": [
       "Cachorro",
-      "Adulto",
       "Senior"
     ],
-    "price": "1200",
+    "price": "1250",
     "image": "img-cafetera-moulinex.jpg"
   }
 ]

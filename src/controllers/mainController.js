@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const productosFilePath = path.join(__dirname, '../data/productos.json');
-const productos = JSON.parse(fs.readFileSync(productosFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -10,7 +10,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const mainController = {
     index: (req, res) => {
         const viewData = {
-            producto: productos,
+            product: products,
         };
         res.render('home', viewData);
     },

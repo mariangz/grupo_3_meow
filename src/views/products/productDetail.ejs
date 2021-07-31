@@ -12,23 +12,23 @@
             <div class="small-container single-product">
                 <div class="row">
                     <div class="col-2">
-                        <img src="/images/food/<%= producto.image %>" width="100%">
+                        <img src="/images/food/<%= product.image %>" width="100%">
                     </div>
                     <div class="col-2">
                         <h1>
-                            <%= producto.name %>
+                            <%= product.name %>
                         </h1>
                         <p>Meow - El mejor alimento</p>
                         <h4>
                             $
-                            <%= producto.price %>
+                            <%= product.price %>
                         </h4>
 
                         <select>
-                                    <% if (producto.category) { %>
-                                        <% for (let x = 0; x < producto.category.length; x++)  {%>
+                                    <% if (product.category) { %>
+                                        <% for (let x = 0; x < product.category.length; x++)  {%>
                                 <option>
-                                    <%= producto.category[x] %>
+                                    <%= product.category[x] %>
                                 </option>
                                 <% } %>
                                     <% } %>
@@ -41,7 +41,7 @@
                         <h3>Info Nutricional</h3>
                         <br>
                         <p>
-                            <%= producto.nutritional  %>
+                            <%= product.nutritional  %>
                         </p>
                     </div>
                 </div>
