@@ -8,18 +8,18 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const mainController = {
-  index: (req, res) => {
-    const viewData = {
-      producto: productos,
-    };
-    res.render('home', viewData);
-  },
+    index: (req, res) => {
+        const viewData = {
+            producto: productos,
+        };
+        res.render('home', viewData);
+    },
 
-  login: (req, res) => res.render('users/login'),
+    login: (req, res) => res.render('users/login'),
 
-  register: (req, res) => res.render('users/register'),
+    register: (req, res) => res.render('users/register'),
 
-  carrito: (req, res) => res.render('carrito'),
+    cart: (req, res) => res.render('cart'),
 };
 
 module.exports = mainController;
