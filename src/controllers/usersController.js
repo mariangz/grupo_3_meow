@@ -11,12 +11,21 @@ const User = require('../models/Users');
 
 const usersController = {
     /* GET - formulario de creación de usuarios */
-    registrar: (req, res) => res.render('/users/registro'),
+    register: (req, res) => {
+    return res.render('/register');
+    },
+    /* Procesar registro */
+    processRegister: (req, res) => {
+        return res.send ({
+            body: req.body,
+            file: req.file
+        });
+    },
     /* POST - petición de guardar registro de usuario */
-    guardarRegistro: (req, res) => {
+    saveRegister: (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
-            return res.render('../users/registro', { errors: errors.array() });
+            return res.render('../users/register', { errors: errors.array() });
             // return res.status(400).json({ errors: errors.array() });
         }
         // Obtengo los datos ingresados en el formulario del usuario a crear//

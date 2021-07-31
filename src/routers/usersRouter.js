@@ -1,5 +1,4 @@
 const express = require('express');
-
 const router = express.Router();
 
 // Controller
@@ -12,16 +11,10 @@ const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 // Formulario de REGISTRO
-router.get('/users/registro', guestMiddleware, usersController.registrar);
+router.get('/register', guestMiddleware, usersController.register);
 
-router.post('/users/registro',
-
-    body('email').isEmail().withMessage('Debe ser un email válido'),
-    body('password').isLength({ min: 6 }).withMessage('Debe tener al menos 6 caracteres'),
-    body('name').isString().isLength({ min: 2 }).withMessage('Debe tener al menos 2 caracteres'),
-
-    usersController.guardarRegistro);
-router.post('/users/registro', upload.single('image'), usersController.guardarRegistro);
+//Procesar el REGISTRO
+router.post('/register', upload.single ('image'), usersController.processRegister);
 
 // Formulario de LOGIN
 router.get('/login', guestMiddleware, usersController.login);

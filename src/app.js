@@ -1,9 +1,9 @@
 const express = require('express');
 const session = require('express-session');
 const methodOverride = require('method-override');
-
 const app = express();
 
+//Routers
 const mainRouter = require('./routers/mainRouter');
 const productsRouter = require('./routers/productsRouter');
 const usersRouter = require('./routers/usersRouter');
@@ -11,6 +11,8 @@ const usersRouter = require('./routers/usersRouter');
 app.use(session({ secret: "Shh, it's a secret", resave: false, saveUninitialized: false }));
 
 app.use(express.urlencoded({ extended: false }));
+
+//Template engine
 app.set('view engine', 'ejs');
 
 app.use(express.json());
