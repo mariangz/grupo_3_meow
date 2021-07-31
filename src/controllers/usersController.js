@@ -39,11 +39,10 @@ const usersController = {
     },
 
     // Formulario de LOGIN
-    login: (req, res) => res.render('../users/login'),
+    login: (req, res) => res.render('/login'),
 
     // Proceso de LOGIN
     loginProcess: (req, res) => {
-        // Buscar en users.json, un usuario cuyo mail sea igual al req.body.email
         const userToLogin = User.findByField('email', req.body.email);
         if (userToLogin) {
             let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -52,7 +51,7 @@ const usersController = {
                 req.session.userLogged = userToLogin;
                 return res.redirect('profile')
             }
-            return res.render('users/login', {
+            return res.render('/login', {
                 errors: {
                     email: {
                         msg: 'Las credenciales son inválidas'
