@@ -2,6 +2,7 @@ const express = require('express');
 
 const app = express();
 const methodOverride = require('method-override');
+const session = require('express-session');
 const mainRouter = require('./routers/mainRouter');
 const productsRouter = require('./routers/productsRouter');
 const usersRouter = require('./routers/usersRouter');
@@ -12,6 +13,7 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({ secret: "Shh, it's a secret", resave: false, saveUninitialized: false }));
 app.use('/', mainRouter);
 app.use('/productos', productsRouter);
 app.use('/users', usersRouter);

@@ -26,6 +26,9 @@ router.get('/login', usersController.login);
 // Proceso de LOGIN
 router.post('/login', usersController.loginProcess);
 
+// Perfil de Usuario
+router.get('/profile', usersController.profile);
+
 router.post('/users/registro', upload.single('image'), usersController.guardarRegistro);
 
 module.exports = router;

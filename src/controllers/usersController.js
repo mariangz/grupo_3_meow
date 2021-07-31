@@ -48,8 +48,17 @@ const usersController = {
         if (userToLogin) {
             let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (isOkPassword) {
-                return res.send('OK, puedes ingresar')
+                delete userToLogin.password;
+                req.session.userLogged = userToLogin;
+                return res.redirect('profile')
             }
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son inválidas'
+                    }
+                }
+            });
         }
         return res.render('users/login', {
             errors: {
@@ -57,6 +66,13 @@ const usersController = {
                     msg: 'El mail no se encuentra registrado'
                 }
             }
+        });
+    },
+
+    // Perfil de Usuario
+    profile: (req, res) => {
+        res.render('users/profile', {
+            user: req.session.userLogged,
         });
     },
 };
