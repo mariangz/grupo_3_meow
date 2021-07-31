@@ -2,63 +2,63 @@
 <html lang="es">
 
 <head>
-  <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
-  <link rel="stylesheet" href="/css/register.css">
+    <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
+        <link rel="stylesheet" href="/css/register.css">
 </head>
 
 <body>
-  <%- include('../partials/header'); %>
-  <main>
-    <div class="form-container">
-        <form class= "register-form" action="/users/register" method="POST" enctype="multipart/form-data">
-            <h1>Registrate</h1>
-            <div class="field">
-                <label for="name">
+    <%- include('../partials/header'); %>
+        <main>
+            <div class="form-container">
+                <form class="register-form" action="/users/register" method="POST" enctype="multipart/form-data">
+                    <h1>Registrate</h1>
+                    <div class="field">
+                        <label for="name">
                     <span>Nombre y Apellido:</span>
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
-                <input type="text" name="name" id="name" required>
-            </div>
-            <div class="field">
-                <label for="email">
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">
                     <span>E-mail:</span>
                     <strong><abbr title="required">*</abbr></strong>
-                </label> 
-                <input type="email" name="email" id="email" required>
-            </div>
-            <div class="field">
-                <label for="password">
+                </label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="password">
                     <span>Contraseña:</span>
                     <strong><abbr title="required">*</abbr></strong>
-                </label>     
-                <input type="password" name="password" id="password" required>
-            </div>
-            <div class="field">
-                <label for="confirmar-contraseña">
+                </label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="field">
+                        <label for="confirmar-contraseña">
                     <span>Confirmar contraseña:</span>
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
-                <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" required>
-            </div>
-            <div class="field">
-                <div class="file-select">Imagen de Perfil:
-                  <div class="upload-image">
-                    <label class="subirImagen" for="userAddImage">
+                        <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" required>
+                    </div>
+                    <div class="field">
+                        <div class="file-select">Imagen de Perfil:
+                            <div class="upload-image">
+                                <label class="subirImagen" for="userAddImage">
                     <i class="fas fa-upload"></i>Click aquí</label>
-                  </div>
-                  <input type="file" name="users" id="userAddImage" accept="image/*">
-              </div>
-            <!-- <div class="field-checkbox">
+                            </div>
+                            <input type="file" name="image" id="userAddImage" accept="image/*">
+                        </div>
+                        <!-- <div class="field-checkbox">
                 <div class="field-checkbox-hija"><p><a class="registrado">Quiero suscribirme a las novedades</a></p></div>
                 <div class="field-checkbox-hija"><input type="checkbox" name="mailing" id="mailing" class="checkbox"></div>
             </div> -->
-            <div class="form-btn">
-                <button type="submit" value="Ingresar">Ingresar</button>
-            </div>
-            <p><a href="/login" class="registrado">¿Ya tienes una cuenta?</a></p>
-        </form>
-    </div>
-    <!-- <div class="horizontalBlock horizontalBlock--yellow"></div> -->
-  </main>
-  <%- include('../partials/footer'); %>
+                        <div class="form-btn">
+                            <button type="submit" value="Ingresar">Ingresar</button>
+                        </div>
+                        <p><a href="/login" class="registrado">¿Ya tienes una cuenta?</a></p>
+                </form>
+                </div>
+                <!-- <div class="horizontalBlock horizontalBlock--yellow"></div> -->
+        </main>
+        <%- include('../partials/footer'); %>
 </body>

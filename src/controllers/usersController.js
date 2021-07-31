@@ -12,11 +12,11 @@ const User = require('../models/Users');
 const usersController = {
     /* GET - formulario de creación de usuarios */
     register: (req, res) => {
-    return res.render('/register');
+        return res.render('/register');
     },
     /* Procesar registro */
     processRegister: (req, res) => {
-        return res.send ({
+        return res.send({
             body: req.body,
             file: req.file
         });
@@ -60,7 +60,7 @@ const usersController = {
                 req.session.userLogged = userToLogin;
                 return res.redirect('profile')
             }
-            return res.render('/login', {
+            return res.render('users/login', {
                 errors: {
                     email: {
                         msg: 'Las credenciales son inválidas'
