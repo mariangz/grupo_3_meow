@@ -58,6 +58,9 @@ const usersController = {
             if (isOkPassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
+                if (req.body.rememberUser) {
+                    res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 })
+                }
                 return res.redirect('profile')
             }
             return res.render('users/login', {
@@ -79,6 +82,7 @@ const usersController = {
 
     // Perfil de Usuario
     profile: (req, res) => {
+        console.log(req.cookies.userEmail);
         res.render('users/profile', {
             user: req.session.userLogged,
         });
@@ -86,6 +90,7 @@ const usersController = {
 
     // Logout
     logout: (req, res) => {
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect('/');
     }
