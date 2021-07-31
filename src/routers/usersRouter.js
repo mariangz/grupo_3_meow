@@ -11,11 +11,21 @@ const upload = require('../middlewares/uploadUserMiddleware');
 const guestMiddleware = require('../middlewares/guestMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 
+//validación
+const validations = [
+    body('name').notEmpty().withMessage('Tienes que escribir un nombre'),
+    body('email')
+        .notEmpty().withMessage('Debes ingresar un correo electrónico').bail()
+        .isEmail().withMessage('Debes escribir un formato de correo válido'),
+    body('password').notEmpty().withMessage('Tienes que escribir una contraseña'),
+    body('confirmPassword').notEmpty().withMessage('Debes confirmar la contraseña anterior'),
+];
+
 // Formulario de REGISTRO
 router.get('/register', guestMiddleware, usersController.register);
 
 // Procesar el REGISTRO
-router.post('/register', upload.single('image'), usersController.processRegister);
+router.post('/register', upload.single('image'), validations,  usersController.processRegister);
 
 // Formulario de LOGIN
 router.get('/login', guestMiddleware, usersController.login);

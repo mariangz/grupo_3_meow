@@ -12,14 +12,18 @@ const User = require('../models/Users');
 const usersController = {
     /* GET - formulario de creación de usuarios */
     register: (req, res) => {
-        return res.render('/register');
+        return res.render('../views/users/register');
     },
     /* Procesar registro */
     processRegister: (req, res) => {
-        return res.send({
-            body: req.body,
-            file: req.file
-        });
+        const resultValidation= validationResult (req)
+        
+        if (resultValidation.errors.length > 0) {
+            return res.render('../views/users/register', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
     },
     /* POST - petición de guardar registro de usuario */
     saveRegister: (req, res) => {
