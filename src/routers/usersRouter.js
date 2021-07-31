@@ -8,9 +8,11 @@ const usersController = require('../controllers/usersController');
 
 // Middlewares
 const upload = require('../middlewares/uploadUserMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require('../middlewares/authMiddleware');
 
-// localhost:3000/users/registro
-router.get('/users/registro', usersController.registrar);
+// Formulario de REGISTRO
+router.get('/users/registro', guestMiddleware, usersController.registrar);
 
 router.post('/users/registro',
 
@@ -19,16 +21,18 @@ router.post('/users/registro',
     body('name').isString().isLength({ min: 2 }).withMessage('Debe tener al menos 2 caracteres'),
 
     usersController.guardarRegistro);
+router.post('/users/registro', upload.single('image'), usersController.guardarRegistro);
 
 // Formulario de LOGIN
-router.get('/login', usersController.login);
+router.get('/login', guestMiddleware, usersController.login);
 
 // Proceso de LOGIN
 router.post('/login', usersController.loginProcess);
 
 // Perfil de Usuario
-router.get('/profile', usersController.profile);
+router.get('/profile', authMiddleware, usersController.profile);
 
-router.post('/users/registro', upload.single('image'), usersController.guardarRegistro);
+// Logout
+router.get('/logout', usersController.logout);
 
 module.exports = router;

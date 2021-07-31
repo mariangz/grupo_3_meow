@@ -11,7 +11,7 @@ const User = require('../models/Users');
 
 const usersController = {
     /* GET - formulario de creación de usuarios */
-    registrar: (req, res) => res.render('../users/registro'),
+    registrar: (req, res) => res.render('/users/registro'),
     /* POST - petición de guardar registro de usuario */
     guardarRegistro: (req, res) => {
         const errors = validationResult(req);
@@ -75,5 +75,11 @@ const usersController = {
             user: req.session.userLogged,
         });
     },
+
+    // Logout
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect('/');
+    }
 };
 module.exports = usersController;
