@@ -44,6 +44,13 @@ const usersController = {
 
     // Proceso de LOGIN
     loginProcess: (req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('../views/users/login', {
+                errors: resultValidation.mapped(),
+                oldData: req.body,
+            });
+        }
         const userToLogin = User.findByField('email', req.body.email);
         if (userToLogin) {
             const isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
