@@ -21,7 +21,7 @@ router.post('/register', upload.single('image'), validations, usersController.pr
 router.get('/login', guestMiddleware, usersController.login);
 
 // Proceso de LOGIN
-router.post('/login', validations, usersController.loginProcess);
+router.post('/login', usersController.loginProcess);
 
 // Perfil USUARIO
 router.get('/profile', authMiddleware, usersController.profile);

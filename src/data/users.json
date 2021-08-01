@@ -1,58 +1,57 @@
-[
- {
-  "id": 1,
-  "name": "Admin",
-  "email": "admin@admin.com",
-  "password": "$2b$10$Oczr.HPT86inDE4BCZ2heO/UrygmRqHcR8cyZHUSN1TgqMVeSSj2K",
-  "confirmPassword": "1234",
-  "image": "dos.png"
- },
- {
-  "id": 2,
-  "name": "Luciana García",
-  "email": "lucia@garcia.com",
-  "password": "$2b$10$Oczr.HPT86inDE4BCZ2heO/UrygmRqHcR8cyZHUSN1TgqMVeSSj2K",
-  "confirmPassword": "1234",
-  "image": "uno.png"
- },
- {
-  "id": 3,
-  "name": "Alicia Mondino",
-  "email": "alicia@mondino.com",
-  "password": "$2b$10$Oczr.HPT86inDE4BCZ2heO/UrygmRqHcR8cyZHUSN1TgqMVeSSj2K",
-  "confirmPassword": "1234",
-  "image": "dos.png"
- },
- {
-  "id": 4,
-  "name": "Analia Maidana",
-  "email": "analiamaidana@gmail.com",
-  "password": "$2b$10$4S2EBQr1kXkoJ5oclj9.GuJDxKbIhd7AljI/YttOv7qwaE4PUW8u.",
-  "confirmar-contraseña": "123456",
-  "image": "dos.png"
- },
- {
-  "id": 5,
-  "name": "Luis Viale",
-  "email": "luisviale@gmail.com",
-  "password": "$2b$10$wTF7qhckhwa.eMwUYm.s1O21ilBJhlkrslbrLuVPrKphFYE/.clvS",
-  "confirmar-contraseña": "654321",
-  "image": "tres.png"
- },
- {
-  "id": 6,
-  "name": "Natalia Krivanek",
-  "email": "ludmik@gmail.com",
-  "password": "$2b$10$SiBVfPL95j4Rzxy7UixGFu/smN4sZOSXb8x9BQWKtBXx/ELsRBO/i",
-  "confirmPassword": "1234",
-  "image": "uno.png"
- },
- {
-  "id": 7,
-  "name": "Pedro Lopez",
-  "email": "pedroperez@gmail.com",
-  "password": "$2b$10$l0G/x9F.zAbF2JKuu7M/oulyIEJhg2aitsJk91BwgcixOPZwSfBFS",
-  "confirmPassword": "4321",
-  "image": "img-tv-samsung-smart.jpg"
- }
+[{
+        "id": 1,
+        "name": "Admin",
+        "email": "admin@admin.com",
+        "password": "$2b$10$Oczr.HPT86inDE4BCZ2heO/UrygmRqHcR8cyZHUSN1TgqMVeSSj2K",
+        "confirmPassword": "1234",
+        "image": "dos.png"
+    },
+    {
+        "id": 2,
+        "name": "Luciana García",
+        "email": "lucia@garcia.com",
+        "password": "$2b$10$Oczr.HPT86inDE4BCZ2heO/UrygmRqHcR8cyZHUSN1TgqMVeSSj2K",
+        "confirmPassword": "1234",
+        "image": "uno.png"
+    },
+    {
+        "id": 3,
+        "name": "Alicia Mondino",
+        "email": "alicia@mondino.com",
+        "password": "$2b$10$Oczr.HPT86inDE4BCZ2heO/UrygmRqHcR8cyZHUSN1TgqMVeSSj2K",
+        "confirmPassword": "1234",
+        "image": "dos.png"
+    },
+    {
+        "id": 4,
+        "name": "Analia Maidana",
+        "email": "analiamaidana@gmail.com",
+        "password": "$2b$10$4S2EBQr1kXkoJ5oclj9.GuJDxKbIhd7AljI/YttOv7qwaE4PUW8u.",
+        "confirmar-contraseña": "123456",
+        "image": "dos.png"
+    },
+    {
+        "id": 5,
+        "name": "Luis Viale",
+        "email": "luisviale@gmail.com",
+        "password": "$2b$10$wTF7qhckhwa.eMwUYm.s1O21ilBJhlkrslbrLuVPrKphFYE/.clvS",
+        "confirmar-contraseña": "654321",
+        "image": "tres.png"
+    },
+    {
+        "id": 6,
+        "name": "Natalia Krivanek",
+        "email": "ludmik@gmail.com",
+        "password": "$2b$10$SiBVfPL95j4Rzxy7UixGFu/smN4sZOSXb8x9BQWKtBXx/ELsRBO/i",
+        "confirmPassword": "1234",
+        "image": "uno.png"
+    },
+    {
+        "id": 7,
+        "name": "Pedro Lopez",
+        "email": "pedroperez@gmail.com",
+        "password": "$2b$10$l0G/x9F.zAbF2JKuu7M/oulyIEJhg2aitsJk91BwgcixOPZwSfBFS",
+        "confirmPassword": "4321",
+        "image": "img-tv-samsung-smart.jpg"
+    }
 ]
