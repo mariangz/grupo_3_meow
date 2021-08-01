@@ -35,3 +35,25 @@
     + Actualizar weekly del proyecto.
     + Detallar la retrospectiva de esta entrega.
     + Desarrollar la parte de USUARIOS en JSON.
+
+## Weekly - 5to Sprint
+
++ Mariano
+    + Mejorar ...
+    + Revisar ...
+    + Limpiar ...
+    + Desarrollar ...
+
++ Natalia
+    + Armar el tablero para el Sprint5.
+    + Crear la vista de PROFILE, en proceso.
+    + Implementar el LOGIN del usuario.
+    + Implementar la opción de recordar usuario.
+    + ...
+
++ Analía
+    + Actualizar weekly del proyecto.
+    + Detallar la retrospectiva de esta entrega.
+    + Implementar la entidad del usuario.
+    + Implementar el REGISTRO del usuario.
+    + ....
