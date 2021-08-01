@@ -14,10 +14,10 @@
                     <h1>Bienvenid@</h1>
                     <div class="field">
                         <label for="email">
-              <span>Email:</span>
-              <strong><abbr title="required">*</abbr></strong>
-            </label>
-                        <input type="email" id="email" name="email" required>
+                    <span>Email:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                        <input type="email" name="email" id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
@@ -25,12 +25,16 @@
                             <% } %>
                     </div>
                     <div class="field">
-                        <label for="contraseña">
-              <span>Contraseña:</span>
-              <strong><abbr title="required">*</abbr></strong>
-            </label>
-                        <input type="password" name="password" id="password" required>
-                        <p><a class="olvido" href="/users/password">¿Olvidaste tu contraseña?</a></p>
+                        <label for="password">
+                    <span>Contraseña:</span>
+                    <strong><abbr title="required">*</abbr></strong>
+                </label>
+                        <input type="password" name="password" id="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <div class="text-danger">
+                                <%= errors.password.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <div class="field-checkbox">
 
