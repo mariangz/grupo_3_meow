@@ -24,6 +24,7 @@ const usersController = {
                 oldData: req.body,
             });
         }
+        return res.send ("Ok, no tienes errores");
     },
     /* POST - petición de guardar registro de usuario */
     saveRegister: (req, res) => {
