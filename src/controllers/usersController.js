@@ -1,11 +1,5 @@
-const fs = require('fs');
-const path = require('path');
-
-const usersFilePath = path.join(__dirname, '../data/users.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const bcrypt = require('bcrypt');
 
-const saltRounds = 10;
 const { validationResult } = require('express-validator');
 const User = require('../models/Users');
 
@@ -14,42 +8,35 @@ const usersController = {
     register: (req, res) => {
         return res.render('../views/users/register');
     },
+
     /* Procesar registro */
     processRegister: (req, res) => {
-        const resultValidation= validationResult (req)
-        
+        const resultValidation = validationResult(req)
+
         if (resultValidation.errors.length > 0) {
             return res.render('../views/users/register', {
                 errors: resultValidation.mapped(),
                 oldData: req.body,
             });
         }
-        return res.send ("Ok, no tienes errores");
-    },
-    /* POST - petición de guardar registro de usuario */
-    saveRegister: (req, res) => {
-        const errors = validationResult(req);
-        if (!errors.isEmpty()) {
-            return res.render('../users/register', { errors: errors.array() });
-            // return res.status(400).json({ errors: errors.array() });
+        const userInDB = User.findByField('email', req.body.email)
+        if (userInDB) {
+            return res.render('users/register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya está registrado'
+                    }
+                },
+                oldData: req.body
+            });
         }
-        // Obtengo los datos ingresados en el formulario del usuario a crear//
-        const userToCreate = req.body;
-        const imageToCreate = req.file;
-        // Organizo objeto con la misma estructura que el JSON de usuarios
-        const newUser = {
-            id: userToCreate.id,
-            name: userToCreate.name,
-            email: userToCreate.email,
-            password: userToCreate.password,
-            image: userToCreate.filename,
-        };
-        // Encripto la contraseña del usuario//
-        userToCreate.password = bcrypt.hashSync(req.body.password, saltRounds);
-        // Guardo el nuevo usuario en la base de datos//
-        users.push(userToCreate);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        return res.send(userToCreate);
+        const userToCreate = {
+            ...req.body,
+            password: bcrypt.hashSync(req.body.password, 10),
+            image: req.file.filename
+        }
+        const userCreated = User.create(userToCreate);
+        return res.redirect('login');
     },
 
     // Formulario de LOGIN
@@ -59,7 +46,7 @@ const usersController = {
     loginProcess: (req, res) => {
         const userToLogin = User.findByField('email', req.body.email);
         if (userToLogin) {
-            let isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+            const isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
             if (isOkPassword) {
                 delete userToLogin.password;
                 req.session.userLogged = userToLogin;
