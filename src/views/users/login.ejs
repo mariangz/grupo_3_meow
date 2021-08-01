@@ -17,7 +17,7 @@
                     <span>Email:</span>
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
-                        <input type="email" name="email" id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+                        <input type="text" name="email" id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
                             <div class="text-danger">
                                 <%= errors.email.msg %>
