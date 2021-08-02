@@ -1,10 +1,10 @@
 [{
         "id": 1,
-        "name": "Admin",
-        "email": "admin@admin.com",
-        "password": "$2b$10$Oczr.HPT86inDE4BCZ2heO/UrygmRqHcR8cyZHUSN1TgqMVeSSj2K",
-        "confirmPassword": "1234",
-        "image": "dos.png"
+        "name": "Administrador",
+        "email": "admin@meow.com.ar",
+        "password": "$2b$10$ktcrasllk9wPIVILDn3QWeCHMoZiafnU1VusN4ecdqXxz9OaQmbH6",
+        "confirmPassword": "admin",
+        "image": "default.png"
     },
     {
         "id": 2,
