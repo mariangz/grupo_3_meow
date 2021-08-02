@@ -15,10 +15,6 @@ const mainController = {
         res.render('home', viewData);
     },
 
-    login: (req, res) => res.render('users/login'),
-
-    register: (req, res) => res.render('users/register'),
-
     cart: (req, res) => res.render('cart'),
 };
 

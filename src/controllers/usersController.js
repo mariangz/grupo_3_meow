@@ -40,7 +40,7 @@ const usersController = {
     },
 
     // Formulario de LOGIN
-    login: (req, res) => res.render('/login'),
+    login: (req, res) => res.render('users/login'),
 
     // Proceso de LOGIN
     loginProcess: (req, res) => {
