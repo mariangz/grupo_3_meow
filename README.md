@@ -7,7 +7,7 @@ Nuestra audiencia objetivo serán las personas que estén preocupadas por la ali
 
 ## Referentes del mercado
 
-+ Natalia Krivanek
++ Natalia
 	+ [Bor](https://www.bor.com.ar/): se puede observar la simplicidad de la estructura del sitio.  Me agradan la paleta de colores que utiliza, siempre acompañando a los colores de la marca. Es fácil de recorrer, pero con pocos productos.
 
 + Sabrina
@@ -27,10 +27,10 @@ Nuestra audiencia objetivo serán las personas que estén preocupadas por la ali
 + Natalia Krivanek
 	+ Tiene un don para la experiencia de usuario estratégica y las interfaces de usuario. Su experiencia en una amplia variedad de sectores comerciales siempre aporta una nueva perspectiva a la mesa.
 
-+ Analía
++ Analía Maidana
 	+ Aplica su pensamiento de diseño digital y conocimientos de comercialización para alinear perfectamente nuestra misión con las líneas de productos y las necesidades de nuestros clientes. Aporta estructura y planificación a nuestro equipo.
 
-+ Mariano
++ Mariano Giménez
 	+ Es el desarrollador front-end más comprensivo que jamás conocerán. Desde la perspectiva técnica, del diseño, del usuario o del cliente, él está a su disposición, plenamente consciente del contexto de un proyecto.
 
 
