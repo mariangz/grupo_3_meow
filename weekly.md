@@ -55,4 +55,3 @@
     + Detallar la retrospectiva de esta entrega.
     + Implementar la entidad del usuario.
     + Implementar el REGISTRO del usuario.
-    + ....
