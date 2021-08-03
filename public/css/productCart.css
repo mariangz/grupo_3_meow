@@ -29,13 +29,7 @@ table {
 
 .cart-info {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-}
-
-p {
-  margin-block-start: 0;
-  margin-block-end: 0.5em;
 }
 
 small {
@@ -55,12 +49,11 @@ td {
   padding: 5px 5px;
 }
 
-td input {
-  width: 40px;
-  padding: 3px;
+td input[type=number] {
+  max-width: 40px;
   text-align: center;
   border: none;
-  margin: auto;
+  margin: 0;
 }
 
 td a img {
@@ -101,26 +94,6 @@ td:last-child {
 
 th:last-child {
   text-align: right;
-}
-
-.button-checkout {
-  color: #fff;
-  background-color: var(--color-font);
-  padding: 0.5rem 1.3rem;
-  cursor: pointer;
-  border: 2px solid #fff;
-  outline: 2px solid transparent;
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border-radius: 0.8rem;
-}
-
-.button-checkout:hover,
-.button-checkout:focus {
-  background-color: #fff;
-  color: var(--color-font);
-  border: 2px solid var(--color-font);
 }
 
 .checkout-container {

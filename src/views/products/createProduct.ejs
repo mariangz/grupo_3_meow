@@ -2,74 +2,76 @@
 <html lang="es">
 
 <head>
-    <%- include('../partials/head', {pageTitle: 'Crear producto!'}); %>
-        <link rel="stylesheet" href="/css/adminProduct.css">
+    <%- include('../partials/head', {pageTitle: 'Crear producto'}); %>
 </head>
 
 <body>
     <%- include('../partials/header') %>
         <main>
-            <div class="crear-producto">
-                <div class="form-content">
-                    <h3>Crear Producto</h3>
+            <div class="container crear-producto">
+                <div class="form-container">
+                    <h1>Crear Producto</h1>
                     <form action="crear-productos" method="POST" enctype="multipart/form-data">
-                        <div class="contenedor">
+                        <div class="field">
                             <label for="id">
-                            <span>ID del producto: </span>
-                        <input type="text" name="id" id="id" autofocus required></label>
+                        <span>ID del producto</span>
+                    <input type="text" name="id" id="id" autofocus required></label>
                         </div>
-                        <div class="contenedor">
+                        <div class="field">
                             <label for="name">
-                            <span>Nombre del producto: </span>
-                        <input type="text" name="name" id="name" autofocus required></label>
+                        <span>Nombre del producto</span>
+                    <input type="text" name="name" id="name" autofocus required></label>
                         </div>
-                        <div class="contenedor">
+                        <div class="field">
                             <label for="price">
-                            <span>Precio:</span>
-                        <input type="number" name="price" id="price" placeholder="Ej. 4200.99" required></label>
+                        <span>Precio</span>
+                    <input type="number" name="price" id="price" placeholder="Ej. 4200.99" required></label>
                         </div>
 
-                        <div class="contenedor">
+                        <div class="field">
                             <label for="description">
-                                <span>Descripción resumida:</span>
-                            <textarea name="description" id="description" placeholder="Es la descripción del producto en el home" required></textarea></label>
+                            <span>Descripción resumida</span>
+                        <textarea name="description" id="description" placeholder="Es la descripción del producto en el home" required></textarea></label>
                             <label for="nutritional">
-                                <span>Información nutricional:</span>
-                            <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto" required></textarea></label>
+                            <span>Información nutricional</span>
+                        <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto" required></textarea></label>
                         </div>
-                        <div class="contenedor">
-                            <span>Edad de tu mascota:</span><br>
+                        <fieldset class="field">
+                            <legend>Edad de tu mascota</legend>
 
                             <label for="product-cachorro">
-                                <input type="checkbox" name="category" id="product-cachorro" value="Cachorro">
-                                <span>Cachorro</span></label>
+                            <input type="checkbox" name="category" id="product-cachorro" value="Cachorro">
+                            <span>Cachorro</span></label>
 
                             <label for="product-adulto">
-                                <input type="checkbox" name="category" id="product-adulto" value="Adulto">
-                                <span>Adulto</span>
-                            </label>
+                            <input type="checkbox" name="category" id="product-adulto" value="Adulto">
+                            <span>Adulto</span>
+                        </label>
 
                             <label for="product-senior">
-                                <input type="checkbox" name="category" id="product-senior" value="Senior">
-                                <span>Senior</span>
-                            </label>
-                        </div>
-                        <div class="contenedor">
-                            <span>Agregar una imagen:</span>
-                            <div class="file-select">
-                                <input type="file" name="image" id="ProductAddImage" accept="image/x-png,image/gif,image/jpeg" required></input>
+                            <input type="checkbox" name="category" id="product-senior" value="Senior">
+                            <span>Senior</span>
+                        </label>
+                        </fieldset>
+                        <div class="field">
+                            <div class="file-select">Agregar una imagen:
+                                <div class="upload-image file-select">
+                                    <label class="subirImagen" for="productAddImage">
+                        <i class="fas fa-upload"></i>Click aquí</label>
+                                </div>
+                                <input type="file" name="image" id="productAddImage" accept="image/*">
+                                <% if (locals.errors && errors.image) { %>
+                                    <div class="text-danger">
+                                        <%= errors.image.msg %>
+                                    </div>
+                                    <% } %>
                             </div>
-                        </div>
-                        <div class="button-product">
-                            <button type="reset">Limpiar</button>
-                        </div>
-                        <div class="button-product">
-                            <button type="submit">GUARDAR</button>
-                        </div>
+                            <div class="button-product">
+                                <button type="submit" class="button">Guardar</button>
+                            </div>
                     </form>
+                    </div>
                 </div>
-            </div>
-
         </main>
         <%- include('../partials/footer'); %>
 </body>

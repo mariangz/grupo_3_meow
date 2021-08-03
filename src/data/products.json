@@ -66,11 +66,12 @@
   },
   {
     "id": "prueba",
-    "name": "Prueba",
+    "name": "Prueba23",
     "description": "Probando editar cada campo del producto, inclusive quitando uno de los checkbox para ver si los guarda como array.\r\n",
     "nutritional": "Probamos editar un nuevo producto, esperando que funcione.",
     "category": [
       "Cachorro",
+      "Adulto",
       "Senior"
     ],
     "price": "1250",
