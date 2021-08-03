@@ -10,9 +10,17 @@
 
 .header-wrapper {
   display: flex;
+  gap: 1rem;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: var(--headerHeight);
+} 
+
+.nav-wrapper {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 /* ********** checkout icon ********** */
@@ -24,8 +32,7 @@
 .logo {
   display: block;
   max-width: 5rem;
-  margin-left: auto;
-  margin-right: auto;
+  flex-shrink: 0;
 }
 
 .logo img {
@@ -52,18 +59,21 @@
 
 .nav-menu {
   position: fixed;
-  left: -100%;
+  right: -100%;
   top: var(--headerHeight);
   flex-direction: column;
   background-color: var(--backgroundHeader-color);
-  width: 20rem;
+  width: 16rem;
+  height: calc(100vh - var(--headerHeight));
   margin: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
   text-align: left;
-  transition: all 200ms ease-in-out;
+  transition: right 200ms ease-in-out;
 }
 
 .nav-menu.active {
-  left: 0;
+  right: 0;
   z-index: 10;
 }
 
@@ -77,9 +87,28 @@
   background-color: var(--color-font);
 }
 
-.nav-item {
-  margin: 2.5rem 0;
+.nav-item a {
+  display: block;
+  padding: 1.25rem 0;
 }
+
+.nav-item a i {
+  min-width: 1.5ch;
+  opacity: .25;
+}
+
+.nav-item a:hover, 
+.nav-item a:focus {
+  
+}
+
+.nav-item a:hover i, 
+.nav-item a:focus i {
+  min-width: 2ch;
+  opacity: 1;
+  color: var(--color-primary);
+}
+
 
 .nav-button.active .bar:nth-child(2) {
   opacity: 0;
