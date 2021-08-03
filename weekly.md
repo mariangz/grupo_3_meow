@@ -49,7 +49,7 @@
     + Crear la vista de PROFILE, en proceso.
     + Implementar el LOGIN del usuario.
     + Implementar la opción de recordar usuario.
-    + ...
+    + Implementar rutas de huéspedes y de usuarios.
 
 + Analía
     + Detallar la retrospectiva de esta entrega.
