@@ -39,14 +39,13 @@
 ## Weekly - 5to Sprint
 
 + Mariano
-    + Mejorar ...
-    + Revisar ...
-    + Limpiar ...
-    + Desarrollar ...
+    + Desarrollar en el header un menu especifico para usuarios.
+    + Mejorar la consistencia en estilos de todo el sitio.
+    + Revisar el funcionamiento del sitio.
 
 + Natalia
     + Armar el tablero para el Sprint5.
-    + Crear la vista de PROFILE, en proceso.
+    + Crear la vista de PROFILE (en desarrollo).
     + Implementar el LOGIN del usuario.
     + Implementar la opción de recordar usuario.
     + Implementar rutas de huéspedes y de usuarios.
