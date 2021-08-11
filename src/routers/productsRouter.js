@@ -9,12 +9,12 @@ const authMiddleware = require('../middlewares/authMiddleware');
 // Controller
 const productsController = require('../controllers/productsController');
 
-router.get('/administrar', authMiddleware, productsController.listar); /* GET - listado de productos para administrar */
-router.get('/crear-productos', authMiddleware, productsController.crear); /* GET - formulario de creación de productos */
-router.post('/crear-productos', upload.single('image'), productsController.guardar); /* POST - Acción de edición a donde se envia el formulario */
-router.get('/editar-productos/:id', productsController.editar); /* GET - formulario de edición de productos */
-router.put('/editar-productos/:id', productsController.actualizar); /* PUT - Acción de edición a donde se envia el formulario */
-router.delete('/:id', productsController.eliminar); /* DELETE un producto */
-router.get('/:id/', productsController.detalle); /* GET - dellate de un producto en particular */
+router.get('/adminProduct', authMiddleware, productsController.list); /* GET - listado de productos para administrar */
+router.get('/:id/', productsController.detail); /* GET - dellate de un producto en particular */
+router.get('/createProduct', authMiddleware, productsController.create); /* GET - formulario de creación de productos */
+router.post('/createProduct', upload.single('image'), productsController.save); /* POST - Acción de edición a donde se envia el formulario */
+router.get('/editProduct/:id', productsController.edit); /* GET - formulario de edición de productos */
+router.put('/editProduct/:id', productsController.update); /* PUT - Acción de edición a donde se envia el formulario */
+router.delete('/:id', productsController.delete); /* DELETE un producto */
 
 module.exports = router;

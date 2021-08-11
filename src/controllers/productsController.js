@@ -6,7 +6,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
     /* GET - detalle de un producto en particular */
-    detalle: (req, res) => {
+    detail: (req, res) => {
         const { id } = req.params;
         const detalle = products.find((prod) => prod.id === id);
         const viewData = { product: detalle };
@@ -14,7 +14,7 @@ const productsController = {
     },
 
     /* GET - listado de productos */
-    listar: (req, res) => {
+    list: (req, res) => {
         const viewData = {
             product: products,
         };
@@ -22,10 +22,10 @@ const productsController = {
     },
 
     /* GET - formulario de creación de productos */
-    crear: (req, res) => res.render('products/createProduct'),
+    create: (req, res) => res.render('products/createProduct'),
 
     /* POST - Acción de creación a donde se envia el formulario */
-    guardar: (req, res) => {
+    save: (req, res) => {
         // Obtengo los datos ingresados en el formulario del producto a crear
         const productCreate = req.body;
         const imageUpLoad = req.file;
@@ -46,7 +46,7 @@ const productsController = {
     },
 
     /* GET - formulario de edición de productos */
-    editar: (req, res) => {
+    edit: (req, res) => {
         const ages = ['Cachorro', 'Adulto', 'Senior'];
         const { id } = req.params;
         const product1 = products.find((prod) => prod.id === id);
@@ -58,7 +58,7 @@ const productsController = {
     },
 
     /* PUT - Acción de edición a donde se envia el formulario */
-    actualizar: (req, res) => {
+    update: (req, res) => {
         const indexProduct = products.findIndex(
             (product) => product.id === req.params.id,
         );
@@ -72,7 +72,7 @@ const productsController = {
     },
 
     /* DELETE - Acción de borrado - EN PROCESO - */
-    eliminar: (req, res) => {
+    delete: (req, res) => {
         // Buscar el producto con el id recibido por parametro en el array
         const productsFinal = products.filter(
             (prod) => prod.id !== req.params.id,

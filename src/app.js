@@ -27,6 +27,6 @@ app.use(express.static('../public'));
 app.listen(3000, () => console.log('servidor en puerto 3000'));
 
 app.use('/', mainRouter);
-app.use('/productos', productsRouter);
+app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use((req, res) => res.status(404).render('404'));

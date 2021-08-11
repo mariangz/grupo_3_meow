@@ -18,19 +18,19 @@
                             <br>
                             <span class="nobreak">para gatos reales 🐱</span>
                         </h1>
-                        <a class="button" href="/#productos">Quiero!</a>
+                        <a class="button" href="/#products">Quiero!</a>
                     </div>
                 </div>
             </section>
             <div class="horizontalBlock horizontalBlock--turquesa"></div>
 
             <!-- PRODUCTS -->
-            <section id="productos">
+            <section id="products">
                 <h2>Nuestra Selección</h2>
                 <div class="productos">
                     <% product.forEach(element => { %>
                         <div class="card">
-                            <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
+                            <a href="/products/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
                             <div class="card__text-container">
                                 <h3 class="card__title">
                                     <%= element.name %>
@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                         </div>
-                    <% }) %>
+                        <% }) %>
             </section>
 
             <div class="horizontalBlock horizontalBlock--pink"></div>

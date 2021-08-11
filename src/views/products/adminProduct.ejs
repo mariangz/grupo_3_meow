@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head', {pageTitle: 'Administrar'}); %>
-    <link rel="stylesheet" href="/css/homeProductos.css">
+        <link rel="stylesheet" href="/css/homeProductos.css">
 </head>
 
 <body>
@@ -17,22 +17,20 @@
                             <img src="/images/food/nuevo.jpeg" class="product-item__image">
                             <div class="product-item__text-container">
                                 <h3 class="product-item__text title">Nuevo Producto</h3>
-                                <a href="crear-productos" class="button button--small button--outline">
-                                    <i class="fas fa-plus"></i>
-                                    Crear
+                                <a href="createProduct" class="button button--small button--outline">
+                                    <i class="fas fa-plus"></i> Crear
                                 </a>
                             </div>
                         </div>
                         <% product.forEach(element => { %>
                             <div class="product-item">
-                                <a href="/productos/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="product-item__image"></a>
+                                <a href="/products/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="product-item__image"></a>
                                 <div class="product-item__text-container">
                                     <h3 class="product-item__text title">
                                         <%= element.name %>
                                     </h3>
-                                    <a href="editar-productos/<%= element.id %>" class="button button--small button--outline">
-                                        <i class="fas fa-edit"></i>
-                                        Editar
+                                    <a href="editProduct/<%= element.id %>" class="button button--small button--outline">
+                                        <i class="fas fa-edit"></i> Editar
                                     </a>
                                 </div>
                             </div>
