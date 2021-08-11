@@ -59,12 +59,8 @@
                                     <label class="subirImagen" for="productAddImage">
                         <i class="fas fa-upload"></i>Click aquí</label>
                                 </div>
-                                <input type="file" name="image" id="productAddImage" accept="image/*">
-                                <% if (locals.errors && errors.image) { %>
-                                    <div class="text-danger">
-                                        <%= errors.image.msg %>
-                                    </div>
-                                    <% } %>
+                                <input type="file" name="image" id="productAddImage" accept="image/*" required>
+
                             </div>
                             <div class="button-product">
                                 <button type="submit" class="button">Guardar</button>
