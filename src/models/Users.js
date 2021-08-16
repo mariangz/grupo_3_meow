@@ -3,9 +3,10 @@ const fs = require('fs');
 const path = require('path');
 
 const User = {
-    fileName: './data/users.json',
+    fileName: path.resolve('src/data/users.json'),
 
     getData: function() {
+        console.log(this.fileName);
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'));
     },
 
