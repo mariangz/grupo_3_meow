@@ -63,9 +63,8 @@ const usersController = {
                 }
                 return res.redirect('profile')
             }
-            return res.render('users/login', { errors: { email: { msg: 'Las credenciales son inválidas' } } });
         }
-        return res.render('users/login', { errors: { email: { msg: 'El mail no se encuentra registrado' } } });
+        return res.render('users/login', { errors: { email: { msg: 'Las credenciales son inválidas' } } });
     },
 
     // Perfil de Usuario
