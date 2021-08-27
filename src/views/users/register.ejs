@@ -17,7 +17,7 @@
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" minlength="2" required
+                    <input type="text" name="name" id="name" pattern="^[A-Za-z ]{2,20}$" required
                         class="form-control <%=  locals.errors && errors.name ? 'is-invalid' : null %>"
                         value="<%= locals.oldData ? oldData.name : null %>" >
                     <% if (locals.errors && errors.name) { %>
@@ -59,7 +59,7 @@
                         <span>Confirmar contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="confirmPassword" id="confirmar-contraseña" minlength="8" required
+                    <input type="password" name="confirmPassword" id="confirmar-contraseña" required
                         class="form-control <%= locals.errors && errors.confirmPassword ? 'is-invalid' : null %>"
                         value="<%= locals.oldData ? oldData.confirmPassword : null %>">
                     <% if (locals.errors && errors.confirmPassword) { %>
