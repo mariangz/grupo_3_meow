@@ -1,4 +1,6 @@
 const multer = require('multer');
+const upload = multer({ storage });
+const path = require('path');
 
 /* Indicamos para subir el archivo nombre y donde guardarlo */
 const storage = multer.diskStorage({
@@ -6,10 +8,8 @@ const storage = multer.diskStorage({
     cb(null, './public/images/users');
   },
   filename(req, file, cb) {
-    cb(null, file.originalname);
+    cb(null, `${Date.now()}_img_${path.extname(file.originalname)}`);
   },
 });
-
-const upload = multer({ storage });
 
 module.exports = upload;
