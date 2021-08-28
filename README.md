@@ -36,3 +36,7 @@ Nuestra audiencia objetivo serán las personas que estén preocupadas por la ali
 
 ## Tablero de trabajo
 Utilizamos Projects de GITHub.
+
+## Instrucciones
+
+Luego de descargar el proyecto e instalar las dependencias (`npm install`), puede ejecutarlo con `npm run dev`.
