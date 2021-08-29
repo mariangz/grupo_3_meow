@@ -1,4 +1,5 @@
 const multer = require('multer');
+const path = require('path');
 
 /* Indicamos para subir el archivo nombre y donde guardarlo */
 const storage = multer.diskStorage({
@@ -7,7 +8,8 @@ const storage = multer.diskStorage({
     cb(null, folder);
   },
   filename(req, file, cb) {
-    cb(null, file.originalname);
+    const imageName = `dish-${Date.now()}${path.extname(file.originalname)}`;
+    cb(null, imageName);
   },
 });
 

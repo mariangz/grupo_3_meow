@@ -94,5 +94,13 @@
   "password": "$2b$10$T5rK5ri.3RJbrVGPNghLR.WoifEkrkbf23gO1rajZeNKhU9O0gpqK",
   "confirmPassword": "$2b$10$9A8.y6K9gTM0JIVBYmoQb.U5gOXIVeZlEXMqmwFFA9LisPjxJQn3m",
   "image": "1630171778978_img_.png"
+ },
+ {
+  "id": 13,
+  "name": "Juan",
+  "email": "teassssst@test.com",
+  "password": "$2b$10$WI9mZR14nDiU5rEvD9nkPOhIkdPvBx6fzE3czTN6KZpvmuF8ABMV2",
+  "confirmPassword": "$2b$10$tBTrgd2fWmVUoZ5y3Lg11e2ttvQEOmD9DwplRnXVnD/.Hk0XtrjO6",
+  "image": "avatar1630176511757.png"
  }
 ]

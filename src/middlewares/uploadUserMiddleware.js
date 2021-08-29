@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
     cb(null, folder);
   },
   filename(req, file, cb) {
-    const imageName = `${Date.now()}${path.extname(file.originalname)}`;
+    const imageName = `avatar-${Date.now()}${path.extname(file.originalname)}`;
     cb(null, imageName);
   },
 });
