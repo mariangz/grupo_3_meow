@@ -62,5 +62,45 @@
   "password": "$2b$10$twf5./hMzhhZAJ7JU7.4auM90.dIesSDm.DDc1uXa7jJU6gzNpo.m",
   "confirmPassword": "$2b$10$zPtVbXsTbVhFxKpvhl41l.YarH2EWjAOkK9WUqKbxhuuMCz6jsZXW",
   "image": "luis alberdi.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Test",
+  "email": "test@test.com",
+  "password": "$2b$10$r2NXQUqIEu4pfL40sc326.Caw3PwLhUBZGp8lnlJg3jWqrc3DImna",
+  "confirmPassword": "$2b$10$pXRkTu6eUKRZaYYm8kk8GeEB1Z8WVJKjnlJkx2gXyUkZ./sAzoISm",
+  "image": "1630169784521_img_.png"
+ },
+ {
+  "id": 10,
+  "name": "JUan",
+  "email": "tesst@test.com",
+  "password": "$2b$10$O4O83MIj5O/Go6MxiKDjseE73.Zc22lO42bHjLw3CPNNxnkLVr8ra",
+  "confirmPassword": "$2b$10$gOIueC7OuuwAPq7MejJikOpmopOluGLSf6CyJCO1qliGtW6r87Li6",
+  "image": "1630170564847_img_.png"
+ },
+ {
+  "id": 11,
+  "name": "Juan",
+  "email": "tessst@test.com",
+  "password": "$2b$10$2nbnPtGJHB9XkKC2IqKyzes6nvv8nEI9ACUdnW7TTTezuPD9bfG0W",
+  "confirmPassword": "$2b$10$Et5YaZAyPiOwFO8wYVrNNuZQvVMgR3bI1Uue9E0/l7lZ05QTp9hbm",
+  "image": "1630171736883_img_.png"
+ },
+ {
+  "id": 12,
+  "name": "Juan",
+  "email": "tesssst@test.com",
+  "password": "$2b$10$T5rK5ri.3RJbrVGPNghLR.WoifEkrkbf23gO1rajZeNKhU9O0gpqK",
+  "confirmPassword": "$2b$10$9A8.y6K9gTM0JIVBYmoQb.U5gOXIVeZlEXMqmwFFA9LisPjxJQn3m",
+  "image": "1630171778978_img_.png"
+ },
+ {
+  "id": 13,
+  "name": "Juan",
+  "email": "teassssst@test.com",
+  "password": "$2b$10$WI9mZR14nDiU5rEvD9nkPOhIkdPvBx6fzE3czTN6KZpvmuF8ABMV2",
+  "confirmPassword": "$2b$10$tBTrgd2fWmVUoZ5y3Lg11e2ttvQEOmD9DwplRnXVnD/.Hk0XtrjO6",
+  "image": "avatar1630176511757.png"
  }
 ]

@@ -52,17 +52,22 @@ const usersController = {
     }
     const userToLogin = User.findByField('email', req.body.email);
     if (userToLogin) {
-      const isOkPassword = bcrypt.compareSync(req.body.password, userToLogin.password);
+      const isOkPassword = bcrypt.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
       if (isOkPassword) {
         delete userToLogin.password;
         req.session.userLogged = userToLogin;
         if (req.body.rememberUser) {
-          res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 2 });
+          res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 2 });
         }
         return res.redirect('profile');
       }
     }
-    return res.render('users/login', { errors: { email: { msg: 'Las credenciales son inválidas' } } });
+    return res.render('users/login', {
+      errors: { email: { msg: 'Las credenciales son inválidas' } },
+    });
   },
 
   // Perfil de Usuario

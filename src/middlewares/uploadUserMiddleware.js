@@ -1,12 +1,15 @@
 const multer = require('multer');
+const path = require('path');
 
 /* Indicamos para subir el archivo nombre y donde guardarlo */
 const storage = multer.diskStorage({
   destination(req, file, cb) {
-    cb(null, './public/images/users');
+    const folder = './public/images/users';
+    cb(null, folder);
   },
   filename(req, file, cb) {
-    cb(null, file.originalname);
+    const imageName = `avatar-${Date.now()}${path.extname(file.originalname)}`;
+    cb(null, imageName);
   },
 });
 

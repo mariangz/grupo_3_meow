@@ -74,7 +74,7 @@
                             <label class="subirImagen" for="userAddImage">
                                 <i class="fas fa-upload"></i>Click aquí</label>
                         </div>
-                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif">
+                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif" required>
                         <% if (locals.errors && errors.image) { %>
                         <div class="text-danger">
                             <%= errors.image.msg %>
