@@ -54,3 +54,23 @@
     + Detallar la retrospectiva de esta entrega.
     + Implementar la entidad del usuario.
     + Implementar el REGISTRO del usuario.
+
+    ## Weekly - 6to Sprint
+
++ Mariano
+    + Borrador del diagrama de Base de Datos.   
+    + Desarrollar ...
+    + Mejorar ...
+    + Revisar ...
+
++ Natalia
+    + Armar Diagrama de Base de Datos.
+    + Realizar Script de Estructura.
+    + Implementar ...
+    + Implementar ...
+
++ Analía
+    + Armar el tablero para el Sprint6.
+    + Detallar la retrospectiva de esta entrega.
+    + Implementar ...
+    + Implementar ...
