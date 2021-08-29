@@ -17,16 +17,20 @@
                         <img src="/images/users/<%= user.image %>" width="50%">
                     </div>
                     <div class="col-2">
-                        <h2>
+                        <h1>
                             <%= user.name %>
-                        </h2>
-
-                        <h4>
+                        </h1>
+                        <p>
                             <%= user.email %>
-                        </h4>
-
-
+                        </p>
+                        <div class="col-2">
+                            <a href="editUser/<%= user.id %>" class="button button--small button--outline">
+                                <i class="fas fa-edit"></i> Editar</a>
+                        </div>
                     </div>
+
+
+
                 </div>
             </div>
         </main>

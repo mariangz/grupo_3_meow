@@ -22,6 +22,21 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
     };
 
-    const Order = sequelize.define(alias, cols, config);;
+    const Order = sequelize.define(alias, cols, config);
+
+    Order.associate = (models) => {
+        Order.belongsTo(models.Payment, {
+            as: 'payment',
+            foreignKey: 'payment_id'
+        })
+        Order.belongsTo(models.User, {
+            as: 'user',
+            foreignKey: 'user_id'
+        })
+        Order.belongsTo(models.Product, {
+            as: 'product',
+            foreignKey: 'product_id',
+        })
+    }
     return Order;
 }
