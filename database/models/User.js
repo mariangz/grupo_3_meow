@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         image: {
             type: DataTypes.STRING,
         },
-        roleId: {
+        role_id: {
             type: DataTypes.INTEGER,
         },
     };
@@ -32,5 +32,6 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const User = sequelize.define(alias, cols, config);;
+
     return User;
 }

@@ -6,13 +6,13 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        userId: {
+        user_id: {
             type: DataTypes.INTEGER
         },
-        productId: {
+        product_id: {
             type: DataTypes.INTEGER
         },
-        paymentId: {
+        payment_id: {
             type: DataTypes.INTEGER,
         }
     };

@@ -58,13 +58,13 @@ DROP TABLE IF EXISTS `ProductsCategories`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ProductsCategories` (
   `productCategory_id` int NOT NULL AUTO_INCREMENT,
-  `categoryId` int NOT NULL,
-  `productId` int NOT NULL,
+  `category_id` int NOT NULL,
+  `product_id` int NOT NULL,
   PRIMARY KEY (`productCategory_id`),
-  KEY `categoryId` (`categoryId`),
-  KEY `productId` (`productId`),
-  CONSTRAINT `productscategories_ibfk_1` FOREIGN KEY (`categoryId`) REFERENCES `Categories` (`category_id`),
-  CONSTRAINT `productscategories_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `Products` (`product_id`)
+  KEY `category_id` (`category_id`),
+  KEY `product_id` (`product_id`),
+  CONSTRAINT `productscategories_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `Categories` (`category_id`),
+  CONSTRAINT `productscategories_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
@@ -95,10 +95,10 @@ CREATE TABLE `Users` (
   `password` varchar(8) NOT NULL,
   `confirmPassword` varchar(8) NOT NULL,
   `image` varchar(50) NOT NULL,
-  `roleId` int NOT NULL,
+  `role_id` int NOT NULL,
   PRIMARY KEY (`user_id`),
-  KEY `roleId` (`roleId`),
-  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`roleId`) REFERENCES `Roles` (`role_id`)
+  KEY `role_id` (`role_id`),
+  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `Roles` (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
@@ -123,15 +123,15 @@ DROP TABLE IF EXISTS `Orders`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Orders` (
   `order_id` int NOT NULL AUTO_INCREMENT,
-  `userId` int NOT NULL,
-  `productId` int NOT NULL,
-  `paymentId` int NOT NULL,
+  `user_id` int NOT NULL,
+  `product_id` int NOT NULL,
+  `payment_id` int NOT NULL,
   PRIMARY KEY (`order_id`),
-  KEY `userId` (`userId`),
-  KEY `productId` (`productId`),
-  KEY `paymentId` (`paymentId`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `Users` (`user_id`),
-  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`productId`) REFERENCES `Products` (`product_id`),
-  CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`paymentId`) REFERENCES `Payments` (`payment_id`)
+  KEY `user_id` (`user_id`),
+  KEY `product_id` (`product_id`),
+  KEY `payment_id` (`payment_id`),
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`),
+  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`),
+  CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
