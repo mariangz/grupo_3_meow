@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
     let alias = "User";
-    let cols = { 
+    let cols = {
         user_id: {
             autoIncrement: true,
             primaryKey: true,
@@ -9,29 +9,28 @@ module.exports = (sequelize, DataTypes) => {
         name: {
             allowNull: false,
             type: DataTypes.STRING
-        } ,
-        email:{
+        },
+        email: {
             type: DataTypes.STRING,
         },
-        password:{
+        password: {
             type: DataTypes.STRING,
-        } ,
+        },
         confirmPassword: {
             type: DataTypes.STRING,
         },
         image: {
             type: DataTypes.STRING,
         },
-        role_id:{
+        roleId: {
             type: DataTypes.INTEGER,
-            },
+        },
     };
-    let config = { 
+    let config = {
         tableName: "Users",
         timestamps: false,
     }
 
-    const User = sequelize.define(alias, cols, config);    
-    ;
+    const User = sequelize.define(alias, cols, config);;
     return User;
 }

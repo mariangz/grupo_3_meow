@@ -1,29 +1,27 @@
 module.exports = (sequelize, DataTypes) => {
     let alias = "Order";
-    let cols = { 
+    let cols = {
         order_id: {
             autoIncrement: true,
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        user_id: {
+        userId: {
             type: DataTypes.INTEGER
-        } ,
-        product_id:{
+        },
+        productId: {
             type: DataTypes.INTEGER
-        }
-         ,
-        payment_id:{
+        },
+        paymentId: {
             type: DataTypes.INTEGER,
-        } 
-            };
+        }
+    };
 
-    let config = { 
+    let config = {
         tableName: "Orders",
         timestamps: false,
     };
 
-    const Order = sequelize.define(alias, cols, config);    
-    ;
+    const Order = sequelize.define(alias, cols, config);;
     return Order;
 }
