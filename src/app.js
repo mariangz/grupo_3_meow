@@ -14,6 +14,10 @@ const mainRouter = require('./routers/mainRouter');
 const productsRouter = require('./routers/productsRouter');
 const usersRouter = require('./routers/usersRouter');
 
+// Template engine
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, './views'));
+
 app.use(logger('dev'));
 app.use(
   session({
@@ -25,19 +29,14 @@ app.use(
 app.use(cookies());
 app.use(userLoggedMiddleware);
 app.use(express.urlencoded({ extended: false }));
-
-// Template engine
-app.set('view engine', 'ejs');
-app.set('views', path.resolve(__dirname, './views'));
-
 app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static(path.resolve('public')));
-// eslint-disable-next-line no-console
-const server = 3000;
-app.listen(server, () => console.log(`servidor en puerto ${server}`));
-
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use((req, res) => res.status(404).render('404'));
+
+// server
+const server = 3000;
+app.listen(server, () => console.log(`servidor en puerto ${server}`));
