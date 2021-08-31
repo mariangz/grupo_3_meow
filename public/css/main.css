@@ -319,7 +319,7 @@ input[type=email],
 input[type=number]  {
   display: block;
   width: 100%;
-  margin-bottom: .5rem;
+  /* margin-bottom: 1.5rem; */
   padding: .5rem .75rem;
   border: 1px solid var(--color-fontLight);
   font-size: 0.875rem;
@@ -350,6 +350,10 @@ fieldset  {
 .required-hint {
   text-decoration: none;
   color: var(--color-fontLight);
+}
+
+.field {
+  margin-bottom: 1.5rem;
 }
 
 .field-checkbox {
