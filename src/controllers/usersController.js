@@ -11,6 +11,13 @@ const usersController = {
   processRegister: (req, res) => {
     const resultValidation = validationResult(req);
 
+    if (!resultValidation) {
+      return res.render('../views/users/register', {
+        errors: resultValidation.mapped(),
+        oldData: req.body,
+      });
+    }
+    /*
     if (resultValidation.errors.length > 0) {
       return res.render('../views/users/register', {
         errors: resultValidation.mapped(),
@@ -35,7 +42,7 @@ const usersController = {
       image: req.file.filename,
     };
     const userCreated = User.create(userToCreate);
-    return res.redirect('login');
+    return res.redirect('login'); */
   },
 
   // Formulario de LOGIN

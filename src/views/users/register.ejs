@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head', {pageTitle: 'Meow!' }); %>
-    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" pattern="^[A-Za-z ]{2,20}$" required
+                    <input type="text" name="name" id="name" 
                         class="form-control <%=  locals.errors && errors.name ? 'is-invalid' : null %>"
                         value="<%= locals.oldData ? oldData.name : null %>" >
                     <% if (locals.errors && errors.name) { %>
@@ -31,7 +31,7 @@
                         <span>E-mail:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="email" name="email" id="email" required
+                    <input type="email" name="email" id="email" 
                         class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                         value="<%= locals.oldData ? oldData.email : null %>">
                     <% if (locals.errors && errors.email) { %>
@@ -45,7 +45,7 @@
                         <span>Contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="password" id="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$" required
+                    <input type="password" name="password" id="password"
                         class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>"
                         value="<%= locals.oldData ? oldData.password : null %>">
                     <% if (locals.errors && errors.password) { %>
@@ -59,7 +59,7 @@
                         <span>Confirmar contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="confirmPassword" id="confirmar-contraseña" required
+                    <input type="password" name="confirmPassword" id="confirmar-contraseña" 
                         class="form-control <%= locals.errors && errors.confirmPassword ? 'is-invalid' : null %>"
                         value="<%= locals.oldData ? oldData.confirmPassword : null %>">
                     <% if (locals.errors && errors.confirmPassword) { %>
@@ -74,7 +74,7 @@
                             <label class="subirImagen" for="userAddImage">
                                 <i class="fas fa-upload"></i>Click aquí</label>
                         </div>
-                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif" required>
+                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif">
                         <% if (locals.errors && errors.image) { %>
                         <div class="text-danger">
                             <%= errors.image.msg %>
