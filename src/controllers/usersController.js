@@ -17,12 +17,6 @@ const usersController = {
       });
     }
     /*
-    if (resultValida tion.errors.length > 0) {
-      return res.render('../views/users/register', {
-        errors: resultValidation.mapped(),
-        oldData: req.body,
-      });
-    }
     const userInDB = User.findByField('email', req.body.email);
     if (userInDB) {
       return res.render('users/register', {
