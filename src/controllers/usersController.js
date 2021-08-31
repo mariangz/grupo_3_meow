@@ -16,7 +16,6 @@ const usersController = {
         oldData: req.body,
       });
     }
-    /*
     const userInDB = User.findByField('email', req.body.email);
     if (userInDB) {
       return res.render('users/register', {
@@ -35,7 +34,7 @@ const usersController = {
       image: req.file.filename,
     };
     const userCreated = User.create(userToCreate);
-    return res.redirect('login'); */
+    return res.redirect('login');
   },
 
   // Formulario de LOGIN
