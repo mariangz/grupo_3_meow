@@ -2,6 +2,7 @@
   --color-primary: #8fd9c1;
   --color-accent: #ffe95a;
   --color-accentTwo: #fed8d2;
+  --color-danger: #ff0000;
 
   --color-font: #000;
   --color-fontMedium: #666;
@@ -169,7 +170,7 @@ li {
 }
 
 .button--delete {
-  background-color: red;
+  background-color: var(--color-danger);
   color: var(--color-font);
 }
 
@@ -318,7 +319,7 @@ input[type=email],
 input[type=number]  {
   display: block;
   width: 100%;
-  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
   padding: .5rem .75rem;
   border: 1px solid var(--color-fontLight);
   font-size: 0.875rem;
@@ -340,9 +341,19 @@ fieldset  {
   border-radius: .25rem;
 }
 
+.text-danger {
+  color: var(--color-danger);
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
 .required-hint {
   text-decoration: none;
   color: var(--color-fontLight);
+}
+
+.field {
+  margin-bottom: 1.5rem;
 }
 
 .field-checkbox {
@@ -385,10 +396,6 @@ input[type="file"] {
   padding: .5rem 0;
   text-align: center;
   cursor: pointer;
-}
-
-.text-danger {
-  color: red;
 }
 
 .button-product {
