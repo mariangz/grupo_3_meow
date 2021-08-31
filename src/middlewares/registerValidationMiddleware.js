@@ -13,24 +13,24 @@ const validations = [
   body('password').notEmpty().withMessage('Ingresá tu contraseña'),
   body('confirmPassword').notEmpty().withMessage('Confirmá tu contraseña'),
 
-  // body('image').custom((value, { req }) => {
-  //   const { file } = req;
-  //   const acceptedExtensions = ['.jpg', '.png', '.gif'];
+  body('image').custom((value, { req }) => {
+    const { file } = req;
+    const acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
 
-  //   if (!file) {
-  //     throw new Error('Tienes que subir una imagen');
-  //   } else {
-  //     const fileExtension = path.extname(file.originalname);
-  //     if (!acceptedExtensions.includes(fileExtension)) {
-  //       throw new Error(
-  //         `Las extensiones de archivo permitidas son ${acceptedExtensions.join(
-  //           ' , '
-  //         )}`
-  //       );
-  //     }
-  //   }
-  //   return true;
-  // }),
+    if (!file) {
+      throw new Error('Tienes que subir una imagen');
+    } else {
+      const fileExtension = path.extname(file.originalname);
+      if (!acceptedExtensions.includes(fileExtension)) {
+        throw new Error(
+          `Las extensiones de archivo permitidas son ${acceptedExtensions.join(
+            ' , '
+          )}`
+        );
+      }
+    }
+    return true;
+  }),
 ];
 
 module.exports = validations;
