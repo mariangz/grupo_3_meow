@@ -325,6 +325,7 @@ input[type=number]  {
   border-radius: .25rem;
 }
 
+
 select {
   padding: .5rem .5rem;
   border: 1px solid var(--color-fontLight);
@@ -338,6 +339,12 @@ fieldset  {
   border: 1px solid var(--color-fontLight);
   font-size: 0.875rem;
   border-radius: .25rem;
+}
+
+.text-danger {
+  color: red;
+  font-size: .8rem;
+  margin-bottom: 1rem;
 }
 
 .required-hint {
@@ -368,12 +375,6 @@ fieldset  {
 
 input[type="file"] {
   display: none;
-}
-
-.text-danger {
-  color: red;
-  font-size: .8rem;
-  margin-bottom: 1rem;
 }
 
 .upload-image {
