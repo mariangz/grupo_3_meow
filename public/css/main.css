@@ -318,7 +318,7 @@ input[type=email],
 input[type=number]  {
   display: block;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: .5rem;
   padding: .5rem .75rem;
   border: 1px solid var(--color-fontLight);
   font-size: 0.875rem;
@@ -370,6 +370,12 @@ input[type="file"] {
   display: none;
 }
 
+.text-danger {
+  color: red;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
 .upload-image {
   margin-bottom: 1.5rem;
 }
@@ -385,10 +391,6 @@ input[type="file"] {
   padding: .5rem 0;
   text-align: center;
   cursor: pointer;
-}
-
-.text-danger {
-  color: red;
 }
 
 .button-product {

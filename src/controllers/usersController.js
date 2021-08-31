@@ -10,15 +10,14 @@ const usersController = {
   /* Procesar registro */
   processRegister: (req, res) => {
     const resultValidation = validationResult(req);
-
-    if (!resultValidation) {
+    if (resultValidation.errors.length > 0) {
       return res.render('../views/users/register', {
         errors: resultValidation.mapped(),
         oldData: req.body,
       });
     }
     /*
-    if (resultValidation.errors.length > 0) {
+    if (resultValida tion.errors.length > 0) {
       return res.render('../views/users/register', {
         errors: resultValidation.mapped(),
         oldData: req.body,
