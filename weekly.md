@@ -66,11 +66,11 @@
 + Natalia
     + Armar Diagrama de Base de Datos.
     + Realizar Script de Estructura.
-    + Implementar ...
+    + Realizar Script de datos.
     + Implementar ...
 
 + Analía
     + Armar el tablero para el Sprint6.
     + Detallar la retrospectiva de esta entrega.
-    + Implementar ...
-    + Implementar ...
+    + Implementar Sequelize y creación de carpetas.
+    + Creación de archivos modelos.
