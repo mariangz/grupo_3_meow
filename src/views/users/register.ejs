@@ -16,7 +16,7 @@
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" 
+                    <input type="text" name="name" id="name" required
                         value="<%= locals.oldData ? oldData.name : null %>" >
                     <% if ( locals.errors && errors.name) { %>
                     <p class="text-danger">
@@ -29,7 +29,7 @@
                         <span>E-mail:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="email" name="email" id="email" 
+                    <input type="email" name="email" id="email" required
                         value="<%= locals.oldData ? oldData.email : null %>">
                     <% if ( locals.errors && errors.email) { %>
                     <p class="text-danger">
@@ -42,7 +42,7 @@
                         <span>Contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="password" id="password"
+                    <input type="password" name="password" id="password" required
                         value="<%= locals.oldData ? oldData.password : null %>">
                     <% if ( locals.errors && errors.password) { %>
                     <p class="text-danger">
@@ -55,7 +55,7 @@
                         <span>Confirmar contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="confirmPassword" id="confirmar-contraseña" 
+                    <input type="password" name="confirmPassword" id="confirmar-contraseña" required 
                         value="<%= locals.oldData ? oldData.confirmPassword : null %>">
                     <% if ( locals.errors && errors.confirmPassword) { %>
                     <p class="text-danger">
@@ -69,7 +69,7 @@
                             <label class="subirImagen" for="userAddImage">
                                 <i class="fas fa-upload"></i>Click aquí</label>
                         </div>
-                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif">
+                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif" required> 
                         <% if ( locals.errors && errors.image) { %>
                         <p class="text-danger">
                             <%= errors.image.msg %>
