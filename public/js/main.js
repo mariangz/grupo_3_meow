@@ -16,3 +16,6 @@ navButton.addEventListener('click', openMenu);
 navLink.forEach((link) => link.addEventListener('click', closeMenu));
 
 // navLink.addEventListener("click", closeMenu);
+const registerFormValidation = () => {
+  const form = document.querySelector('.register-form');
+};
