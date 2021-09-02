@@ -330,12 +330,11 @@ input[type=email].invalid {
   border: 1px solid var(--color-danger);
 }
 
-form i {
+.fa-check-circle,
+.fa-exclamation-circle {
   position: absolute;
-  right: 250px;
-  /* top: 250px; */
-  color: #ff0000;
-
+  right: 10px;
+  top: 40px;
 }
 
 select {
@@ -366,6 +365,7 @@ fieldset  {
 
 .field {
   margin-bottom: 1.5rem;
+  position: relative;
 }
 
 .field-checkbox {
