@@ -1,54 +1,28 @@
-const email = document.getElementById('email');
-const form = document.getElementById('email');
-const emailError = document.querySelector('#email + span.error');
+const form = document.getElementById('register');
 
-const showError = () => {
-  if (email.validity.valueMissing) {
-    emailError.textContent = 'Ingresá un email';
-  } else if (email.validity.typeMismatch) {
-    emailError.textContent = 'El email tiene que tener un formato válido.';
+const showError = (input) => {
+  const span = document.querySelector(`#${input.id} + span.error`);
+  if (input.validity.valueMissing) {
+    span.textContent = 'Campo obligatorio';
+  } else if (input.validity.tooShort) {
+    span.textContent = `Al menos ${input.minLength} caracteres.`;
+  } else if (input.validity.typeMismatch) {
+    span.textContent = input.title;
+  } else if (input.validity.patternMismatch) {
+    span.textContent = input.title;
   }
-  email.classList.add('invalid');
-  emailError.className = 'error active';
+  span.classList.add = 'active';
 };
 
 form.addEventListener('input', (event) => {
   const input = event.target;
   if (input.validity.valid) {
     input.classList.remove('invalid');
-    emailError.textContent = '';
-    emailError.className = 'error';
+    input.textContent = '';
+    input.className = 'error';
   } else {
-    showError();
+    showError(input);
   }
 });
 
-// email.addEventListener('focus', () => {
-//   if (email.classList.contains('invalid')) {
-//     email.classList.remove('invalid');
-//   }
-// });
-
-// const password = document.getElementById('password');
-// const inputs = document.querySelectorAll('#register [required]');
-
-// inputs.forEach((input) => {
-//   const small = document.createElement('small');
-//   small.id = input.name;
-//   small.textContent = input.title;
-//   small.classList.add('text-danger', 'hidden');
-//   input.insertAdjacentElement('afterend', small);
-// });
-
-// form.addEventListener('keyup', (event) => {
-//   if (event.target.matches('#register [required]')) {
-//     const e = event.target;
-//     const { pattern } = event.target;
-//     const regex = new RegExp(pattern);
-//     if (regex.exec(e.value)) {
-//       console.log(regex.exec(e.value));
-//       return document.getElementById(e.name).classList.add('hidden');
-//     }
-//     return document.getElementById(e.name).classList.remove('hidden');
-//   }
-// });
+console.log(form);

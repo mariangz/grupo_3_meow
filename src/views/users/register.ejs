@@ -17,8 +17,9 @@
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" required pattern="^[A-Za-z ]{2,20}$"
+                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" required pattern="^[A-Za-z ]$" minlength="2"
                         value="<%= locals.oldData ? oldData.name : null %>" >
+                        <span class="error" aria-live="polite"></span>
                         <i class="fas fa-check-circle input-icon"></i>
                         <i class="fas fa-exclamation-circle input-icon"></i>
                     <% if ( locals.errors && errors.name) { %>
@@ -50,6 +51,7 @@
                     </label>
                     <input type="password" name="password" id="password" title="Ingresá una contraseña válida" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.password : null %>">
+                        <span class="error" aria-live="polite"></span>
                         <i class="fas fa-check-circle input-icon"></i>
                         <i class="fas fa-exclamation-circle input-icon"></i>
                     <% if ( locals.errors && errors.password) { %>
@@ -65,6 +67,7 @@
                     </label>
                     <input type="password" name="confirmPassword" id="confirmar-contraseña" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.confirmPassword : null %>">
+                        <span class="error" aria-live="polite"></span>
                         <i class="fas fa-check-circle input-icon"></i>
                         <i class="fas fa-exclamation-circle input-icon"></i>
                     <% if ( locals.errors && errors.confirmPassword) { %>
