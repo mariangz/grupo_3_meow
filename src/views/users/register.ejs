@@ -10,18 +10,17 @@
     <%- include('../partials/header'); %>
     <main>
         <div class="form-container">
-            <form class="register-form" id='register' action="/users/register" method="POST" enctype="multipart/form-data">
+            <form class="register-form" id='register' novalidate action="/users/register" method="POST" enctype="multipart/form-data">
                 <h1>Registrate</h1>
                 <div class="field">
                     <label for="name">
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" 
+                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" required pattern="^[A-Za-z ]{2,20}$"
                         value="<%= locals.oldData ? oldData.name : null %>" >
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error</small>
+                        <i class="fas fa-check-circle input-icon"></i>
+                        <i class="fas fa-exclamation-circle input-icon"></i>
                     <% if ( locals.errors && errors.name) { %>
                     <p class="text-danger">
                         <%= errors.name.msg %>
@@ -33,11 +32,11 @@
                         <span>E-mail:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="email" name="email" id="email" 
+                    <input type="email" name="email" id="email" title="Ingresá un email válido" required
                         value="<%= locals.oldData ? oldData.email : null %>">
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error</small>
+                        <span class="error" aria-live="polite"></span>
+                        <i class="fas fa-check-circle input-icon"></i>
+                        <i class="fas fa-exclamation-circle input-icon"></i>
                     <% if ( locals.errors && errors.email) { %>
                     <p class="text-danger">
                         <%= errors.email.msg %>
@@ -49,11 +48,10 @@
                         <span>Contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="password" id="password" 
+                    <input type="password" name="password" id="password" title="Ingresá una contraseña válida" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.password : null %>">
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error</small>
+                        <i class="fas fa-check-circle input-icon"></i>
+                        <i class="fas fa-exclamation-circle input-icon"></i>
                     <% if ( locals.errors && errors.password) { %>
                     <p class="text-danger">
                         <%= errors.password.msg %>
@@ -65,11 +63,10 @@
                         <span>Confirmar contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="confirmPassword" id="confirmar-contraseña"  
+                    <input type="password" name="confirmPassword" id="confirmar-contraseña" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.confirmPassword : null %>">
-                        <i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <small>Error</small>
+                        <i class="fas fa-check-circle input-icon"></i>
+                        <i class="fas fa-exclamation-circle input-icon"></i>
                     <% if ( locals.errors && errors.confirmPassword) { %>
                     <p class="text-danger">
                         <%= errors.confirmPassword.msg %>
@@ -82,7 +79,7 @@
                             <label class="subirImagen" for="userAddImage">
                                 <i class="fas fa-upload"></i>Click aquí</label>
                         </div>
-                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif"> 
+                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif" required> 
                         <% if ( locals.errors && errors.image) { %>
                         <p class="text-danger">
                             <%= errors.image.msg %>
@@ -94,7 +91,7 @@
                 <div class="field-checkbox-hija"><input type="checkbox" name="mailing" id="mailing" class="checkbox"></div>
             </div> -->
                     <div>
-                        <button type="submit" value="Ingresar" class="button button--small button--outline">Registrarme</button>
+                        <button type="submit" value="Ingresar" class="button button--small class="error-msg" button--outline">Registrarme</button>
                     </div>
                     <p><a href="/users/login" class="registrado">¿Ya tienes una cuenta?</a></p>
             </form>
