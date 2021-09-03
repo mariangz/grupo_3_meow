@@ -1,6 +1,7 @@
 const form = document.getElementById('register');
 
 const showError = (input) => {
+  console.log(input);
   const span = document.querySelector(`#${input.id} + span.error`);
   if (input.validity.valueMissing) {
     span.textContent = 'Campo obligatorio';
@@ -12,6 +13,8 @@ const showError = (input) => {
     span.textContent = input.title;
   }
   span.classList.add('invalid');
+  const icon = document.querySelector(`#${input.id} ~ .input-icon`);
+  icon.classList.add('input-icon--error', 'fa-exclamation-circle');
 };
 
 const hideError = (input) => {
@@ -19,7 +22,9 @@ const hideError = (input) => {
   span.textContent = '';
   span.classList.remove('invalid');
   input.classList.remove('invalid');
-  input.classList.remove();
+  const icon = document.querySelector(`#${input.id} ~ .input-icon`);
+  icon.classList.remove('input-icon--error', 'fa-exclamation-circle');
+  icon.classList.add('input-icon--success', 'fa-check-circle');
 };
 
 form.addEventListener('input', (event) =>

@@ -17,11 +17,10 @@
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" required minlength="2" 
+                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" required  minlength="2" 
                         value="<%= locals.oldData ? oldData.name : null %>" >
-                        <span class="error" aria-live="polite"></span>
-                        <i class="fas fa-check-circle input-icon"></i>
-                        <i class="fas fa-exclamation-circle input-icon"></i>
+                    <span class="error" aria-live="polite"></span>
+                    <i class="fas input-icon"></i>
                     <% if ( locals.errors && errors.name) { %>
                     <p class="text-danger">
                         <%= errors.name.msg %>
