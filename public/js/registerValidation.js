@@ -12,7 +12,6 @@ const showError = (input) => {
     span.textContent = input.title;
   }
   span.classList.add('invalid');
-  input.classList.add('invalid');
 };
 
 const hideError = (input) => {
@@ -20,6 +19,7 @@ const hideError = (input) => {
   span.textContent = '';
   span.classList.remove('invalid');
   input.classList.remove('invalid');
+  input.classList.remove();
 };
 
 form.addEventListener('input', (event) =>

@@ -334,17 +334,18 @@ input[type=email].invalid {
 }
 
 .input-icon {
-  /* visibility: hidden; */
+  visibility: hidden;
   position: absolute;
   right: 10px;
   top: 40px;
 }
 
-.fa-check-circle.succes {
+.fa-check-circle.succes.valid {
   color: var(--color-succes);
+  visibility: hidden;
 }
 
-.fa-exclamation-circle.error {
+.fa-exclamation-circle.error.invalid{
   color: var(--color-danger);
 }
 
