@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
         image: {
             type: DataTypes.STRING,
         },
-        role_id: {
+        rights: {
             type: DataTypes.INTEGER,
         },
     };
