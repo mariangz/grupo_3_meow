@@ -124,14 +124,17 @@ CREATE TABLE `Users` (
   `password` varchar(8) NOT NULL,
   `confirmPassword` varchar(8) NOT NULL,
   `image` varchar(50) NOT NULL,
+  `rights` varchar(3),
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 --
 -- Dumping data for table `Users`
 --
-INSERT INTO Users (user_id, name, email, password, confirmpassword, image) VALUES
-(1,'Administrador', 'admin@meow.com.ar', '1234', '1234', 'default.png'),
-(2,'UsuarioPrueba', 'prueba@gmail.com', 'hola', 'hola', 'uno.png');
+INSERT INTO Users (user_id, name, email, password, confirmpassword, image, rights) VALUES
+(1,'Administrador', 'mariano@meow.com.ar', '1234', '1234', 'default.png', 'admin'),
+(2,'Administrador', 'analia@meow.com.ar', '1234', '1234', 'default.png', 'admin'),
+(3,'Administrador', 'naralia@meow.com.ar', '1234', '1234', 'default.png', 'admin'),
+(4,'UsuarioPrueba', 'prueba@gmail.com', 'hola', 'hola', 'uno.png', null);
 
 
 --

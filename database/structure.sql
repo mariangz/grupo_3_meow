@@ -81,6 +81,7 @@ CREATE TABLE `Users` (
   `password` varchar(8) NOT NULL,
   `confirmPassword` varchar(8) NOT NULL,
   `image` varchar(50) NOT NULL,
+  `rights` varchar(3),
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
