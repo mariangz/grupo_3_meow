@@ -111,27 +111,6 @@ INSERT INTO ProductsCategories (productCategory_id, product_Id, Category_id) VAL
 (18,6,3);
 
 --
--- Table structure for table `Roles`
---
-
-DROP TABLE IF EXISTS `Roles`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Roles` (
-  `role_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Dumping data for table `Roles`
---
-INSERT INTO Roles (role_id, name) VALUES
-(1,'Administrador'),
-(2,'Usuario');
-
-
---
 -- Table structure for table `Users`
 --
 
@@ -145,17 +124,14 @@ CREATE TABLE `Users` (
   `password` varchar(8) NOT NULL,
   `confirmPassword` varchar(8) NOT NULL,
   `image` varchar(50) NOT NULL,
-  `role_id` int NOT NULL,
-  PRIMARY KEY (`user_id`),
-  KEY `role_id` (`role_id`),
-  CONSTRAINT `users_ibfk_1` FOREIGN KEY (`role_id`) REFERENCES `Roles` (`role_id`)
+  PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 --
 -- Dumping data for table `Users`
 --
-INSERT INTO Users (user_id, name, email, password, confirmpassword, image, role_id) VALUES
-(1,'Administrador', 'admin@meow.com.ar', '1234', '1234', 'default.png', 1),
-(2,'UsuarioPrueba', 'prueba@gmail.com', 'hola', 'hola', 'uno.png',2);
+INSERT INTO Users (user_id, name, email, password, confirmpassword, image) VALUES
+(1,'Administrador', 'admin@meow.com.ar', '1234', '1234', 'default.png'),
+(2,'UsuarioPrueba', 'prueba@gmail.com', 'hola', 'hola', 'uno.png');
 
 
 --
