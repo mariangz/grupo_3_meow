@@ -1,7 +1,7 @@
-module.exports = function (sequelize, dataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const alias = "Cart";
-    
- const cols = {
+
+    const cols = {
         cart_id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -22,30 +22,26 @@ module.exports = function (sequelize, dataTypes) {
             allowNull: false
         },
     }
-    
-  const config = {
+
+    const config = {
         tableName: "Carts",
-       timestamps: false
-   }
-    
+        timestamps: false
+    }
+
     const Cart = sequelize.define(alias, cols, config);
-    
-    Cart.associate = (models)=>{
+
+    Cart.associate = (models) => {
 
         Cart.hasMany(models.Item, {
             as: "items",
             foreignKey: "cart_id",
-          });
-          Cart.belongsTo(models.User, {
+        });
+        Cart.belongsTo(models.User, {
             as: "user",
             foreignKey: "user_id",
-          });
-    
-    }   
-    
+        });
+
+    }
+
     return Cart;
 }
-
-
-
-
