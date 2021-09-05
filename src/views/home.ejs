@@ -30,17 +30,17 @@
                 <div class="productos">
                     <% product.forEach(element => { %>
                         <div class="card">
-                            <a href="/products/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="card__image"></a>
+                            <a href="/products/<%= element.product_id %>" class="link-product"><img src="/images/food/<%= element.productImage %>" class="card__image"></a>
                             <div class="card__text-container">
                                 <h3 class="card__title">
-                                    <%= element.name %>
+                                    <%= element.productName %>
                                 </h3>
                                 <p class="card__text description">
-                                    <%= element.description %>
+                                    <%= element.shortDescription %>
                                 </p>
                                 <div class="card__text-btn-container">
                                     <p class="card__text price">$
-                                        <%= element.price %>
+                                        <%= element.productPrice %>
                                     </p>
                                     <button class="card__button"><img src="/images/plus.svg" alt=""></button>
                                 </div>

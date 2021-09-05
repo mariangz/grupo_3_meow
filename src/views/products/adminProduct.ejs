@@ -22,14 +22,14 @@
                                 </a>
                             </div>
                         </div>
-                        <% product.forEach(element => { %>
+                        <% products.forEach(element => { %>
                             <div class="product-item">
-                                <a href="/products/<%= element.id %>" class="link-product"><img src="/images/food/<%= element.image %>" class="product-item__image"></a>
+                                <a href="/products/<%= element.product_id %>" class="link-product"><img src="/images/food/<%= element.productImage %>" class="product-item__image"></a>
                                 <div class="product-item__text-container">
                                     <h3 class="product-item__text title">
-                                        <%= element.name %>
+                                        <%= element.productName %>
                                     </h3>
-                                    <a href="editProduct/<%= element.id %>" class="button button--small button--outline">
+                                    <a href="editProduct/<%= element.product_id %>" class="button button--small button--outline">
                                         <i class="fas fa-edit"></i> Editar
                                     </a>
                                 </div>

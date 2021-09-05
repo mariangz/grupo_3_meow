@@ -11,15 +11,23 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         productPrice: {
+            allowNull: false,
             type: DataTypes.DECIMAL(10, 2)
         },
         shortDescription: {
+            allowNull: false,
             type: DataTypes.STRING,
         },
         nutritionalDetail: {
+            allowNull: false,
             type: DataTypes.STRING,
         },
         productImage: {
+            allowNull: false,
+            type: DataTypes.STRING,
+        },
+        productCategory: {
+            allowNull: false,
             type: DataTypes.STRING,
         },
     };
@@ -29,20 +37,6 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const Product = sequelize.define(alias, cols, config);
-
-    Product.associate = (models) => {
-
-        Product.belongsToMany(
-            models.Category, {
-                through: 'productCategory',
-                foreignKey: 'category_id',
-                otherKey: 'product_id',
-                as: 'categories',
-                timestamps: false
-
-            }
-        )
-    }
 
     return Product;
 }

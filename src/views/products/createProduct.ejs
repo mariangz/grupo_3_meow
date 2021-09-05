@@ -12,11 +12,11 @@
                 <div class="form-container">
                     <h1>Crear Producto</h1>
                     <form action="createProduct" method="POST" enctype="multipart/form-data">
-                        <div class="field">
+                        <!-- <div class="field">
                             <label for="id">
                         <span>ID del producto</span>
                     <input type="text" name="id" id="id" autofocus required></label>
-                        </div>
+                        </div> -->
                         <div class="field">
                             <label for="name">
                         <span>Nombre del producto</span>
@@ -37,19 +37,19 @@
                         <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto" required></textarea></label>
                         </div>
                         <fieldset class="field">
-                            <legend>Edad de tu mascota</legend>
+                            <legend>Categoria del alimento</legend>
 
                             <label for="product-cachorro">
-                            <input type="checkbox" name="category" id="product-cachorro" value="Cachorro">
+                            <input type="radio" name="category" id="product-cachorro" value="Cachorro">
                             <span>Cachorro</span></label>
 
                             <label for="product-adulto">
-                            <input type="checkbox" name="category" id="product-adulto" value="Adulto">
+                            <input type="radio" name="category" id="product-adulto" value="Adulto">
                             <span>Adulto</span>
                         </label>
 
                             <label for="product-senior">
-                            <input type="checkbox" name="category" id="product-senior" value="Senior">
+                            <input type="radio" name="category" id="product-senior" value="Senior">
                             <span>Senior</span>
                         </label>
                         </fieldset>

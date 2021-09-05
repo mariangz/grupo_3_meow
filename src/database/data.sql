@@ -32,6 +32,7 @@ CREATE TABLE `Products` (
   `productPrice` decimal(10,0) NOT NULL,
   `shortDescription` varchar(120) NOT NULL,
   `nutritionalDetail` varchar(500) NOT NULL,
+  `productCategory` varchar(50) NOT NULL,
   `productImage` varchar(50) NOT NULL,
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
@@ -39,76 +40,13 @@ CREATE TABLE `Products` (
 --
 -- Dumping data for table `Products`
 --
-INSERT INTO Products (product_id, productName, productPrice, shortDescription, nutritionalDetail, productImage) VALUES
-(1, 'Pescado', 590, 'Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!', 'Es un alimento completo y balanceado, 100% húmedo y sabroso! Está hecho con trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, que aportan a tu gato los nutrientes que necesita para mantenerse sano y fuerte. Además, su textura y sabor son ideales para aquellos que tienen el paladar exigente.', 'pescado.jpeg'),
-(2, 'Salmon', 600, 'Sabrosos trocitos de salmón horneado a fuego lento, que tu gato no podrá resistirse.', 'Es un alimento húmedo 100% super sabroso, completo y balanceado. Hecho de delicados trozos de salmón, sumergidos en una abundante salsa ligera y deliciosa. Es ideal para los gatos fanáticos y para aquellos que tienen el paladar exigente. Aporta a tu gato los nutrientes que necesita para mantenerse sano y fuerte!', 'salmon.jpeg'),
-(3, 'Carne', 500, 'Suaves trocitos de la mejor carne de vaca cocidos al vapor con salsa, 100% húmedo y sabroso!', 'Es un alimento completo y equilibrado, 100% húmedo que contiene suaves trocitos de carne de vaca cocidos al vapor con salsa. Formulado con proteínas de origen animal que ayudan a proporcionar los nutrientes que tu gato necesita todos los días para estar saludable. Cada porción contribuye con la vitalidad y energía necesarias para explorar el mundo!', 'carne.jpeg'),
-(4, 'Vegetales', 490, 'La mejor selección de vegetales para lograr un balance perfecto en la alimentación de tu gato.', 'Es un alimento completo y equilibrado que ayuda a mantener un buen estado de salud. Los mejores vegetales seleccionados cuidadosamente para lograr un balance perfecto en la alimentación de tu gato. Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.', 'vetetariano.jpeg'),
-(5, 'Pollo', 360, 'Deliciosos trocitos de pollo con abundante salsa, para que tu gato disfrute en cualquier momento.', 'Es un alimento completo y equilibrado, 100% húmedo super sabroso. Cada porción combina un sabor delicado, que lo hace delicioso y nutritivo! Formulado con proteínas de pollo, 90% de pechuga y muslo con abundante salsa, para que tu gato disfrute en cualquier momento. Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.', 'pollo.jpeg'),
-(6, 'Atún', 390, 'Delicados trozos de atún con una deliciosa salsa, ideal para aquellos que tienen el paladar exigente.', 'Es un alimento húmedo 100% super sabroso, completo y balanceado. Hecho de delicados trozos de atún, sumergidos en una abundante salsa ligera y deliciosa. Es ideal para los gatos fanáticos de las salsas y para aquellos que tienen el paladar exigente. Aporta a tu gato los nutrientes que necesita para mantenerse sano y fuerte!', 'atun.jpeg');
-
-
---
--- Table structure for table `Categories`
---
-
-DROP TABLE IF EXISTS `Categories`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Categories` (
-  `category_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Dumping data for table `Categories`
---
-INSERT INTO Categories (category_id, name) VALUES
-(1, 'Cachoro'),
-(2, 'Adulto'),
-(3, 'Senior');
-
---
--- Table structure for table `ProductsCategories`
---
-
-DROP TABLE IF EXISTS `ProductsCategories`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `ProductsCategories` (
-  `productCategory_id` int NOT NULL AUTO_INCREMENT,
-  `product_id` int NOT NULL,
-  `category_id` int NOT NULL,
-  PRIMARY KEY (`productCategory_id`),
-  KEY `product_id` (`product_id`),
-  KEY `category_id` (`category_id`),
-  CONSTRAINT `productscategories_ibfk_1` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`),
-  CONSTRAINT `productscategories_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `Categories` (`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
--- Dumping data for table `ProductsCategories`
---
-INSERT INTO ProductsCategories (productCategory_id, product_Id, Category_id) VALUES
-(1,1,1),
-(2,1,2),
-(3,1,3),
-(4,2,1),
-(5,2,2),
-(6,2,3),
-(7,3,1),
-(8,3,2),
-(9,3,3),
-(10,4,1),
-(11,4,2),
-(12,4,3),
-(13,5,1),
-(14,5,2),
-(15,5,3),
-(16,6,1),
-(17,6,2),
-(18,6,3);
+INSERT INTO Products (product_id, productName, productPrice, shortDescription, nutritionalDetail, productCategory, productImage) VALUES
+(1, 'Pescado', 590, 'Trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, 100% húmedo y sabroso!', 'Es un alimento completo y balanceado, 100% húmedo y sabroso! Está hecho con trocitos de la mejor variedad de pescados con una deliciosa salsa ligera, que aportan a tu gato los nutrientes que necesita para mantenerse sano y fuerte. Además, su textura y sabor son ideales para aquellos que tienen el paladar exigente.', 'cachorro', 'pescado.jpeg'),
+(2, 'Salmon', 600, 'Sabrosos trocitos de salmón horneado a fuego lento, que tu gato no podrá resistirse.', 'Es un alimento húmedo 100% super sabroso, completo y balanceado. Hecho de delicados trozos de salmón, sumergidos en una abundante salsa ligera y deliciosa. Es ideal para los gatos fanáticos y para aquellos que tienen el paladar exigente. Aporta a tu gato los nutrientes que necesita para mantenerse sano y fuerte!', 'adulto', 'salmon.jpeg'),
+(3, 'Carne', 500, 'Suaves trocitos de la mejor carne de vaca cocidos al vapor con salsa, 100% húmedo y sabroso!', 'Es un alimento completo y equilibrado, 100% húmedo que contiene suaves trocitos de carne de vaca cocidos al vapor con salsa. Formulado con proteínas de origen animal que ayudan a proporcionar los nutrientes que tu gato necesita todos los días para estar saludable. Cada porción contribuye con la vitalidad y energía necesarias para explorar el mundo!', 'senior', 'carne.jpeg'),
+(4, 'Vegetales', 490, 'La mejor selección de vegetales para lograr un balance perfecto en la alimentación de tu gato.', 'Es un alimento completo y equilibrado que ayuda a mantener un buen estado de salud. Los mejores vegetales seleccionados cuidadosamente para lograr un balance perfecto en la alimentación de tu gato. Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.', 'adulto', 'vegetariano.jpeg'),
+(5, 'Pollo', 360, 'Deliciosos trocitos de pollo con abundante salsa, para que tu gato disfrute en cualquier momento.', 'Es un alimento completo y equilibrado, 100% húmedo super sabroso. Cada porción combina un sabor delicado, que lo hace delicioso y nutritivo! Formulado con proteínas de pollo, 90% de pechuga y muslo con abundante salsa, para que tu gato disfrute en cualquier momento. Proporciona un aporte calórico moderado perfectamente adaptado a las necesidades del gato con actividad moderada, que ayuda a mantener un buen estado de salud.', 'senior', 'pollo.jpeg'),
+(6, 'Atún', 390, 'Delicados trozos de atún con una deliciosa salsa, ideal para aquellos que tienen el paladar exigente.', 'Es un alimento húmedo 100% super sabroso, completo y balanceado. Hecho de delicados trozos de atún, sumergidos en una abundante salsa ligera y deliciosa. Es ideal para los gatos fanáticos de las salsas y para aquellos que tienen el paladar exigente. Aporta a tu gato los nutrientes que necesita para mantenerse sano y fuerte!', 'cachorro', 'atun.jpeg');
 
 --
 -- Table structure for table `Users`
@@ -188,18 +126,15 @@ CREATE TABLE `items` (
   `state` tinyint(4) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
-  `productCategory_id` int(11) DEFAULT NULL,
   `cart_id` int(11) DEFAULT NULL,
   `payment_id` int NOT NULL,
   PRIMARY KEY (`item_id`),
   KEY `user_id` (`user_id`),
   KEY `product_id` (`product_id`),
-  KEY `productCategory_id` (`product_id`),
   KEY `payment_id` (`payment_id`),
   KEY `cart_id` (`cart_id`),
   CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`),
   CONSTRAINT `items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`),
-  CONSTRAINT `items_ibfk_3` FOREIGN KEY (`productCategory_id`) REFERENCES `ProductsCategories` (`productCategory_id`),
-  CONSTRAINT `items_ibfk_4` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`),
-  CONSTRAINT `items_ibfk_5` FOREIGN KEY (`cart_id`) REFERENCES `Carts` (`cart_id`)
+  CONSTRAINT `items_ibfk_3` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`),
+  CONSTRAINT `items_ibfk_4` FOREIGN KEY (`cart_id`) REFERENCES `Carts` (`cart_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;

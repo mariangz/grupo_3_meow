@@ -39,10 +39,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
 
-        productCategory_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
         cart_id: {
             type: DataTypes.INTEGER,
         },
@@ -79,11 +75,6 @@ module.exports = (sequelize, DataTypes) => {
         Item.belongsTo(models.Product, {
             as: "payment",
             foreignKey: "payment_id",
-        });
-
-        Item.belongsTo(models.Product, {
-            as: "procutCategory",
-            foreignKey: "productCategory_id",
         });
 
     }
