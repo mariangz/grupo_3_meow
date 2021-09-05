@@ -79,8 +79,17 @@ const productsController = {
         res.redirect('/');
     }, */
 
-    /* GET - formulario de edición de productos JSON */
+    /* GET - formulario de edición de productos MYSQL */
     edit: (req, res) => {
+        db.Product
+            .findByPk(req.params.id)
+            .then(product => {
+                res.render('products/editProduct', { product });
+            })
+
+    },
+    /* GET - formulario de edición de productos JSON */
+    /* edit: (req, res) => {
         const ages = ['Cachorro', 'Adulto', 'Senior'];
         const { id } = req.params;
         const product1 = products.find((prod) => prod.id === id);
@@ -89,10 +98,30 @@ const productsController = {
             ages,
         };
         return res.render('products/editProduct', viewData);
-    },
+    }, */
 
-    /* PUT - Acción de edición a donde se envia el formulario */
+    /* PUT - Acción de edición a donde se envia el formulario MYSQL */
     update: (req, res) => {
+        const data = req.body;
+        data.productName = req.body.name;
+        data.productPrice = req.body.price;
+        data.shortDescription = req.body.description;
+        data.nutritionalDetail = req.body.nutritional;
+        data.productCategory = req.body.category;
+
+        db.Product
+            .update(data, {
+                where: {
+                    product_id: req.params.id
+                }
+            })
+            .then(product => {
+                res.redirect('/')
+            })
+            .catch(error => res.send(error));
+    },
+    /* PUT - Acción de edición a donde se envia el formulario JSON */
+    /* update: (req, res) => {
         const indexProduct = products.findIndex(
             (product) => product.id === req.params.id,
         );
@@ -103,15 +132,28 @@ const productsController = {
         };
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
         res.redirect('/');
-    },
+    }, */
 
-    /* DELETE - Acción de borrado - EN PROCESO - */
+    /* DELETE - Acción de borrado en MYSQL */
     delete: (req, res) => {
+        db.Product
+            .destroy({
+                where: {
+                    product_id: req.params.id
+                },
+                force: true
+            })
+            .then(confirm => {
+                res.redirect('/');
+            })
+    },
+    /* DELETE - Acción de borrado en JSON */
+    /* delete: (req, res) => {
         // Buscar el producto con el id recibido por parametro en el array
         const productsFinal = products.filter((prod) => prod.id !== req.params.id);
         fs.writeFileSync(productsFilePath, JSON.stringify(productsFinal, null, 2));
         res.redirect('/');
-    },
+    }, */
 };
 
 module.exports = productsController;
