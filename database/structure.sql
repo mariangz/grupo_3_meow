@@ -99,23 +99,50 @@ CREATE TABLE `Payments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Table structure for table `Orders`
+-- Table structure for table `carts`
 --
-
-DROP TABLE IF EXISTS `Orders`;
+DROP TABLE IF EXISTS `carts`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Orders` (
-  `order_id` int NOT NULL AUTO_INCREMENT,
-  `user_id` int NOT NULL,
-  `product_id` int NOT NULL,
+CREATE TABLE `carts` (
+  `cart_id` int(11) NOT NULL AUTO_INCREMENT,
+  `orderNumber` int(11) DEFAULT NULL,
+  `total` decimal(10,2) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`cart_id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+--
+-- Table structure for table `Items`
+--
+
+DROP TABLE IF EXISTS `items`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `items` (
+  `item_id` int(11) NOT NULL AUTO_INCREMENT,
+  `price` decimal(10,2) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `subtotal` decimal(10,2) DEFAULT NULL,
+  `state` tinyint(4) DEFAULT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `productCategory_id` int(11) DEFAULT NULL,
+  `cart_id` int(11) DEFAULT NULL,
   `payment_id` int NOT NULL,
-  PRIMARY KEY (`order_id`),
+  PRIMARY KEY (`item_id`),
   KEY `user_id` (`user_id`),
   KEY `product_id` (`product_id`),
+  KEY `productCategory_id` (`product_id`),
   KEY `payment_id` (`payment_id`),
-  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`),
-  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`),
-  CONSTRAINT `orders_ibfk_3` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`)
+  KEY `cart_id` (`cart_id`),
+  CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`),
+  CONSTRAINT `items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`),
+  CONSTRAINT `items_ibfk_3` FOREIGN KEY (`productCategory_id`) REFERENCES `ProductsCategories` (`productCategory_id`),
+  CONSTRAINT `items_ibfk_4` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`),
+  CONSTRAINT `items_ibfk_5` FOREIGN KEY (`cart_id`) REFERENCES `Carts` (`cart_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 

@@ -32,12 +32,18 @@ module.exports = (sequelize, DataTypes) => {
     }
 
     const User = sequelize.define(alias, cols, config);
-
+    //Asociación con el carrito
     User.associate = (models) => {
-        User.hasMany(models.Order, {
-            as: 'orders',
+        User.hasMany(models.Item, {
+            as: 'items',
             foreignKey: 'user_id',
-        })
+        });
+
+    //Asociación con carts
+    User.hasMany(models.Cart, {
+      foreignKey: "user_id",
+      as: "carts",
+    });
     }
 
     return User;
