@@ -67,7 +67,7 @@
     + Armar Diagrama de Base de Datos.
     + Realizar Script de Estructura.
     + Realizar Script de datos.
-    + Implementar ...
+    + Crear e implementar el CRUD para productos.
 
 + Analía
     + Armar el tablero para el Sprint6.
