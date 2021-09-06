@@ -443,6 +443,10 @@ input[type="file"] {
   margin-bottom: 1.5rem;
 }
 
+.icon-upload {
+  margin-right: 1em;
+}
+
 .button-product {
   margin-top: 1rem;
 }
