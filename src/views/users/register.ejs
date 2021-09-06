@@ -48,7 +48,7 @@
                         <span>Contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="password" id="password" title="Ingresá una contraseña válida" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
+                    <input type="password" name="password" id="password" title="Ingresá una contraseña válida" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@.\-_$_!%*¿?&+])[A-Za-z\d@.\-$_!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.password : null %>">
                         <span class="error" aria-live="polite"></span>
                         <i class="fas fa-check-circle input-icon"></i>
