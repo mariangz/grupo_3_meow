@@ -16,5 +16,6 @@ router.get('/editProduct/:id', productsController.edit); /* GET - formulario de 
 router.put('/editProduct/:id', productsController.update); /* PUT - Acción de edición a donde se envia el formulario */
 router.delete('/:id', productsController.delete); /* DELETE un producto */
 router.get('/:id/', productsController.detail); /* GET - dellate de un producto en particular */
+router.get('/adminProduct/search', productsController.search); /* GET - buscar de un producto */
 
 module.exports = router;

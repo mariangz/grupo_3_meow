@@ -12,7 +12,19 @@
             <div class="container crear-producto">
                 <section id="productos">
                     <h2>Administrador de productos</h2>
+
                     <div class="productos-admins">
+                        <div class="product-item">
+                            <img src="/images/food/nuevo.jpeg" class="product-item__image">
+                            <div class="product-item__text-container">
+                                <h3 class="product-item__text title">Buscar un producto</h3>
+                                <form action="/products/adminProduct/search" method="GET">
+                                    <input type="search" name="search">
+                                    <button type="submit" class="button button--small button--outline">
+                                    <i class="fas fa-search"></i> Buscar</button>
+                                </form>
+                            </div>
+                        </div>
                         <div class="product-item product-item--new">
                             <img src="/images/food/nuevo.jpeg" class="product-item__image">
                             <div class="product-item__text-container">
@@ -22,14 +34,14 @@
                                 </a>
                             </div>
                         </div>
-                        <% products.forEach(element => { %>
+                        <% products.forEach(product => { %>
                             <div class="product-item">
-                                <a href="/products/<%= element.product_id %>" class="link-product"><img src="/images/food/<%= element.productImage %>" class="product-item__image"></a>
+                                <a href="/products/<%= product.product_id %>" class="link-product"><img src="/images/food/<%= product.productImage %>" class="product-item__image"></a>
                                 <div class="product-item__text-container">
                                     <h3 class="product-item__text title">
-                                        <%= element.productName %>
+                                        <%= product.productName %>
                                     </h3>
-                                    <a href="editProduct/<%= element.product_id %>" class="button button--small button--outline">
+                                    <a href="editProduct/<%= product.product_id %>" class="button button--small button--outline">
                                         <i class="fas fa-edit"></i> Editar
                                     </a>
                                 </div>

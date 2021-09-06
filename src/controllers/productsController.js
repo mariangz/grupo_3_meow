@@ -1,6 +1,8 @@
 // const fs = require('fs');
 // const path = require('path');
 const db = require('../database/models');
+// Se activa los operadores en sus querys (like - count - max) 
+const Op = db.Sequelize.Op;
 // const productsFilePath = path.join(__dirname, '../data/products.json');
 // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
@@ -154,6 +156,19 @@ const productsController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(productsFinal, null, 2));
         res.redirect('/');
     }, */
+
+    /* SEARCH - Buscar un producto MYSQL */
+    search: (req, res) => {
+        db.Product.findAll({
+                where: {
+                    productName: {
+                        [Op.like]: `%${req.query.search}%`
+                    }
+                }
+            })
+            .then(result => { res.render('products/adminProduct', { products: result }); })
+            .catch(error => res.send(error))
+    }
 };
 
 module.exports = productsController;
