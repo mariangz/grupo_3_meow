@@ -41,10 +41,6 @@ module.exports = (sequelize, DataTypes) => {
 
         cart_id: {
             type: DataTypes.INTEGER,
-        },
-
-        payment_id: {
-            type: DataTypes.INTEGER,
         }
 
     }
@@ -70,11 +66,6 @@ module.exports = (sequelize, DataTypes) => {
         Item.belongsTo(models.Product, {
             as: "product",
             foreignKey: "product_id",
-        });
-
-        Item.belongsTo(models.Product, {
-            as: "payment",
-            foreignKey: "payment_id",
         });
 
     }

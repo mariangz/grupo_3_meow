@@ -49,8 +49,8 @@ CREATE TABLE `Users` (
   `user_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(8) NOT NULL,
-  `confirmPassword` varchar(8) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `confirmPassword` varchar(100) NOT NULL,
   `image` varchar(50) NOT NULL,
   `rights` varchar(3),
   PRIMARY KEY (`user_id`)
@@ -80,9 +80,12 @@ CREATE TABLE `carts` (
   `orderNumber` int(11) DEFAULT NULL,
   `total` decimal(10,2) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
+  `payment_id` int NOT NULL,
   PRIMARY KEY (`cart_id`),
   KEY `user_id` (`user_id`),
+  KEY `payment_id` (`payment_id`),
   CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`)
+  CONSTRAINT `items_ibfk_2` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`),
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 
@@ -102,15 +105,12 @@ CREATE TABLE `items` (
   `user_id` int(11) DEFAULT NULL,
   `product_id` int(11) DEFAULT NULL,
   `cart_id` int(11) DEFAULT NULL,
-  `payment_id` int NOT NULL,
   PRIMARY KEY (`item_id`),
   KEY `user_id` (`user_id`),
   KEY `product_id` (`product_id`),
-  KEY `payment_id` (`payment_id`),
   KEY `cart_id` (`cart_id`),
   CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`),
   CONSTRAINT `items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`),
-  CONSTRAINT `items_ibfk_3` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`),
-  CONSTRAINT `items_ibfk_4` FOREIGN KEY (`cart_id`) REFERENCES `Carts` (`cart_id`)
+  CONSTRAINT `items_ibfk_3` FOREIGN KEY (`cart_id`) REFERENCES `Carts` (`cart_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 

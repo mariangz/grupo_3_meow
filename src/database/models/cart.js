@@ -40,6 +40,10 @@ module.exports = (sequelize, DataTypes) => {
             as: "user",
             foreignKey: "user_id",
         });
+        Cart.belongsTo(models.Payment, {
+            as: "payment",
+            foreignKey: "payment_id",
+        });
 
     }
 
