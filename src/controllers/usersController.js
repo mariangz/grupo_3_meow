@@ -40,7 +40,7 @@ const usersController = {
         };
         db.User
             .create(userToCreate)
-            .then((user) => res.render('users/profile', { user }))
+        return res.redirect('profile')
     },
 
     // Formulario de LOGIN
