@@ -65,7 +65,7 @@ const usersController = {
                         req.session.userLogged = userToLogin;
 
                         if (req.body.rememberUser) {
-                            res.cookie('userEmail', req.body.email, { maxAge: 1000 * 60 * 2 })
+                            res.cookie('email', req.body.email, { maxAge: 1000 * 60 * 2 })
                         }
                         return res.redirect('profile');
                     }
@@ -90,24 +90,16 @@ const usersController = {
     },
 
     // Perfil de Usuario
-    profile:
-    /* async
-          (req, res) => {
-                 const user = await db.User.findOne({
-                     where: { email: req.session.userLogged.email }
-                 })
-                 return res.render('users/profile', { user });
-             }, */
-
-        (req, res) => {
-        res.render('users/profile', {
-            user: req.session.userLogged,
-        });
+    profile: async(req, res) => {
+        const user = await db.User.findOne({
+            where: { 'email': req.session.userLogged.email }
+        })
+        return res.render('users/profile', { user });
     },
 
     // Logout
     logout: (req, res) => {
-        res.clearCookie('userEmail');
+        res.clearCookie('email');
         req.session.destroy();
         return res.redirect('/');
     },
@@ -173,4 +165,11 @@ module.exports = usersController;
     return res.render('users/login', {
       errors: { email: { msg: 'Las credenciales son inválidas' } },
     });
+  }, */
+
+/* Procesar registro para JSON */
+/* profile: (req, res) => {
+    res.render('users/profile', {
+      user: req.session.userLogged,
+      });
   }, */
