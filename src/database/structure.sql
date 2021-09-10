@@ -22,11 +22,11 @@ USE `meow_db`;
 -- Table structure for table `Products`
 --
 
-DROP TABLE IF EXISTS `Products`;
+DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 
-CREATE TABLE `Products` (
+CREATE TABLE `products` (
   `product_id` int NOT NULL AUTO_INCREMENT,
   `productName` varchar(50) NOT NULL,
   `productPrice` decimal(10,0) NOT NULL,
@@ -42,10 +42,10 @@ CREATE TABLE `Products` (
 -- Table structure for table `Users`
 --
 
-DROP TABLE IF EXISTS `Users`;
+DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Users` (
+CREATE TABLE `users` (
   `user_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
@@ -60,10 +60,10 @@ CREATE TABLE `Users` (
 -- Table structure for table `Payments`
 --
 
-DROP TABLE IF EXISTS `Payments`;
+DROP TABLE IF EXISTS `payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Payments` (
+CREATE TABLE `payments` (
   `payment_id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`payment_id`)
@@ -84,8 +84,8 @@ CREATE TABLE `carts` (
   PRIMARY KEY (`cart_id`),
   KEY `user_id` (`user_id`),
   KEY `payment_id` (`payment_id`),
-  CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`)
-  CONSTRAINT `items_ibfk_2` FOREIGN KEY (`payment_id`) REFERENCES `Payments` (`payment_id`),
+  CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`payment_id`) REFERENCES `payments` (`payment_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 
@@ -109,8 +109,12 @@ CREATE TABLE `items` (
   KEY `user_id` (`user_id`),
   KEY `product_id` (`product_id`),
   KEY `cart_id` (`cart_id`),
-  CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `Users` (`user_id`),
-  CONSTRAINT `items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `Products` (`product_id`),
-  CONSTRAINT `items_ibfk_3` FOREIGN KEY (`cart_id`) REFERENCES `Carts` (`cart_id`)
+  CONSTRAINT `items_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  CONSTRAINT `items_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`),
+  CONSTRAINT `items_ibfk_3` FOREIGN KEY (`cart_id`) REFERENCES `carts` (`cart_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
+LOCK TABLES `items` WRITE;
+/*!40000 ALTER TABLE `items` DISABLE KEYS */;
+/*!40000 ALTER TABLE `items` ENABLE KEYS */;
+UNLOCK TABLES;

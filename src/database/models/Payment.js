@@ -1,22 +1,21 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Payment";
-    let cols = { 
+    const alias = "Payment";
+    const cols = {
         payment_id: {
             autoIncrement: true,
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        amount:{
+        amount: {
             type: DataTypes.INTEGER,
-        } 
-            };
+        }
+    };
 
-    let config = { 
-        tableName: "Payments",
+    const config = {
+        tableName: "payments",
         timestamps: false,
     };
 
-    const Payment = sequelize.define(alias, cols, config);    
-    ;
+    const Payment = sequelize.define(alias, cols, config);;
     return Payment;
 }
