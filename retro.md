@@ -66,3 +66,22 @@
 
 ### Dejar de hacer
 + Por el momento no encontramos puntos para agregar en este apartado
+
+## Retrospectiva Nro 5 del Proyecto Meow (Sprint 6)
+### Start doing
++ Tomar anotaciones de los desarrollos pendientes y puntos a mejorar de nuestra página
+
+### More of
++ Seguir compartiendo info útil para reforzar conceptos de las clases y su implementación en el proyecto
++ Continuar con la asignación de tareas mediante Github Projects
++ Priorizarizando tareas en relación a la importancia en el cumplimiento del sprint actual
+
+### Keep doing
++ Continuar utilizando Whatsapp como herramienta de comunicación grupal
++ Colaborar en la resolución de problemas respecto de aplicación de herramientas
+
+### Less of
++ Evitar procastinar tareas 
+
+### Dejar de hacer
++ Por el momento no encontramos puntos para agregar en este apartado
