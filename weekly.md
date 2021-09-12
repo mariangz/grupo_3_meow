@@ -59,9 +59,9 @@
 
 + Mariano
     + Borrador del diagrama de Base de Datos.   
-    + Desarrollar ...
-    + Mejorar ...
-    + Revisar ...
+    + Adelantar algunas validaciones del próximo sprint.
+    + Mejorar formato del código.
+    + Mejoras varias del front.
 
 + Natalia
     + Armar Diagrama de Base de Datos.
