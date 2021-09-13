@@ -1,8 +1,6 @@
 // const fs = require('fs');
 // const path = require('path');
 const db = require('../database/models');
-// Se activa los operadores en sus querys (like - count - max) 
-const Op = db.Sequelize.Op;
 // const productsFilePath = path.join(__dirname, '../data/products.json');
 // const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 

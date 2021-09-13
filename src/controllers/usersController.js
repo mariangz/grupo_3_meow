@@ -97,13 +97,41 @@ const usersController = {
         return res.render('users/profile', { user });
     },
 
-    // Logout
+    // Logout de USUARIO
     logout: (req, res) => {
         res.clearCookie('email');
         req.session.destroy();
         return res.redirect('/');
     },
+    // Formulario de EDICION de USUARIO
+    edit: (req, res) => {
+        db.User
+            .findByPk(req.params.id)
+            .then(user => {
+                res.render('users/editProfile', { user });
+            })
 
+    },
+
+    // Proceso de EDICION de USUARIO
+    update: (req, res) => {
+        const data = req.body;
+        data.name = req.body.name;
+        data.email = req.body.email;
+        data.password = bcrypt.hashSync(req.body.password, 10);
+        data.confirmPassword = bcrypt.hashSync(req.body.confirmPassword, 10);
+
+        db.User
+            .update(data, {
+                where: {
+                    user_id: req.params.id
+                }
+            })
+            .then(user => {
+                res.redirect('/')
+            })
+            .catch(error => res.send(error));
+    },
 
 }
 module.exports = usersController;

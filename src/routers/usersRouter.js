@@ -20,4 +20,7 @@ router.post('/login', validationsLogin, usersController.loginProcess); // Proces
 router.get('/profile', authMiddleware, usersController.profile); // Perfil USUARIO
 router.get('/logout', usersController.logout); // Logout USUARIO
 
+router.get('/editProfile/:id', usersController.edit); /* GET - formulario de edición de USUARIO */
+router.put('/editProfile/:id', upload.single('image'), usersController.update); /* PUT - Acción de edición a donde se envia el formulario */
+
 module.exports = router;
