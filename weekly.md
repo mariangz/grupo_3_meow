@@ -68,9 +68,11 @@
     + Realizar Script de Estructura.
     + Realizar Script de datos.
     + Crear e implementar el CRUD para productos.
+    + Crear e implementar el CRUD para usuarios.
 
 + Analía
     + Armar el tablero para el Sprint6.
     + Detallar la retrospectiva de esta entrega.
     + Implementar Sequelize y creación de carpetas.
     + Creación de archivos modelos.
+    + Crear e implementar el CRUD para usuarios.
