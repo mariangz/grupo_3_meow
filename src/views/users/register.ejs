@@ -17,7 +17,7 @@
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" required  minlength="2" 
+                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" pattern="[A-Za-z]{2,32}" required  minlength="2"  
                         value="<%= locals.oldData ? oldData.name : null %>" >
                     <span class="error" aria-live="polite"></span>
                     <i class="fas input-icon"></i>
@@ -82,12 +82,13 @@
                                 <i class="fas fa-upload icon-upload"></i>Click aquí</label>
                         </div>
                         <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif" required>
+                        <span class="error" aria-live="polite"></span>
                         <% if ( locals.errors && errors.image) { %>
                         <p class="text-danger">
                             <%= errors.image.msg %>
                         </p>
                         <% } %>
-                        <!-- <span class="error file" aria-live="polite"></span> -->
+                        
                         <!-- <small>Formatos válidos: jpg, jpeg, png y gif.</small> -->
                     </div>
                     
@@ -96,7 +97,7 @@
                 <div class="field-checkbox-hija"><input type="checkbox" name="mailing" id="mailing" class="checkbox"></div>
             </div> -->
                     <div>
-                        <button type="submit" value="Ingresar" class="button button--small class="error-msg" button--outline">Registrarme</button>
+                        <button type="submit" value="Ingresar" class="button button--reg button--smal error-msg button--outline">Registrarme</button>
                     </div>
                     <p><a href="/users/login" class="registrado">¿Ya tienes una cuenta?</a></p>
             </form>
