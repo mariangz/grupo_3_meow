@@ -1,4 +1,6 @@
 const form = document.getElementById('register');
+const confirmPassword = document.getElementById('confirmar-contraseña');
+// const file = document.getElementById('userAddImage');
 
 const showError = (input) => {
   const span = document.querySelector(`#${input.id} + span.error`);
@@ -35,3 +37,36 @@ form.addEventListener('input', (event) =>
     ? hideError(event.target)
     : showError(event.target)
 );
+
+confirmPassword.addEventListener('input', () => {
+  const password = document.getElementById('password');
+  const icon = document.querySelector(`#confirmPassword ~ .input-icon`);
+  const span = document.querySelector(`#confirmPassword + span.error`);
+  if (confirmPassword.value !== password.value) {
+    span.classList.add('invalid');
+    icon.classList.add('input-icon--error', 'fa-exclamation-circle');
+    input.classList.remove('success');
+    input.classList.add('invalid');
+  } else {
+    icon.classList.remove('input-icon--error', 'fa-exclamation-circle');
+    icon.classList.add('input-icon--success', 'fa-check-circle');
+    confirmPassword.classList.remove('invalid');
+    confirmPassword.classList.add('success');
+  }
+});
+
+// const imgValidation = () => {
+//   const fileExt = file.value;
+//   const span = document.querySelector('');
+//   const allowExt = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+//   if (!allowExt.exec(fileExt)) {
+//     span.textContent = 'Los formatos admitidos son: jpg, jpeg, png y gif.';
+//     return;
+//   } else {
+//     span.textContent = fileExt;
+//     return;
+//   }
+// };
+
+// file.addEventListener('change', imgValidation);
