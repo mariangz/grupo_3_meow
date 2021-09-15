@@ -1,6 +1,10 @@
 const form = document.getElementById('register');
+const password = document.getElementById('password');
+const confirmPass = document.getElementById('confirmar-contraseña');
 
 const showError = (input) => {
+  console.log(input);
+  const icon = document.querySelector(`#${input.id} ~ .input-icon`);
   const span = document.querySelector(`#${input.id} + span.error`);
   if (input.validity.valueMissing) {
     span.textContent = 'Campo obligatorio';
@@ -10,17 +14,19 @@ const showError = (input) => {
     span.textContent = input.title;
   } else if (input.validity.patternMismatch) {
     span.textContent = input.title;
-  } else if (input.value !== document.getElementById('password')) {
+  } else if (input.value !== password.value) {
+    // console.log('soyconfirm ' + input.value);
+    // console.log('password ' + password.value);
     span.textContent = input.title;
   }
 
-  span.classList.add('invalid');
-  const icon = document.querySelector(`#${input.id} ~ .input-icon`);
-  icon.classList.add('input-icon--error', 'fa-exclamation-circle');
   input.classList.remove('success');
+  console.log(input + ' remove');
   input.classList.add('invalid');
+  span.classList.add('invalid');
+  icon.classList.add('input-icon--error', 'fa-exclamation-circle');
 
-  form.addEventListener('submit', (event) => event.preventDefault());
+  console.log('SHOW ERROR');
 };
 
 const hideError = (input) => {
@@ -36,29 +42,50 @@ const hideError = (input) => {
 };
 
 form.addEventListener('input', (event) => {
-  const password = document.getElementById('password');
-  if (event.target.id === 'confirmar-contraseña') {
-    return event.target.value === password.value
-      ? hideError(event.target)
-      : showError(event.target);
+  if (event.target.validity.valid) {
+    hideError(event.target);
+  } else {
+    showError(event.target);
   }
-  return event.target.validity.valid
-    ? hideError(event.target)
-    : showError(event.target);
+});
+
+password.addEventListener('input', () => {
+  if (password.value !== confirmPass.value) {
+    console.log('soy password');
+    showError(confirmPass);
+  } else {
+    hideError(confirmPass);
+  }
+});
+
+confirmPass.addEventListener('input', () => {
+  if (confirmPass.value !== password.value) {
+    console.log('soy confirm password');
+    showError(confirmPass);
+  } else {
+    hideError(confirmPass);
+  }
 });
 
 form.addEventListener('submit', (event) => {
-  const spans = document.querySelectorAll('.error');
-  const inputs = document.querySelectorAll('input');
-  spans.forEach((span) => {
-    if (span.classList.value.includes('invalid')) {
-      event.preventDefault();
-    }
-  });
-  inputs.forEach((input) => {
-    if (input.value === '') {
-      showError(input);
-      event.preventDefault();
-    }
-  });
+  const mail = document.getElementById('email');
+  const name = document.getElementById('name');
+  const image = document.getElementById('userAddImage');
+
+  if (!name.validity.valid) {
+    console.log('soy validity name');
+    showError(name);
+  } else if (!mail.validity.valid) {
+    showError(mail);
+  } else if (!password.validity.valid) {
+    showError(password);
+  } else if (password.value !== confirmPass.value) {
+    showError(confirmPass);
+  } else if (!image.validity.valueMissing) {
+    console.log('LLEGA ACA?');
+    showError(image);
+    console.log('LLEGA ACA2?');
+  }
+  event.preventDefault();
+  console.log('final prevent');
 });

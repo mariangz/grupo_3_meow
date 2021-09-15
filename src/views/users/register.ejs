@@ -64,7 +64,7 @@
                         <span>Confirmar contraseña:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="password" name="confirmPassword" id="confirmar-contraseña" title="Las contraseñas no coinciden" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
+                    <input type="password" name="confirmPassword" id="confirmar-contraseña" title="Las contraseñas no coinciden" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.confirmPassword : null %>">
                         <span class="error" aria-live="polite"></span>
                         <i class="fas fa-check-circle input-icon"></i>
@@ -81,7 +81,7 @@
                             <label class="subirImagen" for="userAddImage">
                                 <i class="fas fa-upload icon-upload"></i>Click aquí</label>
                         </div>
-                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif" required>
+                        <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif" title="Cargar una imagen" required>
                         <span class="error" aria-live="polite"></span>
                         <% if ( locals.errors && errors.image) { %>
                         <p class="text-danger">
