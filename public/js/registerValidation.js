@@ -14,11 +14,7 @@ const showError = (input) => {
     span.textContent = input.title;
   } else if (input.validity.patternMismatch) {
     span.textContent = input.title;
-<<<<<<< HEAD
   } else if (input.value !== password.value || password.value.trim() === '') {
-=======
-  } else if (input.value !== password.value) {
->>>>>>> e1d027bffc18f0b9153c933a615eba1bbdd5510e
     span.textContent = input.title;
   }
 
@@ -48,24 +44,12 @@ const hideError = (input) => {
 
 form.addEventListener('input', (event) => {
   if (event.target.validity.valid) {
-    console.log(event.target);
     hideError(event.target);
   } else {
     showError(event.target);
   }
 });
 
-<<<<<<< HEAD
-=======
-password.addEventListener('input', () => {
-  if (password.value !== confirmPass.value) {
-    showError(confirmPass);
-  } else {
-    hideError(confirmPass);
-  }
-});
-
->>>>>>> e1d027bffc18f0b9153c933a615eba1bbdd5510e
 confirmPass.addEventListener('input', () => {
   if (confirmPass.value !== password.value) {
     showError(confirmPass);
@@ -83,7 +67,6 @@ form.addEventListener('submit', (event) => {
   if (!name.validity.valid) {
     event.preventDefault();
     showError(name);
-<<<<<<< HEAD
   }
   if (!mail.validity.valid) {
     event.preventDefault();
@@ -101,19 +84,4 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
     showError(image);
   }
-=======
-  } else if (!mail.validity.valid) {
-    event.preventDefault();
-    showError(mail);
-  } else if (!password.validity.valid) {
-    event.preventDefault();
-    showError(password);
-  } else if (password.value !== confirmPass.value || confirmPass.value.trim() === '') {
-    showError(confirmPass);
-  } else if (!image.validity.valueMissing) {
-    event.preventDefault();
-    showError(image);
-  }
-  
->>>>>>> e1d027bffc18f0b9153c933a615eba1bbdd5510e
 });
