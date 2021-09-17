@@ -10,14 +10,12 @@ const mainController = {
             .then(product => {
                 res.render('home', { product })
             })
-            .cath(
-                (error) => res.send(error)
-            )
-            // CODIGO PARA JSON
-            // const viewData = {
-            //        product: products,
-            //      };
-            //      res.render('home', viewData);
+            .catch(error => res.send(error));
+        // CODIGO PARA JSON
+        // const viewData = {
+        //        product: products,
+        //      };
+        //      res.render('home', viewData);
     },
 
     cart: (req, res) => res.render('cart'),
