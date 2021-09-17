@@ -14,9 +14,7 @@ const productsController = {
             .then(product => {
                 res.render('products/productDetail', { product });
             })
-            .cath(
-                (error) => res.send(error)
-            )
+            .catch(error => res.send(error));
 
         /* GET - detalle de un producto en particular JSON */
         /* detail: (req, res) => {
@@ -167,7 +165,7 @@ const productsController = {
                 }
             })
             .then(result => { res.render('products/adminProduct', { products: result }); })
-            .catch(error => res.send(error))
+            .catch(error => res.send(error));
     }
 };
 
