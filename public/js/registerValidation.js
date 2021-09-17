@@ -3,7 +3,6 @@ const password = document.getElementById('password');
 const confirmPass = document.getElementById('confirmar-contraseña');
 
 const showError = (input) => {
-  console.log(input);
   const icon = document.querySelector(`#${input.id} ~ .input-icon`);
   const span = document.querySelector(`#${input.id} + span.error`);
   if (input.validity.valueMissing) {
@@ -15,18 +14,13 @@ const showError = (input) => {
   } else if (input.validity.patternMismatch) {
     span.textContent = input.title;
   } else if (input.value !== password.value) {
-    // console.log('soyconfirm ' + input.value);
-    // console.log('password ' + password.value);
     span.textContent = input.title;
   }
 
   input.classList.remove('success');
-  console.log(input + ' remove');
   input.classList.add('invalid');
   span.classList.add('invalid');
   icon.classList.add('input-icon--error', 'fa-exclamation-circle');
-
-  console.log('SHOW ERROR');
 };
 
 const hideError = (input) => {
@@ -51,7 +45,6 @@ form.addEventListener('input', (event) => {
 
 password.addEventListener('input', () => {
   if (password.value !== confirmPass.value) {
-    console.log('soy password');
     showError(confirmPass);
   } else {
     hideError(confirmPass);
@@ -60,7 +53,6 @@ password.addEventListener('input', () => {
 
 confirmPass.addEventListener('input', () => {
   if (confirmPass.value !== password.value) {
-    console.log('soy confirm password');
     showError(confirmPass);
   } else {
     hideError(confirmPass);
@@ -73,19 +65,19 @@ form.addEventListener('submit', (event) => {
   const image = document.getElementById('userAddImage');
 
   if (!name.validity.valid) {
-    console.log('soy validity name');
+    event.preventDefault();
     showError(name);
   } else if (!mail.validity.valid) {
+    event.preventDefault();
     showError(mail);
   } else if (!password.validity.valid) {
+    event.preventDefault();
     showError(password);
-  } else if (password.value !== confirmPass.value) {
+  } else if (password.value !== confirmPass.value || confirmPass.value.trim() === '') {
     showError(confirmPass);
   } else if (!image.validity.valueMissing) {
-    console.log('LLEGA ACA?');
+    event.preventDefault();
     showError(image);
-    console.log('LLEGA ACA2?');
   }
-  event.preventDefault();
-  console.log('final prevent');
+  
 });
