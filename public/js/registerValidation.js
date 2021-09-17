@@ -3,64 +3,56 @@ const password = document.getElementById('password');
 const confirmPass = document.getElementById('confirmar-contraseña');
 
 const showError = (input) => {
-  console.log(input);
   const icon = document.querySelector(`#${input.id} ~ .input-icon`);
   const span = document.querySelector(`#${input.id} + span.error`);
+
   if (input.validity.valueMissing) {
-    span.textContent = 'Campo obligatorio';
+    span.textContent = 'Obligatory field';
   } else if (input.validity.tooShort) {
-    span.textContent = `Al menos ${input.minLength} caracteres`;
+    span.textContent = `At least ${input.minLength} characters`;
   } else if (input.validity.typeMismatch) {
     span.textContent = input.title;
   } else if (input.validity.patternMismatch) {
     span.textContent = input.title;
-  } else if (input.value !== password.value) {
-    // console.log('soyconfirm ' + input.value);
-    // console.log('password ' + password.value);
+  } else if (input.value !== password.value || password.value.trim() === '') {
     span.textContent = input.title;
   }
 
   input.classList.remove('success');
-  console.log(input + ' remove');
   input.classList.add('invalid');
   span.classList.add('invalid');
   icon.classList.add('input-icon--error', 'fa-exclamation-circle');
-
-  console.log('SHOW ERROR');
 };
 
 const hideError = (input) => {
   const span = document.querySelector(`#${input.id} + span.error`);
-  span.textContent = '';
-  span.classList.remove('invalid');
-  input.classList.remove('invalid');
-  const icon = document.querySelector(`#${input.id} ~ .input-icon`);
-  icon.classList.remove('input-icon--error', 'fa-exclamation-circle');
-  icon.classList.add('input-icon--success', 'fa-check-circle');
-  input.classList.remove('invalid');
-  input.classList.add('success');
+  if (input.name === 'image') {
+    span.textContent = '';
+    span.classList.remove('invalid');
+    input.classList.remove('invalid');
+    input.classList.add('success');
+  } else {
+    span.textContent = '';
+    span.classList.remove('invalid');
+    input.classList.remove('invalid');
+    const icon = document.querySelector(`#${input.id} ~ .input-icon`);
+    icon.classList.remove('input-icon--error', 'fa-exclamation-circle');
+    icon.classList.add('input-icon--success', 'fa-check-circle');
+    input.classList.add('success');
+  }
 };
 
 form.addEventListener('input', (event) => {
   if (event.target.validity.valid) {
+    console.log(event.target);
     hideError(event.target);
   } else {
     showError(event.target);
   }
 });
 
-password.addEventListener('input', () => {
-  if (password.value !== confirmPass.value) {
-    console.log('soy password');
-    showError(confirmPass);
-  } else {
-    hideError(confirmPass);
-  }
-});
-
 confirmPass.addEventListener('input', () => {
   if (confirmPass.value !== password.value) {
-    console.log('soy confirm password');
     showError(confirmPass);
   } else {
     hideError(confirmPass);
@@ -71,21 +63,26 @@ form.addEventListener('submit', (event) => {
   const mail = document.getElementById('email');
   const name = document.getElementById('name');
   const image = document.getElementById('userAddImage');
+  const fileExt = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
   if (!name.validity.valid) {
-    console.log('soy validity name');
+    event.preventDefault();
     showError(name);
-  } else if (!mail.validity.valid) {
-    showError(mail);
-  } else if (!password.validity.valid) {
-    showError(password);
-  } else if (password.value !== confirmPass.value) {
-    showError(confirmPass);
-  } else if (!image.validity.valueMissing) {
-    console.log('LLEGA ACA?');
-    showError(image);
-    console.log('LLEGA ACA2?');
   }
-  event.preventDefault();
-  console.log('final prevent');
+  if (!mail.validity.valid) {
+    event.preventDefault();
+    showError(mail);
+  }
+  if (!password.validity.valid) {
+    event.preventDefault();
+    showError(password);
+  }
+  if (password.value !== confirmPass.value || password.value.trim() === '') {
+    event.preventDefault();
+    showError(confirmPass);
+  }
+  if (!fileExt.exec(image.value)) {
+    event.preventDefault();
+    showError(image);
+  }
 });

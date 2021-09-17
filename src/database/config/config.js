@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    username: null,
+    username: 'tejedor709',
     password: null,
     database: 'meow_db',
     host: '127.0.0.1',
