@@ -41,7 +41,7 @@
                         <div class="field">
                             <label for="description">
                             <span>Descripción resumida</span>
-                        <textarea name="description" id="description" placeholder="Es la descripción del producto en el home" value="<%= locals.oldData ? oldData.description : null %>"></textarea></label>
+                        <textarea name="description" id="description" placeholder="Es la descripción del producto en el home"><%= locals.oldData ? oldData.description : null %></textarea></label>
                             <% if ( locals.errors && errors.description) { %>
                                 <p class="text-danger">
                                     <%= errors.description.msg %>
@@ -49,7 +49,7 @@
                                 <% } %>
                                     <label for="nutritional">
                             <span>Información nutricional</span>
-                        <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto" value="<%= locals.oldData ? oldData.nutritional : null %>"></textarea></label>
+                        <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto"><%= locals.oldData ? oldData.nutritional : null %></textarea></label>
                                     <% if ( locals.errors && errors.nutritional) { %>
                                         <p class="text-danger">
                                             <%= errors.nutritional.msg %>

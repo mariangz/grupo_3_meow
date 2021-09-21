@@ -13,7 +13,7 @@ const validationCreate = [
     body('category').notEmpty().withMessage('Ingresá una categoria'),
     body('image').custom((value, { req }) => {
         const { file } = req;
-        const acceptedExtensions = ['.jpg', '.JPG', '.jpeg', '.JPEG', '.png', '.PNG', '.gif', '.GIF'];
+        const acceptedExtensions = ['.jpg', '.jpeg', '.png', '.gif'];
         if (!file) {
             throw new Error('Tienes que subir una imagen');
         } else {

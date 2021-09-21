@@ -64,13 +64,14 @@ const productsController = {
             });
         }
 
-        const data = req.body;
-        data.productName = req.body.name;
-        data.productPrice = req.body.price;
-        data.shortDescription = req.body.description;
-        data.nutritionalDetail = req.body.nutritional;
-        data.productCategory = req.body.category;
-        data.productImage = req.file ? req.file.filename : ''
+        const data = {
+            productName: req.body.name,
+            productPrice: req.body.price,
+            shortDescription: req.body.description,
+            nutritionalDetail: req.body.nutritional,
+            productCategory: req.body.category,
+            productImage: req.file.filename
+        }
 
         db.Product
             .create(data)
