@@ -1,5 +1,6 @@
 // const fs = require('fs');
 // const path = require('path');
+const { validationResult } = require('express-validator')
 const db = require('../database/models');
 
 const Op = db.Sequelize.Op;
@@ -42,7 +43,27 @@ const productsController = {
     create: (req, res) => res.render('products/createProduct'),
 
     /* POST - Acción de creación a donde se envia el formulario MYSQL */
-    save: (req, res) => {
+    save: async(req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            res.render('products/createProduct', {
+                errors: resultValidation.mapped(),
+                oldData: req.body
+            })
+        }
+        if (await db.Product.findOne({
+                where: { productName: req.body.name }
+            })) {
+            return res.render('../views/products/createProduct', {
+                oldData: req.body,
+                errors: {
+                    name: {
+                        msg: 'El nombre ya se encuentra registrado'
+                    }
+                }
+            });
+        }
+
         const data = req.body;
         data.productName = req.body.name;
         data.productPrice = req.body.price;

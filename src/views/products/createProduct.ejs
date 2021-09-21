@@ -20,38 +20,63 @@
                         <div class="field">
                             <label for="name">
                         <span>Nombre del producto</span>
-                    <input type="text" name="name" id="name" autofocus required></label>
+                    <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>"></label>
+                            <% if ( locals.errors && errors.name) { %>
+                                <p class="text-danger">
+                                    <%= errors.name.msg %>
+                                </p>
+                                <% } %>
                         </div>
                         <div class="field">
                             <label for="price">
                         <span>Precio</span>
-                    <input type="number" name="price" id="price" placeholder="Ej. 4200.99" required></label>
+                    <input type="number" name="price" id="price" placeholder="Ej. 4200.99"  value="<%= locals.oldData ? oldData.price : null %>"></label>
+                            <% if ( locals.errors && errors.price) { %>
+                                <p class="text-danger">
+                                    <%= errors.price.msg %>
+                                </p>
+                                <% } %>
                         </div>
 
                         <div class="field">
                             <label for="description">
                             <span>Descripción resumida</span>
-                        <textarea name="description" id="description" placeholder="Es la descripción del producto en el home" required></textarea></label>
-                            <label for="nutritional">
+                        <textarea name="description" id="description" placeholder="Es la descripción del producto en el home" value="<%= locals.oldData ? oldData.description : null %>"></textarea></label>
+                            <% if ( locals.errors && errors.description) { %>
+                                <p class="text-danger">
+                                    <%= errors.description.msg %>
+                                </p>
+                                <% } %>
+                                    <label for="nutritional">
                             <span>Información nutricional</span>
-                        <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto" required></textarea></label>
+                        <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto" value="<%= locals.oldData ? oldData.nutritional : null %>"></textarea></label>
+                                    <% if ( locals.errors && errors.nutritional) { %>
+                                        <p class="text-danger">
+                                            <%= errors.nutritional.msg %>
+                                        </p>
+                                        <% } %>
                         </div>
                         <fieldset class="field">
                             <legend>Categoria del alimento</legend>
 
                             <label for="product-cachorro">
-                            <input type="radio" name="category" id="product-cachorro" value="cachorro">
+                            <input type="radio" name="category" id="product-cachorro" value="cachorro" <%= locals.oldData && ("cachorro" === oldData.category) ? 'checked' : null %>>
                             <span>Cachorro</span></label>
 
                             <label for="product-adulto">
-                            <input type="radio" name="category" id="product-adulto" value="adulto">
+                            <input type="radio" name="category" id="product-adulto" value="adulto" <%= locals.oldData && ("adulto" === oldData.category) ? 'checked' : null %>>
                             <span>Adulto</span>
                             </label>
 
                             <label for="product-senior">
-                            <input type="radio" name="category" id="product-senior" value="senior">
+                            <input type="radio" name="category" id="product-senior" value="senior" <%= locals.oldData && ("senior" === oldData.category) ? 'checked' : null %>>
                             <span>Senior</span>
                             </label>
+                            <% if ( locals.errors && errors.category) { %>
+                                <p class="text-danger">
+                                    <%= errors.category.msg %>
+                                </p>
+                                <% } %>
                         </fieldset>
                         <div class="field">
                             <div class="file-select">Agregar una imagen:
@@ -59,8 +84,12 @@
                                     <label class="subirImagen" for="productAddImage">
                         <i class="fas fa-upload icon-upload"></i>Click aquí</label>
                                 </div>
-                                <input type="file" name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png" required>
-
+                                <input type="file" name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png">
+                                <% if ( locals.errors && errors.image) { %>
+                                    <p class="text-danger">
+                                        <%= errors.image.msg %>
+                                    </p>
+                                    <% } %>
                             </div>
                             <div class="button-product">
                                 <button type="submit" class="button">Guardar</button>
