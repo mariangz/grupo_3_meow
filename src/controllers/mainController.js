@@ -19,6 +19,7 @@ const mainController = {
     },
 
     cart: (req, res) => res.render('cart'),
+    aboutUs: (req, res) => res.render('aboutUs'),
 };
 
 module.exports = mainController;

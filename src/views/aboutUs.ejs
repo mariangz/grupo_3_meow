@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <%- include('partials/head', {pageTitle: 'Meow!'}); %>
+    <link rel="stylesheet" href="/css/aboutUs.css">
+</head>
+<body>
+    <%- include('partials/header'); %>
+<main>
+<h2>Sobre Nosotros</h2>
+<div class="card">
+    <h4 class="card__title">En Meow, el bienestar de nuestros amigos felinos es nuestra prioridad. En el mercado de alimentos para mascotas, la salud siempre ha venido después del costo, la conveniencia y las modas de marketing. No en Meow. Nosotros dejamos a un lado los grandes márgenes de ganancia y las falsificaciones en favor de lo que realmente nuestras mascotas necesitan, anhelan y merecen. Nuestra misión es ofrecer la experiencia del cliente que nunca obtuvimos, la educación que más deseamos y una comunidad de amigos con intereses comunes.
+    </h4>
+</div>
+<h2>Nuestro equipo</h2>
+<div class="column">
+    <div class="card">
+        <img src="/images/users/nati.jpg" class= "card_image" alt="Natalia" style="width:100%">
+        <div class="card_text_container">
+          <h2 class="card__title">Natalia Krivanek</h2>
+          <p class="card__text description">Socia principal y fundadora. Es propietaria de una charca en la localidad de Los Cardales. Administra una granja orgánica y sustentable desde 2007.  Es de allí de donde proviene la materia prima para la elaboración de nuestros productos.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="/images/users/marian.jpg" class= "card_image" alt="Mariano" style="width:100%">
+        <div class="card_text_container">
+          <h2 class="card__title">Mariano Gimenez</h2>
+          <p class="card__text description">Experto médico. Es veterinario y es miembro activo de la Fundación Argentina de Rescate Animal.  Ha publicado varios artículos científicos sobre nutrición de animales de compañía.</p>
+        </div>
+    </div>
+    <div class="card">
+        <img src="/images/users/ana.jpg" class= "card_image" alt="Analía" style="width:100%">
+        <div class="card_text_container">
+          <h2 class="card__title">Analía Maidana</h2>
+          <p class="card__title">Marketing digital y atención al cliente. Se asegura que nuestros productos satisfagan las altas exigencias del paladar de nuestros amigos felinos. Desarrolla la información y el soporte para nuestra comunidad y canaliza las optimizaciones y mejoras que señalan nuestros clientes.</p>
+        </div>
+    </div>
+</div>
+
+</main>
+<%- include('partials/footer'); %>
+</body>

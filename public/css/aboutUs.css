@@ -1,0 +1,41 @@
+.column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 20rem));
+    grid-gap: 2rem;
+    justify-content: center;
+  }
+  
+  .card {
+    --cardBtnHeight: 3rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    transition: transform 200ms ease-in;
+  }
+  
+  .card__image {
+    height: 15rem;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .card__text-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .card__text-btn-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-weight: 500;
+  }
+  
+  .card__title {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
