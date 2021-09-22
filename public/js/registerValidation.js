@@ -13,7 +13,7 @@ const showError = (input) => {
     span.textContent = input.title;
   } else if (input.validity.patternMismatch) {
     span.textContent = input.title;
-  } else if (input.value !== password.value) {
+  } else if (input.value !== password.value || input.value.trim() === '') {
     span.textContent = input.title;
   }
   span.classList.add('invalid');
