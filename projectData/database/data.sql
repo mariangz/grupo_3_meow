@@ -69,9 +69,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `Users`
 --
 INSERT INTO users (user_id, name, email, password, confirmpassword, image, rights) VALUES
-(1,'Administrador', 'mariano@meow.com.ar', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', 'default.png', '2'),
-(2,'Administrador', 'analia@meow.com.ar', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', 'default.png', '2'),
-(3,'Administrador', 'natalia@meow.com.ar', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', 'default.png', '2');
+(1,'Administrador', 'mariano@meow.com.ar', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', 'avatar-1632319528085.png', '2'),
+(2,'Administrador', 'analia@meow.com.ar', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', 'avatar-1632313845304.jpg', '2'),
+(3,'Administrador', 'natalia@meow.com.ar', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', '$2b$10$.J53TYq7.2gb/lHQZjroO.7pxVLj/jK4wIrG3d87dUCwIBIO83H/m', 'avatar-1632322870487.jpg', '2');
 
 
 --

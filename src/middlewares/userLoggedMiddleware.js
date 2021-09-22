@@ -1,13 +1,9 @@
-/* codigo para JSON */
-// const User = require('../models/Users');
 const db = require('../database/models');
 
 async function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
     const emailInCookie = req.cookies.email;
-
-    // const userFromCookie = User.findByField('email', emailInCookie); /* Codigo para JSON */
 
     if (emailInCookie) {
         req.session.userLogged = emailInCookie;
