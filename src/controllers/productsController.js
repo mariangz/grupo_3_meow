@@ -76,7 +76,7 @@ const productsController = {
         db.Product
             .create(data)
             .then(product => {
-                res.redirect('adminProduct');
+                res.redirect('/');
             })
 
     },
@@ -166,7 +166,7 @@ const productsController = {
                 force: true
             })
             .then(confirm => {
-                res.redirect('adminProduct');
+                res.redirect('/');
             })
     },
     /* DELETE - Acción de borrado en JSON */
