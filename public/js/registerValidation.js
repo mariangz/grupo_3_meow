@@ -5,22 +5,20 @@ const confirmPass = document.getElementById('confirmar-contraseña');
 const showError = (input) => {
   const icon = document.querySelector(`#${input.id} ~ .input-icon`);
   const span = document.querySelector(`#${input.id} + span.error`);
-
   if (input.validity.valueMissing) {
-    span.textContent = 'Obligatory field';
+    span.textContent = 'Campo obligatorio';
   } else if (input.validity.tooShort) {
-    span.textContent = `At least ${input.minLength} characters`;
+    span.textContent = `Al menos ${input.minLength} caracteres`;
   } else if (input.validity.typeMismatch) {
     span.textContent = input.title;
   } else if (input.validity.patternMismatch) {
     span.textContent = input.title;
-  } else if (input.value !== password.value || password.value.trim() === '') {
+  } else if (input.value !== password.value) {
     span.textContent = input.title;
   }
-
-  input.classList.remove('success');
-  input.classList.add('invalid');
   span.classList.add('invalid');
+  input.classList.add('invalid');
+  input.classList.remove('success');
   icon.classList.add('input-icon--error', 'fa-exclamation-circle');
 };
 
@@ -43,18 +41,30 @@ const hideError = (input) => {
 };
 
 form.addEventListener('input', (event) => {
-  if (event.target.validity.valid) {
+  if (event.target === confirmPass) {
+    if (
+      confirmPass.value !== password.value ||
+      event.target.value.trim() === ''
+    ) {
+      showError(confirmPass);
+    } else {
+      hideError(confirmPass);
+    }
+  } else if (event.target === password) {
+    if (!password.validity.valid) {
+      showError(password);
+    } else {
+      hideError(password);
+    }
+    if (confirmPass.value !== password.value) {
+      showError(confirmPass);
+    } else {
+      hideError(confirmPass);
+    }
+  } else if (event.target.validity.valid) {
     hideError(event.target);
   } else {
     showError(event.target);
-  }
-});
-
-confirmPass.addEventListener('input', () => {
-  if (confirmPass.value !== password.value) {
-    showError(confirmPass);
-  } else {
-    hideError(confirmPass);
   }
 });
 
