@@ -76,3 +76,14 @@
     + Implementar Sequelize y creación de carpetas.
     + Creación de archivos modelos.
     + Crear e implementar el CRUD para usuarios.
+
+        ## Weekly - 7mo Sprint
+
++ Mariano
+    + 
+
++ Natalia
+    + 
+
++ Analía
+    + 
