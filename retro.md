@@ -85,3 +85,19 @@
 
 ### Dejar de hacer
 + Por el momento no encontramos puntos para agregar en este apartado
+
+## Retrospectiva Nro 6 del Proyecto Meow (Sprint 7)
+### Start doing
++ 
+
+### More of
++ 
+
+### Keep doing
++ 
+
+### Less of
++ 
+
+### Dejar de hacer
++ 
