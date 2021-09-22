@@ -13,6 +13,7 @@ const productsController = {
             })
             .catch(error => res.send(error));
     },
+
     /* GET - listado de productos MYSQL */
     list: async(req, res) => {
         db.Product.findAll()
@@ -28,7 +29,7 @@ const productsController = {
     save: async(req, res) => {
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
-            res.render('products/createProduct', {
+            return res.render('products/createProduct', {
                 errors: resultValidation.mapped(),
                 oldData: req.body
             })
@@ -52,13 +53,13 @@ const productsController = {
             shortDescription: req.body.description,
             nutritionalDetail: req.body.nutritional,
             productCategory: req.body.category,
-            productImage: req.file.filename
+            productImage: req.file.filename,
         }
 
         db.Product
             .create(data)
             .then(product => {
-                res.redirect('/');
+                res.redirect('adminProduct');
             })
 
     },
@@ -74,16 +75,29 @@ const productsController = {
     },
 
     /* PUT - Acción de edición a donde se envia el formulario MYSQL */
-    update: (req, res) => {
-        const data = req.body;
-        data.productName = req.body.name;
-        data.productPrice = req.body.price;
-        data.shortDescription = req.body.description;
-        data.nutritionalDetail = req.body.nutritional;
-        data.productCategory = req.body.category;
-
-        db.Product
-            .update(data, {
+    update: async(req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('products/editProduct', {
+                errors: resultValidation.mapped(),
+                product: {
+                    productName: req.body.name,
+                    productPrice: req.body.price,
+                    shortDescription: req.body.description,
+                    nutritionalDetail: req.body.nutritional,
+                    productCategory: req.body.category,
+                    product_id: req.params.id
+                }
+            })
+        }
+        await db.Product
+            .update({
+                productName: req.body.name,
+                productPrice: req.body.price,
+                shortDescription: req.body.description,
+                nutritionalDetail: req.body.nutritional,
+                productCategory: req.body.category,
+            }, {
                 where: {
                     product_id: req.params.id
                 }
@@ -104,7 +118,7 @@ const productsController = {
                 force: true
             })
             .then(confirm => {
-                res.redirect('/');
+                res.redirect('adminProduct');
             })
     },
 

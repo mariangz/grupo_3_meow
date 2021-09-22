@@ -6,6 +6,7 @@ const router = express.Router();
 const upload = require('../middlewares/uploadProductMiddleware');
 const authMiddleware = require('../middlewares/authMiddleware');
 const validationCreate = require('../middlewares/createProductMiddleware');
+const validationEdit = require('../middlewares/editProductMiddleware');
 
 // Controller
 const productsController = require('../controllers/productsController');
@@ -14,7 +15,7 @@ router.get('/adminProduct', authMiddleware, productsController.list); /* GET - l
 router.get('/createProduct', authMiddleware, productsController.create); /* GET - formulario de creación de productos */
 router.post('/createProduct', upload.single('image'), validationCreate, productsController.save); /* POST - Acción de edición a donde se envia el formulario */
 router.get('/editProduct/:id', productsController.edit); /* GET - formulario de edición de productos */
-router.put('/editProduct/:id', productsController.update); /* PUT - Acción de edición a donde se envia el formulario */
+router.put('/editProduct/:id', validationEdit, productsController.update); /* PUT - Acción de edición a donde se envia el formulario */
 router.delete('/:id', productsController.delete); /* DELETE un producto */
 router.get('/:id/', productsController.detail); /* GET - dellate de un producto en particular */
 router.get('/adminProduct/search', productsController.search); /* GET - buscar de un producto */
