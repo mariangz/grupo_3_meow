@@ -5,32 +5,23 @@
 
 <head>
     <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
-        <link rel="stylesheet" href="/css/productDetail.css">
 </head>
 
 <body>
     <%- include('../partials/header'); %>
         <main>
-            <div class="small-container single-product">
-                <div class="row">
-                    <div class="col-2">
-                        <img src="/images/users/<%= user.image %>" width="50%">
-                    </div>
-                    <div class="col-2">
-                        <h1>
-                            <%= user.name %>
-                        </h1>
-                        <p>
-                            <%= user.email %>
-                        </p>
-                        <div class="col-2">
-                            <a href="editProfile/<%= user.user_id %>" class="button button--small button--outline">
-                                <i class="fas fa-edit"></i> Editar</a>
-                        </div>
-                    </div>
 
-
-
+            <div class="form-container">
+                <img src="/images/users/<%= user.image %>" class="thumbnail">
+                <h3 class="name">
+                    <%= user.name %>
+                </h3>
+                <p class="email">
+                    <%= user.email %>
+                </p>
+                <div>
+                    <a href="editProfile/<%= user.user_id %>" class="button button--small button--outline">
+                        <i class="fas fa-edit"></i> Editar</a>
                 </div>
             </div>
         </main>

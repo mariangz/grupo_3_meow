@@ -14,32 +14,32 @@
             <div class="form-container">
                 <h1>Editar Mi Perfil</h1>
                 <div class="field">
-                    <img src="/images/users/<%= user.image %>" width="50%" align-item="center">
+                    <img src="/images/users/<%= user.image %>" class="thumbnail">
                 </div>
 
                 <form action="/users/editProfile/<%=user.user_id %>?_method=PUT" method="POST">
                     <div class="field">
                         <label for="name">
                             <span>Nombre completo</span>
-                            <input type="text" name="name" id="name" autofocus value=<%= user.name %>>
+                            <input type="text" name="name" id="name" value=<%= user.name %>>
                         </label>
                     </div>
                     <div class="field">
                         <label for="email">
                             <span>Email</span>
-                            <input type="email" name="email" id="email" autofocus value=<%= user.email %>>
+                            <input type="email" name="email" id="email" value=<%= user.email %>>
                         </label>
                     </div>
                     <div class="field">
                         <label for="password">
                             <span>Contraseña:</span>
-                            <input type="password" name="password" id="password" autofocus value=<%= user.password %>>
+                            <input type="password" name="password" id="password" value=<%= user.password %>>
                         </label>
                     </div>
                     <div class="field">
                         <label for="confirmar-contraseña">
                             <span>Contraseña:</span>
-                            <input type="password" name="confirmPassword" id="confirmar-contraseña" autofocus value=<%= user.confirmPassword %>>
+                            <input type="password" name="confirmPassword" id="confirmar-contraseña" value=<%= user.confirmPassword %>>
                         </label>
                     </div>
                     <!-- <div class="field">
