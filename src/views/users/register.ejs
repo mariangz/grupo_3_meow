@@ -17,7 +17,7 @@
                         <span>Nombre y Apellido:</span>
                         <strong><abbr title="required">*</abbr></strong>
                     </label>
-                    <input type="text" name="name" id="name" title="Sólo admite letras y espacios en blanco" pattern="[A-Za-z ]{2,32}" required  minlength="2"  
+                    <input type="text" name="name" id="name" title="No válido" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$" required  minlength="2"  
                         value="<%= locals.oldData ? oldData.name : null %>" >
                     <span class="error" aria-live="polite"></span>
                     <i class="fas input-icon"></i>
