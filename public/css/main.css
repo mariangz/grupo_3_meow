@@ -488,18 +488,17 @@ fieldset {
     text-decoration: underline;
 }
 
+
+/* ********** PROFILE ********** */
+
 .thumbnail {
-    width: 200px;
-    height: 150px;
+    width: 80%;
     display: flex;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5em;
-    border-radius: 100%;
+    border-radius: 50%;
 }
-
-
-/* ********** PROFILE ********** */
 
 .name {
     color: #2D354A;

@@ -39,6 +39,7 @@ const usersController = {
         };
         db.User
             .create(userToCreate)
+        req.session.userLogged = userToCreate // Logea al usuario y lo guarda en session
         return res.redirect('profile')
     },
 
