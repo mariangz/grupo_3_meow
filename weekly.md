@@ -86,8 +86,8 @@
     + Armar el tablero para el Sprint7.
     + Validaciones BACKEND para crear y modificar un producto.
     + Corrección de "recordar usuario" al pasar al sequelize.
-    + Organizar archivos de información en "projectData".
     + Limpiar código de JSON comentado y archivarlo en "oldArchiveJSON".
+    + Organizar archivos de información en "projectData".
 
 + Analía
     + 
