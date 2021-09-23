@@ -88,6 +88,7 @@
     + Corrección de "recordar usuario" al pasar al sequelize.
     + Limpiar código de JSON comentado y archivarlo en "oldArchiveJSON".
     + Organizar archivos de información en "projectData".
+    + Mejorar vista de Profile.
 
 + Analía
     + 
