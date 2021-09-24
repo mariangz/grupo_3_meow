@@ -84,11 +84,15 @@
 
 + Natalia
     + Armar el tablero para el Sprint7.
-    + Validaciones BACKEND para crear y modificar un producto.
+    + Validaciones BACKEND en crear y modificar un producto.
+    + Validaciones BACKEND en modificar un usuario.
     + Corrección de "recordar usuario" al pasar al sequelize.
     + Limpiar código de JSON comentado y archivarlo en "oldArchiveJSON".
     + Organizar archivos de información en "projectData".
-    + Mejorar vista de Profile.
+    + Mejorar vista de Profile - en proceso.
+    + Al editar un producto o usuario, poder modificar la imagen.
+    + Sección Administrar productos y usuarios solo accesible por administradores.
+    + Proceso de loguearse cuando se registra un usuario.
 
 + Analía
     + 
