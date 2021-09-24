@@ -9,6 +9,8 @@ const showError = (input) => {
     span.textContent = 'Campo obligatorio';
   } else if (input.validity.typeMismatch) {
     span.textContent = input.title;
+  } else if (input.validity.tooShort) {
+    span.textContent = `Al menos ${input.minLength} caracteres`;
   }
   span.classList.add('invalid');
   input.classList.add('invalid');
@@ -49,7 +51,7 @@ form.addEventListener('submit', (event) => {
     showError(mail);
   }
 
-  if (!password.validity.valid) {
+  if (!password.validity.valid || password.value.trim() === '') {
     event.preventDefault();
     showError(password);
   }
