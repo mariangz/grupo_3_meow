@@ -1,19 +1,15 @@
 const form = document.getElementById('login');
 const password = document.getElementById('password');
 const mail = document.getElementById('email');
-console.log(mail);
+
 const showError = (input) => {
-  console.log(input);
   const icon = document.querySelector(`#${input.id} ~ .input-icon`);
   const span = document.querySelector(`#${input.id} + span.error`);
   if (input.value.trim() === '') {
-    console.log('valueMissing');
     span.textContent = 'Campo obligatorio';
   } else if (input.validity.typeMismatch) {
-    console.log('typeMismatch');
     span.textContent = input.title;
   } else if (input.validity.tooShort) {
-    console.log('tooShort');
     span.textContent = `Al menos ${input.minLength} caracteres`;
   }
   span.classList.add('invalid');
