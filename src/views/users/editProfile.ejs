@@ -17,7 +17,7 @@
                     <img src="/images/users/<%= user.image %>" class="thumbnail">
                 </div>
 
-                <form action="/users/editProfile/<%=user.user_id %>?_method=PUT" method="POST">
+                <form action="/users/editProfile/<%=user.user_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                     <div class="field">
                         <label for="name">
                             <span>Nombre completo</span>
@@ -62,20 +62,13 @@
                             </p>
                             <% } %>
                     </div>
-                    <!-- <div class="field">
-                        <div class="file-select">Cambiar la imagen de Perfil:
-                            <div class="upload-image__label">
-                                <label class="subirImagen" for="userAddImage">
-                                    <i class="fas fa-upload icon-upload"></i>Click aquí</label>
-                            </div>
-                            <input type="file" name="image" id="userAddImage" accept=".jpg, .jpeg, .png, .gif">
-                            <% if ( locals.errors && errors.image) { %>
-                                <p class="text-danger">
-                                    <%= errors.image.msg %>
-                                </p>
-                                <% } %>
+                    <div class="field">
+                        <div class="file-select">Cambiar la imagen:
+                            <div class="upload-image__label file-select"></div>
+                            <input type="hidden" name="oldImagen" value="<%= user.image%>">
+                            <input type='file' name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png">
                         </div>
-                    </div> -->
+                    </div>
                     <div class="button-product">
                         <button type="submit" class="button">Guardar cambios</button>
                     </div>

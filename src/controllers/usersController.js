@@ -138,6 +138,7 @@ const usersController = {
         data.email = req.body.email;
         data.password = bcrypt.hashSync(req.body.password, 10);
         data.confirmPassword = bcrypt.hashSync(req.body.confirmPassword, 10);
+        data.image = req.file ? req.file.filename : req.body.oldImage;
 
         await db.User
             .update(data, {

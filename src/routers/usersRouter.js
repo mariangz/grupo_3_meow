@@ -22,6 +22,6 @@ router.get('/profile', authMiddleware, usersController.profile); // Perfil USUAR
 router.get('/logout', usersController.logout); // Logout USUARIO
 
 router.get('/editProfile/:id', usersController.edit); /* GET - formulario de edición de USUARIO */
-router.put('/editProfile/:id', validationsEditProfile, usersController.update); /* PUT - Acción de edición a donde se envia el formulario */
+router.put('/editProfile/:id', upload.single('image'), validationsEditProfile, usersController.update); /* PUT - Acción de edición a donde se envia el formulario */
 
 module.exports = router;
