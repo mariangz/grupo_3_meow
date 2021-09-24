@@ -118,14 +118,28 @@ const usersController = {
     },
 
     // Proceso de EDICION de USUARIO
-    update: (req, res) => {
+    update: async(req, res) => {
+        const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+            return res.render('users/editProfile', {
+                errors: resultValidation.mapped(),
+                user: {
+                    name: req.body.name,
+                    email: req.body.email,
+                    password: req.body.password,
+                    confirmPassword: req.body.confirmPassword,
+                    rights: 1,
+                    user_id: req.params.id
+                }
+            })
+        }
         const data = req.body;
         data.name = req.body.name;
         data.email = req.body.email;
         data.password = bcrypt.hashSync(req.body.password, 10);
         data.confirmPassword = bcrypt.hashSync(req.body.confirmPassword, 10);
 
-        db.User
+        await db.User
             .update(data, {
                 where: {
                     user_id: req.params.id

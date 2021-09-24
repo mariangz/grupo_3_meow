@@ -23,24 +23,44 @@
                             <span>Nombre completo</span>
                             <input type="text" name="name" id="name" value=<%= user.name %>>
                         </label>
+                        <% if ( locals.errors && errors.name) { %>
+                            <p class="text-danger">
+                                <%= errors.name.msg %>
+                            </p>
+                            <% } %>
                     </div>
                     <div class="field">
                         <label for="email">
                             <span>Email</span>
                             <input type="email" name="email" id="email" value=<%= user.email %>>
                         </label>
+                        <% if ( locals.errors && errors.email) { %>
+                            <p class="text-danger">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
                     </div>
                     <div class="field">
                         <label for="password">
                             <span>Contraseña:</span>
-                            <input type="password" name="password" id="password" value=<%= user.password %>>
+                            <input type="password" name="password" id="password">
                         </label>
+                        <% if ( locals.errors && errors.password) { %>
+                            <p class="text-danger">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
                     </div>
                     <div class="field">
                         <label for="confirmar-contraseña">
-                            <span>Contraseña:</span>
-                            <input type="password" name="confirmPassword" id="confirmar-contraseña" value=<%= user.confirmPassword %>>
+                            <span>Confirmar contraseña:</span>
+                            <input type="password" name="confirmPassword" id="confirmar-contraseña">
                         </label>
+                        <% if ( locals.errors && errors.confirmPassword) { %>
+                            <p class="text-danger">
+                                <%= errors.confirmPassword.msg %>
+                            </p>
+                            <% } %>
                     </div>
                     <!-- <div class="field">
                         <div class="file-select">Cambiar la imagen de Perfil:
