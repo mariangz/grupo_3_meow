@@ -14,8 +14,9 @@
                     <form action="createProduct" method="POST" enctype="multipart/form-data">
                         <div class="field">
                             <label for="name">
-                        <span>Nombre del producto</span>
-                    <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>"></label>
+                            <span>Nombre del producto</span>
+                            <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
+                            </label>
                             <% if ( locals.errors && errors.name) { %>
                                 <p class="text-danger">
                                     <%= errors.name.msg %>
@@ -24,8 +25,8 @@
                         </div>
                         <div class="field">
                             <label for="price">
-                        <span>Precio</span>
-                    <input type="number" name="price" id="price" placeholder="Ej. 4200.99"  value="<%= locals.oldData ? oldData.price : null %>"></label>
+                            <span>Precio</span>
+                            <input type="number" name="price" id="price" placeholder="Ej. 4200.99"  value="<%= locals.oldData ? oldData.price : null %>"></label>
                             <% if ( locals.errors && errors.price) { %>
                                 <p class="text-danger">
                                     <%= errors.price.msg %>
@@ -36,7 +37,7 @@
                         <div class="field">
                             <label for="description">
                             <span>Descripción resumida</span>
-                        <textarea name="description" id="description" placeholder="Es la descripción del producto en el home"><%= locals.oldData ? oldData.description : null %></textarea></label>
+                            <textarea name="description" id="description" placeholder="Es la descripción del producto en el home"><%= locals.oldData ? oldData.description : null %></textarea></label>
                             <% if ( locals.errors && errors.description) { %>
                                 <p class="text-danger">
                                     <%= errors.description.msg %>
@@ -44,7 +45,7 @@
                                 <% } %>
                                     <label for="nutritional">
                             <span>Información nutricional</span>
-                        <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto"><%= locals.oldData ? oldData.nutritional : null %></textarea></label>
+                            <textarea name="nutritional" id="nutritional" placeholder="Es la info nutricional de detalle de producto"><%= locals.oldData ? oldData.nutritional : null %></textarea></label>
                                     <% if ( locals.errors && errors.nutritional) { %>
                                         <p class="text-danger">
                                             <%= errors.nutritional.msg %>
@@ -75,10 +76,7 @@
                         </fieldset>
                         <div class="field">
                             <div class="file-select">Agregar una imagen:
-                                <div class="upload-image__label file-select">
-                                    <label class="subirImagen" for="productAddImage">
-                        <i class="fas fa-upload icon-upload"></i>Click aquí</label>
-                                </div>
+                                <div class="upload-image__label file-select"></div>
                                 <input type="file" name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png">
                                 <% if ( locals.errors && errors.image) { %>
                                     <p class="text-danger">
@@ -86,12 +84,13 @@
                                     </p>
                                     <% } %>
                             </div>
-                            <div class="button-product">
-                                <button type="submit" class="button">Guardar</button>
-                            </div>
+                        </div>
+                        <div class="button-product">
+                            <button type="submit" class="button">Guardar</button>
+                        </div>
                     </form>
-                    </div>
                 </div>
+            </div>
         </main>
         <%- include('../partials/footer'); %>
 </body>

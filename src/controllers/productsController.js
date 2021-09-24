@@ -55,7 +55,6 @@ const productsController = {
             productCategory: req.body.category,
             productImage: req.file.filename,
         }
-
         db.Product
             .create(data)
             .then(product => {
@@ -90,14 +89,16 @@ const productsController = {
                 }
             })
         }
+        const data = {
+            productName: req.body.name,
+            productPrice: req.body.price,
+            shortDescription: req.body.description,
+            nutritionalDetail: req.body.nutritional,
+            productCategory: req.body.category,
+            productImage: req.file ? req.file.filename : req.body.oldImage,
+        }
         await db.Product
-            .update({
-                productName: req.body.name,
-                productPrice: req.body.price,
-                shortDescription: req.body.description,
-                nutritionalDetail: req.body.nutritional,
-                productCategory: req.body.category,
-            }, {
+            .update(data, {
                 where: {
                     product_id: req.params.id
                 }
