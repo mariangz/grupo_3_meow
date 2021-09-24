@@ -13,6 +13,7 @@ const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware');
 const mainRouter = require('./routers/mainRouter');
 const productsRouter = require('./routers/productsRouter');
 const usersRouter = require('./routers/usersRouter');
+const adminUsersRouter = require('./routers/adminUsersRouter');
 
 // Template engine
 app.set('view engine', 'ejs');
@@ -20,11 +21,11 @@ app.set('views', path.resolve(__dirname, './views'));
 
 app.use(logger('dev'));
 app.use(
-  session({
-    secret: "Shh, it's a secret",
-    resave: false,
-    saveUninitialized: false,
-  })
+    session({
+        secret: "Shh, it's a secret",
+        resave: false,
+        saveUninitialized: false,
+    })
 );
 app.use(cookies());
 app.use(userLoggedMiddleware);
@@ -35,6 +36,7 @@ app.use(express.static(path.resolve('public')));
 app.use('/', mainRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
+app.use('/users', adminUsersRouter);
 app.use((req, res) => res.status(404).render('404'));
 
 // server
