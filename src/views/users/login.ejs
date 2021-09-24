@@ -3,24 +3,29 @@
 
 <head>
     <%- include('../partials/head', {pageTitle: 'Meow!'}); %>
+    <script src="/js/login.js" defer></script>
 </head>
 
 <body>
     <%- include('../partials/header') %>
         <main>
             <div class="form-container">
-                <form class="login-form" action="/users/login" method="POST">
+                <form id="login" class="login-form" action="/users/login" method="POST">
                     <h1>Bienvenid@</h1>
                     <div class="field">
                         <label for="email">
                     <span>Email:</span>
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
-                        <input type="text" name="email" id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>">
+                        <input type="email" name="email" id="email" title="No válido" requerid 
+                        class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.email : null %>"> 
+                        <span class="error" aria-live="polite"></span>
+                        <i class="fas fa-check-circle input-icon"></i>
+                        <i class="fas fa-exclamation-circle input-icon"></i>
                         <% if (locals.errors && errors.email) { %>
-                            <div class="text-danger">
+                            <p class="text-danger">
                                 <%= errors.email.msg %>
-                            </div>
+                            </p>
                             <% } %>
                     </div>
                     <div class="field">
@@ -28,11 +33,14 @@
                     <span>Contraseña:</span>
                     <strong><abbr title="required">*</abbr></strong>
                 </label>
-                        <input type="password" name="password" id="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>">
+                        <input type="password" name="password" id="password" minlength="8" requerid class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.password : null %>">
+                        <span class="error" aria-live="polite"></span>
+                        <i class="fas fa-check-circle input-icon"></i>
+                        <i class="fas fa-exclamation-circle input-icon"></i>
                         <% if (locals.errors && errors.password) { %>
-                            <div class="text-danger">
+                            <p class="text-danger">
                                 <%= errors.password.msg %>
-                            </div>
+                            </p>
                             <% } %>
                     </div>
                     <div class="field-checkbox">
