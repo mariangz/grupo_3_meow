@@ -48,12 +48,15 @@
                                 <i class="fas fa-sign-out-alt"></i> Logout
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/products/adminProduct" class="nav-link">
-                                <i class="fas fa-lock"></i> Admin Productos
-                            </a>
-                        </li>
-                        <% } %>
+
+                        <% if (locals.userLogged.rights ==2){ %>
+                            <li class="nav-item">
+                                <a href="/products/adminProduct" class="nav-link">
+                                    <i class="fas fa-lock"></i> Admin Productos
+                                </a>
+                            </li>
+                            <% } %>
+                                <% } %>
                 </ul>
             </nav>
         </div>
