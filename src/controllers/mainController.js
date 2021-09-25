@@ -9,7 +9,6 @@ const mainController = {
             .catch(error => res.send(error));
     },
 
-    cart: (req, res) => res.render('cart'),
     aboutUs: (req, res) => res.render('aboutUs'),
 };
 

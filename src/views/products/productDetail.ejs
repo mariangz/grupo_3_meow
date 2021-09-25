@@ -34,11 +34,14 @@
                                 <% } %>
                                     <% } %>
                         </select> -->
-
-                        <div class="single-product__input-group">
-                            <input type="number" name="quantity" value="1">
-                            <button type="button" class="button">Añadir al carrito</button>
-                        </div>
+                        <form action="/cart/addCart" method="post" class="form-inline">
+                            <input type="hidden" name="product_id" value="<%= product.product_id%>">
+                            <input type="hidden" name="price" value="<%= product.productPrice %>">
+                            <div class="single-product__input-group">
+                                <input type="number" name="quantity" value="1">
+                                <button type="submit" class="button">Añadir al carrito</button>
+                            </div>
+                        </form>
 
                         <h3>Info Nutricional</h3>
                         <br>

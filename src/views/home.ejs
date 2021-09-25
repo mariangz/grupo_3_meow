@@ -42,7 +42,13 @@
                                     <p class="card__text price">$
                                         <%= element.productPrice %>
                                     </p>
-                                    <button class="card__button"><img src="/images/plus.svg" alt=""></button>
+                                    <form action="/cart/addCart" method="post">
+                                        <input type="hidden" name="product_id" value="<%= element.product_id%>">
+                                        <input type="hidden" name="price" value="<%= element.productPrice %>">
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="card__button"><img src="/images/plus.svg" alt=""></button>
+                                    </form>
+
                                 </div>
                             </div>
                         </div>

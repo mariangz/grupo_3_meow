@@ -14,6 +14,7 @@ const mainRouter = require('./routers/mainRouter');
 const productsRouter = require('./routers/productsRouter');
 const usersRouter = require('./routers/usersRouter');
 const adminUsersRouter = require('./routers/adminUsersRouter');
+const cartRouter = require('./routers/cartRouter');
 
 // Template engine
 app.set('view engine', 'ejs');
@@ -34,6 +35,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static(path.resolve('public')));
 app.use('/', mainRouter);
+app.use(cartRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/users', adminUsersRouter);
