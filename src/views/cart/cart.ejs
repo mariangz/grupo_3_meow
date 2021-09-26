@@ -63,18 +63,20 @@
                                     </td>
                                 </tr>
                             </table>
-
                         </div>
+                        <a href="/#products">Agregar más productos al carrito</a>
                         <div class="checkout-container">
-                            <div class="small-container cart-paid">
-                                <h4 class="page-subtitle">Método de Pago</h4>
-                                <label><input type="radio" name="mercadoPago">
-              <img src="/images/mercado-pago.png">
-            </label>
-                            </div>
-                            <div class="button-cart">
-                                <button class="button" type="submit" name="checkout" value="pagar">Pagar</button>
-                            </div>
+                            <form action="/cart/shop" method="POST">
+                                <div class="small-container cart-paid">
+                                    <h4 class="page-subtitle">Método de Pago</h4>
+                                    <label><input type="radio" name="mercadoPago">
+                                <img src="/images/mercado-pago.png">
+                                </label>
+                                </div>
+                                <div class="button-cart">
+                                    <button class="button" type="submit" name="checkout" value="pagar">Pagar</button>
+                                </div>
+                            </form>
                         </div>
 
                         <% } else { %>
@@ -84,7 +86,6 @@
                             <% } %>
                 </div>
             </section>
-            <!-- <div class="horizontalBlock horizontalBlock--yellow"></div> -->
 
         </main>
 

@@ -41,8 +41,7 @@ module.exports = (sequelize, DataTypes) => {
 
         cart_id: {
             type: DataTypes.INTEGER,
-        }
-
+        },
     }
 
 
@@ -67,7 +66,6 @@ module.exports = (sequelize, DataTypes) => {
             as: "product",
             foreignKey: "product_id",
         });
-
     }
 
     return Item;
