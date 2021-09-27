@@ -102,3 +102,15 @@
     + Validaciones BACKEND en Register y Login
     + Creación página "About us", ruteo y primer borrador
     + Detallar la retrospectiva de este sprint
+
+        ## Weekly - 8vo Sprint
+
++ Mariano
+    + 
+
++ Natalia
+    + Armar el tablero para el Sprint8.
+    + 
+
++ Analía
+    + 
