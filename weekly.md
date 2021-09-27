@@ -100,4 +100,5 @@
 
 + Analía
     + Validaciones BACKEND en Register y Login
-    + Creación página "About us", ruteo y primer borrador.
+    + Creación página "About us", ruteo y primer borrador
+    + Detallar la retrospectiva de este sprint
