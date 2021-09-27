@@ -44,6 +44,10 @@ main {
     border: 1px solid red;
 }
 
+.box-imagen {
+    border: 1px solid blueviolet;
+}
+
 section:first-child {
     margin: 0;
 }
