@@ -565,10 +565,15 @@ fieldset {
     .box {
         display: flex;
         max-width: 100%;
-        padding: 2rem;
+        flex-direction: row;
+        gap: 9rem;
+    } 
+    .box:nth-child(odd) {
+        flex-direction: row-reverse;
+        
     } 
     .box-title {
-        margin-bottom: rem;
+        margin-top: 0;
     }
 
     .text-container {
@@ -577,14 +582,12 @@ fieldset {
     }
     
     .imagen-container {
-        max-width: 400px;
-        margin-left: auto;
+        position: relative;
     }
 
     .box-title {
         margin-top: 0;
         padding-top: 0;
-    }
-
+    
     }
 }
