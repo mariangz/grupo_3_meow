@@ -36,6 +36,12 @@ main {
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
+    border: 1px solid red;
+}
+
+.container-aboutus .box {
+    max-width: 450px;
+    border: 1px solid red;
 }
 
 section:first-child {
