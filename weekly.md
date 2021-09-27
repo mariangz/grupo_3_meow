@@ -99,4 +99,5 @@
     + Proceso de loguearse cuando se registra un usuario.
 
 + Analía
-    + 
+    + Validaciones BACKEND en Register y Login
+    + Creación página "About us", ruteo y primer borrador.
