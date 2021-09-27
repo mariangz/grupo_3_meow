@@ -36,17 +36,29 @@ main {
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-.container-aboutus .box {
+.box {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
     max-width: 450px;
-    border: 1px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid blue; */
 }
 
-.box-imagen {
-    border: 1px solid blueviolet;
+.box-title {
+    text-align: center;
+    margin-bottom: 2rem;
 }
+
+.text-container {
+    font-size: .8rem;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+}
+
 
 section:first-child {
     margin: 0;
@@ -546,5 +558,30 @@ fieldset {
 @media screen and (min-width: 968px) {
     .portada {
         font-size: 1.6rem;
+    }
+
+} @media screen and (min-width: 1024px) {
+    .box {
+        display: flex;
+        max-width: 75%;
+        padding: 2rem;
+    } 
+    .box-title {
+        margin-bottom: rem;
+    }
+
+    .text-container {
+        max-width: 400px;
+        margin: 0;
+    }
+    
+    .imagen-container {
+        max-width: 400px;
+        margin-left: auto;
+    }
+
+    .box-title {
+        margin-top: 0;
+        padding-top: 0;
     }
 }
