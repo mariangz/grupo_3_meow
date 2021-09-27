@@ -80,7 +80,10 @@
         ## Weekly - 7mo Sprint
 
 + Mariano
-    + 
+    + Validaciones Fron-End en Register, Login y Carga y Modificación de productos.
+    + Layout página de Nosotros.
+    + Agregar características dinámicas al home.
+    + Depuración de código.
 
 + Natalia
     + Armar el tablero para el Sprint7.
