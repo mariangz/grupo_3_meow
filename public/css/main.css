@@ -36,7 +36,6 @@ main {
     max-width: 1280px;
     margin-right: auto;
     margin-left: auto;
-    /* border: 1px solid red; */
 }
 
 .box {
@@ -45,7 +44,6 @@ main {
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
-    /* border: 1px solid blue; */
 }
 
 .box-title {
@@ -561,9 +559,12 @@ fieldset {
     }
 
 } @media screen and (min-width: 1024px) {
+    .container-aboutus  {
+        max-width: 1000px;
+    }
     .box {
         display: flex;
-        max-width: 75%;
+        max-width: 100%;
         padding: 2rem;
     } 
     .box-title {
@@ -583,5 +584,7 @@ fieldset {
     .box-title {
         margin-top: 0;
         padding-top: 0;
+    }
+
     }
 }
