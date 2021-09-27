@@ -29,7 +29,7 @@
 + Colaborar en la resolución de problemas respecto de aplicación de herramientas
 
 ### Less of
-+ Evitar procastinar tareas 
++ Evitar procrastinar tareas 
 
 ## Retrospectiva Nro 3 del Proyecto Meow (Sprint 4)
 ### Start doing
@@ -43,7 +43,7 @@
 + Colaborar en la resolución de problemas respecto de aplicación de herramientas
 
 ### Less of
-+ Evitar procastinar tareas 
++ Evitar procrastinar tareas 
 
 ### Dejar de hacer
 + Por el momento no encontramos puntos para agregar en este apartado
@@ -62,7 +62,7 @@
 + Colaborar en la resolución de problemas respecto de aplicación de herramientas
 
 ### Less of
-+ Evitar procastinar tareas 
++ Evitar procrastinar tareas 
 
 ### Dejar de hacer
 + Por el momento no encontramos puntos para agregar en este apartado
@@ -74,30 +74,31 @@
 ### More of
 + Seguir compartiendo info útil para reforzar conceptos de las clases y su implementación en el proyecto
 + Continuar con la asignación de tareas mediante Github Projects
-+ Priorizarizando tareas en relación a la importancia en el cumplimiento del sprint actual
++ Priorizar tareas en relación a la importancia en el cumplimiento del sprint actual
 
 ### Keep doing
 + Continuar utilizando Whatsapp como herramienta de comunicación grupal
 + Colaborar en la resolución de problemas respecto de aplicación de herramientas
 
 ### Less of
-+ Evitar procastinar tareas 
++ Evitar procrastinar tareas 
 
 ### Dejar de hacer
 + Por el momento no encontramos puntos para agregar en este apartado
 
 ## Retrospectiva Nro 6 del Proyecto Meow (Sprint 7)
 ### Start doing
-+ 
++ Agregar comentarios a los issues de proyecto en GITHUB para mejorar feedback y ayudar a terminar pendientes
 
 ### More of
-+ 
++ Asignación de tareas mediante Github Projects
++ Consulta con docente y auxiliar con problemas más complejos
 
 ### Keep doing
-+ 
++  Colaborar en la resolución de problemas respecto de aplicación de nuevas herramientas en proyecto
 
 ### Less of
-+ 
++ Evitar procrastinar tareas 
 
 ### Dejar de hacer
-+ 
++ Por el momento no encontramos puntos para agregar en este apartado
