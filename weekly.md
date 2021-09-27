@@ -84,6 +84,7 @@
     + Layout página de Nosotros.
     + Agregar características dinámicas al home.
     + Depuración de código.
+    + Agregar About en Navbar
 
 + Natalia
     + Armar el tablero para el Sprint7.
