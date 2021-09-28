@@ -76,7 +76,7 @@
 
                         <label for="administrador">
                             <input type="radio" name="rights" id="administrador" value="2" <%= locals.oldData && ("2" === oldData.rights) ? 'checked' : null %>>
-                            <span>Adminitrador</span></label>
+                            <span>Administrador</span></label>
 
                         <label for="usuario">
                             <input type="radio" name="rights" id="usuario" value="1" <%= locals.oldData && ("1" === oldData.rights) ? 'checked' : null %>>
@@ -104,9 +104,8 @@
                                 <% } %>
                             </div>
                         <div>
-                            <button type="submit" value="Ingresar" class="button button--reg button--smal error-msg button--outline">Registrarme</button>
+                            <button type="submit" value="Ingresar" class="button button--reg button--smal error-msg button--outline">Crear usuario</button>
                         </div>
-                        <p><a href="/users/login" class="registrado">¿Ya tienes una cuenta?</a></p>
                 </form>
                 </div>
         </main>
