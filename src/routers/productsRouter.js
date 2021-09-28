@@ -12,10 +12,13 @@ const adminMiddleware = require('../middlewares/adminMiddleware');
 // Controller
 const productsController = require('../controllers/productsController');
 
-router.get('/adminProduct', authMiddleware, adminMiddleware, productsController.list); /* GET - listado de productos para administrar */
-router.get('/createProduct', authMiddleware, adminMiddleware, productsController.create); /* GET - formulario de creación de productos */
+router.get('/adminProduct', productsController.list);
+// router.get('/adminProduct', authMiddleware, adminMiddleware, productsController.list); /* GET - listado de productos para administrar */
+router.get('/createProduct', productsController.create);
+// router.get('/createProduct', authMiddleware, adminMiddleware, productsController.create); /* GET - formulario de creación de productos */
 router.post('/createProduct', upload.single('image'), validationCreate, productsController.save); /* POST - Acción de edición a donde se envia el formulario */
-router.get('/editProduct/:id', adminMiddleware, productsController.edit); /* GET - formulario de edición de productos */
+router.get('/editProduct/:id', productsController.edit);
+// router.get('/editProduct/:id', adminMiddleware, productsController.edit); /* GET - formulario de edición de productos */
 router.put('/editProduct/:id', upload.single('image'), validationEdit, productsController.update); /* PUT - Acción de edición a donde se envia el formulario */
 router.delete('/:id', productsController.delete); /* DELETE un producto */
 router.get('/:id/', productsController.detail); /* GET - dellate de un producto en particular */
