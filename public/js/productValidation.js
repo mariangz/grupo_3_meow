@@ -1,15 +1,17 @@
 const form = document.querySelector('form');
-const field = document.getElementById('field');
+const fieldset = document.getElementById('fieldset');
 const nombre = document.getElementById('name');
 const price = document.getElementById('price');
 const description = document.getElementById('description');
 const nutritional = document.getElementById('nutritional');
 const radios = document.querySelectorAll('input[type="radio"]');
-console.log(field.id);
+let radio = false;
 
 const showError = (input) => {
   const span = document.querySelector(`#${input.id} + span.error`);
-  if (input.validity.valueMissing) {
+  if (input.id === 'fieldset') {
+    span.textContent = `Seleccionar al menos una opción`;
+  } else if (input.validity.valueMissing) {
     span.textContent = 'Campo obligatorio';
   } else if (input.validity.tooShort) {
     span.textContent = `Al menos ${input.minLength} caracteres`;
@@ -28,16 +30,16 @@ const hideError = (input) => {
   input.classList.add('success');
 };
 
-let radio = false;
-radios.forEach((e) => {
-  if (e.check === true) {
-    radio = true;
-  }
-});
-
 form.addEventListener('submit', (event) => {
   const image = document.getElementById('productAddImage');
   const fileExt = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+  radios.forEach((e) => {
+    console.log(e.checked);
+    if (e.checked === true) {
+      radio = true;
+    }
+  });
 
   if (!nombre.validity.valid) {
     event.preventDefault();
@@ -45,20 +47,22 @@ form.addEventListener('submit', (event) => {
   } else {
     hideError(nombre);
   }
+
   if (price.value.trim() === '') {
     event.preventDefault();
     showError(price);
   } else {
     hideError(price);
   }
-  if (description.textContent.trim().length < 20) {
+
+  if (description.value.trim().length < 20) {
     event.preventDefault();
     showError(description);
   } else {
     hideError(description);
   }
 
-  if (nutritional.textContent.trim().length < 20) {
+  if (nutritional.value.trim().length < 20) {
     event.preventDefault();
     showError(nutritional);
   } else {
@@ -67,12 +71,13 @@ form.addEventListener('submit', (event) => {
 
   if (!radio) {
     event.preventDefault();
-    showError(field);
+    showError(fieldset);
+  } else {
+    hideError(fieldset);
   }
 
   if (!fileExt.exec(image.value)) {
     event.preventDefault();
-    console.log(image);
     showError(image);
   }
 });

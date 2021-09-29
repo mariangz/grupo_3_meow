@@ -453,6 +453,14 @@ fieldset {
     position: relative;
 }
 
+.fieldset {
+    margin-bottom: 0;
+}
+
+.field-image {
+    margin-top: 1.5rem;
+}
+
 .field-checkbox {
     display: flex;
     gap: .5rem;
