@@ -1,7 +1,7 @@
 module.exports = {
   development: {
     username: 'root',
-    password: 'tejedor709',
+    password: null,
     database: 'meow_db',
     host: '127.0.0.1',
     dialect: 'mysql',
