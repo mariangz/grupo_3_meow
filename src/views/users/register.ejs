@@ -35,8 +35,7 @@
                     <input type="email" name="email" id="email" title="Ingresá un email válido" required
                         value="<%= locals.oldData ? oldData.email : null %>">
                         <span class="error" aria-live="polite"></span>
-                        <i class="fas fa-check-circle input-icon"></i>
-                        <i class="fas fa-exclamation-circle input-icon"></i>
+                        <i class="fas input-icon"></i>
                     <% if ( locals.errors && errors.email) { %>
                     <p class="text-danger">
                         <%= errors.email.msg %>
@@ -51,8 +50,7 @@
                     <input type="password" name="password" id="password" title="Debe tener mínimo 8 caracteres, incluir una mayúscula, un número y un símbolo" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@.\-_$_!%*¿?&+])[A-Za-z\d@.\-$_!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.password : null %>">
                         <span class="error" aria-live="polite"></span>
-                        <i class="fas fa-check-circle input-icon"></i>
-                        <i class="fas fa-exclamation-circle input-icon"></i>
+                        <i class="fas input-icon"></i>
                     <% if ( locals.errors && errors.password) { %>
                     <p class="text-danger">
                         <%= errors.password.msg %>
@@ -67,8 +65,7 @@
                     <input type="password" name="confirmPassword" id="confirmar-contraseña" title="Las contraseñas no coinciden" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*¿?&+])[A-Za-z\d@$!%*¿?&+]{8,32}$"
                         value="<%= locals.oldData ? oldData.confirmPassword : null %>">
                         <span class="error" aria-live="polite"></span>
-                        <i class="fas fa-check-circle input-icon"></i>
-                        <i class="fas fa-exclamation-circle input-icon"></i>
+                        <i class="fas input-icon"></i>
                     <% if ( locals.errors && errors.confirmPassword) { %>
                     <p class="text-danger">
                         <%= errors.confirmPassword.msg %>
