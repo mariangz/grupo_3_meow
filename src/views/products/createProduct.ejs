@@ -3,6 +3,7 @@
 
 <head>
     <%- include('../partials/head', {pageTitle: 'Crear producto'}); %>
+    <script src="/js/productValidation.js" defer></script>
 </head>
 
 <body>
@@ -16,6 +17,8 @@
                             <label for="name">
                             <span>Nombre del producto</span>
                             <input type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>">
+                            <span class="error" aria-live="polite"></span>
+                            <i class="fas input-icon"></i>
                             </label>
                             <% if ( locals.errors && errors.name) { %>
                                 <p class="text-danger">
