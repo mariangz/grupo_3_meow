@@ -370,20 +370,20 @@ input[type=radio] {
     border-radius: .25rem;
 }
 
+textarea.invalid,
 input[type=text].invalid,
 input[type=password].invalid,
 input[type=email].invalid,
 input[type=number].invalid,
-input[type=radio].invalid,
-textarea.invalid {
+input[type=radio].invalid {
     border: 1px solid var(--color-danger);
 }
 
+textarea.success,
 input[type=text].success,
 input[type=password].success,
 input[type=email].success,
-input[type=number].success
-textarea.success {
+input[type=number].success {
     border: 1px solid var(--color-success);
 }
 

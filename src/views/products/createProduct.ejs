@@ -53,7 +53,6 @@
                                 <span>Información nutricional</span>
                                 <textarea name="nutritional" id="nutritional" required minlength="20" ><%= locals.oldData ? oldData.nutritional : null %></textarea>
                                 <span class="error" aria-live="polite"></span>
-                                <i class="fas input-icon"></i>
                             </label>
                                     <% if ( locals.errors && errors.nutritional) { %>
                                         <p class="text-danger">
@@ -84,10 +83,12 @@
                                 </p>
                                 <% } %>
                         </fieldset>
-                        <div class="field">
+                        <span class="error" aria-live="polite"></span>
+                        <div class="field" id="field">
                             <div class="file-select">Agregar una imagen:
                                 <div class="upload-image__label file-select"></div>
-                                <input type="file" name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png">
+                                <input type="file" required title="Cargar una imagen" name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png">
+                                <span class="error" aria-live="polite"></span>
                                 <% if ( locals.errors && errors.image) { %>
                                     <p class="text-danger">
                                         <%= errors.image.msg %>

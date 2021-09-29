@@ -1,15 +1,13 @@
 const form = document.querySelector('form');
-const form = document.querySelector('.field');
+const field = document.getElementById('field');
 const nombre = document.getElementById('name');
 const price = document.getElementById('price');
 const description = document.getElementById('description');
 const nutritional = document.getElementById('nutritional');
 const radios = document.querySelectorAll('input[type="radio"]');
-console.log(radio);
-console.log(nutritional);
+console.log(field.id);
 
 const showError = (input) => {
-  console.log(input);
   const span = document.querySelector(`#${input.id} + span.error`);
   if (input.validity.valueMissing) {
     span.textContent = 'Campo obligatorio';
@@ -30,14 +28,12 @@ const hideError = (input) => {
   input.classList.add('success');
 };
 
-nutritional.addEventListener('input', (event) => console.log(event.target));
-
 let radio = false;
-for (let e of radios) {
+radios.forEach((e) => {
   if (e.check === true) {
     radio = true;
   }
-}
+});
 
 form.addEventListener('submit', (event) => {
   const image = document.getElementById('productAddImage');
@@ -46,25 +42,27 @@ form.addEventListener('submit', (event) => {
   if (!nombre.validity.valid) {
     event.preventDefault();
     showError(nombre);
+  } else {
+    hideError(nombre);
   }
-  if (!price.value.valid) {
+  if (price.value.trim() === '') {
     event.preventDefault();
     showError(price);
+  } else {
+    hideError(price);
   }
-  if (
-    description.textContent.trim() === '' ||
-    nutritional.textContent.trim().length > 20
-  ) {
+  if (description.textContent.trim().length < 20) {
     event.preventDefault();
-    showError(nutritional);
+    showError(description);
+  } else {
+    hideError(description);
   }
 
-  if (
-    nutritional.textContent.trim() === '' ||
-    nutritional.textContent.trim().length > 20
-  ) {
+  if (nutritional.textContent.trim().length < 20) {
     event.preventDefault();
     showError(nutritional);
+  } else {
+    hideError(nutritional);
   }
 
   if (!radio) {
@@ -74,6 +72,7 @@ form.addEventListener('submit', (event) => {
 
   if (!fileExt.exec(image.value)) {
     event.preventDefault();
+    console.log(image);
     showError(image);
   }
 });
