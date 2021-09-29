@@ -3,6 +3,7 @@
 
 <head>
     <%- include('../partials/head', {pageTitle: 'Editar producto'}); %>
+    <script src="/js/productValidation.js" defer></script>
 </head>
 
 <body>
@@ -11,7 +12,7 @@
             <div class="container crear-producto">
                 <div class="form-container">
                     <h1>Editar Producto</h1>
-                    <form action="/products/editProduct/<%=product.product_id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form action="/products/editProduct/<%=product.product_id %>?_method=PUT" method="POST" novalidate enctype="multipart/form-data">
                         <div class="field">
                             <label for="name">
                                 <span>Nombre del producto</span>

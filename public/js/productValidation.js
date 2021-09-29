@@ -35,7 +35,6 @@ form.addEventListener('submit', (event) => {
   const fileExt = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
 
   radios.forEach((e) => {
-    console.log(e.checked);
     if (e.checked === true) {
       radio = true;
     }
