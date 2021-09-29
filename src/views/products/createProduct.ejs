@@ -87,7 +87,7 @@
                         <div class="field field-image">
                             <div class="file-select">Agregar una imagen:
                                 <div class="upload-image__label file-select"></div>
-                                <input type="file" required title="Cargar una imagen" name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png">
+                                <input type="file" title="Cargar una imagen" name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png" required>
                                 <span class="error" aria-live="polite"></span>
                                 <% if ( locals.errors && errors.image) { %>
                                     <p class="text-danger">
