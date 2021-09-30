@@ -43,6 +43,7 @@
                         </a>
                     </li>
                     
+                    <% if (locals.isLogged){ %>
                         <li class="nav-item ">
                             <a href="/users/profile " class="nav-link ">
                                 <i class="fas fa-user "></i> Profile
@@ -53,6 +54,8 @@
                                 <i class="fas fa-sign-out-alt "></i> Logout
                             </a>
                         </li>
+
+                        <% if (locals.userLogged.rights ==2){ %>
                             <li class="nav-item ">
                                 <a href="/products/adminProduct " class="nav-link ">
                                     <i class="fas fa-lock "></i> Admin Productos
@@ -63,7 +66,8 @@
                                     <i class="fas fa-lock "></i> Admin Usuarios
                                 </a>
                             </li>
-                        
+                            <% } %>
+                                <% } %>
                 </ul>
             </nav>
         </div>
