@@ -26,9 +26,6 @@ const hideError = (input) => {
 };
 
 form.addEventListener('submit', (event) => {
-  // const image = document.getElementById('productAddImage');
-  // const fileExt = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
-
   if (!nombre.validity.valid) {
     event.preventDefault();
     showError(nombre);
@@ -56,9 +53,4 @@ form.addEventListener('submit', (event) => {
   } else {
     hideError(nutritional);
   }
-
-  // if (!fileExt.exec(image.value)) {
-  //   event.preventDefault();
-  //   showError(image);
-  // }
 });

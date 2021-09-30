@@ -40,7 +40,7 @@
                         <div class="field">
                             <label for="description">
                             <span>Descripción resumida</span>
-                            <textarea name="description" id="description"><%= product.shortDescription %></textarea>
+                            <textarea name="description" minlength="20" id="description"><%= product.shortDescription %></textarea>
                             <span class="error" aria-live="polite"></span>
                     </label>
                             <% if ( locals.errors && errors.description) { %>
@@ -50,7 +50,7 @@
                                 <% } %>
                     <label for="nutritional">
                         <span>Información nutricional</span>
-                        <textarea name="nutritional" id="nutritional"><%= product.nutritionalDetail %></textarea>
+                        <textarea name="nutritional" minlength="20" id="nutritional"><%= product.nutritionalDetail %></textarea>
                         <span class="error" aria-live="polite"></span>
                     </label>
                                     <% if ( locals.errors && errors.nutritional) { %>
@@ -78,7 +78,6 @@
                                 <div class="upload-image__label file-select"></div>
                                 <input type="hidden" name="oldImagen" value="<%= product.productImage%>">
                                 <input type='file' name="image" id="productAddImage" accept="image/.jpg, .jpeg, .png" required>
-                                <span class="error" aria-live="polite"></span>
                             </div>
                         </div>
 
