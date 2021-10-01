@@ -15,6 +15,7 @@ const productsRouter = require('./routers/productsRouter');
 const usersRouter = require('./routers/usersRouter');
 const adminUsersRouter = require('./routers/adminUsersRouter');
 const cartRouter = require('./routers/cartRouter');
+const apiProductsRouter = require('./routers/api/apiProductsRouter');
 
 // Template engine
 app.set('view engine', 'ejs');
@@ -39,6 +40,7 @@ app.use(cartRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/users', adminUsersRouter);
+app.use('/api/products', apiProductsRouter);
 app.use((req, res) => res.status(404).render('404'));
 
 // server
