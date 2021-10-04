@@ -1,7 +1,13 @@
 const db = require('../../database/models');
 
 module.exports = {
-    productsAll: (req, res) => {},
+    productsAll: (req, res) => {
+        db.Product
+            .findAll()
+            .then(result => {
+                return res.json(result);
+            }).catch(error => res.json(error));
+    },
 
     detail: (req, res) => {
         db.Product.findByPk(req.params.id)

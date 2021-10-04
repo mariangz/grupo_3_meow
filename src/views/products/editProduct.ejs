@@ -3,7 +3,7 @@
 
 <head>
     <%- include('../partials/head', {pageTitle: 'Editar producto'}); %>
-    <script src="/js/editProductValidation.js" defer></script>
+        <script src="/js/editProductValidation.js" defer></script>
 </head>
 
 <body>
@@ -48,7 +48,7 @@
                                     <%= errors.description.msg %>
                                 </p>
                                 <% } %>
-                    <label for="nutritional">
+                                    <label for="nutritional">
                         <span>Información nutricional</span>
                         <textarea name="nutritional" minlength="20" id="nutritional"><%= product.nutritionalDetail %></textarea>
                         <span class="error" aria-live="polite"></span>
@@ -88,7 +88,7 @@
                     <hr class="form-separator" />
                     <form action="/products/<%= product.product_id %>?_method=DELETE" method="POST">
                         <div class="button-product">
-                            <button type="submit" class="delete-button">Eliminar este producto</button>
+                            <button type="submit" class="delete-button" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">Eliminar este producto</button>
                         </div>
                     </form>
                 </div>
