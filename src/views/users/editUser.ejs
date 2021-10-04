@@ -93,7 +93,7 @@
                 <hr class="form-separator" />
                 <form action="/users/<%= user.user_id %>?_method=DELETE" method="POST">
                     <div class="button-product">
-                        <button type="submit" class="delete-button">Eliminar este usuario</button>
+                        <button type="submit" class="delete-button" onclick="return confirm('Estás seguro que deseas eliminar el registro?');">Eliminar este usuario</button>
                     </div>
                 </form>
             </div>
