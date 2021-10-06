@@ -24,11 +24,12 @@ module.exports = {
                         statusMsg: "OK"
                     },
                     data: {
-                        name: user.userName,
+                        name: user.name,
                         email: user.email,
-                        image: user.userImage,
+                        image: user.image,
                         rights: user.rights,
-                        user_id: user.id
+                        user_id: user.user_id,
+                        Url_image: `http://localhost:3000/images/users/${user.image}`
                     }
                 }
 
