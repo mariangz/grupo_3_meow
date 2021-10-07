@@ -1,17 +1,41 @@
 const db = require('../../database/models');
-const { detail } = require('../productsController');
 
 module.exports = {
     list: (req, res) => {
         db.User
             .findAll()
-            .then(users => {
-                return res.json({
-                    total: users.length,
-                    data: users,
-                    status: 200,
+            .then(results => {
+
+                const response = {
+                    meta: {
+                        status: 200,
+                        statusMsg: "Ok",
+                        count: results.length
+                    },
+                    data: []
+                }
+
+                results.forEach(element => {
+                    response.data.push({
+                        id: element.user_id,
+                        name: element.name,
+                        email: element.email,
+                        detail: `/api/users/${element.user_id}`
+                    });
                 });
-            }).catch(error => res.json(error));
+
+                res.status(200).json(response);
+
+            })
+            .catch(error => {
+                res.status(500).json({
+                    meta: {
+                        status: 500,
+                        statusMsg: "Internal server error"
+                    },
+                    data: []
+                });
+            });
     },
 
     profile: (req, res) => {

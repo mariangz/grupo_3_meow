@@ -4,9 +4,43 @@ module.exports = {
     productsAll: (req, res) => {
         db.Product
             .findAll()
-            .then(result => {
-                return res.json(result);
-            }).catch(error => res.json(error));
+            .then(results => {
+
+                const response = {
+                    meta: {
+                        status: 200,
+                        statusMsg: "Ok",
+                        count: results.length,
+                        countByCategory: ''
+                    },
+                    data: []
+                }
+
+                results.forEach(element => {
+                    response.data.push({
+                        id: element.product_id,
+                        name: element.productName,
+                        description: element.shortDescription,
+                        nutritional: element.nutritionalDetail,
+                        price: element.productPrice,
+                        category: [element.productCategory],
+                        image: element.productImage,
+                        detail: `/api/products/${element.product_id}`
+                    });
+                });
+
+                res.status(200).json(response);
+
+            })
+            .catch(error => {
+                res.status(500).json({
+                    meta: {
+                        status: 500,
+                        statusMsg: "Internal server error"
+                    },
+                    data: []
+                });
+            });
     },
 
     detail: (req, res) => {
