@@ -5,7 +5,7 @@ const apiUsersController = require('../../controllers/api/apiUsersController');
 
 
 /* Páginas de usuarios */
-router.post("/:id", apiUsersController.profile);
-router.post("/", apiUsersController.list);
+router.get("/:id", apiUsersController.profile);
+router.get("/", apiUsersController.list);
 
 module.exports = router;

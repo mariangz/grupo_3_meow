@@ -5,7 +5,8 @@ const apiProductsController = require('../../controllers/api/apiProductsControll
 
 
 /* Páginas de productos */
-router.post("/:id", apiProductsController.detail);
-router.post("/", apiProductsController.productsAll);
+router.get("/", apiProductsController.productsAll);
+router.get("/:id", apiProductsController.detail);
+
 
 module.exports = router;
