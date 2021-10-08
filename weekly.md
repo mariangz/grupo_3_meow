@@ -110,7 +110,7 @@
 
 + Natalia
     + Armar el tablero para el Sprint8.
-    + 
+    + Api de Productos.
 
 + Analía
     + 
