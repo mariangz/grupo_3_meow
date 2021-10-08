@@ -1,17 +1,22 @@
+const { sequelize } = require('../../database/models');
 const db = require('../../database/models');
 
 module.exports = {
-    productsAll: (req, res) => {
+    productsAll: async(req, res) => {
+        const groupCategory = await db.Product.findAll({
+            attributes: ['productCategory', [sequelize.fn('count', sequelize.col('product_id')), 'count']],
+            group: ['productCategory'],
+        })
+
         db.Product
             .findAll()
             .then(results => {
-
                 const response = {
                     meta: {
                         status: 200,
                         statusMsg: "Ok",
                         count: results.length,
-                        countByCategory: ''
+                        countByCategory: groupCategory
                     },
                     data: []
                 }
