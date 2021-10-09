@@ -5,6 +5,14 @@ const Op = db.Sequelize.Op;
 
 const productsController = {
 
+    /* GET - listado de todos los productos MYSQL */
+    all: async(req, res) => {
+        db.Product.findAll()
+            .then(product => {
+                res.render('products/products', { product })
+            })
+            .catch(error => res.send(error));
+    },
     /* GET - detalle de un producto en particular MYSQL */
     detail: async(req, res) => {
         db.Product.findByPk(req.params.id)

@@ -18,43 +18,44 @@
                             <br>
                             <span class="nobreak">para gatos reales 🐱</span>
                         </h1>
-                        <a class="button" href="/#products">Quiero!</a>
+                        <a class="button" href="/products">Quiero!</a>
                     </div>
                 </div>
             </section>
             <div class="horizontalBlock horizontalBlock--turquesa"></div>
 
-            <!-- PRODUCTS -->
-            <section id="products">
-                <h2>Nuestra Selección</h2>
-                <div class="productos">
-                    <% product.forEach(element => { %>
-                        <div class="card">
-                            <a href="/products/<%= element.product_id %>" class="link-product"><img src="/images/food/<%= element.productImage %>" class="card__image"></a>
-                            <div class="card__text-container">
-                                <h3 class="card__title">
-                                    <%= element.productName %>
-                                </h3>
-                                <p class="card__text description">
-                                    <%= element.shortDescription %>
-                                </p>
-                                <div class="card__text-btn-container">
-                                    <p class="card__text price">$
-                                        <%= element.productPrice %>
-                                    </p>
-                                    <form action="/cart/addCart" method="post">
-                                        <input type="hidden" name="product_id" value="<%= element.product_id%>">
-                                        <input type="hidden" name="price" value="<%= element.productPrice %>">
-                                        <input type="hidden" name="quantity" value="1">
-                                        <button type="submit" class="card__button"><img src="/images/plus.svg" alt=""></button>
-                                    </form>
-
-                                </div>
-                            </div>
+            <!-- ABOUTUS -->,
+            <section id="aboutus">
+                <div class="container container-aboutus">
+                    <div class="box">
+                        <div class="text-container">
+                            <h1 class="box-title">Nosotros</h1>
+                            <p class="box-text">
+                                Somos un gran equipo y el bienestar de nuestros amigos felinos es nuestra prioridad. En el mercado de alimentos para mascotas, la salud siempre ha venido después del costo, la conveniencia y las modas de marketing. No en Meow. Nosotros dejamos a un lado
+                                los grandes márgenes de ganancia y las falsificaciones en favor de lo que realmente nuestras mascotas necesitan, anhelan y merecen. Nuestra misión es ofrecer la experiencia del cliente que nunca obtuvimos, la educación
+                                que más deseamos y una comunidad de amigos con intereses comunes.
+                            </p>
                         </div>
-                        <% }) %>
-            </section>
+                        <div class="imagen-container">
+                            <img class="box-imagen" src="/images/team.jpeg" alt="Grupo de personas con bicicletas">
+                        </div>
 
+                    </div>
+                    <div class="box">
+                        <div class="text-container">
+                            <h1 class="box-title">Nuestra Cultura</h1>
+                            <p class="box-text">
+                                Los valores que nos guían no son solo carteles bonitos, estamos orgullosos de cómo interactuamos con nuestros clientes y entre nosotros todos los días. Nuestras oficinas son pet-friendly y nuestras mascotas son también parte de esto. Estamos convencidos
+                                que nuestros productos realmente mejoran la calidad de vida de nuestros amigos de cuatro patas y por eso hacemos nuestro trabajo en equipo y con gran satisfacción.
+                            </p>
+                        </div>
+                        <div class="imagen-container">
+                            <img class="box-imagen" src="/images/dog-office.jpeg" alt="Grupo de personas con bicicletas">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
             <div class="horizontalBlock horizontalBlock--pink"></div>
             <!-- CUSTOMERS -->
             <section id="customers" class="customers">
