@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
+        payment: {
+            allowNull: false,
+            type: DataTypes.STRING
+        },
     }
 
     const config = {
@@ -39,10 +43,6 @@ module.exports = (sequelize, DataTypes) => {
         Cart.belongsTo(models.User, {
             as: "user",
             foreignKey: "user_id",
-        });
-        Cart.belongsTo(models.Payment, {
-            as: "payment",
-            foreignKey: "payment_id",
         });
 
     }

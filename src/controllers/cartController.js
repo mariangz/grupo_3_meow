@@ -61,6 +61,69 @@ const cartController = {
             .then(() => res.redirect('/cart'))
             .catch(error => console.log(error))
     },
+
+    shop: (req, res) => {
+        let totalPrice = 0;
+        db.Item.findAll({
+                where: {
+                    user_id: req.session.userLogged.user_id,
+                    state: 1
+                }
+            })
+            .then((items) => {
+                totalPrice = items.reduce((total, item) => (total = total + Number(item.subtotal)), 0)
+            })
+        db.Cart.findOne({
+                orderNumber: [
+                    ['createdAt', 'DESC']
+                ]
+            })
+            .then((cart) => db.Cart.create({
+                orderNumber: cart ? cart.orderNumber + 1 : 1,
+                total: totalPrice,
+                user_id: req.session.userLogged.user_id,
+                payment: 'mercadoPago'
+            }))
+            .then(cart => {
+                db.Item.update({
+                    state: 0,
+                    cart_id: cart.cart_id
+                }, {
+                    where: {
+                        user_id: req.session.userLogged.user_id,
+                        state: 1
+                    }
+                })
+            })
+            .then(() => res.redirect('/cart/historial'))
+            .catch(error => console.log(error))
+    },
+
+    history: (req, res) => {
+        db.Cart.findAll({
+                where: {
+                    user_id: req.session.userLogged.user_id
+                },
+                include: {
+                    all: true,
+                    nested: true
+                }
+            })
+            .then(carts => {
+                res.render('cart/historial', { carts });
+            })
+    },
+    buyDetail: (req, res) => {
+        db.Cart.findByPk(req.params.id, {
+                include: {
+                    all: true,
+                    nested: true
+                }
+            })
+            .then((cart) => {
+                res.render('cart/detailshop', { cart });
+            })
+    }
 };
 
 module.exports = cartController;
