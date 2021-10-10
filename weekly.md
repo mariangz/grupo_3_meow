@@ -111,7 +111,8 @@
 + Natalia
     + Armar el tablero para el Sprint8.
     + Api de Productos.
+    + Se sacó los productos del Home y se hizo una página exclusiva.
     + implementar Carrito de compras.
 
 + Analía
-    + 
+    + Api de Usuarios.
