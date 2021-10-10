@@ -57,19 +57,6 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 --
--- Table structure for table `Payments`
---
-
-DROP TABLE IF EXISTS `payments`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `payments` (
-  `payment_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL,
-  PRIMARY KEY (`payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
---
 -- Table structure for table `carts`
 --
 DROP TABLE IF EXISTS `carts`;
@@ -80,12 +67,10 @@ CREATE TABLE `carts` (
   `orderNumber` int(11) DEFAULT NULL,
   `total` decimal(10,2) DEFAULT NULL,
   `user_id` int(11) DEFAULT NULL,
-  `payment_id` int NOT NULL,
+  `payment` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`cart_id`),
   KEY `user_id` (`user_id`),
-  KEY `payment_id` (`payment_id`),
-  CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
-  CONSTRAINT `carts_ibfk_2` FOREIGN KEY (`payment_id`) REFERENCES `payments` (`payment_id`)
+  CONSTRAINT `carts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 
 
