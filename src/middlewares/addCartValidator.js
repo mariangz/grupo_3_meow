@@ -1,9 +1,9 @@
-const { body } = require("express-validator");
+const { body } = require('express-validator');
 
 module.exports = {
     addCart: [
-        body("quantity")
+        body('quantity')
         .custom((value) => value > 0)
-        .withMessage("Debe agregar almenos un producto a su carrito"),
+        .withMessage('Debe agregar al menos un producto a su carrito'),
     ],
 };

@@ -37,7 +37,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 app.use(express.static(path.resolve('public')));
 app.use('/', mainRouter);
-app.use(cartRouter);
+app.use('/cart', cartRouter);
 app.use('/products', productsRouter);
 app.use('/users', usersRouter);
 app.use('/users', adminUsersRouter);

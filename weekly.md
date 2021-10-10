@@ -55,7 +55,7 @@
     + Implementar la entidad del usuario.
     + Implementar el REGISTRO del usuario.
 
-    ## Weekly - 6to Sprint
+## Weekly - 6to Sprint
 
 + Mariano
     + Borrador del diagrama de Base de Datos.   
@@ -77,7 +77,7 @@
     + Creación de archivos modelos.
     + Crear e implementar el CRUD para usuarios.
 
-        ## Weekly - 7mo Sprint
+## Weekly - 7mo Sprint
 
 + Mariano
     + Validaciones Fron-End en Register, Login y Carga y Modificación de productos.
@@ -103,7 +103,7 @@
     + Creación página "About us", ruteo y primer borrador
     + Detallar la retrospectiva de este sprint
 
-        ## Weekly - 8vo Sprint
+## Weekly - 8vo Sprint
 
 + Mariano
     + 
@@ -111,6 +111,7 @@
 + Natalia
     + Armar el tablero para el Sprint8.
     + Api de Productos.
+    + implementar Carrito de compras.
 
 + Analía
     + 

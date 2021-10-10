@@ -6,11 +6,11 @@ const addCartValidator = require('../middlewares/addCartValidator');
 
 const cartController = require('../controllers/cartController');
 
-router.post('/cart/addCart', authMiddleware, addCartValidator.addCart, cartController.addCart);
-router.get('/cart', authMiddleware, cartController.cart);
-router.post('/cart/delete', authMiddleware, cartController.deleteCart);
-router.post('/cart/shop', authMiddleware, cartController.shop);
-router.get('/cart/historial', authMiddleware, cartController.history);
-router.get('/cart/detailshop/:id', authMiddleware, cartController.buyDetail);
+router.get('/', authMiddleware, cartController.cart);
+router.post('/addCart', authMiddleware, addCartValidator.addCart, cartController.addCart);
+router.post('/delete', authMiddleware, cartController.deleteCart);
+router.post('/shop', authMiddleware, cartController.shop);
+router.get('/historial', authMiddleware, cartController.history);
+router.get('/detailshop/:id', authMiddleware, cartController.buyDetail);
 
 module.exports = router;
