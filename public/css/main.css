@@ -576,7 +576,7 @@ fieldset {
     .container-aboutus .box {
         display: flex;
         min-width: 100%;
-        gap: 4rem;
+        gap: 6rem;
     }
 
     .container-aboutus .box:nth-child(even) {
