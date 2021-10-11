@@ -132,6 +132,20 @@ h2 {
     margin-top: 0.5rem;
 }
 
+/* ********** ABOUT ********** */
+.container-aboutus {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-title {
+    text-align: left;
+}
+
+.box-text {
+    line-height: 1.9;
+}
+
 
 /* adds transitions to all buttons, links and form elements */
 
@@ -304,7 +318,7 @@ li {
 }
 
 
-/* ----- FORMS ------------------------------- */
+/* ----- FORMS ----- */
 
 .form-container {
     max-width: 420px;
@@ -534,6 +548,7 @@ fieldset {
 @media screen and (min-width: 400px) {
     .footer-nav {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 }
@@ -553,32 +568,20 @@ fieldset {
     .container-aboutus  {
         max-width: 1000px;
     }
-    .box {
-        display: flex;
-        max-width: 100%;
-        flex-direction: row;
-        gap: 9rem;
-    } 
-    .box:nth-child(odd) {
-        flex-direction: row-reverse;
-        
-    } 
-    .box-title {
-        margin-top: 0;
-    }
 
     .text-container {
-        max-width: 400px;
-        margin: 0;
-    }
-    
-    .imagen-container {
-        position: relative;
+        margin-top: 0;
     }
 
-    .box-title {
-        margin-top: 0;
-        padding-top: 0;
-    
+    .container-aboutus .box {
+        display: flex;
+        min-width: 100%;
+        gap: 4rem;
     }
+
+    .container-aboutus .box:nth-child(even) {
+        flex-direction: row-reverse;
+        
+    }
+
 }
