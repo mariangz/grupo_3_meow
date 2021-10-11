@@ -15,7 +15,7 @@
     transition: transform 200ms ease-in;
   }
   
-  .card_head{
+  .card_head {
     display: flex;
     flex-direction: column;
     align-items: center;
