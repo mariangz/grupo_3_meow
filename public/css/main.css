@@ -84,13 +84,13 @@ h2 {
     margin-bottom: 2rem;
 }
 
-.title-clientes,
-.title-productos {
+.secciones {
     text-align: center;
+    margin-top: 2rem;
 }
 
-.title-productos {
-    margin-top: 2rem;
+.product-item__text {
+    font-size: 1rem;
 }
 
 .horizontalBlock {
