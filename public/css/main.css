@@ -31,6 +31,12 @@ main {
     flex-grow: 1;
 }
 
+/* #aboutus {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+} */
+
 .container {
     width: calc(100vw - 3rem);
     max-width: 1280px;
@@ -38,22 +44,38 @@ main {
     margin-left: auto;
 }
 
-.box {
+.box.about,
+.box.ingredients {
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
     max-width: 450px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.box-title {
-    text-align: center;
-    margin-bottom: 2rem;
+.box.ingredients {
+    display: flex;
+    flex-direction: row;
+}
+
+.box.ingredients .imagen-container:nth-child(1){
+    margin-bottom: 4rem;
+}
+
+
+.title {
+    font-weight: 300;
+    font-size: 2.3rem;
+}
+
+.box.text {
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin-bottom: 4rem;
 }
 
 .text-container {
-    font-size: .8rem;
-    margin: 1.5rem 0;
     line-height: 1.5;
 }
 
@@ -128,6 +150,11 @@ h2 {
     font-size: 1em;
 }
 
+.hero-title {
+    font-weight: 600;
+    letter-spacing: .02em
+}
+
 .hero-description p {
     margin-top: 0.5rem;
 }
@@ -145,6 +172,13 @@ h2 {
 .box-text {
     line-height: 1.9;
 }
+
+.box.ingredients {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
 
 
 /* adds transitions to all buttons, links and form elements */
@@ -570,7 +604,8 @@ fieldset {
     }
 
 } @media screen and (min-width: 1024px) {
-    .container-aboutus  {
+    .container-aboutus, 
+    .container-ingredients  {
         max-width: 1000px;
     }
 
@@ -578,15 +613,36 @@ fieldset {
         margin-top: 0;
     }
 
-    .container-aboutus .box {
+    .imagen-container {
+        max-width: 600px;
+    }
+
+    .box.title {
+        margin-top: 0;
+    }
+
+    .container-aboutus .box,
+    .box.ingredients {
         display: flex;
         min-width: 100%;
         gap: 6rem;
     }
 
+    .container-ingredients {
+        margin-top: 4rem;
+    }
+
     .container-aboutus .box:nth-child(even) {
         flex-direction: row-reverse;
         
+    }
+
+    .box.ingredients {
+        flex-direction: row;
+    }
+
+    h2 {
+        margin-top: 0;
     }
 
 }
