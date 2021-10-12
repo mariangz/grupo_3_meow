@@ -31,11 +31,10 @@ main {
     flex-grow: 1;
 }
 
-/* #aboutus {
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
-} */
+h2 {
+    margin-top: 0;
+    text-align: left;
+}
 
 .container {
     width: calc(100vw - 3rem);
@@ -639,10 +638,6 @@ fieldset {
 
     .box.ingredients {
         flex-direction: row;
-    }
-
-    h2 {
-        margin-top: 0;
     }
 
 }
