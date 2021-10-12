@@ -84,9 +84,15 @@ h2 {
     margin-bottom: 2rem;
 }
 
-.title-clientes {
+.title-clientes,
+.title-productos {
     text-align: center;
 }
+
+.title-productos {
+    margin-top: 2rem;
+}
+
 .horizontalBlock {
     height: 30px;
     width: 100%;
@@ -110,7 +116,6 @@ h2 {
 #customers {
     scroll-margin-top: 2rem;
 }
-
 
 /* ********** PORTADA ********** */
 
@@ -175,7 +180,6 @@ h2 {
     flex-direction: column;
     gap: 5rem;
 }
-
 
 
 /* adds transitions to all buttons, links and form elements */
