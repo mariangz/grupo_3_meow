@@ -188,6 +188,11 @@ li {
     border: 2px solid transparent;
 }
 
+.button.portada {
+    margin-top: 1rem;
+}
+
+
 .button:hover,
 .button:focus {
     color: var(--color-font);
