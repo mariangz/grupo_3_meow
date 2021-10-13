@@ -382,12 +382,7 @@ li {
 .form-container a {
     display: inline-block;
     font-size: 0.75rem;
-    color: var(--color-fontLight);
-}
-
-.form-container a:hover,
-.form-container a:focus {
-    color: var(--color-primary);
+    color: var(--color-font);
 }
 
 .form-separator {
@@ -580,6 +575,13 @@ fieldset {
     padding-bottom: .7em;
     letter-spacing: 1.5px;
     text-transform: uppercase;
+}
+
+.content-btn-perfil {
+    margin-top: 1rem;
+    width: 6rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
