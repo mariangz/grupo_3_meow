@@ -56,7 +56,10 @@ form.addEventListener('input', (event) => {
     } else {
       hideError(password);
     }
-    if (confirmPass.value !== password.value) {
+    if (
+      confirmPass.value !== password.value ||
+      confirmPass.value.trim() === ''
+    ) {
       showError(confirmPass);
     } else {
       hideError(confirmPass);
