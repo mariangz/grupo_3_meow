@@ -547,6 +547,10 @@ fieldset {
     text-decoration: underline;
 }
 
+.card__text.price {
+    margin-right: .3rem;
+}
+
 
 /* ********** PROFILE ********** */
 
