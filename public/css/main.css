@@ -417,6 +417,7 @@ input[type=number] {
     border: 1px solid var(--color-fontLight);
     font-size: 0.875rem;
     border-radius: .25rem;
+    color: var(--color-fontMedium);
 }
 
 textarea.invalid,
@@ -585,11 +586,11 @@ fieldset {
 }
 
 .search-form {
-    position: relative;
     width: 100%;
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .search-prod {
@@ -606,11 +607,19 @@ fieldset {
     cursor: pointer;
 }
 
-.search-input {
+.search-input  {
     border: 0;
     border-bottom: 1px solid var(--color-fontLight);
     outline: 0;
     width: 100%;
+    color: var(--color-fontMedium);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance:none;
 }
 
 .search-icon {
