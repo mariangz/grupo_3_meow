@@ -74,6 +74,12 @@ p {
     margin: 0;
 }
 
+/* .search-prod {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+} */
+
 /* MEDIA QUERIES */
 
 @media (min-width: 768px) {

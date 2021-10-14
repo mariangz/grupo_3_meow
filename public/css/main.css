@@ -584,6 +584,22 @@ fieldset {
     margin-right: auto;
 }
 
+.form-search {
+    border: 1px solid red;
+    position: relative;
+    width: 100%;
+}
+
+.search-prod {
+    border: 1px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.search-btn {
+    position: absolute;
+}
 
 /* ********** media queries ********** */
 
