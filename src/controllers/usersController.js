@@ -37,12 +37,13 @@ const usersController = {
             image: req.file.filename,
             rights: 1
         };
-        await db.User
+        const userCreated = await db.User
             .create(userToCreate)
         const userToLogin = {
             name: req.body.name,
             email: req.body.email,
             image: req.file.filename,
+            user_id: userCreated.user_id,
         }
         req.session.userLogged = userToLogin // Logea al usuario y lo guarda en session
         return res.redirect('profile')
